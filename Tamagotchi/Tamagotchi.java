@@ -62,7 +62,7 @@ public class Tamagotchi
 
     public int getCleanliness()
     {
-        return this.hunger;
+        return this.cleanliness;
     }
 
     public int getHappiness()
