@@ -1,39 +1,28 @@
+import java.lang.*;
 
-/**
- * @version (22.09.21)
- */
 public class Animal extends Tamagotchi
 {
-    public String name;
+    private String name;
     private int age;
     private String type;
     private int energy;
     private boolean happy;
-    public Animal(String name, int age, String type){
-       this.name=name;
-       this.age=age;
-       this.type=type;
-       energy=100;
-       happy = true;
-    }
     
-    public String getName(){
-        return name;
-    }
-    
-    public int getAge(){
-        return age;
-    }
-    
-    public String getType(){
-        return type;
+    /**
+     * Constructeur d'objets de classe Tamagotchi
+     */
+    public Animal(String name, int age, String type)
+    {
+        this.name=name;
+        this.age=age;
+        this.type=type;
+        energy=100;
+        happy = true;
+        
     }
     
     public void eat(){
-        //steak : +50%
-        //poisson : +25%
-        //herbe : +10%
-        //bonbon : -5%
+        
     }
     
     public void sleep(){
@@ -48,5 +37,7 @@ public class Animal extends Tamagotchi
         //delete
     }
     
-   
+    private void grow(){
+        // toutes les 86 400 secondes (un jour) age+=1
+    }
 }
