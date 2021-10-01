@@ -3,17 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ContenuFenetre extends JPanel {
-    
-    //private JLabel etiquette1;
-    //private JLabel etiquette2;
-    //private JLabel etiquette3;
-    //private JLabel etiquette4;
-    //private JLabel etiquette5;
-    //private JLabel etiquette6;
-    //private JLabel etiquette7;
-    //private JLabel etiquette8;
-    //private JLabel etiquette9;
-    private JLabel placeLabel;
+
+    private JLabel locationLabel;
     private JButton feedButton;
     private JButton playButton;
     private JButton cleanButton;
@@ -23,9 +14,9 @@ public class ContenuFenetre extends JPanel {
     private JButton selectButton;
     private JButton doButton;
     private JButton aboutButton;
-    private JTextField champTexte;
+    //private JTextField champTexte;
     private JLabel imageLbl;
-    private ImageIcon imagetama;
+    //private ImageIcon imagetama;
     private JProgressBar healthBar;
     private JProgressBar energyBar;
     private JProgressBar hungerBar;
@@ -37,80 +28,90 @@ public class ContenuFenetre extends JPanel {
         super();
         this.affichageContenu();       
     } 
+
+
+    JLabel verticalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
+    {
+        int width=500;
+        int height=40;
+        int xPosition=defaultx;
+        int yPosition=defaulty+(increment*rowNumber);
+
+        JLabel newLabel = new JLabel();
+
+        newLabel.setBounds(xPosition, yPosition, width, height);
+        newLabel.setText(content);
+        newLabel.setFont(textFont);
+        return newLabel;
+    }
+
+
+    JLabel horizontalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
+    {
+        int width=500;
+        int height=40;
+        int xPosition=defaultx;
+        int yPosition=defaulty+(increment*rowNumber);
+
+        JLabel newLabel = new JLabel();
+
+        newLabel.setBounds(xPosition, yPosition, width, height);
+        newLabel.setText(content);
+        newLabel.setFont(textFont);
+        return newLabel;
+    }
     
     public void affichageContenu(){
+        
         this.setLayout(null); // On n'utilise aucun gestionnaire de disposition (positionnement absolu)
-        //------------------------------------------------   
-        JLabel etiquette1 = new JLabel();
-        etiquette1.setBounds(450, 10, 500, 40); //Position et dimension de l'étiquette.
-        etiquette1.setText("Tamagotchi");
-        Font font24 = new Font("Arial",Font.BOLD,24); //Style et taille du contenu de l'étiquette.
-        etiquette1.setFont(font24);
-        this.add(etiquette1); // Intégration de l'étiquette au Contenu
-     
-        JLabel healthLabel = new JLabel();
-        healthLabel.setBounds(300, 165, 500, 40); 
-        healthLabel.setText("Vie");
-        Font font12 = new Font("Arial",Font.BOLD,12); 
-        healthLabel.setFont(font12);
+
+        // Définitions des polices d'écriture
+        Font normalFont = new Font("Arial",Font.BOLD,12); 
+        Font largeFont = new Font("Arial",Font.BOLD,16);
+        Font hugeFont = new Font("Arial",Font.BOLD,24); //Style et taille du contenu de l'étiquette.
+
+
+        int barLabelDefaulty=165;
+        int barLabelDefaultX=300;
+        int barLabelIncrement=60;
+
+        JLabel titleLabel = verticalBuilder("Tamagotchi", 450, 10, 0, 0, hugeFont);
+        JLabel healthLabel = verticalBuilder("vie",barLabelDefaultX, barLabelDefaulty, barLabelIncrement, 0, normalFont);
+        JLabel energyLabel = verticalBuilder("Energie",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  1, normalFont);
+        JLabel hungerLabel = verticalBuilder("Nourriture",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  2, normalFont);
+        JLabel cleanLinessLabel = verticalBuilder("health points",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  3, normalFont);
+        JLabel hapinessLabel = verticalBuilder("health points",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  4, normalFont);
+        
+        this.add(titleLabel);
         this.add(healthLabel);
-        
-        JLabel energyLabel = new JLabel();
-        energyLabel.setBounds(300, 225, 500, 40); 
-        energyLabel.setText("Energie");
-        energyLabel.setFont(font12);
         this.add(energyLabel);
-        
-        JLabel hungerLabel = new JLabel();
-        hungerLabel.setBounds(300, 285, 500, 40); 
-        hungerLabel.setText("Nourriture");
-        hungerLabel.setFont(font12);
         this.add(hungerLabel);
-        
-        JLabel cleanlinessLabel = new JLabel();
-        cleanlinessLabel.setBounds(300, 345, 500, 40); 
-        cleanlinessLabel.setText("Hygiène");
-        cleanlinessLabel.setFont(font12);
-        this.add(cleanlinessLabel);
-        
-        JLabel hapinessLabel = new JLabel();
-        hapinessLabel.setBounds(300, 405, 500, 40); 
-        hapinessLabel.setText("Bonheur");
-        hapinessLabel.setFont(font12);
+        this.add(cleanLinessLabel);
         this.add(hapinessLabel);
+
+        // Infos sur le tamagotchi
+
+        int infoDefaultx=30;
+        int infoDefaultY=220;
+        int infoIncrement=30;
+
+        JLabel nameLabel = verticalBuilder("nom", infoDefaultx, infoDefaultY, infoIncrement, 0, largeFont);
+        JLabel breedLabel = verticalBuilder("Espece", infoDefaultx, infoDefaultY, infoIncrement, 2, largeFont);
+        JLabel moodLabel = verticalBuilder("Humeur", infoDefaultx, infoDefaultY, infoIncrement, 3, largeFont);
+        JLabel locationLabel = verticalBuilder("Lieu", infoDefaultx, infoDefaultY, infoIncrement, 4, largeFont);
         
-        JLabel nameLabel = new JLabel();
-        nameLabel.setBounds(30, 220, 500, 40); 
-        nameLabel.setText("Nom");
-        Font font16 = new Font("Arial",Font.BOLD,16);
-        nameLabel.setFont(font16);
         this.add(nameLabel);
-        
-        JLabel breedLabel = new JLabel();
-        breedLabel.setBounds(30, 250, 500, 40); 
-        breedLabel.setText("Espèce");
-        breedLabel.setFont(font16);
         this.add(breedLabel);
-        
-        JLabel moodLabel = new JLabel();
-        moodLabel.setBounds(30,280, 500, 40); 
-        moodLabel.setText("Humeur");
-        moodLabel.setFont(font16);
         this.add(moodLabel);
-        
-        placeLabel = new JLabel();
-        placeLabel.setBounds(30, 310, 500, 40); 
-        placeLabel.setText("Lieu");
-        placeLabel.setFont(font16);
-        this.add(placeLabel);
-        
+        this.add(locationLabel);
+
         //------------------------------------------------
         //Création bouttons
         feedButton = new JButton();
         this.feedButton.setText("Nourrir");
         this.feedButton.setBounds(300, 85, 110, 55);
         this.add(feedButton);
-        
+        // +150
         playButton = new JButton();
         this.playButton.setText("Jouer");
         this.playButton.setBounds(450, 85, 110, 55);
@@ -118,6 +119,7 @@ public class ContenuFenetre extends JPanel {
         
         cleanButton = new JButton();
         this.cleanButton.setText("Laver");
+        
         this.cleanButton.setBounds(600, 85, 110, 55);
         this.add(cleanButton);
         
