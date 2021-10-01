@@ -9,6 +9,7 @@ public class Tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
     String name;
+    String breed; 
     //Breed breed; // object ?
 
     // variables d'instance
@@ -27,6 +28,7 @@ public class Tamagotchi
     {
         // initialisation des variables d'instance
         this.name = name;
+        this.breed="unknown";
        // this.breed = breed;
 
         this.health=100;
@@ -78,4 +80,4 @@ public class Tamagotchi
 
 
 
-}
+    }

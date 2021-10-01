@@ -1,9 +1,7 @@
-import species.*;
-import species.Tamagotchi;
-
-public class main{
-
-	public static void main(String[] args){
+public class backendTesting
+{
+    public static void main(String[] args)
+    {
         Tamagotchi gen = new Tamagotchi("GEN");
         Tamagotchi mouton = new Sheep("w");
 
@@ -16,7 +14,5 @@ public class main{
         System.out.println("tamagotchi mouton : " + mouton.name);
         System.out.println("espece : " + mouton.breed);
         
-
-	}
-
+    }
 }
