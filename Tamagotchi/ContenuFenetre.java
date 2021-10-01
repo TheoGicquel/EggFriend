@@ -4,33 +4,33 @@ import java.awt.*;
 
 public class ContenuFenetre extends JPanel {
     
-    private JLabel etiquette1;
-    private JLabel etiquette2;
-    private JLabel etiquette3;
-    private JLabel etiquette4;
-    private JLabel etiquette5;
-    private JLabel etiquette6;
-    private JLabel etiquette7;
-    private JLabel etiquette8;
-    private JLabel etiquette9;
-    private JLabel etiquette10;
-    private JButton bouton1;
-    private JButton bouton2;
-    private JButton bouton3;
-    private JButton bouton4;
-    private JButton bouton5;
-    private JButton bouton6;
-    private JButton bouton7;
-    private JButton bouton8;
-    private JButton bouton9;
+    //private JLabel etiquette1;
+    //private JLabel etiquette2;
+    //private JLabel etiquette3;
+    //private JLabel etiquette4;
+    //private JLabel etiquette5;
+    //private JLabel etiquette6;
+    //private JLabel etiquette7;
+    //private JLabel etiquette8;
+    //private JLabel etiquette9;
+    private JLabel placeLabel;
+    private JButton feedButton;
+    private JButton playButton;
+    private JButton cleanButton;
+    private JButton sleepButton;
+    private JButton quitButton;
+    private JButton refreshButton;
+    private JButton selectButton;
+    private JButton doButton;
+    private JButton aboutButton;
     private JTextField champTexte;
     private JLabel imageLbl;
     private ImageIcon imagetama;
-    private JProgressBar barre1;
-    private JProgressBar barre2;
-    private JProgressBar barre3;
-    private JProgressBar barre4;
-    private JProgressBar barre5;   
+    private JProgressBar healthBar;
+    private JProgressBar energyBar;
+    private JProgressBar hungerBar;
+    private JProgressBar cleanlinessBar;
+    private JProgressBar hapinessBar;   
     
     
     public ContenuFenetre(){
@@ -48,108 +48,108 @@ public class ContenuFenetre extends JPanel {
         etiquette1.setFont(font24);
         this.add(etiquette1); // Intégration de l'étiquette au Contenu
      
-        JLabel etiquette2 = new JLabel();
-        etiquette2.setBounds(300, 165, 500, 40); 
-        etiquette2.setText("Vie");
+        JLabel healthLabel = new JLabel();
+        healthLabel.setBounds(300, 165, 500, 40); 
+        healthLabel.setText("Vie");
         Font font12 = new Font("Arial",Font.BOLD,12); 
-        etiquette2.setFont(font12);
-        this.add(etiquette2);
+        healthLabel.setFont(font12);
+        this.add(healthLabel);
         
-        JLabel etiquette3 = new JLabel();
-        etiquette3.setBounds(300, 225, 500, 40); 
-        etiquette3.setText("Energie");
-        etiquette3.setFont(font12);
-        this.add(etiquette3);
+        JLabel energyLabel = new JLabel();
+        energyLabel.setBounds(300, 225, 500, 40); 
+        energyLabel.setText("Energie");
+        energyLabel.setFont(font12);
+        this.add(energyLabel);
         
-        JLabel etiquette4 = new JLabel();
-        etiquette4.setBounds(300, 285, 500, 40); 
-        etiquette4.setText("Nourriture");
-        etiquette4.setFont(font12);
-        this.add(etiquette4);
+        JLabel hungerLabel = new JLabel();
+        hungerLabel.setBounds(300, 285, 500, 40); 
+        hungerLabel.setText("Nourriture");
+        hungerLabel.setFont(font12);
+        this.add(hungerLabel);
         
-        JLabel etiquette5 = new JLabel();
-        etiquette5.setBounds(300, 345, 500, 40); 
-        etiquette5.setText("Hygiène");
-        etiquette5.setFont(font12);
-        this.add(etiquette5);
+        JLabel cleanlinessLabel = new JLabel();
+        cleanlinessLabel.setBounds(300, 345, 500, 40); 
+        cleanlinessLabel.setText("Hygiène");
+        cleanlinessLabel.setFont(font12);
+        this.add(cleanlinessLabel);
         
-        JLabel etiquette6 = new JLabel();
-        etiquette6.setBounds(300, 405, 500, 40); 
-        etiquette6.setText("Bonheur");
-        etiquette6.setFont(font12);
-        this.add(etiquette6);
+        JLabel hapinessLabel = new JLabel();
+        hapinessLabel.setBounds(300, 405, 500, 40); 
+        hapinessLabel.setText("Bonheur");
+        hapinessLabel.setFont(font12);
+        this.add(hapinessLabel);
         
-        JLabel etiquette7 = new JLabel();
-        etiquette7.setBounds(30, 220, 500, 40); 
-        etiquette7.setText("Nom");
+        JLabel nameLabel = new JLabel();
+        nameLabel.setBounds(30, 220, 500, 40); 
+        nameLabel.setText("Nom");
         Font font16 = new Font("Arial",Font.BOLD,16);
-        etiquette7.setFont(font16);
-        this.add(etiquette7);
+        nameLabel.setFont(font16);
+        this.add(nameLabel);
         
-        JLabel etiquette8 = new JLabel();
-        etiquette8.setBounds(30, 250, 500, 40); 
-        etiquette8.setText("Espèce");
-        etiquette8.setFont(font16);
-        this.add(etiquette8);
+        JLabel breedLabel = new JLabel();
+        breedLabel.setBounds(30, 250, 500, 40); 
+        breedLabel.setText("Espèce");
+        breedLabel.setFont(font16);
+        this.add(breedLabel);
         
-        JLabel etiquette9 = new JLabel();
-        etiquette9.setBounds(30,280, 500, 40); 
-        etiquette9.setText("Humeur");
-        etiquette9.setFont(font16);
-        this.add(etiquette9);
+        JLabel moodLabel = new JLabel();
+        moodLabel.setBounds(30,280, 500, 40); 
+        moodLabel.setText("Humeur");
+        moodLabel.setFont(font16);
+        this.add(moodLabel);
         
-        etiquette10 = new JLabel();
-        etiquette10.setBounds(30, 310, 500, 40); 
-        etiquette10.setText("Lieu");
-        etiquette10.setFont(font16);
-        this.add(etiquette10);
+        placeLabel = new JLabel();
+        placeLabel.setBounds(30, 310, 500, 40); 
+        placeLabel.setText("Lieu");
+        placeLabel.setFont(font16);
+        this.add(placeLabel);
         
         //------------------------------------------------
         //Création bouttons
-        bouton1 = new JButton();
-        this.bouton1.setText("Nourrir");
-        this.bouton1.setBounds(300, 85, 110, 55);
-        this.add(bouton1);
+        feedButton = new JButton();
+        this.feedButton.setText("Nourrir");
+        this.feedButton.setBounds(300, 85, 110, 55);
+        this.add(feedButton);
         
-        bouton2 = new JButton();
-        this.bouton2.setText("Jouer");
-        this.bouton2.setBounds(450, 85, 110, 55);
-        this.add(bouton2);
+        playButton = new JButton();
+        this.playButton.setText("Jouer");
+        this.playButton.setBounds(450, 85, 110, 55);
+        this.add(playButton);
         
-        bouton3 = new JButton();
-        this.bouton3.setText("Laver");
-        this.bouton3.setBounds(600, 85, 110, 55);
-        this.add(bouton3);
+        cleanButton = new JButton();
+        this.cleanButton.setText("Laver");
+        this.cleanButton.setBounds(600, 85, 110, 55);
+        this.add(cleanButton);
         
-        bouton4 = new JButton();
-        this.bouton4.setText("Dormir");
-        this.bouton4.setBounds(750, 85, 110, 55);
-        this.add(bouton4);
+        sleepButton = new JButton();
+        this.sleepButton.setText("Dormir");
+        this.sleepButton.setBounds(750, 85, 110, 55);
+        this.add(sleepButton);
         
-        bouton5 = new JButton();
-        this.bouton5.setText("Quitter");
-        this.bouton5.setBounds(50, 500, 95, 35);
-        this.add(bouton5);
+        quitButton = new JButton();
+        this.quitButton.setText("Quitter");
+        this.quitButton.setBounds(50, 500, 95, 35);
+        this.add(quitButton);
         
-        bouton6 = new JButton();
-        this.bouton6.setText("Rafraichir");
-        this.bouton6.setBounds(160, 500, 95, 35);
-        this.add(bouton6);
+        refreshButton = new JButton();
+        this.refreshButton.setText("Rafraichir");
+        this.refreshButton.setBounds(160, 500, 95, 35);
+        this.add(refreshButton);
         
-        bouton7 = new JButton();
-        this.bouton7.setText("Sélectionner");
-        this.bouton7.setBounds(480, 500, 120, 40);
-        this.add(bouton7);
+        selectButton = new JButton();
+        this.selectButton.setText("Sélectionner");
+        this.selectButton.setBounds(480, 500, 120, 40);
+        this.add(selectButton);
         
-        bouton8 = new JButton();
-        this.bouton8.setText("Effectuer");
-        this.bouton8.setBounds(610, 500, 120, 40);
-        this.add(bouton8);
+        doButton = new JButton();
+        this.doButton.setText("Effectuer");
+        this.doButton.setBounds(610, 500, 120, 40);
+        this.add(doButton);
         
-        bouton9 = new JButton();
-        this.bouton9.setText("A propos");
-        this.bouton9.setBounds(740, 500, 120, 40);
-        this.add(bouton9);
+        aboutButton = new JButton();
+        this.aboutButton.setText("A propos");
+        this.aboutButton.setBounds(740, 500, 120, 40);
+        this.add(aboutButton);
         
         
         //------------------------------------------------
@@ -161,41 +161,41 @@ public class ContenuFenetre extends JPanel {
         //------------------------------------------------
         //Création d'une barre de progression
                 
-        barre1 = new JProgressBar();
+        healthBar = new JProgressBar();
         
-        barre1.setBounds(300,190,560,30);
-        barre1.setForeground(Color.GREEN);
-        barre1.setStringPainted(true);
-        barre1.setValue(89);
-        this.add(barre1);
+        healthBar.setBounds(300,190,560,30);
+        healthBar.setForeground(Color.GREEN);
+        healthBar.setStringPainted(true);
+        healthBar.setValue(89);
+        this.add(healthBar);
         
-        barre2 = new JProgressBar();
-        barre2.setValue(48);
-        barre2.setBounds(300,250,560,30);
-        barre2.setForeground(Color.CYAN);
-        barre2.setStringPainted(true);
-        this.add(barre2);
+        energyBar = new JProgressBar();
+        energyBar.setValue(48);
+        energyBar.setBounds(300,250,560,30);
+        energyBar.setForeground(Color.CYAN);
+        energyBar.setStringPainted(true);
+        this.add(energyBar);
         
-        barre3 = new JProgressBar();
-        barre3.setValue(56);
-        barre3.setBounds(300,310,560,30);
-        barre3.setForeground(Color.RED);
-        barre3.setStringPainted(true);
-        this.add(barre3);
+        hungerBar = new JProgressBar();
+        hungerBar.setValue(56);
+        hungerBar.setBounds(300,310,560,30);
+        hungerBar.setForeground(Color.RED);
+        hungerBar.setStringPainted(true);
+        this.add(hungerBar);
         
-        barre4 = new JProgressBar();
-        barre4.setValue(23);
-        barre4.setBounds(300,370,560,30);
-        barre4.setForeground(Color.BLUE);
-        barre4.setStringPainted(true);
-        this.add(barre4);
+        cleanlinessBar = new JProgressBar();
+        cleanlinessBar.setValue(23);
+        cleanlinessBar.setBounds(300,370,560,30);
+        cleanlinessBar.setForeground(Color.BLUE);
+        cleanlinessBar.setStringPainted(true);
+        this.add(cleanlinessBar);
         
-        barre5 = new JProgressBar();
-        barre5.setValue(60);
-        barre5.setBounds(300,430,560,30);
-        barre5.setForeground(Color.YELLOW);
-        barre5.setStringPainted(true);
-        this.add(barre5);
+        hapinessBar = new JProgressBar();
+        hapinessBar.setValue(60);
+        hapinessBar.setBounds(300,430,560,30);
+        hapinessBar.setForeground(Color.YELLOW);
+        hapinessBar.setStringPainted(true);
+        this.add(hapinessBar);
         
         //------------------------------------------------
         //Création d'une image
