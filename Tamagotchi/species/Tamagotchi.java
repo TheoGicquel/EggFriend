@@ -1,3 +1,4 @@
+package species;
 
 /**
  * Décrivez votre classe tamagochi ici.
