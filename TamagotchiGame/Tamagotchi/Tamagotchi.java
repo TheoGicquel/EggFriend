@@ -1,4 +1,4 @@
-package species;
+
 
 /**
  * Décrivez votre classe tamagochi ici.
@@ -6,20 +6,24 @@ package species;
  * @author (votre nom)
  * @version 0.0.1
  */
+
+package Tamagotchi;
+
 public class Tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
     String name;
-    String breed; 
+    protected String breed; 
+    String favoriteFood;
     //Breed breed; // object ?
 
     // variables d'instance
-    private int health;
-    private boolean isAlive;
-    private int energy;
-    private int hunger;
-    private int cleanliness;
-    private int happiness;
+    protected int health;
+    protected boolean isAlive;
+    protected int energy;
+    protected int hunger;
+    protected int cleanliness;
+    protected int happiness;
     
 
     /**
@@ -38,6 +42,13 @@ public class Tamagotchi
         this.hunger=100;
         this.cleanliness=100;
         this.happiness=100;
+    }
+
+
+
+    public String getBreed()
+    {
+        return this.breed;
     }
 
 
