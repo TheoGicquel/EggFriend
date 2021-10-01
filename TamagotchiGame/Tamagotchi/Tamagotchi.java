@@ -7,7 +7,7 @@
  * @version 0.0.1
  */
 
-package Tamagotchi;
+package tamagotchi;
 
 public class Tamagotchi
 {
@@ -45,6 +45,7 @@ public class Tamagotchi
     }
 
 
+)
 
     public String getBreed()
     {

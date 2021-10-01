@@ -1,6 +1,6 @@
-package Tamagotchi.species;
+package tamagotchi.species;
 
-import Tamagotchi.Tamagotchi;
+import tamagotchi.Tamagotchi;
 
 public class Sheep extends Tamagotchi {
     public Sheep(String name)

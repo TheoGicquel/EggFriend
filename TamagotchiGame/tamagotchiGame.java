@@ -1,7 +1,7 @@
-import Tamagotchi.*;
-import Tamagotchi.species.*;
+import tamagotchi.*;
+import tamagotchi.species.*;
 
-public class main
+public class tamagotchiGame
 {
 
 	public static void main(String[] args){
