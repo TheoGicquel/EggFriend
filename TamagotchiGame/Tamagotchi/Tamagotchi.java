@@ -45,7 +45,6 @@ public class Tamagotchi
     }
 
 
-)
 
     public String getBreed()
     {
