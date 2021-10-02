@@ -3,8 +3,6 @@ import java.awt.*;
 
 public class Interface
 {
-    public Interface()
-    {}
 
     public static void main(String[] args){
         //Création d'une nouvelle fenêtre

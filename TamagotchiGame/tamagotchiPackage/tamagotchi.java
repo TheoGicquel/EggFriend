@@ -7,9 +7,9 @@
  * @version 0.0.1
  */
 
-package tamagotchi;
+package tamagotchiPackage;
 
-public class Tamagotchi
+public class tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
     String name;
@@ -29,7 +29,7 @@ public class Tamagotchi
     /**
      * Constructeur d'objets de classe tamagochi
      */
-    public Tamagotchi(String name)
+    public tamagotchi(String name)
     {
         // initialisation des variables d'instance
         this.name = name;

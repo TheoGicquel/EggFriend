@@ -1,13 +1,14 @@
-import tamagotchi.*;
-import tamagotchi.species.*;
+
+import tamagotchiPackage.*;
+import tamagotchiPackage.species.*;
 
 public class tamagotchiGame
 {
-
 	public static void main(String[] args){
-        Tamagotchi gen = new Tamagotchi("GEN");
 
-        Tamagotchi mouton = new Sheep("monMouton");
+        tamagotchi gen = new tamagotchi("GEN");
+
+        tamagotchi mouton = new Sheep("monMouton");
 
         System.out.println("tamagotchi generique : " + gen.getName());
         System.out.println("espece : " + gen.getBreed());
