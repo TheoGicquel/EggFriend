@@ -1,3 +1,5 @@
+package tamagotchiPackage;
+
 import javax.swing.*;
 import java.awt.*;
 

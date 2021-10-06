@@ -1,6 +1,10 @@
+package tamagotchiPackage;
+
+
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
+
 
 public class ContenuFenetre extends JPanel {
 

@@ -1,3 +1,4 @@
+import UIPackage.tamagotchiUI;
 import tamagotchiPackage.*;
 import tamagotchiPackage.species.*;
 
@@ -5,7 +6,9 @@ public class tamagotchiGame {
 
   public static void main(String[] args) {
     //new debugWindow();
-    new tamagotchiUI();
+    //new tamagotchiUI();
+    //affichageContenu();
+    ContenuFenetre fenetre = new ContenuFenetre();
     tamagotchi gen = new tamagotchi("GEN");
     tamagotchi mouton = new Sheep("monMouton");
     System.out.println("tamagotchi generique : " + gen.getName());
