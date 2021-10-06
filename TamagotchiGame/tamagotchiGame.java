@@ -12,7 +12,7 @@ public class tamagotchiGame {
     FenetreGraphique fenetre = new FenetreGraphique();
 		fenetre.setVisible(true);
     tamagotchi gen = new tamagotchi("GEN");
-    tamagotchi mouton = new Sheep("monMouton");
+    tamagotchi mouton = new Sheep("monouton");
     System.out.println("tamagotchi generique : " + gen.getName());
     System.out.println("espece : " + gen.getBreed());
     System.out.println("\n\n");
