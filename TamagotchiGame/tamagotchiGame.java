@@ -1,3 +1,4 @@
+import UIPackage.FenetreGraphique;
 import UIPackage.tamagotchiUI;
 import tamagotchiPackage.*;
 //import tamagotchiPackage.main;
