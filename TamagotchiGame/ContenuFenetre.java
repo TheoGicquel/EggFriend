@@ -1,4 +1,4 @@
-package tamagotchiPackage;
+
 
 
 import java.lang.*;
@@ -29,7 +29,7 @@ public class ContenuFenetre extends JPanel {
     
     
     public ContenuFenetre(){
-        super();
+       // super();
         this.affichageContenu();       
     } 
 
@@ -206,9 +206,9 @@ public class ContenuFenetre extends JPanel {
         //------------------------------------------------
         //Création d'une image
         
-        ImageIcon imagetama = new ImageIcon(getClass().getResource("Image/imageTama.png"));
-        imageLbl = new JLabel(imagetama,JLabel.CENTER);
-        this.add(imageLbl);
+      //  ImageIcon imagetama = new ImageIcon(getClass().getResource("Image/imageTama.png"));
+       // imageLbl = new JLabel(imagetama,JLabel.CENTER);
+     //   this.add(imageLbl);
         this.validate();
         
         

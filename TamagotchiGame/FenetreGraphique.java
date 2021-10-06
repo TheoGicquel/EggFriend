@@ -1,13 +1,13 @@
-package tamagotchiPackage;
 
 import javax.swing.*;
+
 import java.awt.*;
 
 public class FenetreGraphique extends JFrame{
     ContenuFenetre panel;
     
     public FenetreGraphique(){
-        super();
+       // super();
         proprietesFenetre();
     }
 
