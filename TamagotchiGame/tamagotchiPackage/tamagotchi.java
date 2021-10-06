@@ -1,10 +1,10 @@
 
 
 /**
- * Décrivez votre classe tamagochi ici.
+ * Décrivez votre classe Tamagotchi ici.
  *
- * @author (votre nom)
- * @version 0.0.1
+ * @author (Ryan)
+ * @version (14/09/21)
  */
 
 package tamagotchiPackage;
@@ -25,9 +25,9 @@ public class tamagotchi
     protected int cleanliness;
     protected int happiness;
     
-
+    
     /**
-     * Constructeur d'objets de classe tamagochi
+     * Constructeur d'objets de classe Tamagotchi
      */
     public tamagotchi(String name)
     {
@@ -65,7 +65,6 @@ public class tamagotchi
 
     public boolean getIsAlive()
     {
-        return this.isAlive;
     }
 
     public int getEnergy()
