@@ -1,33 +1,40 @@
 
+
 /**
  * Décrivez votre classe tamagochi ici.
  *
  * @author (votre nom)
  * @version 0.0.1
  */
-public class Tamagotchi
+
+package tamagotchiPackage;
+
+public class tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
     String name;
-    Breed breed; // object ?
+    protected String breed; 
+    String favoriteFood;
+    //Breed breed; // object ?
 
     // variables d'instance
-    private int health;
-    private boolean isAlive;
-    private int energy;
-    private int hunger;
-    private int cleanliness;
-    private int happiness;
+    protected int health;
+    protected boolean isAlive;
+    protected int energy;
+    protected int hunger;
+    protected int cleanliness;
+    protected int happiness;
     
 
     /**
      * Constructeur d'objets de classe tamagochi
      */
-    public Tamagotchi(String name, Breed breed)
+    public tamagotchi(String name)
     {
         // initialisation des variables d'instance
         this.name = name;
-        this.breed = breed;
+        this.breed="unknown";
+       // this.breed = breed;
 
         this.health=100;
         this.isAlive=true;
@@ -37,6 +44,18 @@ public class Tamagotchi
         this.happiness=100;
     }
 
+
+
+    public String getBreed()
+    {
+        return this.breed;
+    }
+
+
+    public String getName()
+    {
+        return this.name;
+    }
 
 
     public int getHealth()
@@ -62,7 +81,7 @@ public class Tamagotchi
 
     public int getCleanliness()
     {
-        return this.hunger;
+        return this.cleanliness;
     }
 
     public int getHappiness()
@@ -73,4 +92,4 @@ public class Tamagotchi
 
 
 
-}
+    }
