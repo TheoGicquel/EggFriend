@@ -65,6 +65,7 @@ public class tamagotchi
 
     public boolean getIsAlive()
     {
+        return this.isAlive;
     }
 
     public int getEnergy()

@@ -1,3 +1,4 @@
+package UIPackage;
 import javax.swing.JFrame;
 
 public class debugWindow extends JFrame {

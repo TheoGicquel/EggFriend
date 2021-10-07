@@ -1,6 +1,11 @@
+package UIPackage;
+
+
+
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
+
 
 public class ContenuFenetre extends JPanel {
 
@@ -25,7 +30,7 @@ public class ContenuFenetre extends JPanel {
     
     
     public ContenuFenetre(){
-        super();
+       // super();
         this.affichageContenu();       
     } 
 
@@ -202,9 +207,9 @@ public class ContenuFenetre extends JPanel {
         //------------------------------------------------
         //Création d'une image
         
-        ImageIcon imagetama = new ImageIcon(getClass().getResource("Image/imageTama.png"));
-        imageLbl = new JLabel(imagetama,JLabel.CENTER);
-        this.add(imageLbl);
+      //  ImageIcon imagetama = new ImageIcon(getClass().getResource("Image/imageTama.png"));
+       // imageLbl = new JLabel(imagetama,JLabel.CENTER);
+     //   this.add(imageLbl);
         this.validate();
         
         

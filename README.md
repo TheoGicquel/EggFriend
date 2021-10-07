@@ -1,5 +1,5 @@
-# Tamagochi-Simulation
-Projet de groupe de réalisation d'un [Tamagochi](https://en.wikipedia.org/wiki/Tamagotchi) sous Java
+# Tamagotchi-Simulation
+Projet de groupe de réalisation d'un [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) sous Java
 ## Membres
 * **Ryan Barrault** : développeur
 * **Théo Gicquel** : architecte logiciel, chef de projet, gestionnaire de la qualité
