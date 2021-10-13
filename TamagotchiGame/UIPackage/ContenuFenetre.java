@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class ContenuFenetre extends JPanel {
+public class ContenuFenetre extends UIBuilder {
 
     private JLabel locationLabel;
     private JButton feedButton;
