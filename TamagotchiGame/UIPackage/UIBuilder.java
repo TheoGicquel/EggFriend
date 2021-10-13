@@ -4,14 +4,17 @@ import java.lang.ProcessBuilder.Redirect.Type;
 
 import javax.lang.model.element.TypeElement;
 import javax.swing.JFrame;
-
+import javax.swing.JLabel;
 /**
  * verticalBuilder
  */
 public class UIBuilder extends JFrame{
-
-
+    //TODO JButton , Constructeur de Boutons 
+    //TODO essai de constructeur par défaut et de méthodes d'assignation automatiques avec enum
     void itemBuilder(TypeElement itemType)
+    {
+
+    }
 
     JLabel verticalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
     {
