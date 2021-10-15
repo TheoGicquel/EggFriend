@@ -102,6 +102,7 @@ public class ContenuFenetre extends UIBuilder {
         this.sleepButton.setBounds(750, 85, 110, 55);
         this.add(sleepButton);
         
+      //  quitButton = new buttonBuilder();
         quitButton = new JButton();
         this.quitButton.setText("Quitter");
         this.quitButton.setBounds(50, 500, 95, 35);

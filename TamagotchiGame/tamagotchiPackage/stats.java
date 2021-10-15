@@ -1,62 +1,8 @@
-
-
-/**
- * Décrivez votre classe Tamagotchi ici.
- *
- * @author (Ryan)
- * @version (14/09/21)
- */
-
 package tamagotchiPackage;
 
-public class tamagotchi
+public class stats extends tamagotchi
 {
-    /** Caracteristiques innés ( initialisés a la naissance) */
-    String name;
-    protected String breed; 
-    private String favoriteFood;
-    //Breed breed; // object ?
 
-    // variables d'instance
-    protected int health;
-    protected boolean isAlive;
-    protected int energy;
-    protected int hunger;
-    protected int cleanliness;
-    protected int happiness;
-    
-    
-    /**
-     * Constructeur d'objets de classe Tamagotchi
-     */
-    public tamagotchi(String name)
-    {
-        this.name = name;
-        this.breed="unknown";
-        this.breed = "unknown";
-        this.favoriteFood="unknown";
-        this.health=100;
-        this.isAlive=true;
-        this.energy=100;
-        this.hunger=100;
-        this.cleanliness=100;
-        this.happiness=100;
-    }
-
-
-    public tamagotchi()
-    {
-        this.name = "tamagotchi";
-        this.breed="unknown";
-        this.breed = "unknown";
-        this.favoriteFood="unknown";
-        this.health=100;
-        this.isAlive=true;
-        this.energy=100;
-        this.hunger=100;
-        this.cleanliness=100;
-        this.happiness=100;
-    }
 
     public String getBreed()
     {
@@ -113,6 +59,7 @@ public class tamagotchi
         this.isAlive=false;
     }
 
+
     public void checkHealth()
     {
         if(this.getHealth()<=0)
@@ -142,14 +89,5 @@ public class tamagotchi
         {
             this.setHealth(newHealth);
         }
-    }
-
-    public void heal(int healValue)
-    {
-        
-    }
-
-
-
-
-    }
+    }    
+}
