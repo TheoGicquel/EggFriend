@@ -1,18 +1,28 @@
 package tests;
+
 import tamagotchiPackage.tamagotchi;
+import tamagotchiPackage.species.Sheep;
 public class constructTest extends testsSuite{
 
-    boolean test()
+    void test()
     {
+        tamagotchi mouton = new Sheep();
+        if(mouton.getName()!="tamagotchi"){fail("tamagotchi","nom par défaut invalide");}
+
+        String myName = "bernardo";
+        tamagotchi myMouton = new Sheep(myName);
+        if(myMouton.getName()!=myName){fail("sheep(name)","surcharge constructeur incorrecte");}
+
+        
+        if(mouton.getIsAlive()!=true){fail("tamagotchi:isAlive","tamagotchi non vivant");}
+        if(mouton.getBreed()!="sheep"){fail("tamagotchi:breed","espece invalide");}
+        if(mouton.getHealth()!=100){fail("tamagotchi:getHealth","santé initiale invalide");}
 
 
-    
-    if(gen.getName()=="GEN")
-    tamagotchi mouton = new Sheep("monouton");
-    System.out.println("tamagotchi generique : " + gen.getHealth());
-    System.out.println("espece : " + gen.getBreed());
-    System.out.println("\n\n");
-    System.out.println("tamagotchi mouton : " + mouton.getName());
-    System.out.println("espece : " + mouton.getBreed());
+
+        tamagotchi geneTama = new tamagotchi();
+        if(geneTama.getBreed()!=null){fail("tamagotchi:breed","espece par défaut invalide");}
     }
+
+
 }
