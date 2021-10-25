@@ -12,10 +12,11 @@ package tamagotchiPackage;
 public class tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
-    String name;
-    protected String breed; 
-    private String favoriteFood;
+    protected String name;
+    protected String favoriteFood;
+    protected String breed;
     //Breed breed; // object ?
+
 
     // variables d'instance
     protected int health;
@@ -24,17 +25,14 @@ public class tamagotchi
     protected int hunger;
     protected int cleanliness;
     protected int happiness;
-    
-    
+
+
     /**
      * Constructeur d'objets de classe Tamagotchi
      */
     public tamagotchi(String name)
     {
         this.name = name;
-        this.breed="unknown";
-        this.breed = "unknown";
-        this.favoriteFood="unknown";
         this.health=100;
         this.isAlive=true;
         this.energy=100;
@@ -47,9 +45,7 @@ public class tamagotchi
     public tamagotchi()
     {
         this.name = "tamagotchi";
-        this.breed="unknown";
-        this.breed = "unknown";
-        this.favoriteFood="unknown";
+       // this.favoriteFood="unknown";
         this.health=100;
         this.isAlive=true;
         this.energy=100;
@@ -146,7 +142,12 @@ public class tamagotchi
 
     public void heal(int healValue)
     {
-        
+        int newHealth = this.getHealth()+healValue;
+        if(newHealth>100)
+        {
+            newHealth=100;
+        }
+        this.setHealth(newHealth);
     }
 
 
