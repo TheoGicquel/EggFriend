@@ -1,11 +1,7 @@
-import UIPackage.FenetreGraphique;
-import UIPackage.tamagotchiUI;
 import tamagotchiPackage.*;
 //import tamagotchiPackage.main;
 import tamagotchiPackage.species.*;
-import javax.swing.*;
 
-import java.awt.*;
 public class tamagotchiGame {
 
   public static void main(String[] args) {

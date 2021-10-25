@@ -1,15 +1,11 @@
 package UIPackage;
-
-
-
-import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 
 
 public class ContenuFenetre extends UIBuilder {
 
-    private JLabel locationLabel;
+  //  private JLabel locationLabel;
     private JButton feedButton;
     private JButton playButton;
     private JButton cleanButton;
@@ -20,7 +16,7 @@ public class ContenuFenetre extends UIBuilder {
     private JButton doButton;
     private JButton aboutButton;
     //private JTextField champTexte;
-    private JLabel imageLbl;
+    //private JLabel imageLbl;
     //private ImageIcon imagetama;
     private JProgressBar healthBar;
     private JProgressBar energyBar;
