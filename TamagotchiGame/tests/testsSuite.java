@@ -10,8 +10,9 @@ public class testsSuite {
   public static final String ANSI_PURPLE = "\u001B[35m";
   public static final String ANSI_CYAN = "\u001B[36m";
   public static final String ANSI_WHITE = "\u001B[37m";
-  int failCounter=0; 
+  public static int failCounter;
   public static void main(String[] args) {
+    failCounter=0; 
     // FenetreGraphique fenetre = new FenetreGraphique();
     // fenetre.setVisible(true);
     System.out.print("\033[H\033[2J");  
@@ -20,14 +21,14 @@ public class testsSuite {
     mytTest.test();
     if(failCounter==0)
     {
-      System.out
+      System.out.println(ANSI_GREEN+"[✔️]Aucune erreur de test !" + ANSI_RESET);
     }
 
   }
 
   protected void fail(String failed, String message) {
     failCounter++;
-    System.out.println( ANSI_RED + "[FAIL]" + ANSI_RESET  
+    System.out.println( ANSI_RED + "[❎FAIL]" + ANSI_RESET  
       + ANSI_YELLOW + "(" + failed + ")" + ANSI_RESET
       + "-> " + message);
   }
