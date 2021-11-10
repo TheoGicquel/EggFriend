@@ -5,10 +5,10 @@ package UIPackage;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
+import java.awt.event.*;
 
 
-public class ContenuFenetre extends JPanel {
+public class ContenuFenetre extends JPanel implements ActionListener {
 
     private JLabel locationLabel;
     private JButton feedButton;
@@ -215,7 +215,7 @@ public class ContenuFenetre extends JPanel {
         
         //------------------------------------------------
         // Création d'une menu déroulant
-
+        /**
         foodChoice = new JComboBox();
         
         foodChoice.addItemListener(new ItemListener() {
@@ -237,11 +237,12 @@ public class ContenuFenetre extends JPanel {
 
         foodChoice.setVisible(false);
         this.add(foodChoice);
-        
+       **/
+
         //------------------------------------------------
         // Création d'une écoute de boutton
 
-        bouton1.addActionListener(this); 
+        feedButton.addActionListener(this); 
 
     }
     @Override
@@ -249,7 +250,7 @@ public class ContenuFenetre extends JPanel {
         if( ((JButton)e.getSource()).getText().equals("Nourrir") ){
             //if combobox
 
-            hungerBar.setValue(80);      //Fonctionne mais résulats voulu après choix du combobox
+            hungerBar.setValue(tamagotchiGame.gen.getHunger()+20);      //Fonctionne mais résulats voulu après choix du combobox
         }else if( ((JButton)e.getSource()).getText().equals("Jouer") ){
             
         }else if( ((JButton)e.getSource()).getText().equals("Laver") ){
