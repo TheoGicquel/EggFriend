@@ -84,8 +84,8 @@ public class ContenuFenetre extends JPanel {
         JLabel healthLabel = verticalBuilder("vie",barLabelDefaultX, barLabelDefaulty, barLabelIncrement, 0, normalFont);
         JLabel energyLabel = verticalBuilder("Energie",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  1, normalFont);
         JLabel hungerLabel = verticalBuilder("Nourriture",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  2, normalFont);
-        JLabel cleanLinessLabel = verticalBuilder("health points",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  3, normalFont);
-        JLabel hapinessLabel = verticalBuilder("health points",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  4, normalFont);
+        JLabel cleanLinessLabel = verticalBuilder("Propreté",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  3, normalFont);
+        JLabel hapinessLabel = verticalBuilder("Joie",barLabelDefaultX, barLabelDefaulty, barLabelIncrement,  4, normalFont);
         
         this.add(titleLabel);
         this.add(healthLabel);
@@ -171,7 +171,7 @@ public class ContenuFenetre extends JPanel {
         healthBar = new JProgressBar();
         
         healthBar.setBounds(300,190,560,30);
-        healthBar.setForeground(Color.GREEN);
+        healthBar.setForeground(new Color(31, 160, 85));//vert : 
         healthBar.setStringPainted(true);
         healthBar.setValue(89);
         this.add(healthBar);
@@ -179,28 +179,28 @@ public class ContenuFenetre extends JPanel {
         energyBar = new JProgressBar();
         energyBar.setValue(48);
         energyBar.setBounds(300,250,560,30);
-        energyBar.setForeground(Color.CYAN);
+        energyBar.setForeground(new Color(38, 196, 236));//Cyan : 
         energyBar.setStringPainted(true);
         this.add(energyBar);
         
         hungerBar = new JProgressBar();
         hungerBar.setValue(56);
         hungerBar.setBounds(300,310,560,30);
-        hungerBar.setForeground(Color.RED);
+        hungerBar.setForeground(new Color(169, 17, 1));//ROUGE : 
         hungerBar.setStringPainted(true);
         this.add(hungerBar);
         
         cleanlinessBar = new JProgressBar();
         cleanlinessBar.setValue(23);
         cleanlinessBar.setBounds(300,370,560,30);
-        cleanlinessBar.setForeground(Color.BLUE);
+        cleanlinessBar.setForeground(new Color(0, 47, 167));//bleu : 
         cleanlinessBar.setStringPainted(true);
         this.add(cleanlinessBar);
         
         hapinessBar = new JProgressBar();
         hapinessBar.setValue(60);
         hapinessBar.setBounds(300,430,560,30);
-        hapinessBar.setForeground(Color.YELLOW);
+        hapinessBar.setForeground(new Color(239, 210, 66));//jaune : 
         hapinessBar.setStringPainted(true);
         this.add(hapinessBar);
         
