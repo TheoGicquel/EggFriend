@@ -7,5 +7,6 @@ public class Dog extends tamagotchi{
     {
         super(name);
         this.breed="Dog";
+        this.favoriteFood="Bone";
     }
 }

@@ -7,6 +7,7 @@ public class Robot extends tamagotchi {
     {
         super(name);
         this.breed="Robot";
+        this.favoriteFood="screw";
     }
     
 }

@@ -14,7 +14,7 @@ public class tamagotchi
     /** Caracteristiques innés ( initialisés a la naissance) */
     String name;
     protected String breed; 
-    String favoriteFood;
+    protected String favoriteFood;
     //Breed breed; // object ?
 
     // variables d'instance
@@ -34,6 +34,7 @@ public class tamagotchi
         // initialisation des variables d'instance
         this.name = name;
         this.breed="unknown";
+        this.favoriteFood = "unknown";
        // this.breed = breed;
 
         this.health=100;
@@ -88,8 +89,4 @@ public class tamagotchi
     {
         return this.happiness;
     }
-
-
-
-
-    }
+}
