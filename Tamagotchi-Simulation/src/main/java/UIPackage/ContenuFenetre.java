@@ -1,11 +1,16 @@
 package UIPackage;
+
+
+
+import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 
-public class ContenuFenetre extends UIBuilder {
+public class ContenuFenetre extends JPanel implements ActionListener {
 
-  //  private JLabel locationLabel;
+    private JLabel locationLabel;
     private JButton feedButton;
     private JButton playButton;
     private JButton cleanButton;
@@ -16,14 +21,14 @@ public class ContenuFenetre extends UIBuilder {
     private JButton doButton;
     private JButton aboutButton;
     //private JTextField champTexte;
-    //private JLabel imageLbl;
+    private JLabel imageLbl;
     //private ImageIcon imagetama;
     private JProgressBar healthBar;
     private JProgressBar energyBar;
     private JProgressBar hungerBar;
     private JProgressBar cleanlinessBar;
     private JProgressBar hapinessBar;   
-    
+    private JComboBox foodChoice;
     
     public ContenuFenetre(){
        // super();
@@ -31,6 +36,37 @@ public class ContenuFenetre extends UIBuilder {
     } 
 
 
+    JLabel verticalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
+    {
+        int width=500;
+        int height=40;
+        int xPosition=defaultx;
+        int yPosition=defaulty+(increment*rowNumber);
+
+        JLabel newLabel = new JLabel();
+
+        newLabel.setBounds(xPosition, yPosition, width, height);
+        newLabel.setText(content);
+        newLabel.setFont(textFont);
+        return newLabel;
+    }
+
+
+    JLabel horizontalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
+    {
+        int width=500;
+        int height=40;
+        int xPosition=defaultx;
+        int yPosition=defaulty+(increment*rowNumber);
+
+        JLabel newLabel = new JLabel();
+
+        newLabel.setBounds(xPosition, yPosition, width, height);
+        newLabel.setText(content);
+        newLabel.setFont(textFont);
+        return newLabel;
+    }
+    
     public void affichageContenu(){
         
         this.setLayout(null); // On n'utilise aucun gestionnaire de disposition (positionnement absolu)
@@ -98,7 +134,6 @@ public class ContenuFenetre extends UIBuilder {
         this.sleepButton.setBounds(750, 85, 110, 55);
         this.add(sleepButton);
         
-      //  quitButton = new buttonBuilder();
         quitButton = new JButton();
         this.quitButton.setText("Quitter");
         this.quitButton.setBounds(50, 500, 95, 35);
@@ -178,6 +213,60 @@ public class ContenuFenetre extends UIBuilder {
      //   this.add(imageLbl);
         this.validate();
         
+        //------------------------------------------------
+        // Création d'une menu déroulant
+        /**
+        foodChoice = new JComboBox();
         
+        foodChoice.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent arg0) {
+                if (arg0.getStateChange()==ItemEvent.SELECTED){
+                    if (foodChoice.getSelectedItem().toString().equals("Choisissez une nourriture...")){
+                        JOptionPane.showMessageDialog((null), "Vous devez choisir un type de nourriture !");
+                    }
+                }
+            }
+        }
+
+        foodChoice.addItem("Choisissez une nourriture...");
+        foodChoice.addItem("Herbe");
+        foodChoice.addItem("Os");
+        foodChoice.addItem("Milk");
+        foodChoice.addItem("Bolt");
+        foodChoice.addItem("Candyes");
+
+        foodChoice.setVisible(false);
+        this.add(foodChoice);
+       **/
+
+        //------------------------------------------------
+        // Création d'une écoute de boutton
+
+        feedButton.addActionListener(this); 
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){  
+        if( ((JButton)e.getSource()).getText().equals("Nourrir") ){
+            //if combobox
+
+    //        hungerBar.setValue(tamagotchiGame.gen.getHunger()+20);      //Fonctionne mais résulats voulu après choix du combobox
+        }else if( ((JButton)e.getSource()).getText().equals("Jouer") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Laver") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Dormir") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Quitter") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Rafraichir") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Selectionner") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Effectuer") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("A propos") ){
+    
+        }
     }
 }
