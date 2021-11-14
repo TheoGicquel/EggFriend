@@ -4,10 +4,10 @@
  * Décrivez votre classe Tamagotchi ici.
  *
  * @author (Ryan)
- * @version (14/09/21)
+ * @version (13/10/21)
  */
 
-package tamagotchiPackage;
+package TamagotchiPackage;
 
 public class tamagotchi
 {

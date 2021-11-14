@@ -10,3 +10,4 @@ public class debugWindow extends JFrame {
     f.setVisible(true);
   }
 }
+ 

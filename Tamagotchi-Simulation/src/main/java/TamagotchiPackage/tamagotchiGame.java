@@ -1,16 +1,12 @@
-import UIPackage.FenetreGraphique;
-import UIPackage.tamagotchiUI;
-import tamagotchiPackage.*;
-//import tamagotchiPackage.main;
-import tamagotchiPackage.species.*;
-import javax.swing.*;
+package TamagotchiPackage;
 
-import java.awt.*;
+import UIPackage.*;
+
 public class tamagotchiGame {
 
   public static void main(String[] args) {
     FenetreGraphique fenetre = new FenetreGraphique();
-		fenetre.setVisible(true);
+    fenetre.setVisible(true);
     tamagotchi gen = new tamagotchi("GEN");
     tamagotchi mouton = new Sheep("monouton");
     System.out.println("tamagotchi generique : " + gen.getName());
