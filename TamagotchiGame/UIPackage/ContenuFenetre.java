@@ -1,9 +1,11 @@
 package UIPackage;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 
-public class ContenuFenetre extends UIBuilder {
+
+public class ContenuFenetre extends JPanel implements ActionListener {
 
   //  private JLabel locationLabel;
     private JButton feedButton;
@@ -23,7 +25,7 @@ public class ContenuFenetre extends UIBuilder {
     private JProgressBar hungerBar;
     private JProgressBar cleanlinessBar;
     private JProgressBar hapinessBar;   
-    
+    private JComboBox foodChoice;
     
     public ContenuFenetre(){
        // super();
@@ -178,6 +180,60 @@ public class ContenuFenetre extends UIBuilder {
      //   this.add(imageLbl);
         this.validate();
         
+        //------------------------------------------------
+        // Création d'une menu déroulant
+        /**
+        foodChoice = new JComboBox();
         
+        foodChoice.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent arg0) {
+                if (arg0.getStateChange()==ItemEvent.SELECTED){
+                    if (foodChoice.getSelectedItem().toString().equals("Choisissez une nourriture...")){
+                        JOptionPane.showMessageDialog((null), "Vous devez choisir un type de nourriture !");
+                    }
+                }
+            }
+        }
+
+        foodChoice.addItem("Choisissez une nourriture...");
+        foodChoice.addItem("Herbe");
+        foodChoice.addItem("Os");
+        foodChoice.addItem("Milk");
+        foodChoice.addItem("Bolt");
+        foodChoice.addItem("Candyes");
+
+        foodChoice.setVisible(false);
+        this.add(foodChoice);
+       **/
+
+        //------------------------------------------------
+        // Création d'une écoute de boutton
+
+        feedButton.addActionListener(this); 
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){  
+        if( ((JButton)e.getSource()).getText().equals("Nourrir") ){
+            //if combobox
+
+            hungerBar.setValue(tamagotchiGame.gen.getHunger()+20);      //Fonctionne mais résulats voulu après choix du combobox
+        }else if( ((JButton)e.getSource()).getText().equals("Jouer") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Laver") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Dormir") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Quitter") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Rafraichir") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Selectionner") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("Effectuer") ){
+            
+        }else if( ((JButton)e.getSource()).getText().equals("A propos") ){
+    
+        }
     }
 }
