@@ -16,10 +16,10 @@ public class tamagotchiGame {
     System.out.println("tamagotchi mouton : " + mouton.getName());
     System.out.println("espece : " + mouton.getBreed());
     SystemManager sys = new SystemManager();
-    sys.savegame.save();
-    sys.savegame.create();
+   // sys.savegame.save();
+   // sys.savegame.create();
 
-    sys.savegame.create();
+   // sys.savegame.create();
     
   }
 }
