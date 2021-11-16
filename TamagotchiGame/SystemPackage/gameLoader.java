@@ -1,5 +1,6 @@
 package SystemPackage;
 
-public class gameLoader extends System{
+//!TODO Chargeur d'instance du jeu */
+public class gameLoader extends SystemManager{
     
 }

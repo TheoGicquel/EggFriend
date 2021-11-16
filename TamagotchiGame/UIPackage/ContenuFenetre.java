@@ -1,16 +1,13 @@
 package UIPackage;
-
-
-
-import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 
+
 public class ContenuFenetre extends JPanel implements ActionListener {
 
-    private JLabel locationLabel;
+  //  private JLabel locationLabel;
     private JButton feedButton;
     private JButton playButton;
     private JButton cleanButton;
@@ -21,7 +18,7 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     private JButton doButton;
     private JButton aboutButton;
     //private JTextField champTexte;
-    private JLabel imageLbl;
+    //private JLabel imageLbl;
     //private ImageIcon imagetama;
     private JProgressBar healthBar;
     private JProgressBar energyBar;
@@ -36,37 +33,6 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     } 
 
 
-    JLabel verticalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
-    {
-        int width=500;
-        int height=40;
-        int xPosition=defaultx;
-        int yPosition=defaulty+(increment*rowNumber);
-
-        JLabel newLabel = new JLabel();
-
-        newLabel.setBounds(xPosition, yPosition, width, height);
-        newLabel.setText(content);
-        newLabel.setFont(textFont);
-        return newLabel;
-    }
-
-
-    JLabel horizontalBuilder(String content, int defaultx, int defaulty, int increment, int rowNumber, Font textFont)
-    {
-        int width=500;
-        int height=40;
-        int xPosition=defaultx;
-        int yPosition=defaulty+(increment*rowNumber);
-
-        JLabel newLabel = new JLabel();
-
-        newLabel.setBounds(xPosition, yPosition, width, height);
-        newLabel.setText(content);
-        newLabel.setFont(textFont);
-        return newLabel;
-    }
-    
     public void affichageContenu(){
         
         this.setLayout(null); // On n'utilise aucun gestionnaire de disposition (positionnement absolu)
@@ -134,6 +100,7 @@ public class ContenuFenetre extends JPanel implements ActionListener {
         this.sleepButton.setBounds(750, 85, 110, 55);
         this.add(sleepButton);
         
+      //  quitButton = new buttonBuilder();
         quitButton = new JButton();
         this.quitButton.setText("Quitter");
         this.quitButton.setBounds(50, 500, 95, 35);
