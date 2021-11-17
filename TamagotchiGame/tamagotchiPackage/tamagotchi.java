@@ -12,10 +12,13 @@ package tamagotchiPackage;
 public class tamagotchi
 {
     /** Caracteristiques innés ( initialisés a la naissance) */
-    protected String name;
+
+    String name;
+    protected String breed; 
+    protected String favoriteFood;
     protected String favoriteFood;
     protected String breed;
-    //Breed breed; // object ?
+
 
 
     // variables d'instance
@@ -33,6 +36,10 @@ public class tamagotchi
     public tamagotchi(String name)
     {
         this.name = name;
+        this.breed="unknown";
+        this.favoriteFood = "unknown";
+       // this.breed = breed;
+
         this.health=100;
         this.isAlive=true;
         this.energy=100;
@@ -94,6 +101,9 @@ public class tamagotchi
         return this.happiness;
     }
 
+
+
+
     public void setName(String newName)
     {
         this.name = newName;
@@ -154,3 +164,4 @@ public class tamagotchi
 
 
     }
+
