@@ -7,7 +7,13 @@ public class Sheep extends tamagotchi {
     {
         super(name);
         this.breed="sheep";
-        this.favoriteFood="Grass";
+        this.favoriteFood="grass";
+    }
+
+    public Sheep()
+    {
+        this.breed="sheep";
+        this.favoriteFood="grass";
     }
     
 }
