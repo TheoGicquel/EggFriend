@@ -1,0 +1,12 @@
+package com.lado.app.Tamagotchi;
+
+
+
+public class Sheep extends Tamagotchi {
+    public Sheep(String name)
+    {
+        super(name);
+        this.breed="sheep";
+    }
+    
+}
