@@ -1,6 +1,6 @@
 package com.lado.app.Tamagotchi;
 
-import UIPackage.*;
+import com.lado.app.UIPackage.*;
 
 public class TamagotchiGame {
 
