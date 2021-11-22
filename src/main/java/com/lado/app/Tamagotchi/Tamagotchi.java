@@ -52,6 +52,11 @@ public class Tamagotchi {
     return this.name;
   }
 
+  public String getBreed()
+  {
+    return this.breed;
+  }
+
   public int getHealth() {
     return this.health;
   }

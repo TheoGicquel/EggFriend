@@ -10,11 +10,9 @@ import javax.swing.JLabel;
  */
 public class UIBuilder extends JFrame {
 
-  //TODO JButton , Constructeur de Boutons
-  //TODO essai de constructeur par défaut et de méthodes d'assignation automatiques avec enum
   void itemBuilder(TypeElement itemType) {}
 
-  JLabel verticalBuilder(
+  static JLabel verticalBuilder(
     String content,
     int defaultx,
     int defaulty,

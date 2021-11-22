@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class ContenuFenetre extends JPanel implements ActionListener {
 
-  private JLabel locationLabel;
+ // private JLabel locationLabel; // non implémenté - lieu du tama
   private JButton feedButton;
   private JButton playButton;
   private JButton cleanButton;
@@ -18,14 +18,14 @@ public class ContenuFenetre extends JPanel implements ActionListener {
   private JButton doButton;
   private JButton aboutButton;
   //private JTextField champTexte;
-  private JLabel imageLbl;
+ // private JLabel imageLbl; // non implémenté - image du tama
   //private ImageIcon imagetama;
   private JProgressBar healthBar;
   private JProgressBar energyBar;
   private JProgressBar hungerBar;
   private JProgressBar cleanlinessBar;
   private JProgressBar hapinessBar;
-  private JComboBox foodChoice;
+  // private JComboBox foodChoice; // broken
 
   public ContenuFenetre() {
     // super();
