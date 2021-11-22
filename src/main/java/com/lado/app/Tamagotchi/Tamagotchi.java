@@ -108,6 +108,9 @@ public class Tamagotchi {
 
   public void setHealth(int newHealth) {
     this.health = newHealth;
+    if (this.health == 0) {
+      this.setIsAlive(false);
+    }
   }
 
   public void setIsAlive(boolean alive) {

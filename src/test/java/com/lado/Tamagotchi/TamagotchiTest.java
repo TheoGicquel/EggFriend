@@ -33,4 +33,19 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
     assertEquals("tama", testTamagotchi.getName());
   }
+
+  @Test
+  public void testSetName() {
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setName("tamatest");
+    assertEquals("tamatest", testTamagotchi.getName());
+  }
+
+  @Test
+  public void testAliveHealth() {
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setHealth(0);
+    assertEquals(0, testTamagotchi.getHealth());
+    assertEquals(false, testTamagotchi.getIsAlive());
+  }
 }
