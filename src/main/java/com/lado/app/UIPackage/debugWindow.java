@@ -1,4 +1,5 @@
-package UIPackage;
+package com.lado.app.UIPackage;
+
 import javax.swing.JFrame;
 
 public class debugWindow extends JFrame {

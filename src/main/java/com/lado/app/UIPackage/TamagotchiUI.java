@@ -1,14 +1,15 @@
-package UIPackage;
+package com.lado.app.UIPackage;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class tamagotchiUI extends JFrame {
+public class TamagotchiUI extends JFrame {
 
   // Frame >> panel
-  public tamagotchiUI() {
+  public TamagotchiUI() {
     JFrame tamagoFrame = new JFrame("Tamagotchi");
     JFrame.setDefaultLookAndFeelDecorated(false);
     tamagoFrame.setDefaultCloseOperation(3);
