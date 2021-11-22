@@ -27,11 +27,18 @@ public class Tamagotchi {
    * Constructeur d'objets de classe Tamagotchi
    */
   public Tamagotchi(String name) {
-    // initialisation des variables d'instance
+    setDefaultStats();
     this.name = name;
-    this.breed = "unknown";
-    // this.breed = breed;
+  }
 
+  public Tamagotchi() {
+    setDefaultStats();    
+  }
+
+  public void setDefaultStats()
+  {
+    this.name = "Tamago";
+    this.breed = "unknown";
     this.health = 100;
     this.isAlive = true;
     this.energy = 100;
@@ -40,9 +47,6 @@ public class Tamagotchi {
     this.happiness = 100;
   }
 
-  public String getBreed() {
-    return this.breed;
-  }
 
   public String getName() {
     return this.name;
