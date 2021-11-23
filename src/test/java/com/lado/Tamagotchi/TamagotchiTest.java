@@ -58,7 +58,7 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
     testTamagotchi.setHealth(0);
     assertEquals(0, testTamagotchi.health.getVal());
-    assertEquals(false, testTamagotchi.getName());
+    assertEquals(false, testTamagotchi.getAlive());
   }
 
   @Test
