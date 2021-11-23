@@ -2,7 +2,7 @@ package com.lado.app;
 
 import com.lado.app.Tamagotchi.Tamagotchi;
 import com.lado.app.UIPackage.*;
-import com.lado.app.UIPackage.DebugFrame;
+import javax.swing.JFrame;
 
 /**
  * Hello world!
@@ -28,8 +28,8 @@ public class App {
     }
 
     System.out.print("Hello World!");
-
-    FenetreGraphique fenetre = new FenetreGraphique();
-    fenetre.setVisible(true);
+    // FenetreGraphique fenetre = new FenetreGraphique();
+    // fenetre.setVisible(true);
+    JFrame gameFrame = new GameFrame(tama);
   }
 }
