@@ -4,10 +4,10 @@ public class Need {
 
   String name;
   int value;
-  double factor;
+  float factor;
   boolean critical;
 
-  Need(String name, int value, double factor) {
+  Need(String name, int value, Float factor) {
     this.value = value;
     this.name = name;
     this.factor = factor;
@@ -25,16 +25,33 @@ public class Need {
     this.critical = critical;
   }
 
+  /***
+   * @brief change la valeur du besoin selon le temps écoulé (minutes) et
+   *  le facteur d'évolution du besoin
+   * @param time
+   */
+  void calcDepletion(Float time) {
+    int newValue = (int) (this.value - (time * this.factor));
+    this.setVal(newValue);
+  }
+
   int setVal(int value) {
-    this.value = value;
-    return value;
+    if (value < 0) {
+      this.value = 0;
+    } else if (value > 100) {
+      this.value = 100;
+    } else {
+      this.value = value;
+    }
+
+    return this.value;
   }
 
   void setName(String name) {
     this.name = name;
   }
 
-  void setFactor(double factor) {
+  void setFactor(Float factor) {
     this.factor = factor;
   }
 
