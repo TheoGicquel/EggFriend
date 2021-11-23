@@ -82,9 +82,9 @@ public class TamagotchiTest {
 
   @Test
   public void testHurt() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
-    testTamagotchi.setHealth(42);
-    testTamagotchi.hurt(12);
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setHealth(43);
+    testTamagotchi.hurt(13);
     assertEquals(30, testTamagotchi.health.getVal());
 
     testTamagotchi.hurt(900);
