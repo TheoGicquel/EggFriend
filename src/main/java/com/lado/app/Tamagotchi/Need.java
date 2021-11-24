@@ -47,11 +47,16 @@ public class Need {
     return this.value;
   }
 
-  void setName(String name) {
+  public void setName(String name) {
     this.name = name;
   }
 
-  void setFactor(Float factor) {
+  public String getName()
+  {
+    return this.name;
+  }
+
+  public void setFactor(Float factor) {
     this.factor = factor;
   }
 
