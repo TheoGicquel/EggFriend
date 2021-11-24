@@ -12,7 +12,7 @@ public class Tamagotchi {
   /** Caracteristiques innés ( initialisés a la naissance) */
   String name;
   protected String breed;
-  String favoriteFood;
+  String favoriteFoods[];
   //Breed breed; // object ?
 
   // variables d'instance

@@ -5,7 +5,8 @@ public class Sheep extends Tamagotchi {
   public Sheep(String name) {
     super(name);
     this.breed = "sheep";
-    this.favoriteFood = "grass";
+    this.favoriteFoods[0] = "grass";
+    
   }
   //  public Sheep() {
   //    this.setBreed("sheep");
