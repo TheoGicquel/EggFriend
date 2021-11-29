@@ -1,4 +1,7 @@
+[![Maven CI](https://github.com/TheoGicquel/Tamagotchi-Simulation/actions/workflows/maven.yml/badge.svg)](https://github.com/TheoGicquel/Tamagotchi-Simulation/actions/workflows/maven.yml)
+
 # Tamagotchi-Simulation
+
 Projet de groupe de réalisation d'un [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) sous Java
 ## Membres
 * **Ryan Barrault** : développeur
