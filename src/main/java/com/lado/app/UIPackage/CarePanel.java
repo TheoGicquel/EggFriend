@@ -11,11 +11,13 @@ import java.awt.Color;
 import com.lado.app.Tamagotchi.Need;
 
 public class CarePanel extends JPanel{
-    CarePanel(Need inputNeed,String buttonString)
+    CarePanel(Need inputNeed,JButton careButton)
     {
         Border blackline = BorderFactory.createLineBorder(Color.black);
         this.setBorder(blackline);
-        JButton careButton = new JButton(buttonString);
+        //FIXME - Enlever ce systeme de boutons
+
+       
         
         this.add(careButton);
         

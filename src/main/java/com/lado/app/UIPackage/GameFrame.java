@@ -1,8 +1,11 @@
 package com.lado.app.UIPackage;
 
+import com.lado.app.Tamagotchi.Need;
 import com.lado.app.Tamagotchi.Tamagotchi;
-
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.JFrame;
@@ -10,7 +13,7 @@ import javax.swing.border.Border;
  
 
 public class GameFrame extends Window {
-
+  private MyEventListener listener;
   public GameFrame(Tamagotchi tamagotchi) {
     this.setSize(400, 400);
     this.setTitle("TITRE FENETRE");
@@ -18,6 +21,10 @@ public class GameFrame extends Window {
     this.setResizable(false);
     // ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
     // this.setIconImage(appIcon.getImage());
+
+     listener = new MyEventListener();
+
+
     Color backgroundColor = new Color(0xa0a0a0);
     this.getContentPane().setBackground(backgroundColor);
 
@@ -32,6 +39,28 @@ public class GameFrame extends Window {
 
     this.add(nameLbl);
 
+    // TODO : instancier tous les elements de l'UI pour pouvoir y acceder pour l'implémentation des EventListeners
+
+
+    /**
+     *  Implementation des barres de vie et labels
+     */
+
+    
+    NeedBar hungerBar = new NeedBar(tamagotchi.hunger);
+    NeedBar healthBar = new NeedBar(tamagotchi.health);
+    NeedBar happinessBar = new NeedBar(tamagotchi.happiness);
+    NeedBar energyBar = new NeedBar(tamagotchi.energy);
+
+    JButton feedBtn = new JButton("Nourrir");
+    JButton playBtn = new JButton("Jouer");
+    JButton sleepBtn = new JButton("Sieste");
+    JButton cleanBtn = new JButton("Laver");
+    feedBtn.addActionListener(listener);
+    playBtn.addActionListener(listener);
+    sleepBtn.addActionListener(listener);
+    cleanBtn.addActionListener(listener);
+
     Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
     JPanel healthPanel = new NeedPanel(tamagotchi.health,tamagotchi.health.getName(),"icon");
@@ -39,12 +68,11 @@ public class GameFrame extends Window {
     JPanel energyPanel = new NeedPanel(tamagotchi.energy,tamagotchi.energy.getName(),"icon");
     JPanel cleanLinessPanel = new NeedPanel(tamagotchi.cleanliness,tamagotchi.cleanliness.getName(),"icon");
     JPanel happinessPanel = new NeedPanel(tamagotchi.happiness,tamagotchi.happiness.getName(),"icon");
-    
 
-    JPanel hungerCarePanel = new CarePanel(tamagotchi.hunger,"Nourrir");
-    JPanel energyCarePanel = new CarePanel(tamagotchi.energy,"Sieste");
-    JPanel cleanlinessCarePanel = new CarePanel(tamagotchi.cleanliness,"Laver");
-    JPanel happinessCarePanel = new CarePanel(tamagotchi.happiness,"Jouer");
+    JPanel hungerCarePanel = new CarePanel(tamagotchi.hunger,feedBtn);
+    JPanel energyCarePanel = new CarePanel(tamagotchi.energy,sleepBtn);
+    JPanel cleanlinessCarePanel = new CarePanel(tamagotchi.cleanliness,cleanBtn);
+    JPanel happinessCarePanel = new CarePanel(tamagotchi.happiness,playBtn);
   
     
 
@@ -76,14 +104,14 @@ public class GameFrame extends Window {
     this.pack();
     this.setVisible(true);
   }
-  
 
-
-  void init() {}
-
-
-  public void build()
-  {
-
-  }
+  private class MyEventListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+      // TODO : implémenter les actions des boutons
+      System.out.println("Bouton !");
+      System.out.println(ae.getActionCommand());
+      
+    }
+}
 }
