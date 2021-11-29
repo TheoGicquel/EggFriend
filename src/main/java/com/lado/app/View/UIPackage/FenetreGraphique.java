@@ -1,4 +1,4 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
 import java.awt.*;
 import javax.swing.*;

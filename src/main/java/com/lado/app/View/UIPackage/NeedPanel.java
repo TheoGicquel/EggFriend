@@ -1,4 +1,4 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
 import javax.swing.BorderFactory;
 
@@ -6,9 +6,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.border.Border;
-import java.awt.Color;
 
-import com.lado.app.Tamagotchi.Need;
+import com.lado.app.Model.Tamagotchi.Need;
+
+import java.awt.Color;
 
 public class NeedPanel extends JPanel {
 

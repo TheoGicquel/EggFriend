@@ -1,4 +1,4 @@
-package com.lado.app.Tamagotchi;
+package com.lado.app.Model.Tamagotchi;
 
 public class Sheep extends Tamagotchi {
 

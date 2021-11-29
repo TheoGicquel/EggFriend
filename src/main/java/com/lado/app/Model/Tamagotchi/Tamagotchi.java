@@ -5,7 +5,7 @@
  * @version (13/10/21)
  */
 
-package com.lado.app.Tamagotchi;
+package com.lado.app.Model.Tamagotchi;
 
 public class Tamagotchi {
 

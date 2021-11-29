@@ -1,8 +1,9 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
 import javax.swing.JProgressBar;
 
-import com.lado.app.Tamagotchi.Need;
+import com.lado.app.Model.Tamagotchi.Need;
+
 import java.awt.Color;
 
 public class NeedBar extends JProgressBar{

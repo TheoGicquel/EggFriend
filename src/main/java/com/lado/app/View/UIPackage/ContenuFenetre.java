@@ -1,4 +1,4 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class ContenuFenetre extends JPanel implements ActionListener {
 
- // private JLabel locationLabel; // non implémenté - lieu du tama
+  // private JLabel locationLabel; // non implémenté - lieu du tama
   private JButton feedButton;
   private JButton playButton;
   private JButton cleanButton;
@@ -17,9 +17,9 @@ public class ContenuFenetre extends JPanel implements ActionListener {
   private JButton selectButton;
   private JButton doButton;
   private JButton aboutButton;
-  //private JTextField champTexte;
- // private JLabel imageLbl; // non implémenté - image du tama
-  //private ImageIcon imagetama;
+  // private JTextField champTexte;
+  // private JLabel imageLbl; // non implémenté - image du tama
+  // private ImageIcon imagetama;
   private JProgressBar healthBar;
   private JProgressBar energyBar;
   private JProgressBar hungerBar;
@@ -33,13 +33,12 @@ public class ContenuFenetre extends JPanel implements ActionListener {
   }
 
   JLabel verticalBuilder(
-    String content,
-    int defaultx,
-    int defaulty,
-    int increment,
-    int rowNumber,
-    Font textFont
-  ) {
+      String content,
+      int defaultx,
+      int defaulty,
+      int increment,
+      int rowNumber,
+      Font textFont) {
     int width = 500;
     int height = 40;
     int xPosition = defaultx;
@@ -54,13 +53,12 @@ public class ContenuFenetre extends JPanel implements ActionListener {
   }
 
   JLabel horizontalBuilder(
-    String content,
-    int defaultx,
-    int defaulty,
-    int increment,
-    int rowNumber,
-    Font textFont
-  ) {
+      String content,
+      int defaultx,
+      int defaulty,
+      int increment,
+      int rowNumber,
+      Font textFont) {
     int width = 500;
     int height = 40;
     int xPosition = defaultx;
@@ -80,7 +78,7 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     // Définitions des polices d'écriture
     Font normalFont = new Font("Arial", Font.BOLD, 12);
     Font largeFont = new Font("Arial", Font.BOLD, 16);
-    Font hugeFont = new Font("Arial", Font.BOLD, 24); //Style et taille du contenu de l'étiquette.
+    Font hugeFont = new Font("Arial", Font.BOLD, 24); // Style et taille du contenu de l'étiquette.
 
     int barLabelDefaulty = 165;
     int barLabelDefaultX = 300;
@@ -88,45 +86,40 @@ public class ContenuFenetre extends JPanel implements ActionListener {
 
     JLabel titleLabel = verticalBuilder("Tamagotchi", 450, 10, 0, 0, hugeFont);
     JLabel healthLabel = verticalBuilder(
-      "vie",
-      barLabelDefaultX,
-      barLabelDefaulty,
-      barLabelIncrement,
-      0,
-      normalFont
-    );
+        "vie",
+        barLabelDefaultX,
+        barLabelDefaulty,
+        barLabelIncrement,
+        0,
+        normalFont);
     JLabel energyLabel = verticalBuilder(
-      "Energie",
-      barLabelDefaultX,
-      barLabelDefaulty,
-      barLabelIncrement,
-      1,
-      normalFont
-    );
+        "Energie",
+        barLabelDefaultX,
+        barLabelDefaulty,
+        barLabelIncrement,
+        1,
+        normalFont);
     JLabel hungerLabel = verticalBuilder(
-      "Nourriture",
-      barLabelDefaultX,
-      barLabelDefaulty,
-      barLabelIncrement,
-      2,
-      normalFont
-    );
+        "Nourriture",
+        barLabelDefaultX,
+        barLabelDefaulty,
+        barLabelIncrement,
+        2,
+        normalFont);
     JLabel cleanLinessLabel = verticalBuilder(
-      "health points",
-      barLabelDefaultX,
-      barLabelDefaulty,
-      barLabelIncrement,
-      3,
-      normalFont
-    );
+        "health points",
+        barLabelDefaultX,
+        barLabelDefaulty,
+        barLabelIncrement,
+        3,
+        normalFont);
     JLabel hapinessLabel = verticalBuilder(
-      "health points",
-      barLabelDefaultX,
-      barLabelDefaulty,
-      barLabelIncrement,
-      4,
-      normalFont
-    );
+        "health points",
+        barLabelDefaultX,
+        barLabelDefaulty,
+        barLabelIncrement,
+        4,
+        normalFont);
 
     this.add(titleLabel);
     this.add(healthLabel);
@@ -142,45 +135,41 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     int infoIncrement = 30;
 
     JLabel nameLabel = verticalBuilder(
-      "nom",
-      infoDefaultx,
-      infoDefaultY,
-      infoIncrement,
-      0,
-      largeFont
-    );
+        "nom",
+        infoDefaultx,
+        infoDefaultY,
+        infoIncrement,
+        0,
+        largeFont);
     JLabel breedLabel = verticalBuilder(
-      "Espece",
-      infoDefaultx,
-      infoDefaultY,
-      infoIncrement,
-      2,
-      largeFont
-    );
+        "Espece",
+        infoDefaultx,
+        infoDefaultY,
+        infoIncrement,
+        2,
+        largeFont);
     JLabel moodLabel = verticalBuilder(
-      "Humeur",
-      infoDefaultx,
-      infoDefaultY,
-      infoIncrement,
-      3,
-      largeFont
-    );
+        "Humeur",
+        infoDefaultx,
+        infoDefaultY,
+        infoIncrement,
+        3,
+        largeFont);
     JLabel locationLabel = verticalBuilder(
-      "Lieu",
-      infoDefaultx,
-      infoDefaultY,
-      infoIncrement,
-      4,
-      largeFont
-    );
+        "Lieu",
+        infoDefaultx,
+        infoDefaultY,
+        infoIncrement,
+        4,
+        largeFont);
 
     this.add(nameLabel);
     this.add(breedLabel);
     this.add(moodLabel);
     this.add(locationLabel);
 
-    //------------------------------------------------
-    //Création bouttons
+    // ------------------------------------------------
+    // Création bouttons
     feedButton = new JButton();
     this.feedButton.setText("Nourrir");
     this.feedButton.setBounds(300, 85, 110, 55);
@@ -227,14 +216,14 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     this.aboutButton.setBounds(740, 500, 120, 40);
     this.add(aboutButton);
 
-    //------------------------------------------------
-    //Création d'un champ de texte
-    //champTexte = new JTextField();
-    //this.champTexte.setBounds(210, 200, 100, 40);
-    //this.add(champTexte);
+    // ------------------------------------------------
+    // Création d'un champ de texte
+    // champTexte = new JTextField();
+    // this.champTexte.setBounds(210, 200, 100, 40);
+    // this.add(champTexte);
 
-    //------------------------------------------------
-    //Création d'une barre de progression
+    // ------------------------------------------------
+    // Création d'une barre de progression
 
     healthBar = new JProgressBar();
 
@@ -272,41 +261,44 @@ public class ContenuFenetre extends JPanel implements ActionListener {
     hapinessBar.setStringPainted(true);
     this.add(hapinessBar);
 
-    //------------------------------------------------
-    //Création d'une image
+    // ------------------------------------------------
+    // Création d'une image
 
-    //  ImageIcon imagetama = new ImageIcon(getClass().getResource("Image/imageTama.png"));
+    // ImageIcon imagetama = new
+    // ImageIcon(getClass().getResource("Image/imageTama.png"));
     // imageLbl = new JLabel(imagetama,JLabel.CENTER);
-    //   this.add(imageLbl);
+    // this.add(imageLbl);
     this.validate();
 
-    //------------------------------------------------
+    // ------------------------------------------------
     // Création d'une menu déroulant
     /**
-        foodChoice = new JComboBox();
-        
-        foodChoice.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent arg0) {
-                if (arg0.getStateChange()==ItemEvent.SELECTED){
-                    if (foodChoice.getSelectedItem().toString().equals("Choisissez une nourriture...")){
-                        JOptionPane.showMessageDialog((null), "Vous devez choisir un type de nourriture !");
-                    }
-                }
-            }
-        }
+     * foodChoice = new JComboBox();
+     * 
+     * foodChoice.addItemListener(new ItemListener() {
+     * public void itemStateChanged(ItemEvent arg0) {
+     * if (arg0.getStateChange()==ItemEvent.SELECTED){
+     * if (foodChoice.getSelectedItem().toString().equals("Choisissez une
+     * nourriture...")){
+     * JOptionPane.showMessageDialog((null), "Vous devez choisir un type de
+     * nourriture !");
+     * }
+     * }
+     * }
+     * }
+     * 
+     * foodChoice.addItem("Choisissez une nourriture...");
+     * foodChoice.addItem("Herbe");
+     * foodChoice.addItem("Os");
+     * foodChoice.addItem("Milk");
+     * foodChoice.addItem("Bolt");
+     * foodChoice.addItem("Candyes");
+     * 
+     * foodChoice.setVisible(false);
+     * this.add(foodChoice);
+     **/
 
-        foodChoice.addItem("Choisissez une nourriture...");
-        foodChoice.addItem("Herbe");
-        foodChoice.addItem("Os");
-        foodChoice.addItem("Milk");
-        foodChoice.addItem("Bolt");
-        foodChoice.addItem("Candyes");
-
-        foodChoice.setVisible(false);
-        this.add(foodChoice);
-       **/
-
-    //------------------------------------------------
+    // ------------------------------------------------
     // Création d'une écoute de boutton
 
     feedButton.addActionListener(this);
@@ -315,21 +307,18 @@ public class ContenuFenetre extends JPanel implements ActionListener {
   @Override
   public void actionPerformed(ActionEvent e) {
     if (((JButton) e.getSource()).getText().equals("Nourrir")) {
-      //if combobox
+      // if combobox
 
-      //        hungerBar.setValue(tamagotchiGame.gen.getHunger()+20);      //Fonctionne mais résulats voulu après choix du combobox
-    } else if (((JButton) e.getSource()).getText().equals("Jouer")) {} else if (
-      ((JButton) e.getSource()).getText().equals("Laver")
-    ) {} else if (
-      ((JButton) e.getSource()).getText().equals("Dormir")
-    ) {} else if (
-      ((JButton) e.getSource()).getText().equals("Quitter")
-    ) {} else if (
-      ((JButton) e.getSource()).getText().equals("Rafraichir")
-    ) {} else if (
-      ((JButton) e.getSource()).getText().equals("Selectionner")
-    ) {} else if (
-      ((JButton) e.getSource()).getText().equals("Effectuer")
-    ) {} else if (((JButton) e.getSource()).getText().equals("A propos")) {}
+      // hungerBar.setValue(tamagotchiGame.gen.getHunger()+20); //Fonctionne mais
+      // résulats voulu après choix du combobox
+    } else if (((JButton) e.getSource()).getText().equals("Jouer")) {
+    } else if (((JButton) e.getSource()).getText().equals("Laver")) {
+    } else if (((JButton) e.getSource()).getText().equals("Dormir")) {
+    } else if (((JButton) e.getSource()).getText().equals("Quitter")) {
+    } else if (((JButton) e.getSource()).getText().equals("Rafraichir")) {
+    } else if (((JButton) e.getSource()).getText().equals("Selectionner")) {
+    } else if (((JButton) e.getSource()).getText().equals("Effectuer")) {
+    } else if (((JButton) e.getSource()).getText().equals("A propos")) {
+    }
   }
 }

@@ -1,4 +1,4 @@
-package com.lado.app.SystemPackage;
+package com.lado.app.Model.SystemPackage;
 
 public class System {
 

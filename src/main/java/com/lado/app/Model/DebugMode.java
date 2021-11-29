@@ -1,4 +1,4 @@
-package com.lado.app;
+package com.lado.app.Model;
 
 public class DebugMode {
     
@@ -14,7 +14,7 @@ public class DebugMode {
         applyParams();
     }
 
-    DebugMode()
+    public DebugMode()
     {
         enabled=false;
         applyParams();

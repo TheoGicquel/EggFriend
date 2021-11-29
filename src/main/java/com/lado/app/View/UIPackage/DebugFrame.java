@@ -1,8 +1,9 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 import javax.swing.*;
 
 import javax.swing.JFrame;
-import com.lado.app.Tamagotchi.*;
+
+import com.lado.app.Model.Tamagotchi.*;
 
 public class DebugFrame extends JFrame{
     JFrame DebugFrame;

@@ -1,4 +1,4 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
 import javax.swing.JFrame;
 
