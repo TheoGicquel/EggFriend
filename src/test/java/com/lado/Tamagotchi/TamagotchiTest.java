@@ -2,7 +2,8 @@ package com.lado.Tamagotchi;
 
 import static org.junit.Assert.*;
 
-import com.lado.app.Tamagotchi.Tamagotchi;
+import com.lado.app.Model.Tamagotchi.Tamagotchi;
+
 /** 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

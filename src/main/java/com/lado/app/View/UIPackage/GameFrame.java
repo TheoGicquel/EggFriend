@@ -1,19 +1,20 @@
-package com.lado.app.UIPackage;
+package com.lado.app.View.UIPackage;
 
-import com.lado.app.Tamagotchi.Need;
-import com.lado.app.Tamagotchi.Tamagotchi;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.border.Border;
+import com.lado.app.Controller.GameListener;
+import com.lado.app.Controller.GameListener;
+import com.lado.app.Model.Tamagotchi.Need;
+import com.lado.app.Model.Tamagotchi.Tamagotchi;
  
 
 public class GameFrame extends Window {
-  private MyEventListener listener;
+  private GameListener listener;
   public GameFrame(Tamagotchi tamagotchi) {
     this.setSize(400, 400);
     this.setTitle("TITRE FENETRE");
@@ -22,7 +23,7 @@ public class GameFrame extends Window {
     // ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
     // this.setIconImage(appIcon.getImage());
 
-     listener = new MyEventListener();
+     listener = new GameListener();
 
 
     Color backgroundColor = new Color(0xa0a0a0);
@@ -105,13 +106,5 @@ public class GameFrame extends Window {
     this.setVisible(true);
   }
 
-  private class MyEventListener implements ActionListener {
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-      // TODO : implémenter les actions des boutons
-      System.out.println("Bouton !");
-      System.out.println(ae.getActionCommand());
-      
-    }
-}
+
 }
