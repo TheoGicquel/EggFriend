@@ -1,12 +1,13 @@
 package com.lado.app.UIPackage;
 
 import com.lado.app.Tamagotchi.Tamagotchi;
-import com.lado.app.UIPackage.UIBuilder.*;
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.border.Border;
+ 
 
 public class GameFrame extends Window {
 
@@ -45,7 +46,7 @@ public class GameFrame extends Window {
     JPanel cleanlinessCarePanel = new CarePanel(tamagotchi.cleanliness,"Laver");
     JPanel happinessCarePanel = new CarePanel(tamagotchi.happiness,"Jouer");
   
-
+    
 
     JPanel ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.PAGE_AXIS));
@@ -58,9 +59,13 @@ public class GameFrame extends Window {
     needsUI.add(healthPanel);
     needsUI.add(hungerPanel);
     needsUI.add(energyPanel);
+    needsUI.add(cleanLinessPanel);
+    needsUI.add(happinessPanel);
 
     careUI.add(hungerCarePanel);
     careUI.add(energyCarePanel);
+    careUI.add(cleanlinessCarePanel);
+    careUI.add(happinessCarePanel);
 
     needsUI.setBorder(blueBorder);
     careUI.setBorder(blueBorder);
@@ -71,6 +76,8 @@ public class GameFrame extends Window {
     this.pack();
     this.setVisible(true);
   }
+  
+
 
   void init() {}
 

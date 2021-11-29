@@ -31,5 +31,6 @@ public class App {
     // FenetreGraphique fenetre = new FenetreGraphique();
     // fenetre.setVisible(true);
     JFrame gameFrame = new GameFrame(tama);
+    gameFrame.setVisible(true);
   }
 }
