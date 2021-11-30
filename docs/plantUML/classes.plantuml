@@ -1,28 +1,79 @@
-@startuml
+@startuml Classes
 Class Tamagotchi
 
 package com.lado.App
 {
+    Class App
+    App--GameModel
+    App--GameView
+    App--Controller
+    View--GameModel
+    Controller--GameModel
+    Controller--View
 
-
-    package com.lado.app.Model
+    package Model
     {
 
         class DebugMode
         class GameModel
+        {
+            + Tamagotchi : tamagotchi
+        }
+        GameModel-Tamagotchi
 
-        package com.lado.app.Model.Tamagotchi{
-            class Cat
-            class Dog
-            class Food
+        package Tamagotchi{
+            class Cat extends Tamagotchi
+            class Dog extends Tamagotchi
+            class Food{
+                
+            }
+            Food->Tamagotchi
+            Need->Tamagotchi
+
             class Need
-            class Robot
-            class Sheep
+            {
+
+
+            }
+            class Robot extends Tamagotchi
+            class Sheep extends Tamagotchi
             class Tamagotchi
+            {
+                String name
+                # breed : String
+                + favoriteFoods : String[]
+                + health : Need
+                + alive : boolean
+                + energy : Need
+                + hunger : Need
+                + cleanliness : Need
+                + happiness : Need
+                + CRITICAL_THRESHOLD : integer
+                # protected needs : Need[]
+                + void setDefaultStats()
+                + Tamagotchi(String name)
+                + Tamagotchi() 
+                + Boolean scanCritical() 
+                + void depleteNeeds(float timeElapsed)
+                ----
+                + String getName()
+                + void setName(String newName)
+                ---
+                + String getBreed()
+                + void setBreed(String newBreed)
+                ---
+                + void checkHealth()
+                + void kill()
+                + void hurt(int damage)
+                + void heal(int healValue)
+                + void setHealth(int newHealth)
+                + boolean getAlive()
+                + void setAlive(boolean alive)
+            }
         }
 
 
-        package com.lado.app.Model.SystemPackage
+        package SystemPackage
         {
             class gameLoader
             class gameSaver
@@ -30,11 +81,11 @@ package com.lado.App
         }
     }
 
-    package com.lado.app.View{
+    package View{
 
         class GameView
 
-        package com.lado.app.View.UIPackage {
+        package UIPackage {
             class CarePanel
             class ContenuFenetre
             class DebugFrame
@@ -49,7 +100,7 @@ package com.lado.App
         }
     }
 
-    package com.lado.app.Controller {
+    package Controller {
 
         class GameController
         class classGameListener
