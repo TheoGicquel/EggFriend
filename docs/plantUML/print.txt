@@ -1,0 +1,89 @@
+$ ls -lR
+.
+
+package 
+
+package 
+
+com.lado
+
+package com.lado
+
+ app
+
+package com.lado.app
+
+package com.lado.App
+{
+
+}
+
+package com.lado.App.Controller{
+
+}
+
+package com.lado.App.Model{
+    
+}
+
+
+package com.lado.App.View{
+    
+}
+
+
+package com.lado.app.Controller {
+
+ class GameController
+ class classGameListener
+
+package com.lado.app.Model
+{
+
+    class DebugMode
+        class GameModel
+        class SystemPackage
+        class Tamagotchi
+}
+
+
+package com.lado.app.Model.SystemPackage
+{
+    class gameLoader
+        class gameSaver
+        class System
+}
+
+
+package com.lado.app.Model.Tamagotchi{
+    class Cat
+        class Dog
+        class Food
+        class Need
+        class Robot
+        class Sheep
+        class Tamagotchi
+}
+
+
+package com.lado.app.View{
+
+    class GameView
+        class UIPackage
+}
+
+
+package com.lado.app.View.UIPackage {
+
+ class CarePanel
+ class ContenuFenetre
+ class DebugFrame
+ class debugWindow
+ class FenetreGraphique
+ class GameFrame
+ class NeedBar
+ class NeedPanel
+ class TamagotchiUI
+ class UIBuilder
+ class Window
+ }
