@@ -1,8 +1,5 @@
 package com.lado.app.View;
-
 import javax.swing.JFrame;
-
-import com.lado.app.Model.DebugMode;
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 import com.lado.app.View.UIPackage.GameFrame;

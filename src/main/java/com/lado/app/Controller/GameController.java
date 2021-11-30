@@ -13,6 +13,12 @@ public class GameController {
         this.gameView = view;
     }
 
+    public void start() {
+        
+    }
+
+    
+
 
     
 }

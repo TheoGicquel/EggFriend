@@ -1,18 +1,12 @@
 package com.lado.app.View.UIPackage;
-
 import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.border.Border;
 import com.lado.app.Controller.GameListener;
-import com.lado.app.Controller.GameListener;
-import com.lado.app.Model.Tamagotchi.Need;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
  
-
 public class GameFrame extends Window {
   private GameListener listener;
   public GameFrame(Tamagotchi tamagotchi) {
@@ -20,10 +14,10 @@ public class GameFrame extends Window {
     this.setTitle("TITRE FENETRE");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setResizable(false);
-    // ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
-    // this.setIconImage(appIcon.getImage());
+   ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
+     this.setIconImage(appIcon.getImage());
 
-     listener = new GameListener();
+     listener = new GameListener(tamagotchi);
 
 
     Color backgroundColor = new Color(0xa0a0a0);
@@ -40,14 +34,7 @@ public class GameFrame extends Window {
 
     this.add(nameLbl);
 
-    // TODO : instancier tous les elements de l'UI pour pouvoir y acceder pour l'implémentation des EventListeners
 
-
-    /**
-     *  Implementation des barres de vie et labels
-     */
-
-    
     NeedBar hungerBar = new NeedBar(tamagotchi.hunger);
     NeedBar healthBar = new NeedBar(tamagotchi.health);
     NeedBar happinessBar = new NeedBar(tamagotchi.happiness);
@@ -57,10 +44,14 @@ public class GameFrame extends Window {
     JButton playBtn = new JButton("Jouer");
     JButton sleepBtn = new JButton("Sieste");
     JButton cleanBtn = new JButton("Laver");
-    feedBtn.addActionListener(listener);
-    playBtn.addActionListener(listener);
-    sleepBtn.addActionListener(listener);
-    cleanBtn.addActionListener(listener);
+
+    NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
+    JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
+
+    for (JButton jButton : careButtons) {
+      jButton.addActionListener(listener);
+    }
+  
 
     Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
@@ -75,7 +66,8 @@ public class GameFrame extends Window {
     JPanel cleanlinessCarePanel = new CarePanel(tamagotchi.cleanliness,cleanBtn);
     JPanel happinessCarePanel = new CarePanel(tamagotchi.happiness,playBtn);
   
-    
+    JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
+    JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
     JPanel ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.PAGE_AXIS));
@@ -85,16 +77,15 @@ public class GameFrame extends Window {
 
     JPanel careUI = new JPanel();
 
-    needsUI.add(healthPanel);
-    needsUI.add(hungerPanel);
-    needsUI.add(energyPanel);
-    needsUI.add(cleanLinessPanel);
-    needsUI.add(happinessPanel);
+    for (JPanel needPanel : needPanels) {
+      needsUI.add(needPanel);
+    }
 
-    careUI.add(hungerCarePanel);
-    careUI.add(energyCarePanel);
-    careUI.add(cleanlinessCarePanel);
-    careUI.add(happinessCarePanel);
+    for (JPanel carePanel : carePanels) {
+      careUI.add(carePanel);
+    }
+
+
 
     needsUI.setBorder(blueBorder);
     careUI.setBorder(blueBorder);

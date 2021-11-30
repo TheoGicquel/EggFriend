@@ -16,9 +16,7 @@ public class CarePanel extends JPanel{
     {
         Border blackline = BorderFactory.createLineBorder(Color.black);
         this.setBorder(blackline);
-        //FIXME - Enlever ce systeme de boutons
 
-       
         
         this.add(careButton);
         

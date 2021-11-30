@@ -2,11 +2,10 @@ package com.lado.app;
 
 import com.lado.app.Controller.GameController;
 import com.lado.app.Model.GameModel;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.GameView;
-import com.lado.app.View.UIPackage.*;
 
-import javax.swing.JFrame;
+import com.lado.app.View.GameView;
+
+
 
 /**
  * Hello world!
@@ -23,7 +22,7 @@ public class App {
     GameModel model = new GameModel();
     GameView view = new  GameView(model);
     GameController controller = new GameController(model,view);
-
+    controller.start();
 
     /**
      * Lancer une fenetre permettant de consulter les infos
@@ -36,7 +35,6 @@ public class App {
     }
     */
 
-    System.out.print("Hello World!");
- 
+
   }
 }
