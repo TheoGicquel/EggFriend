@@ -1,4 +1,5 @@
-package UIPackage;
+package com.lado.app.View.UIPackage;
+
 import javax.swing.JFrame;
 
 public class debugWindow extends JFrame {
@@ -10,3 +11,4 @@ public class debugWindow extends JFrame {
     f.setVisible(true);
   }
 }
+ 
