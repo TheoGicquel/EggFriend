@@ -4,17 +4,27 @@ import java.awt.event.ActionListener;
 
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.View.GameView;
 
 
 public class GameListener implements ActionListener {
 
 
 
-  private GameModel gModel;
 
-  public GameListener(Tamagotchi tamagotchi) {
+
+  public GameListener(GameModel gameModel, GameView gameView) {
+
+  }
+
+  public GameListener(GameModel gameModel) {
+
   
   }
+
+  public GameListener(Tamagotchi tamagotchi) {}
+
+
 
     @Override
     public void actionPerformed(ActionEvent ae) {
