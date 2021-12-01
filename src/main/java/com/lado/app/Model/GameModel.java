@@ -1,6 +1,6 @@
 package com.lado.app.Model;
+import com.lado.app.Model.GameManager.GameManager;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.Model.saveData.GameManager;
 
 
 public class GameModel {
@@ -15,5 +15,8 @@ public class GameModel {
         tamagotchi = new Tamagotchi();
 
     }
+
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.lado.app.Model.saveData;
+package com.lado.app.Model.GameManager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

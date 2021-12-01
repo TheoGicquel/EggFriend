@@ -40,5 +40,11 @@ public class GameListener implements ActionListener {
         //controller.tama.update(Tamagotchi.Action.EAT);
       }
 
+      if(inputText.equals("Maj"))
+      {
+        GameController.updateTama();
+        
+      }
+
     }
 }
