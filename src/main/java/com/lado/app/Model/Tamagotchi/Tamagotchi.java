@@ -7,7 +7,9 @@
 
 package com.lado.app.Model.Tamagotchi;
 
-public class Tamagotchi {
+import java.io.Serializable;
+
+public class Tamagotchi implements Serializable{
 
   /** Caracteristiques innés ( initialisés a la naissance) */
   String name;
@@ -22,6 +24,7 @@ public class Tamagotchi {
   public Need hunger;
   public Need cleanliness;
   public Need happiness;
+  public String mood;
   int CRITICAL_THRESHOLD = 5;
   protected Need[] needs = { energy, hunger, cleanliness, happiness };
 
@@ -35,6 +38,7 @@ public class Tamagotchi {
     this.cleanliness = new Need("Proprete", 100, 1.0f);
     this.happiness = new Need("Bonnheur", 100, 1.0f);
     this.health.setCritical(true);
+    this.mood = "normal";
   }
 
   public Tamagotchi(String name) {
@@ -140,4 +144,22 @@ public class Tamagotchi {
   public void setAlive(boolean alive) {
     this.alive = alive;
   }
+
+  public void evalMood() {
+    for (Need scannedNeed : needs) {
+      if (scannedNeed.getVal() <= 50) {
+        this.mood = scannedNeed.getName();
+      }
+    }
+    
+  }
+
+public String getMood() {
+    return this.mood;
+}
+
+public void setMood(String mood) {
+    this.mood = mood;
+}
+
 }

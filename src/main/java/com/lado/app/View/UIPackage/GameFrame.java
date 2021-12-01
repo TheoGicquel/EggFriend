@@ -9,13 +9,10 @@ import com.lado.app.Model.Tamagotchi.Tamagotchi;
  
 public class GameFrame extends Window {
   private GameListener listener;
+  
   public GameFrame(Tamagotchi tamagotchi) {
-    this.setSize(400, 400);
-    this.setTitle("TITRE FENETRE");
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setResizable(false);
-   ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
-     this.setIconImage(appIcon.getImage());
+
+
 
      listener = new GameListener(tamagotchi);
 
@@ -53,6 +50,7 @@ public class GameFrame extends Window {
     }
   
 
+
     Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
     JPanel healthPanel = new NeedPanel(tamagotchi.health,tamagotchi.health.getName(),"icon");
@@ -65,12 +63,17 @@ public class GameFrame extends Window {
     JPanel energyCarePanel = new CarePanel(tamagotchi.energy,sleepBtn);
     JPanel cleanlinessCarePanel = new CarePanel(tamagotchi.cleanliness,cleanBtn);
     JPanel happinessCarePanel = new CarePanel(tamagotchi.happiness,playBtn);
+
+    JPanel infoPanel = new InfoPanel(tamagotchi);
   
     JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
     JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
     JPanel ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.PAGE_AXIS));
+
+  
+
 
     JPanel needsUI = new JPanel();
     needsUI.setLayout(new BoxLayout(needsUI,BoxLayout.PAGE_AXIS));
@@ -85,10 +88,11 @@ public class GameFrame extends Window {
       careUI.add(carePanel);
     }
 
-
-
+    infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
+    infoPanel.setBorder(blueBorder);
     needsUI.setBorder(blueBorder);
     careUI.setBorder(blueBorder);
+    ui.add(infoPanel);
     ui.add(needsUI);
     ui.add(careUI);
 

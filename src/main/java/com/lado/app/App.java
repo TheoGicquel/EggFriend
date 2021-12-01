@@ -12,28 +12,21 @@ import com.lado.app.View.GameView;
  */
 public class App {
 
+  private GameModel model;
+  private GameView view;
+  private GameController controller;
 
-  public App() {}
+
+  public App() {
+    model = new GameModel();
+    view = new  GameView(model);
+    controller = new GameController(model,view);
+  }
 
   public static void main(String[] args) {
-    
+    App app = new App();
+    app.controller.start();
 
-
-    GameModel model = new GameModel();
-    GameView view = new  GameView(model);
-    GameController controller = new GameController(model,view);
-    controller.start();
-
-    /**
-     * Lancer une fenetre permettant de consulter les infos
-     * sur le jeu et le tamagotchi
-     */
-    /** 
-    if (debug.enabled) {
-      DebugFrame debugWindow = new DebugFrame();
-      debugWindow.loadTama(tama);
-    }
-    */
 
 
   }

@@ -1,67 +1,280 @@
-@startuml
-Class Tamagotchi
+@startuml Classes
+
 
 package com.lado.App
 {
-
-
-    package com.lado.app.Model
+    Class App
     {
-
-        class DebugMode
-        class GameModel
-
-        package com.lado.app.Model.Tamagotchi{
-            class Cat
-            class Dog
-            class Food
-            class Need
-            class Robot
-            class Sheep
-            class Tamagotchi
-        }
-
-
-        package com.lado.app.Model.SystemPackage
-        {
-            class gameLoader
-            class gameSaver
-            class System
-        }
+        -model : GameModel
+        -view : GameView
+        -controller : GameController
+        --
+        +App()
+        +main(args : String[]) : void
     }
 
-    package com.lado.app.View{
+    
+
+
+    package "Model" #f2a5a2
+    {
+        App x--> GameModel
+        
+        class GameModel
+        {
+            + Tamagotchi : tamagotchi
+            + gameManager : gameManager
+            --
+            + GameModel()
+        }
+
+       
+        
+
+
+        package "Tamagotchi" #edc4c2{
+           
+            class Cat extends Tamagotchi
+            {
+                +Cat(name : String)
+                
+            }
+
+            class Dog extends Tamagotchi
+            {
+                +Dog(name : String)
+            }
+
+            class Robot extends Tamagotchi
+            {
+                +Robot(name : String)
+            }
+
+            class Sheep extends Tamagotchi
+            {
+                +Sheep(name : String)
+            }
+
+
+            
+            class Food{
+                -id :   int
+                -name : String  
+                --
+                +Food(id : int, name : String)
+            }
+            Food x-left-> Tamagotchi
+            Tamagotchi x--> Need 
+
+            class Need
+            {
+                ~ name : String
+                ~ value : int
+                ~ factor : float
+                ~ critical : boolean
+                --
+                ~ Need(name : String, value : int, factor : float, critical : boolean)
+                ~ calcDepletion(time : float) : void
+                ~ setVal(value : int) : void
+                + setFactor(factor : float) : void
+                + getVal() : int
+
+
+            }
+         
+            class Tamagotchi
+            {
+                ~ name : String
+                # breed : String
+                ~ favoriteFoods : String[]
+                - health : Need
+                - alive : boolean
+                - mood : String
+                - energy : Need
+                - hunger : Need
+                - cleanliness : Need
+                - happiness : Need
+                ~ CRITICAL_THRESHOLD : integer
+                # needs : Need[] = { energy, hunger, cleanliness, happiness }
+                ---
+                + Tamagotchi(String name) : Tamagotchi
+                + Tamagotchi() : Tamagotchi
+                + scanCritical() : Boolean 
+                + depleteNeeds() : void 
+                + setDefaultStats() : void 
+                ----
+                + getName() : String
+                + setName(String newName) : void
+                ---
+                + getBreed() : String
+                + setBreed(newBreed : int)void
+                ---
+                + evalMood() : void
+                + getMood() : String
+                + setMood(newMood : String) : void
+                ---
+                + checkHealth() : void
+                + kill() : void
+                + hurt(int damage) : void
+                + heal(int healValue) : void
+                + setHealth(int newHealth) : void
+                + boolean getAlive()
+                + void setAlive(boolean alive)
+                
+            }
+            GameModel x--> Tamagotchi
+        }
+
+        package "GameManager" #edc4c2
+        {
+            class GameManager
+            {
+                # saveLocation : String = "../saveData/"
+                + saver : GameSaver
+                + loader : GameLoader
+                + timer : GameTimer
+                --
+                + GameManager()
+            }
+
+            class GameSaver
+            {
+                +GameSaver(game : GameModel) : void
+            }
+
+            class GameLoader
+            {
+                +GameLoader(game : GameModel) : void
+            }
+
+    class GameTimer
+            {
+                +GameTimer(game : GameModel) : void
+            }
+
+            GameManager x-->GameSaver
+            GameManager x-->GameLoader
+            GameModel x--> GameManager
+            GameManager x--> GameTimer
+            
+        }
+
+    }
+
+
+        package "Controller" #7ad7ff  {
+
+            App x--> GameController
+            
+        class GameController
+        {
+            -gameView : GameView
+            -gameModel : GameModel
+            -gameListener : GameListener
+            --
+            +GameController(model : GameModel, view : GameView)
+            +start() : void
+            +update() : void
+            +updateTama() : void
+        }
+        class GameListener
+        {
+            +GameListener(model : GameModel, view : GameView)
+            --
+            + <override> actionperformed(event : ActionEvent) : void
+        }
+        
+        GameController x--> GameListener
+        GameController x--> GameModel
+
+
+    }
+
+
+
+    package "View" #b2ff91 {
 
         class GameView
+        {
+            +GameView()
+            +update() : void
+        }
 
-        package com.lado.app.View.UIPackage {
-            class CarePanel
-            class ContenuFenetre
-            class DebugFrame
-            class debugWindow
-            class FenetreGraphique
+     
+
+        App x--> GameView
+        GameView x--> GameModel
+        GameController x--> GameView
+
+        package "UIPackage" #96ff69{
+
             class GameFrame
+            {
+                - listener : GameListener
+                --
+                + GameFrame(Model : GameModel)
+            }
+
+             class StartFrame
+            {
+                - listener : GameListener
+                --
+                + StartFrame(Model : GameModel)
+            }
+
+
+            class FoodFrame
+            {
+                - listener : GameListener
+                --
+                + FoodFrame(Model : GameModel)
+            }
+
+   GameView x--> GameFrame
+        GameView x--> FoodFrame
+        GameView x--> StartFrame
+
+            GameFrame x--> GameListener
+            StartFrame x--> GameListener
+            FoodFrame x--> GameListener
+    
+            Window <|-- GameFrame
+            Window <|-- StartFrame
+            Window <|-- FoodFrame
+
+
+            class CarePanel
             class NeedBar
             class NeedPanel
-            class TamagotchiUI
-            class UIBuilder
+            class InfoPanel
+
+            CarePanel  --o GameFrame
+            NeedBar  --o NeedPanel
+            NeedPanel  --o GameFrame
+            InfoPanel  --o GameFrame
+
+            
+           
             class Window
-        }
+            {
+                + Window()
+               
+            }
+
+            Window --|> JFrame
+
     }
 
-    package com.lado.app.Controller {
 
-        class GameController
-        class classGameListener
-    }
 
 }
+'/
 
 
 
 
 
-
+@enduml Classes
 
 
 

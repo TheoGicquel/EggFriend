@@ -20,6 +20,7 @@ public class GameView {
         
         tamagotchi = model.tamagotchi;
         JFrame gameFrame = new GameFrame(model.tamagotchi);
+
         gameFrame.setVisible(true);
 
     }
