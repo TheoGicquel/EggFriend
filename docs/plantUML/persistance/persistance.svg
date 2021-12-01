@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1913px" preserveAspectRatio="none" style="width:3170px;height:1913px;background:#FFFFFF;" version="1.1" viewBox="0 0 3170 1913" width="3170px" zoomAndPan="magnify"><defs><filter height="300%" id="f1n1mz1tbbls1z" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[5e9e8acaea1a1a52cbf19f9bb86cec01]
+cluster com.lado.App--><polygon fill="#FFFFFF" filter="url(#f1n1mz1tbbls1z)" points="16,6,132,6,139,28.2969,3147,28.2969,3147,1906,16,1906,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="139" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="20" y="20.9951">com.lado.App</text><!--MD5=[15636c1ca4a123c16a2a1a8e90aca7a9]
+cluster Model--><polygon fill="#F2A5A2" filter="url(#f1n1mz1tbbls1z)" points="40,705,94,705,101,727.2969,1904,727.2969,1904,1882,40,1882,40,705" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="101" y1="727.2969" y2="727.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="48" x="44" y="719.9951">Model</text><!--MD5=[9e83cf350cee93aa3efb004ab5834683]
+cluster Tamagotchi--><polygon fill="#EDC4C2" filter="url(#f1n1mz1tbbls1z)" points="1056,748,1160,748,1167,770.2969,1880,770.2969,1880,1581.5,1056,1581.5,1056,748" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1056" x2="1167" y1="770.2969" y2="770.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="1060" y="762.9951">Tamagotchi</text><!--MD5=[b0b09f54806d069c91e7bb6357cbb309]
+cluster GameManager--><polygon fill="#EDC4C2" filter="url(#f1n1mz1tbbls1z)" points="64,1444,186,1444,193,1466.2969,924,1466.2969,924,1858,64,1858,64,1444" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="64" x2="193" y1="1466.2969" y2="1466.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="116" x="68" y="1458.9951">GameManager</text><!--MD5=[1f2cfc53d9d308f53762fd0fcbaa4873]
+cluster Controller--><polygon fill="#7AD7FF" filter="url(#f1n1mz1tbbls1z)" points="1928,500,2015,500,2022,522.2969,2308,522.2969,2308,879,1928,879,1928,500" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1928" x2="2022" y1="522.2969" y2="522.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81" x="1932" y="514.9951">Controller</text><!--MD5=[e320b41f2d43b11d6de1346cab4ea5fc]
+cluster View--><polygon fill="#B2FF91" filter="url(#f1n1mz1tbbls1z)" points="2332,49,2376,49,2383,71.2969,3097,71.2969,3097,681,2332,681,2332,49" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2332" x2="2383" y1="71.2969" y2="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="38" x="2336" y="63.9951">View</text><!--MD5=[34abd5311f45c908a0a37c69ef7f048b]
+cluster UIPackage--><polygon fill="#96FF69" filter="url(#f1n1mz1tbbls1z)" points="2474,92,2563,92,2570,114.2969,3073,114.2969,3073,657,2474,657,2474,92" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2474" x2="2570" y1="114.2969" y2="114.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="83" x="2478" y="106.9951">UIPackage</text><!--MD5=[335f4d9be48430461c68bf6d6fdba145]
+class App--><rect codeLine="3" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="112.0234" id="App" style="stroke:#A80036;stroke-width:1.5;" width="180" x="2028" y="95"/><ellipse cx="2101.75" cy="111" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2104.0938,106.6719 C2103.1563,106.2344 2102.5625,106.0938 2101.6875,106.0938 C2099.0625,106.0938 2097.0625,108.1719 2097.0625,110.8906 L2097.0625,112.0156 C2097.0625,114.5938 2099.1719,116.4844 2102.0625,116.4844 C2103.2813,116.4844 2104.4375,116.1875 2105.1875,115.6406 C2105.7656,115.2344 2106.0938,114.7813 2106.0938,114.3906 C2106.0938,113.9375 2105.7031,113.5469 2105.2344,113.5469 C2105.0156,113.5469 2104.8125,113.625 2104.625,113.8125 C2104.1719,114.2969 2104.1719,114.2969 2103.9844,114.3906 C2103.5625,114.6563 2102.875,114.7813 2102.1094,114.7813 C2100.0625,114.7813 2098.7656,113.6875 2098.7656,111.9844 L2098.7656,110.8906 C2098.7656,109.1094 2100.0156,107.7969 2101.75,107.7969 C2102.3281,107.7969 2102.9375,107.9531 2103.4063,108.2031 C2103.8906,108.4844 2104.0625,108.7031 2104.1563,109.1094 C2104.2188,109.5156 2104.25,109.6406 2104.3906,109.7656 C2104.5313,109.9063 2104.7656,110.0156 2104.9844,110.0156 C2105.25,110.0156 2105.5156,109.875 2105.6875,109.6563 C2105.7969,109.5 2105.8281,109.3125 2105.8281,108.8906 L2105.8281,107.4688 C2105.8281,107.0313 2105.8125,106.9063 2105.7188,106.75 C2105.5625,106.4844 2105.2813,106.3438 2104.9844,106.3438 C2104.6875,106.3438 2104.4844,106.4375 2104.2656,106.75 L2104.0938,106.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="24" x="2122.25" y="115.1543">App</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2029" x2="2207" y1="127" y2="127"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2036" y="135"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="2048" y="141.2104">model : GameModel</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2036" y="147.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="2048" y="154.0151">view : GameView</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2036" y="160.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="2048" y="166.8198">controller : GameController</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2029" x2="2207" y1="173.4141" y2="173.4141"/><ellipse cx="2039" cy="184.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="30" x="2048" y="187.6245">App()</text><ellipse cx="2039" cy="197.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="2048" y="200.4292">main(args : String[]) : void</text><!--MD5=[b66de860dace0d17c278c29ddf327d4c]
+class GameModel--><rect codeLine="20" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="86.4141" id="GameModel" style="stroke:#A80036;stroke-width:1.5;" width="201" x="838.5" y="783"/><ellipse cx="898.75" cy="799" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M901.0938,794.6719 C900.1563,794.2344 899.5625,794.0938 898.6875,794.0938 C896.0625,794.0938 894.0625,796.1719 894.0625,798.8906 L894.0625,800.0156 C894.0625,802.5938 896.1719,804.4844 899.0625,804.4844 C900.2813,804.4844 901.4375,804.1875 902.1875,803.6406 C902.7656,803.2344 903.0938,802.7813 903.0938,802.3906 C903.0938,801.9375 902.7031,801.5469 902.2344,801.5469 C902.0156,801.5469 901.8125,801.625 901.625,801.8125 C901.1719,802.2969 901.1719,802.2969 900.9844,802.3906 C900.5625,802.6563 899.875,802.7813 899.1094,802.7813 C897.0625,802.7813 895.7656,801.6875 895.7656,799.9844 L895.7656,798.8906 C895.7656,797.1094 897.0156,795.7969 898.75,795.7969 C899.3281,795.7969 899.9375,795.9531 900.4063,796.2031 C900.8906,796.4844 901.0625,796.7031 901.1563,797.1094 C901.2188,797.5156 901.25,797.6406 901.3906,797.7656 C901.5313,797.9063 901.7656,798.0156 901.9844,798.0156 C902.25,798.0156 902.5156,797.875 902.6875,797.6563 C902.7969,797.5 902.8281,797.3125 902.8281,796.8906 L902.8281,795.4688 C902.8281,795.0313 902.8125,794.9063 902.7188,794.75 C902.5625,794.4844 902.2813,794.3438 901.9844,794.3438 C901.6875,794.3438 901.4844,794.4375 901.2656,794.75 L901.0938,794.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="72" x="919.25" y="803.1543">GameModel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="839.5" x2="1038.5" y1="815" y2="815"/><ellipse cx="849.5" cy="826" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="140" x="858.5" y="829.2104">Tamagotchi : tamagotchi</text><ellipse cx="849.5" cy="838.8047" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="175" x="858.5" y="842.0151">gameManager : gameManager</text><line style="stroke:#A80036;stroke-width:1.0;" x1="839.5" x2="1038.5" y1="848.6094" y2="848.6094"/><ellipse cx="849.5" cy="859.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="858.5" y="862.8198">GameModel()</text><!--MD5=[cc3de0a176daa3c4ec875deafdf5ddd1]
+class Serializable--><rect codeLine="28" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="Serializable" style="stroke:#A80036;stroke-width:1.5;" width="99" x="940.5" y="1511"/><ellipse cx="955.5" cy="1527" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M956.4531,1523.7813 L958.1719,1523.7813 C958.5625,1523.7813 958.75,1523.75 958.875,1523.6719 C959.1406,1523.5156 959.2813,1523.2344 959.2813,1522.9375 C959.2813,1522.6719 959.1719,1522.4063 958.9375,1522.2344 C958.7656,1522.125 958.625,1522.0938 958.1719,1522.0938 L953.0313,1522.0938 C952.5938,1522.0938 952.4688,1522.1094 952.3125,1522.2031 C952.0625,1522.3594 951.9063,1522.6563 951.9063,1522.9375 C951.9063,1523.2188 952.0469,1523.4688 952.2656,1523.6406 C952.4219,1523.75 952.6094,1523.7813 953.0313,1523.7813 L954.75,1523.7813 L954.75,1530.2969 L953.0313,1530.2969 C952.5938,1530.2969 952.4688,1530.3125 952.3125,1530.4219 C952.0625,1530.5781 951.9063,1530.8594 951.9063,1531.1563 C951.9063,1531.4063 952.0469,1531.6719 952.2656,1531.8281 C952.4219,1531.9531 952.625,1532 953.0313,1532 L958.1719,1532 C958.9219,1532 959.2813,1531.7188 959.2813,1531.1563 C959.2813,1530.875 959.1719,1530.625 958.9375,1530.4531 C958.7656,1530.3281 958.625,1530.2969 958.1719,1530.2969 L956.4531,1530.2969 L956.4531,1523.7813 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="67" x="969.5" y="1531.1543">Serializable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="941.5" x2="1038.5" y1="1543" y2="1543"/><line style="stroke:#A80036;stroke-width:1.5;" x1="941.5" x2="1038.5" y1="1551" y2="1551"/><!--MD5=[8d10b9619f233caeee54837354dd5717]
+class Cat--><rect codeLine="36" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="Cat" style="stroke:#A80036;stroke-width:1.5;" width="130" x="1437" y="1504.5"/><ellipse cx="1488.25" cy="1520.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1490.5938,1516.1719 C1489.6563,1515.7344 1489.0625,1515.5938 1488.1875,1515.5938 C1485.5625,1515.5938 1483.5625,1517.6719 1483.5625,1520.3906 L1483.5625,1521.5156 C1483.5625,1524.0938 1485.6719,1525.9844 1488.5625,1525.9844 C1489.7813,1525.9844 1490.9375,1525.6875 1491.6875,1525.1406 C1492.2656,1524.7344 1492.5938,1524.2813 1492.5938,1523.8906 C1492.5938,1523.4375 1492.2031,1523.0469 1491.7344,1523.0469 C1491.5156,1523.0469 1491.3125,1523.125 1491.125,1523.3125 C1490.6719,1523.7969 1490.6719,1523.7969 1490.4844,1523.8906 C1490.0625,1524.1563 1489.375,1524.2813 1488.6094,1524.2813 C1486.5625,1524.2813 1485.2656,1523.1875 1485.2656,1521.4844 L1485.2656,1520.3906 C1485.2656,1518.6094 1486.5156,1517.2969 1488.25,1517.2969 C1488.8281,1517.2969 1489.4375,1517.4531 1489.9063,1517.7031 C1490.3906,1517.9844 1490.5625,1518.2031 1490.6563,1518.6094 C1490.7188,1519.0156 1490.75,1519.1406 1490.8906,1519.2656 C1491.0313,1519.4063 1491.2656,1519.5156 1491.4844,1519.5156 C1491.75,1519.5156 1492.0156,1519.375 1492.1875,1519.1563 C1492.2969,1519 1492.3281,1518.8125 1492.3281,1518.3906 L1492.3281,1516.9688 C1492.3281,1516.5313 1492.3125,1516.4063 1492.2188,1516.25 C1492.0625,1515.9844 1491.7813,1515.8438 1491.4844,1515.8438 C1491.1875,1515.8438 1490.9844,1515.9375 1490.7656,1516.25 L1490.5938,1516.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="19" x="1508.75" y="1524.6543">Cat</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1438" x2="1566" y1="1536.5" y2="1536.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1438" x2="1566" y1="1544.5" y2="1544.5"/><ellipse cx="1448" cy="1555.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="1457" y="1558.7104">Cat(name : String)</text><!--MD5=[e65995e6249d51050b2a77595098ec55]
+class Tamagotchi--><rect codeLine="86" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="489.75" id="Tamagotchi" style="stroke:#A80036;stroke-width:1.5;" width="375" x="1072.5" y="929"/><ellipse cx="1221.25" cy="945" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1223.5938,940.6719 C1222.6563,940.2344 1222.0625,940.0938 1221.1875,940.0938 C1218.5625,940.0938 1216.5625,942.1719 1216.5625,944.8906 L1216.5625,946.0156 C1216.5625,948.5938 1218.6719,950.4844 1221.5625,950.4844 C1222.7813,950.4844 1223.9375,950.1875 1224.6875,949.6406 C1225.2656,949.2344 1225.5938,948.7813 1225.5938,948.3906 C1225.5938,947.9375 1225.2031,947.5469 1224.7344,947.5469 C1224.5156,947.5469 1224.3125,947.625 1224.125,947.8125 C1223.6719,948.2969 1223.6719,948.2969 1223.4844,948.3906 C1223.0625,948.6563 1222.375,948.7813 1221.6094,948.7813 C1219.5625,948.7813 1218.2656,947.6875 1218.2656,945.9844 L1218.2656,944.8906 C1218.2656,943.1094 1219.5156,941.7969 1221.25,941.7969 C1221.8281,941.7969 1222.4375,941.9531 1222.9063,942.2031 C1223.3906,942.4844 1223.5625,942.7031 1223.6563,943.1094 C1223.7188,943.5156 1223.75,943.6406 1223.8906,943.7656 C1224.0313,943.9063 1224.2656,944.0156 1224.4844,944.0156 C1224.75,944.0156 1225.0156,943.875 1225.1875,943.6563 C1225.2969,943.5 1225.3281,943.3125 1225.3281,942.8906 L1225.3281,941.4688 C1225.3281,941.0313 1225.3125,940.9063 1225.2188,940.75 C1225.0625,940.4844 1224.7813,940.3438 1224.4844,940.3438 C1224.1875,940.3438 1223.9844,940.4375 1223.7656,940.75 L1223.5938,940.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="1241.75" y="949.1543">Tamagotchi</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1073.5" x2="1446.5" y1="961" y2="961"/><polygon fill="none" points="1083.5,968,1079.5,974,1087.5,974" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="1092.5" y="975.2104">name : String</text><polygon fill="none" points="1083.5,979.8047,1087.5,983.8047,1083.5,987.8047,1079.5,983.8047" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="1092.5" y="988.0151">breed : String</text><polygon fill="none" points="1083.5,993.6094,1079.5,999.6094,1087.5,999.6094" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="129" x="1092.5" y="1000.8198">favoriteFoods : String[]</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1007.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="1092.5" y="1013.6245">health : Need</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1020.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="1092.5" y="1026.4292">alive : boolean</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1033.0234"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="1092.5" y="1039.2339">mood : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1045.8281"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="1092.5" y="1052.0386">energy : Need</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1058.6328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="1092.5" y="1064.8433">hunger : Need</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1071.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="1092.5" y="1077.6479">cleanliness : Need</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1080.5" y="1084.2422"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="1092.5" y="1090.4526">happiness : Need</text><polygon fill="none" points="1083.5,1096.0469,1079.5,1102.0469,1087.5,1102.0469" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="177" x="1092.5" y="1103.2573">CRITICAL_THRESHOLD : integer</text><polygon fill="none" points="1083.5,1107.8516,1087.5,1111.8516,1083.5,1115.8516,1079.5,1111.8516" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="349" x="1092.5" y="1116.062">needs : Need[] = { energy, hunger, cleanliness, happiness }</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1073.5" x2="1446.5" y1="1122.6563" y2="1122.6563"/><ellipse cx="1083.5" cy="1133.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="221" x="1092.5" y="1136.8667">Tamagotchi(String name) : Tamagotchi</text><ellipse cx="1083.5" cy="1146.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="1092.5" y="1149.6714">Tamagotchi() : Tamagotchi</text><ellipse cx="1083.5" cy="1159.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="1092.5" y="1162.4761">scanCritical() : Boolean</text><ellipse cx="1083.5" cy="1172.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="1092.5" y="1175.2808">depleteNeeds() : void</text><ellipse cx="1083.5" cy="1184.875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="1092.5" y="1188.0854">setDefaultStats() : void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1073.5" x2="1446.5" y1="1194.6797" y2="1194.6797"/><ellipse cx="1083.5" cy="1205.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="105" x="1092.5" y="1208.8901">getName() : String</text><ellipse cx="1083.5" cy="1218.4844" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="1092.5" y="1221.6948">setName(String newName) : void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1073.5" x2="1446.5" y1="1228.2891" y2="1228.2891"/><ellipse cx="1083.5" cy="1239.2891" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="1092.5" y="1242.4995">getBreed() : String</text><ellipse cx="1083.5" cy="1252.0938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="169" x="1092.5" y="1255.3042">setBreed(newBreed : int)void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1073.5" x2="1446.5" y1="1261.8984" y2="1261.8984"/><ellipse cx="1083.5" cy="1272.8984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="1092.5" y="1276.1089">evalMood() : void</text><ellipse cx="1083.5" cy="1285.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="1092.5" y="1288.9136">getMood() : String</text><ellipse cx="1083.5" cy="1298.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="189" x="1092.5" y="1301.7183">setMood(newMood : String) : void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1073.5" x2="1446.5" y1="1308.3125" y2="1308.3125"/><ellipse cx="1083.5" cy="1319.3125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="1092.5" y="1322.5229">checkHealth() : void</text><ellipse cx="1083.5" cy="1332.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="1092.5" y="1335.3276">kill() : void</text><ellipse cx="1083.5" cy="1344.9219" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="1092.5" y="1348.1323">hurt(int damage) : void</text><ellipse cx="1083.5" cy="1357.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="1092.5" y="1360.937">heal(int healValue) : void</text><ellipse cx="1083.5" cy="1370.5313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="177" x="1092.5" y="1373.7417">setHealth(int newHealth) : void</text><ellipse cx="1083.5" cy="1383.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="1092.5" y="1386.5464">boolean getAlive()</text><ellipse cx="1083.5" cy="1396.1406" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="1092.5" y="1399.3511">void setAlive(boolean alive)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1096.5" y="1412.1558"/><!--MD5=[454ed48f055567edc734f170f61b4daf]
+class Dog--><rect codeLine="43" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="Dog" style="stroke:#A80036;stroke-width:1.5;" width="134" x="1602" y="1504.5"/><ellipse cx="1652.25" cy="1520.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1654.5938,1516.1719 C1653.6563,1515.7344 1653.0625,1515.5938 1652.1875,1515.5938 C1649.5625,1515.5938 1647.5625,1517.6719 1647.5625,1520.3906 L1647.5625,1521.5156 C1647.5625,1524.0938 1649.6719,1525.9844 1652.5625,1525.9844 C1653.7813,1525.9844 1654.9375,1525.6875 1655.6875,1525.1406 C1656.2656,1524.7344 1656.5938,1524.2813 1656.5938,1523.8906 C1656.5938,1523.4375 1656.2031,1523.0469 1655.7344,1523.0469 C1655.5156,1523.0469 1655.3125,1523.125 1655.125,1523.3125 C1654.6719,1523.7969 1654.6719,1523.7969 1654.4844,1523.8906 C1654.0625,1524.1563 1653.375,1524.2813 1652.6094,1524.2813 C1650.5625,1524.2813 1649.2656,1523.1875 1649.2656,1521.4844 L1649.2656,1520.3906 C1649.2656,1518.6094 1650.5156,1517.2969 1652.25,1517.2969 C1652.8281,1517.2969 1653.4375,1517.4531 1653.9063,1517.7031 C1654.3906,1517.9844 1654.5625,1518.2031 1654.6563,1518.6094 C1654.7188,1519.0156 1654.75,1519.1406 1654.8906,1519.2656 C1655.0313,1519.4063 1655.2656,1519.5156 1655.4844,1519.5156 C1655.75,1519.5156 1656.0156,1519.375 1656.1875,1519.1563 C1656.2969,1519 1656.3281,1518.8125 1656.3281,1518.3906 L1656.3281,1516.9688 C1656.3281,1516.5313 1656.3125,1516.4063 1656.2188,1516.25 C1656.0625,1515.9844 1655.7813,1515.8438 1655.4844,1515.8438 C1655.1875,1515.8438 1654.9844,1515.9375 1654.7656,1516.25 L1654.5938,1516.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="25" x="1672.75" y="1524.6543">Dog</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1603" x2="1735" y1="1536.5" y2="1536.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1603" x2="1735" y1="1544.5" y2="1544.5"/><ellipse cx="1613" cy="1555.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="1622" y="1558.7104">Dog(name : String)</text><!--MD5=[60fb4f72b7635aa97affd2efc062a79f]
+class Robot--><rect codeLine="48" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="Robot" style="stroke:#A80036;stroke-width:1.5;" width="143" x="1074.5" y="1504.5"/><ellipse cx="1124.25" cy="1520.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1126.5938,1516.1719 C1125.6563,1515.7344 1125.0625,1515.5938 1124.1875,1515.5938 C1121.5625,1515.5938 1119.5625,1517.6719 1119.5625,1520.3906 L1119.5625,1521.5156 C1119.5625,1524.0938 1121.6719,1525.9844 1124.5625,1525.9844 C1125.7813,1525.9844 1126.9375,1525.6875 1127.6875,1525.1406 C1128.2656,1524.7344 1128.5938,1524.2813 1128.5938,1523.8906 C1128.5938,1523.4375 1128.2031,1523.0469 1127.7344,1523.0469 C1127.5156,1523.0469 1127.3125,1523.125 1127.125,1523.3125 C1126.6719,1523.7969 1126.6719,1523.7969 1126.4844,1523.8906 C1126.0625,1524.1563 1125.375,1524.2813 1124.6094,1524.2813 C1122.5625,1524.2813 1121.2656,1523.1875 1121.2656,1521.4844 L1121.2656,1520.3906 C1121.2656,1518.6094 1122.5156,1517.2969 1124.25,1517.2969 C1124.8281,1517.2969 1125.4375,1517.4531 1125.9063,1517.7031 C1126.3906,1517.9844 1126.5625,1518.2031 1126.6563,1518.6094 C1126.7188,1519.0156 1126.75,1519.1406 1126.8906,1519.2656 C1127.0313,1519.4063 1127.2656,1519.5156 1127.4844,1519.5156 C1127.75,1519.5156 1128.0156,1519.375 1128.1875,1519.1563 C1128.2969,1519 1128.3281,1518.8125 1128.3281,1518.3906 L1128.3281,1516.9688 C1128.3281,1516.5313 1128.3125,1516.4063 1128.2188,1516.25 C1128.0625,1515.9844 1127.7813,1515.8438 1127.4844,1515.8438 C1127.1875,1515.8438 1126.9844,1515.9375 1126.7656,1516.25 L1126.5938,1516.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="35" x="1144.75" y="1524.6543">Robot</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1075.5" x2="1216.5" y1="1536.5" y2="1536.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1075.5" x2="1216.5" y1="1544.5" y2="1544.5"/><ellipse cx="1085.5" cy="1555.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="1094.5" y="1558.7104">Robot(name : String)</text><!--MD5=[ff16b79ca4e34ef4da15c1b30759c29a]
+class Sheep--><rect codeLine="53" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="Sheep" style="stroke:#A80036;stroke-width:1.5;" width="149" x="1252.5" y="1504.5"/><ellipse cx="1303.25" cy="1520.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1305.5938,1516.1719 C1304.6563,1515.7344 1304.0625,1515.5938 1303.1875,1515.5938 C1300.5625,1515.5938 1298.5625,1517.6719 1298.5625,1520.3906 L1298.5625,1521.5156 C1298.5625,1524.0938 1300.6719,1525.9844 1303.5625,1525.9844 C1304.7813,1525.9844 1305.9375,1525.6875 1306.6875,1525.1406 C1307.2656,1524.7344 1307.5938,1524.2813 1307.5938,1523.8906 C1307.5938,1523.4375 1307.2031,1523.0469 1306.7344,1523.0469 C1306.5156,1523.0469 1306.3125,1523.125 1306.125,1523.3125 C1305.6719,1523.7969 1305.6719,1523.7969 1305.4844,1523.8906 C1305.0625,1524.1563 1304.375,1524.2813 1303.6094,1524.2813 C1301.5625,1524.2813 1300.2656,1523.1875 1300.2656,1521.4844 L1300.2656,1520.3906 C1300.2656,1518.6094 1301.5156,1517.2969 1303.25,1517.2969 C1303.8281,1517.2969 1304.4375,1517.4531 1304.9063,1517.7031 C1305.3906,1517.9844 1305.5625,1518.2031 1305.6563,1518.6094 C1305.7188,1519.0156 1305.75,1519.1406 1305.8906,1519.2656 C1306.0313,1519.4063 1306.2656,1519.5156 1306.4844,1519.5156 C1306.75,1519.5156 1307.0156,1519.375 1307.1875,1519.1563 C1307.2969,1519 1307.3281,1518.8125 1307.3281,1518.3906 L1307.3281,1516.9688 C1307.3281,1516.5313 1307.3125,1516.4063 1307.2188,1516.25 C1307.0625,1515.9844 1306.7813,1515.8438 1306.4844,1515.8438 C1306.1875,1515.8438 1305.9844,1515.9375 1305.7656,1516.25 L1305.5938,1516.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="1323.75" y="1524.6543">Sheep</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1253.5" x2="1400.5" y1="1536.5" y2="1536.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1253.5" x2="1400.5" y1="1544.5" y2="1544.5"/><ellipse cx="1263.5" cy="1555.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="1272.5" y="1558.7104">Sheep(name : String)</text><!--MD5=[5b4460e97222b45c9cf25eacd4639dbc]
+class Food--><rect codeLine="61" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="86.4141" id="Food" style="stroke:#A80036;stroke-width:1.5;" width="180" x="1170" y="783"/><ellipse cx="1240.25" cy="799" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1242.5938,794.6719 C1241.6563,794.2344 1241.0625,794.0938 1240.1875,794.0938 C1237.5625,794.0938 1235.5625,796.1719 1235.5625,798.8906 L1235.5625,800.0156 C1235.5625,802.5938 1237.6719,804.4844 1240.5625,804.4844 C1241.7813,804.4844 1242.9375,804.1875 1243.6875,803.6406 C1244.2656,803.2344 1244.5938,802.7813 1244.5938,802.3906 C1244.5938,801.9375 1244.2031,801.5469 1243.7344,801.5469 C1243.5156,801.5469 1243.3125,801.625 1243.125,801.8125 C1242.6719,802.2969 1242.6719,802.2969 1242.4844,802.3906 C1242.0625,802.6563 1241.375,802.7813 1240.6094,802.7813 C1238.5625,802.7813 1237.2656,801.6875 1237.2656,799.9844 L1237.2656,798.8906 C1237.2656,797.1094 1238.5156,795.7969 1240.25,795.7969 C1240.8281,795.7969 1241.4375,795.9531 1241.9063,796.2031 C1242.3906,796.4844 1242.5625,796.7031 1242.6563,797.1094 C1242.7188,797.5156 1242.75,797.6406 1242.8906,797.7656 C1243.0313,797.9063 1243.2656,798.0156 1243.4844,798.0156 C1243.75,798.0156 1244.0156,797.875 1244.1875,797.6563 C1244.2969,797.5 1244.3281,797.3125 1244.3281,796.8906 L1244.3281,795.4688 C1244.3281,795.0313 1244.3125,794.9063 1244.2188,794.75 C1244.0625,794.4844 1243.7813,794.3438 1243.4844,794.3438 C1243.1875,794.3438 1242.9844,794.4375 1242.7656,794.75 L1242.5938,794.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="1260.75" y="803.1543">Food</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1171" x2="1349" y1="815" y2="815"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1178" y="823"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="43" x="1190" y="829.2104">id :   int</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1178" y="835.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="1190" y="842.0151">name : String</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1171" x2="1349" y1="848.6094" y2="848.6094"/><ellipse cx="1181" cy="859.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="1190" y="862.8198">Food(id : int, name : String)</text><!--MD5=[0b6f8c5a3aeecb178d61c5966e6e45f4]
+class Need--><rect codeLine="70" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="188.8516" id="Need" style="stroke:#A80036;stroke-width:1.5;" width="381" x="1482.5" y="1079.5"/><ellipse cx="1652.75" cy="1095.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1655.0938,1091.1719 C1654.1563,1090.7344 1653.5625,1090.5938 1652.6875,1090.5938 C1650.0625,1090.5938 1648.0625,1092.6719 1648.0625,1095.3906 L1648.0625,1096.5156 C1648.0625,1099.0938 1650.1719,1100.9844 1653.0625,1100.9844 C1654.2813,1100.9844 1655.4375,1100.6875 1656.1875,1100.1406 C1656.7656,1099.7344 1657.0938,1099.2813 1657.0938,1098.8906 C1657.0938,1098.4375 1656.7031,1098.0469 1656.2344,1098.0469 C1656.0156,1098.0469 1655.8125,1098.125 1655.625,1098.3125 C1655.1719,1098.7969 1655.1719,1098.7969 1654.9844,1098.8906 C1654.5625,1099.1563 1653.875,1099.2813 1653.1094,1099.2813 C1651.0625,1099.2813 1649.7656,1098.1875 1649.7656,1096.4844 L1649.7656,1095.3906 C1649.7656,1093.6094 1651.0156,1092.2969 1652.75,1092.2969 C1653.3281,1092.2969 1653.9375,1092.4531 1654.4063,1092.7031 C1654.8906,1092.9844 1655.0625,1093.2031 1655.1563,1093.6094 C1655.2188,1094.0156 1655.25,1094.1406 1655.3906,1094.2656 C1655.5313,1094.4063 1655.7656,1094.5156 1655.9844,1094.5156 C1656.25,1094.5156 1656.5156,1094.375 1656.6875,1094.1563 C1656.7969,1094 1656.8281,1093.8125 1656.8281,1093.3906 L1656.8281,1091.9688 C1656.8281,1091.5313 1656.8125,1091.4063 1656.7188,1091.25 C1656.5625,1090.9844 1656.2813,1090.8438 1655.9844,1090.8438 C1655.6875,1090.8438 1655.4844,1090.9375 1655.2656,1091.25 L1655.0938,1091.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="1673.25" y="1099.6543">Need</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1483.5" x2="1862.5" y1="1111.5" y2="1111.5"/><polygon fill="none" points="1493.5,1118.5,1489.5,1124.5,1497.5,1124.5" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="1502.5" y="1125.7104">name : String</text><polygon fill="none" points="1493.5,1131.3047,1489.5,1137.3047,1497.5,1137.3047" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="1502.5" y="1138.5151">value : int</text><polygon fill="none" points="1493.5,1144.1094,1489.5,1150.1094,1497.5,1150.1094" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="1502.5" y="1151.3198">factor : float</text><polygon fill="none" points="1493.5,1156.9141,1489.5,1162.9141,1497.5,1162.9141" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="1502.5" y="1164.1245">critical : boolean</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1483.5" x2="1862.5" y1="1170.7188" y2="1170.7188"/><polygon fill="#4177AF" points="1493.5,1177.7188,1489.5,1183.7188,1497.5,1183.7188" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="355" x="1502.5" y="1184.9292">Need(name : String, value : int, factor : float, critical : boolean)</text><polygon fill="#4177AF" points="1493.5,1190.5234,1489.5,1196.5234,1497.5,1196.5234" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="183" x="1502.5" y="1197.7339">calcDepletion(time : float) : void</text><polygon fill="#4177AF" points="1493.5,1203.3281,1489.5,1209.3281,1497.5,1209.3281" style="stroke:#1963A0;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="1502.5" y="1210.5386">setVal(value : int) : void</text><ellipse cx="1493.5" cy="1220.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="163" x="1502.5" y="1223.3433">setFactor(factor : float) : void</text><ellipse cx="1493.5" cy="1232.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="1502.5" y="1236.1479">getVal() : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1506.5" y="1248.9526"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1506.5" y="1261.7573"/><!--MD5=[ebecb9917226677787fac7e9a2731304]
+class GameManager--><rect codeLine="135" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="112.0234" id="GameManager" style="stroke:#A80036;stroke-width:1.5;" width="241" x="519.5" y="1479"/><ellipse cx="592.25" cy="1495" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M594.5938,1490.6719 C593.6563,1490.2344 593.0625,1490.0938 592.1875,1490.0938 C589.5625,1490.0938 587.5625,1492.1719 587.5625,1494.8906 L587.5625,1496.0156 C587.5625,1498.5938 589.6719,1500.4844 592.5625,1500.4844 C593.7813,1500.4844 594.9375,1500.1875 595.6875,1499.6406 C596.2656,1499.2344 596.5938,1498.7813 596.5938,1498.3906 C596.5938,1497.9375 596.2031,1497.5469 595.7344,1497.5469 C595.5156,1497.5469 595.3125,1497.625 595.125,1497.8125 C594.6719,1498.2969 594.6719,1498.2969 594.4844,1498.3906 C594.0625,1498.6563 593.375,1498.7813 592.6094,1498.7813 C590.5625,1498.7813 589.2656,1497.6875 589.2656,1495.9844 L589.2656,1494.8906 C589.2656,1493.1094 590.5156,1491.7969 592.25,1491.7969 C592.8281,1491.7969 593.4375,1491.9531 593.9063,1492.2031 C594.3906,1492.4844 594.5625,1492.7031 594.6563,1493.1094 C594.7188,1493.5156 594.75,1493.6406 594.8906,1493.7656 C595.0313,1493.9063 595.2656,1494.0156 595.4844,1494.0156 C595.75,1494.0156 596.0156,1493.875 596.1875,1493.6563 C596.2969,1493.5 596.3281,1493.3125 596.3281,1492.8906 L596.3281,1491.4688 C596.3281,1491.0313 596.3125,1490.9063 596.2188,1490.75 C596.0625,1490.4844 595.7813,1490.3438 595.4844,1490.3438 C595.1875,1490.3438 594.9844,1490.4375 594.7656,1490.75 L594.5938,1490.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="612.75" y="1499.1543">GameManager</text><line style="stroke:#A80036;stroke-width:1.5;" x1="520.5" x2="759.5" y1="1511" y2="1511"/><polygon fill="none" points="530.5,1517,534.5,1521,530.5,1525,526.5,1521" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="539.5" y="1525.2104">saveLocation : String = "../saveData/"</text><ellipse cx="530.5" cy="1534.8047" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="539.5" y="1538.0151">saver : GameSaver</text><ellipse cx="530.5" cy="1547.6094" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="539.5" y="1550.8198">loader : GameLoader</text><ellipse cx="530.5" cy="1560.4141" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="539.5" y="1563.6245">timer : GameTimer</text><line style="stroke:#A80036;stroke-width:1.0;" x1="520.5" x2="759.5" y1="1570.2188" y2="1570.2188"/><ellipse cx="530.5" cy="1581.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="539.5" y="1584.4292">GameManager()</text><!--MD5=[951bde26c2b1cb89e8244808190f6362]
+class GameSaver--><rect codeLine="147" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="86.4141" id="GameSaver" style="stroke:#A80036;stroke-width:1.5;" width="251" x="371.5" y="1651"/><ellipse cx="457.75" cy="1667" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M460.0938,1662.6719 C459.1563,1662.2344 458.5625,1662.0938 457.6875,1662.0938 C455.0625,1662.0938 453.0625,1664.1719 453.0625,1666.8906 L453.0625,1668.0156 C453.0625,1670.5938 455.1719,1672.4844 458.0625,1672.4844 C459.2813,1672.4844 460.4375,1672.1875 461.1875,1671.6406 C461.7656,1671.2344 462.0938,1670.7813 462.0938,1670.3906 C462.0938,1669.9375 461.7031,1669.5469 461.2344,1669.5469 C461.0156,1669.5469 460.8125,1669.625 460.625,1669.8125 C460.1719,1670.2969 460.1719,1670.2969 459.9844,1670.3906 C459.5625,1670.6563 458.875,1670.7813 458.1094,1670.7813 C456.0625,1670.7813 454.7656,1669.6875 454.7656,1667.9844 L454.7656,1666.8906 C454.7656,1665.1094 456.0156,1663.7969 457.75,1663.7969 C458.3281,1663.7969 458.9375,1663.9531 459.4063,1664.2031 C459.8906,1664.4844 460.0625,1664.7031 460.1563,1665.1094 C460.2188,1665.5156 460.25,1665.6406 460.3906,1665.7656 C460.5313,1665.9063 460.7656,1666.0156 460.9844,1666.0156 C461.25,1666.0156 461.5156,1665.875 461.6875,1665.6563 C461.7969,1665.5 461.8281,1665.3125 461.8281,1664.8906 L461.8281,1663.4688 C461.8281,1663.0313 461.8125,1662.9063 461.7188,1662.75 C461.5625,1662.4844 461.2813,1662.3438 460.9844,1662.3438 C460.6875,1662.3438 460.4844,1662.4375 460.2656,1662.75 L460.0938,1662.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="478.25" y="1671.1543">GameSaver</text><line style="stroke:#A80036;stroke-width:1.5;" x1="372.5" x2="621.5" y1="1683" y2="1683"/><ellipse cx="382.5" cy="1694" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="225" x="391.5" y="1697.2104">GameSaver(game : GameModel) : void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="372.5" x2="621.5" y1="1703.8047" y2="1703.8047"/><ellipse cx="382.5" cy="1714.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="391.5" y="1718.0151">saveGame(model.tamagotchi) : void</text><polygon fill="none" points="382.5,1722.6094,386.5,1726.6094,382.5,1730.6094,378.5,1726.6094" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="391.5" y="1730.8198">writeFile</text><!--MD5=[e1fa837ce0d6eae14ff00c0c29f3db8d]
+class GameLoader--><rect codeLine="155" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="GameLoader" style="stroke:#A80036;stroke-width:1.5;" width="256" x="80" y="1663.5"/><ellipse cx="165.25" cy="1679.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M167.5938,1675.1719 C166.6563,1674.7344 166.0625,1674.5938 165.1875,1674.5938 C162.5625,1674.5938 160.5625,1676.6719 160.5625,1679.3906 L160.5625,1680.5156 C160.5625,1683.0938 162.6719,1684.9844 165.5625,1684.9844 C166.7813,1684.9844 167.9375,1684.6875 168.6875,1684.1406 C169.2656,1683.7344 169.5938,1683.2813 169.5938,1682.8906 C169.5938,1682.4375 169.2031,1682.0469 168.7344,1682.0469 C168.5156,1682.0469 168.3125,1682.125 168.125,1682.3125 C167.6719,1682.7969 167.6719,1682.7969 167.4844,1682.8906 C167.0625,1683.1563 166.375,1683.2813 165.6094,1683.2813 C163.5625,1683.2813 162.2656,1682.1875 162.2656,1680.4844 L162.2656,1679.3906 C162.2656,1677.6094 163.5156,1676.2969 165.25,1676.2969 C165.8281,1676.2969 166.4375,1676.4531 166.9063,1676.7031 C167.3906,1676.9844 167.5625,1677.2031 167.6563,1677.6094 C167.7188,1678.0156 167.75,1678.1406 167.8906,1678.2656 C168.0313,1678.4063 168.2656,1678.5156 168.4844,1678.5156 C168.75,1678.5156 169.0156,1678.375 169.1875,1678.1563 C169.2969,1678 169.3281,1677.8125 169.3281,1677.3906 L169.3281,1675.9688 C169.3281,1675.5313 169.3125,1675.4063 169.2188,1675.25 C169.0625,1674.9844 168.7813,1674.8438 168.4844,1674.8438 C168.1875,1674.8438 167.9844,1674.9375 167.7656,1675.25 L167.5938,1675.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77" x="185.75" y="1683.6543">GameLoader</text><line style="stroke:#A80036;stroke-width:1.5;" x1="81" x2="335" y1="1695.5" y2="1695.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="81" x2="335" y1="1703.5" y2="1703.5"/><ellipse cx="91" cy="1714.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="100" y="1717.7104">GameLoader(game : GameModel) : void</text><path d="M437.5,1807 L437.5,1832.1328 L730.5,1832.1328 L730.5,1817 L720.5,1807 L437.5,1807 " fill="#FBFB77" filter="url(#f1n1mz1tbbls1z)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M720.5,1807 L720.5,1817 L730.5,1817 L720.5,1807 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="272" x="443.5" y="1824.0669">Fichier de sauvegarde stocké sur le disque</text><!--MD5=[d5a8e3cb3ef7be78545b7f752b434070]
+class GameTimer--><rect codeLine="169" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="GameTimer" style="stroke:#A80036;stroke-width:1.5;" width="250" x="658" y="1663.5"/><ellipse cx="744.25" cy="1679.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M746.5938,1675.1719 C745.6563,1674.7344 745.0625,1674.5938 744.1875,1674.5938 C741.5625,1674.5938 739.5625,1676.6719 739.5625,1679.3906 L739.5625,1680.5156 C739.5625,1683.0938 741.6719,1684.9844 744.5625,1684.9844 C745.7813,1684.9844 746.9375,1684.6875 747.6875,1684.1406 C748.2656,1683.7344 748.5938,1683.2813 748.5938,1682.8906 C748.5938,1682.4375 748.2031,1682.0469 747.7344,1682.0469 C747.5156,1682.0469 747.3125,1682.125 747.125,1682.3125 C746.6719,1682.7969 746.6719,1682.7969 746.4844,1682.8906 C746.0625,1683.1563 745.375,1683.2813 744.6094,1683.2813 C742.5625,1683.2813 741.2656,1682.1875 741.2656,1680.4844 L741.2656,1679.3906 C741.2656,1677.6094 742.5156,1676.2969 744.25,1676.2969 C744.8281,1676.2969 745.4375,1676.4531 745.9063,1676.7031 C746.3906,1676.9844 746.5625,1677.2031 746.6563,1677.6094 C746.7188,1678.0156 746.75,1678.1406 746.8906,1678.2656 C747.0313,1678.4063 747.2656,1678.5156 747.4844,1678.5156 C747.75,1678.5156 748.0156,1678.375 748.1875,1678.1563 C748.2969,1678 748.3281,1677.8125 748.3281,1677.3906 L748.3281,1675.9688 C748.3281,1675.5313 748.3125,1675.4063 748.2188,1675.25 C748.0625,1674.9844 747.7813,1674.8438 747.4844,1674.8438 C747.1875,1674.8438 746.9844,1674.9375 746.7656,1675.25 L746.5938,1675.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="764.75" y="1683.6543">GameTimer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="659" x2="907" y1="1695.5" y2="1695.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="659" x2="907" y1="1703.5" y2="1703.5"/><ellipse cx="669" cy="1714.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="678" y="1717.7104">GameTimer(game : GameModel) : void</text><!--MD5=[d5e39fed2ba1e8132a732c21c0b9e867]
+entity sauvegarde--><path d="M301.5,1807 C301.5,1797 352,1797 352,1797 C352,1797 402.5,1797 402.5,1807 L402.5,1832.2969 C402.5,1842.2969 352,1842.2969 352,1842.2969 C352,1842.2969 301.5,1842.2969 301.5,1832.2969 L301.5,1807 " fill="#FFFFFF" filter="url(#f1n1mz1tbbls1z)" style="stroke:#000000;stroke-width:1.5;"/><path d="M301.5,1807 C301.5,1817 352,1817 352,1817 C352,1817 402.5,1817 402.5,1807 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="311.5" y="1833.9951">sauvegarde</text><!--MD5=[82d9c97a467af7c0b2c072e754b85475]
+class GameController--><rect codeLine="188" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="137.6328" id="GameController" style="stroke:#A80036;stroke-width:1.5;" width="348" x="1944" y="535"/><ellipse cx="2066.75" cy="551" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2069.0938,546.6719 C2068.1563,546.2344 2067.5625,546.0938 2066.6875,546.0938 C2064.0625,546.0938 2062.0625,548.1719 2062.0625,550.8906 L2062.0625,552.0156 C2062.0625,554.5938 2064.1719,556.4844 2067.0625,556.4844 C2068.2813,556.4844 2069.4375,556.1875 2070.1875,555.6406 C2070.7656,555.2344 2071.0938,554.7813 2071.0938,554.3906 C2071.0938,553.9375 2070.7031,553.5469 2070.2344,553.5469 C2070.0156,553.5469 2069.8125,553.625 2069.625,553.8125 C2069.1719,554.2969 2069.1719,554.2969 2068.9844,554.3906 C2068.5625,554.6563 2067.875,554.7813 2067.1094,554.7813 C2065.0625,554.7813 2063.7656,553.6875 2063.7656,551.9844 L2063.7656,550.8906 C2063.7656,549.1094 2065.0156,547.7969 2066.75,547.7969 C2067.3281,547.7969 2067.9375,547.9531 2068.4063,548.2031 C2068.8906,548.4844 2069.0625,548.7031 2069.1563,549.1094 C2069.2188,549.5156 2069.25,549.6406 2069.3906,549.7656 C2069.5313,549.9063 2069.7656,550.0156 2069.9844,550.0156 C2070.25,550.0156 2070.5156,549.875 2070.6875,549.6563 C2070.7969,549.5 2070.8281,549.3125 2070.8281,548.8906 L2070.8281,547.4688 C2070.8281,547.0313 2070.8125,546.9063 2070.7188,546.75 C2070.5625,546.4844 2070.2813,546.3438 2069.9844,546.3438 C2069.6875,546.3438 2069.4844,546.4375 2069.2656,546.75 L2069.0938,546.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="2087.25" y="555.1543">GameController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1945" x2="2291" y1="567" y2="567"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1952" y="575"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="1964" y="581.2104">gameView : GameView</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1952" y="587.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="1964" y="594.0151">gameModel : GameModel</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1952" y="600.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="171" x="1964" y="606.8198">gameListener : GameListener</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1945" x2="2291" y1="613.4141" y2="613.4141"/><ellipse cx="1955" cy="624.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="322" x="1964" y="627.6245">GameController(model : GameModel, view : GameView)</text><ellipse cx="1955" cy="637.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="1964" y="640.4292">start() : void</text><ellipse cx="1955" cy="650.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="1964" y="653.2339">update() : void</text><ellipse cx="1955" cy="662.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="1964" y="666.0386">updateTama() : void</text><!--MD5=[607c1b65ce0188fcc154ec537a7c35f9]
+class GameListener--><rect codeLine="199" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="73.6094" id="GameListener" style="stroke:#A80036;stroke-width:1.5;" width="346" x="1946" y="789"/><ellipse cx="2073.25" cy="805" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2075.5938,800.6719 C2074.6563,800.2344 2074.0625,800.0938 2073.1875,800.0938 C2070.5625,800.0938 2068.5625,802.1719 2068.5625,804.8906 L2068.5625,806.0156 C2068.5625,808.5938 2070.6719,810.4844 2073.5625,810.4844 C2074.7813,810.4844 2075.9375,810.1875 2076.6875,809.6406 C2077.2656,809.2344 2077.5938,808.7813 2077.5938,808.3906 C2077.5938,807.9375 2077.2031,807.5469 2076.7344,807.5469 C2076.5156,807.5469 2076.3125,807.625 2076.125,807.8125 C2075.6719,808.2969 2075.6719,808.2969 2075.4844,808.3906 C2075.0625,808.6563 2074.375,808.7813 2073.6094,808.7813 C2071.5625,808.7813 2070.2656,807.6875 2070.2656,805.9844 L2070.2656,804.8906 C2070.2656,803.1094 2071.5156,801.7969 2073.25,801.7969 C2073.8281,801.7969 2074.4375,801.9531 2074.9063,802.2031 C2075.3906,802.4844 2075.5625,802.7031 2075.6563,803.1094 C2075.7188,803.5156 2075.75,803.6406 2075.8906,803.7656 C2076.0313,803.9063 2076.2656,804.0156 2076.4844,804.0156 C2076.75,804.0156 2077.0156,803.875 2077.1875,803.6563 C2077.2969,803.5 2077.3281,803.3125 2077.3281,802.8906 L2077.3281,801.4688 C2077.3281,801.0313 2077.3125,800.9063 2077.2188,800.75 C2077.0625,800.4844 2076.7813,800.3438 2076.4844,800.3438 C2076.1875,800.3438 2075.9844,800.4375 2075.7656,800.75 L2075.5938,800.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="2093.75" y="809.1543">GameListener</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1947" x2="2291" y1="821" y2="821"/><ellipse cx="1957" cy="832" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="313" x="1966" y="835.2104">GameListener(model : GameModel, view : GameView)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1947" x2="2291" y1="841.8047" y2="841.8047"/><ellipse cx="1957" cy="852.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="320" x="1966" y="856.0151">&lt;override&gt; actionperformed(event : ActionEvent) : void</text><!--MD5=[5d3822d29342fbd355d1b65ea3562ec9]
+class GameView--><rect codeLine="216" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="73.6094" id="GameView" style="stroke:#A80036;stroke-width:1.5;" width="109" x="2348.5" y="267"/><ellipse cx="2369.35" cy="283" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2371.6938,278.6719 C2370.7563,278.2344 2370.1625,278.0938 2369.2875,278.0938 C2366.6625,278.0938 2364.6625,280.1719 2364.6625,282.8906 L2364.6625,284.0156 C2364.6625,286.5938 2366.7719,288.4844 2369.6625,288.4844 C2370.8813,288.4844 2372.0375,288.1875 2372.7875,287.6406 C2373.3656,287.2344 2373.6938,286.7813 2373.6938,286.3906 C2373.6938,285.9375 2373.3031,285.5469 2372.8344,285.5469 C2372.6156,285.5469 2372.4125,285.625 2372.225,285.8125 C2371.7719,286.2969 2371.7719,286.2969 2371.5844,286.3906 C2371.1625,286.6563 2370.475,286.7813 2369.7094,286.7813 C2367.6625,286.7813 2366.3656,285.6875 2366.3656,283.9844 L2366.3656,282.8906 C2366.3656,281.1094 2367.6156,279.7969 2369.35,279.7969 C2369.9281,279.7969 2370.5375,279.9531 2371.0063,280.2031 C2371.4906,280.4844 2371.6625,280.7031 2371.7563,281.1094 C2371.8188,281.5156 2371.85,281.6406 2371.9906,281.7656 C2372.1313,281.9063 2372.3656,282.0156 2372.5844,282.0156 C2372.85,282.0156 2373.1156,281.875 2373.2875,281.6563 C2373.3969,281.5 2373.4281,281.3125 2373.4281,280.8906 L2373.4281,279.4688 C2373.4281,279.0313 2373.4125,278.9063 2373.3188,278.75 C2373.1625,278.4844 2372.8813,278.3438 2372.5844,278.3438 C2372.2875,278.3438 2372.0844,278.4375 2371.8656,278.75 L2371.6938,278.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="64" x="2384.65" y="287.1543">GameView</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2349.5" x2="2456.5" y1="299" y2="299"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2349.5" x2="2456.5" y1="307" y2="307"/><ellipse cx="2359.5" cy="318" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="2368.5" y="321.2104">GameView()</text><ellipse cx="2359.5" cy="330.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="2368.5" y="334.0151">update() : void</text><!--MD5=[da75cb4793a79431f89d81cb3103fccc]
+class GameFrame--><rect codeLine="230" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="73.6094" id="GameFrame" style="stroke:#A80036;stroke-width:1.5;" width="219" x="2805.5" y="401"/><ellipse cx="2874.25" cy="417" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2876.5938,412.6719 C2875.6563,412.2344 2875.0625,412.0938 2874.1875,412.0938 C2871.5625,412.0938 2869.5625,414.1719 2869.5625,416.8906 L2869.5625,418.0156 C2869.5625,420.5938 2871.6719,422.4844 2874.5625,422.4844 C2875.7813,422.4844 2876.9375,422.1875 2877.6875,421.6406 C2878.2656,421.2344 2878.5938,420.7813 2878.5938,420.3906 C2878.5938,419.9375 2878.2031,419.5469 2877.7344,419.5469 C2877.5156,419.5469 2877.3125,419.625 2877.125,419.8125 C2876.6719,420.2969 2876.6719,420.2969 2876.4844,420.3906 C2876.0625,420.6563 2875.375,420.7813 2874.6094,420.7813 C2872.5625,420.7813 2871.2656,419.6875 2871.2656,417.9844 L2871.2656,416.8906 C2871.2656,415.1094 2872.5156,413.7969 2874.25,413.7969 C2874.8281,413.7969 2875.4375,413.9531 2875.9063,414.2031 C2876.3906,414.4844 2876.5625,414.7031 2876.6563,415.1094 C2876.7188,415.5156 2876.75,415.6406 2876.8906,415.7656 C2877.0313,415.9063 2877.2656,416.0156 2877.4844,416.0156 C2877.75,416.0156 2878.0156,415.875 2878.1875,415.6563 C2878.2969,415.5 2878.3281,415.3125 2878.3281,414.8906 L2878.3281,413.4688 C2878.3281,413.0313 2878.3125,412.9063 2878.2188,412.75 C2878.0625,412.4844 2877.7813,412.3438 2877.4844,412.3438 C2877.1875,412.3438 2876.9844,412.4375 2876.7656,412.75 L2876.5938,412.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="2894.75" y="421.1543">GameFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2806.5" x2="3023.5" y1="433" y2="433"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2813.5" y="441"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="2825.5" y="447.2104">listener : GameListener</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2806.5" x2="3023.5" y1="453.8047" y2="453.8047"/><ellipse cx="2816.5" cy="464.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="2825.5" y="468.0151">GameFrame(Model : GameModel)</text><!--MD5=[58bf0f2c5689d08f154df1804c04e8d4]
+class StartFrame--><rect codeLine="237" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="73.6094" id="StartFrame" style="stroke:#A80036;stroke-width:1.5;" width="211" x="2490.5" y="567"/><ellipse cx="2558.75" cy="583" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2561.0938,578.6719 C2560.1563,578.2344 2559.5625,578.0938 2558.6875,578.0938 C2556.0625,578.0938 2554.0625,580.1719 2554.0625,582.8906 L2554.0625,584.0156 C2554.0625,586.5938 2556.1719,588.4844 2559.0625,588.4844 C2560.2813,588.4844 2561.4375,588.1875 2562.1875,587.6406 C2562.7656,587.2344 2563.0938,586.7813 2563.0938,586.3906 C2563.0938,585.9375 2562.7031,585.5469 2562.2344,585.5469 C2562.0156,585.5469 2561.8125,585.625 2561.625,585.8125 C2561.1719,586.2969 2561.1719,586.2969 2560.9844,586.3906 C2560.5625,586.6563 2559.875,586.7813 2559.1094,586.7813 C2557.0625,586.7813 2555.7656,585.6875 2555.7656,583.9844 L2555.7656,582.8906 C2555.7656,581.1094 2557.0156,579.7969 2558.75,579.7969 C2559.3281,579.7969 2559.9375,579.9531 2560.4063,580.2031 C2560.8906,580.4844 2561.0625,580.7031 2561.1563,581.1094 C2561.2188,581.5156 2561.25,581.6406 2561.3906,581.7656 C2561.5313,581.9063 2561.7656,582.0156 2561.9844,582.0156 C2562.25,582.0156 2562.5156,581.875 2562.6875,581.6563 C2562.7969,581.5 2562.8281,581.3125 2562.8281,580.8906 L2562.8281,579.4688 C2562.8281,579.0313 2562.8125,578.9063 2562.7188,578.75 C2562.5625,578.4844 2562.2813,578.3438 2561.9844,578.3438 C2561.6875,578.3438 2561.4844,578.4375 2561.2656,578.75 L2561.0938,578.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="2579.25" y="587.1543">StartFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2491.5" x2="2700.5" y1="599" y2="599"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2498.5" y="607"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="2510.5" y="613.2104">listener : GameListener</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2491.5" x2="2700.5" y1="619.8047" y2="619.8047"/><ellipse cx="2501.5" cy="630.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="2510.5" y="634.0151">StartFrame(Model : GameModel)</text><!--MD5=[4d8c34dc1ac6f72ce8076fe54533ea6c]
+class FoodFrame--><rect codeLine="245" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="73.6094" id="FoodFrame" style="stroke:#A80036;stroke-width:1.5;" width="211" x="2736.5" y="567"/><ellipse cx="2803.25" cy="583" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2805.5938,578.6719 C2804.6563,578.2344 2804.0625,578.0938 2803.1875,578.0938 C2800.5625,578.0938 2798.5625,580.1719 2798.5625,582.8906 L2798.5625,584.0156 C2798.5625,586.5938 2800.6719,588.4844 2803.5625,588.4844 C2804.7813,588.4844 2805.9375,588.1875 2806.6875,587.6406 C2807.2656,587.2344 2807.5938,586.7813 2807.5938,586.3906 C2807.5938,585.9375 2807.2031,585.5469 2806.7344,585.5469 C2806.5156,585.5469 2806.3125,585.625 2806.125,585.8125 C2805.6719,586.2969 2805.6719,586.2969 2805.4844,586.3906 C2805.0625,586.6563 2804.375,586.7813 2803.6094,586.7813 C2801.5625,586.7813 2800.2656,585.6875 2800.2656,583.9844 L2800.2656,582.8906 C2800.2656,581.1094 2801.5156,579.7969 2803.25,579.7969 C2803.8281,579.7969 2804.4375,579.9531 2804.9063,580.2031 C2805.3906,580.4844 2805.5625,580.7031 2805.6563,581.1094 C2805.7188,581.5156 2805.75,581.6406 2805.8906,581.7656 C2806.0313,581.9063 2806.2656,582.0156 2806.4844,582.0156 C2806.75,582.0156 2807.0156,581.875 2807.1875,581.6563 C2807.2969,581.5 2807.3281,581.3125 2807.3281,580.8906 L2807.3281,579.4688 C2807.3281,579.0313 2807.3125,578.9063 2807.2188,578.75 C2807.0625,578.4844 2806.7813,578.3438 2806.4844,578.3438 C2806.1875,578.3438 2805.9844,578.4375 2805.7656,578.75 L2805.5938,578.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="2823.75" y="587.1543">FoodFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2737.5" x2="2946.5" y1="599" y2="599"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2744.5" y="607"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="2756.5" y="613.2104">listener : GameListener</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2737.5" x2="2946.5" y1="619.8047" y2="619.8047"/><ellipse cx="2747.5" cy="630.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="2756.5" y="634.0151">FoodFrame(Model : GameModel)</text><!--MD5=[fa22f29c53ed6d2510bea2e0aa245b7f]
+class Window--><rect codeLine="277" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="60.8047" id="Window" style="stroke:#A80036;stroke-width:1.5;" width="80" x="2690" y="407.5"/><ellipse cx="2705" cy="423.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2707.3438,419.1719 C2706.4063,418.7344 2705.8125,418.5938 2704.9375,418.5938 C2702.3125,418.5938 2700.3125,420.6719 2700.3125,423.3906 L2700.3125,424.5156 C2700.3125,427.0938 2702.4219,428.9844 2705.3125,428.9844 C2706.5313,428.9844 2707.6875,428.6875 2708.4375,428.1406 C2709.0156,427.7344 2709.3438,427.2813 2709.3438,426.8906 C2709.3438,426.4375 2708.9531,426.0469 2708.4844,426.0469 C2708.2656,426.0469 2708.0625,426.125 2707.875,426.3125 C2707.4219,426.7969 2707.4219,426.7969 2707.2344,426.8906 C2706.8125,427.1563 2706.125,427.2813 2705.3594,427.2813 C2703.3125,427.2813 2702.0156,426.1875 2702.0156,424.4844 L2702.0156,423.3906 C2702.0156,421.6094 2703.2656,420.2969 2705,420.2969 C2705.5781,420.2969 2706.1875,420.4531 2706.6563,420.7031 C2707.1406,420.9844 2707.3125,421.2031 2707.4063,421.6094 C2707.4688,422.0156 2707.5,422.1406 2707.6406,422.2656 C2707.7813,422.4063 2708.0156,422.5156 2708.2344,422.5156 C2708.5,422.5156 2708.7656,422.375 2708.9375,422.1563 C2709.0469,422 2709.0781,421.8125 2709.0781,421.3906 L2709.0781,419.9688 C2709.0781,419.5313 2709.0625,419.4063 2708.9688,419.25 C2708.8125,418.9844 2708.5313,418.8438 2708.2344,418.8438 C2707.9375,418.8438 2707.7344,418.9375 2707.5156,419.25 L2707.3438,419.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="2719" y="427.6543">Window</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2691" x2="2769" y1="439.5" y2="439.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2691" x2="2769" y1="447.5" y2="447.5"/><ellipse cx="2701" cy="458.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="52" x="2710" y="461.7104">Window()</text><!--MD5=[950b704b777f60d9f4f6c788c62d48e4]
+class CarePanel--><rect codeLine="265" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="CarePanel" style="stroke:#A80036;stroke-width:1.5;" width="91" x="2965.5" y="280"/><ellipse cx="2980.5" cy="296" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2982.8438,291.6719 C2981.9063,291.2344 2981.3125,291.0938 2980.4375,291.0938 C2977.8125,291.0938 2975.8125,293.1719 2975.8125,295.8906 L2975.8125,297.0156 C2975.8125,299.5938 2977.9219,301.4844 2980.8125,301.4844 C2982.0313,301.4844 2983.1875,301.1875 2983.9375,300.6406 C2984.5156,300.2344 2984.8438,299.7813 2984.8438,299.3906 C2984.8438,298.9375 2984.4531,298.5469 2983.9844,298.5469 C2983.7656,298.5469 2983.5625,298.625 2983.375,298.8125 C2982.9219,299.2969 2982.9219,299.2969 2982.7344,299.3906 C2982.3125,299.6563 2981.625,299.7813 2980.8594,299.7813 C2978.8125,299.7813 2977.5156,298.6875 2977.5156,296.9844 L2977.5156,295.8906 C2977.5156,294.1094 2978.7656,292.7969 2980.5,292.7969 C2981.0781,292.7969 2981.6875,292.9531 2982.1563,293.2031 C2982.6406,293.4844 2982.8125,293.7031 2982.9063,294.1094 C2982.9688,294.5156 2983,294.6406 2983.1406,294.7656 C2983.2813,294.9063 2983.5156,295.0156 2983.7344,295.0156 C2984,295.0156 2984.2656,294.875 2984.4375,294.6563 C2984.5469,294.5 2984.5781,294.3125 2984.5781,293.8906 L2984.5781,292.4688 C2984.5781,292.0313 2984.5625,291.9063 2984.4688,291.75 C2984.3125,291.4844 2984.0313,291.3438 2983.7344,291.3438 C2983.4375,291.3438 2983.2344,291.4375 2983.0156,291.75 L2982.8438,291.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="59" x="2994.5" y="300.1543">CarePanel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2966.5" x2="3055.5" y1="312" y2="312"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2966.5" x2="3055.5" y1="320" y2="320"/><!--MD5=[7410443df040e6b4a32a1c040c7dac6a]
+class NeedBar--><rect codeLine="266" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="NeedBar" style="stroke:#A80036;stroke-width:1.5;" width="84" x="2841" y="127"/><ellipse cx="2856" cy="143" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2858.3438,138.6719 C2857.4063,138.2344 2856.8125,138.0938 2855.9375,138.0938 C2853.3125,138.0938 2851.3125,140.1719 2851.3125,142.8906 L2851.3125,144.0156 C2851.3125,146.5938 2853.4219,148.4844 2856.3125,148.4844 C2857.5313,148.4844 2858.6875,148.1875 2859.4375,147.6406 C2860.0156,147.2344 2860.3438,146.7813 2860.3438,146.3906 C2860.3438,145.9375 2859.9531,145.5469 2859.4844,145.5469 C2859.2656,145.5469 2859.0625,145.625 2858.875,145.8125 C2858.4219,146.2969 2858.4219,146.2969 2858.2344,146.3906 C2857.8125,146.6563 2857.125,146.7813 2856.3594,146.7813 C2854.3125,146.7813 2853.0156,145.6875 2853.0156,143.9844 L2853.0156,142.8906 C2853.0156,141.1094 2854.2656,139.7969 2856,139.7969 C2856.5781,139.7969 2857.1875,139.9531 2857.6563,140.2031 C2858.1406,140.4844 2858.3125,140.7031 2858.4063,141.1094 C2858.4688,141.5156 2858.5,141.6406 2858.6406,141.7656 C2858.7813,141.9063 2859.0156,142.0156 2859.2344,142.0156 C2859.5,142.0156 2859.7656,141.875 2859.9375,141.6563 C2860.0469,141.5 2860.0781,141.3125 2860.0781,140.8906 L2860.0781,139.4688 C2860.0781,139.0313 2860.0625,138.9063 2859.9688,138.75 C2859.8125,138.4844 2859.5313,138.3438 2859.2344,138.3438 C2858.9375,138.3438 2858.7344,138.4375 2858.5156,138.75 L2858.3438,138.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="2870" y="147.1543">NeedBar</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2842" x2="2924" y1="159" y2="159"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2842" x2="2924" y1="167" y2="167"/><!--MD5=[f699c29d0d372c35d21a18d639f4fd5e]
+class NeedPanel--><rect codeLine="267" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="NeedPanel" style="stroke:#A80036;stroke-width:1.5;" width="95" x="2835.5" y="280"/><ellipse cx="2850.5" cy="296" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2852.8438,291.6719 C2851.9063,291.2344 2851.3125,291.0938 2850.4375,291.0938 C2847.8125,291.0938 2845.8125,293.1719 2845.8125,295.8906 L2845.8125,297.0156 C2845.8125,299.5938 2847.9219,301.4844 2850.8125,301.4844 C2852.0313,301.4844 2853.1875,301.1875 2853.9375,300.6406 C2854.5156,300.2344 2854.8438,299.7813 2854.8438,299.3906 C2854.8438,298.9375 2854.4531,298.5469 2853.9844,298.5469 C2853.7656,298.5469 2853.5625,298.625 2853.375,298.8125 C2852.9219,299.2969 2852.9219,299.2969 2852.7344,299.3906 C2852.3125,299.6563 2851.625,299.7813 2850.8594,299.7813 C2848.8125,299.7813 2847.5156,298.6875 2847.5156,296.9844 L2847.5156,295.8906 C2847.5156,294.1094 2848.7656,292.7969 2850.5,292.7969 C2851.0781,292.7969 2851.6875,292.9531 2852.1563,293.2031 C2852.6406,293.4844 2852.8125,293.7031 2852.9063,294.1094 C2852.9688,294.5156 2853,294.6406 2853.1406,294.7656 C2853.2813,294.9063 2853.5156,295.0156 2853.7344,295.0156 C2854,295.0156 2854.2656,294.875 2854.4375,294.6563 C2854.5469,294.5 2854.5781,294.3125 2854.5781,293.8906 L2854.5781,292.4688 C2854.5781,292.0313 2854.5625,291.9063 2854.4688,291.75 C2854.3125,291.4844 2854.0313,291.3438 2853.7344,291.3438 C2853.4375,291.3438 2853.2344,291.4375 2853.0156,291.75 L2852.8438,291.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="63" x="2864.5" y="300.1543">NeedPanel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2836.5" x2="2929.5" y1="312" y2="312"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2836.5" x2="2929.5" y1="320" y2="320"/><!--MD5=[f91d62c0208a7341279161a0b4365a5c]
+class InfoPanel--><rect codeLine="268" fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="InfoPanel" style="stroke:#A80036;stroke-width:1.5;" width="85" x="2715.5" y="280"/><ellipse cx="2730.5" cy="296" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2732.8438,291.6719 C2731.9063,291.2344 2731.3125,291.0938 2730.4375,291.0938 C2727.8125,291.0938 2725.8125,293.1719 2725.8125,295.8906 L2725.8125,297.0156 C2725.8125,299.5938 2727.9219,301.4844 2730.8125,301.4844 C2732.0313,301.4844 2733.1875,301.1875 2733.9375,300.6406 C2734.5156,300.2344 2734.8438,299.7813 2734.8438,299.3906 C2734.8438,298.9375 2734.4531,298.5469 2733.9844,298.5469 C2733.7656,298.5469 2733.5625,298.625 2733.375,298.8125 C2732.9219,299.2969 2732.9219,299.2969 2732.7344,299.3906 C2732.3125,299.6563 2731.625,299.7813 2730.8594,299.7813 C2728.8125,299.7813 2727.5156,298.6875 2727.5156,296.9844 L2727.5156,295.8906 C2727.5156,294.1094 2728.7656,292.7969 2730.5,292.7969 C2731.0781,292.7969 2731.6875,292.9531 2732.1563,293.2031 C2732.6406,293.4844 2732.8125,293.7031 2732.9063,294.1094 C2732.9688,294.5156 2733,294.6406 2733.1406,294.7656 C2733.2813,294.9063 2733.5156,295.0156 2733.7344,295.0156 C2734,295.0156 2734.2656,294.875 2734.4375,294.6563 C2734.5469,294.5 2734.5781,294.3125 2734.5781,293.8906 L2734.5781,292.4688 C2734.5781,292.0313 2734.5625,291.9063 2734.4688,291.75 C2734.3125,291.4844 2734.0313,291.3438 2733.7344,291.3438 C2733.4375,291.3438 2733.2344,291.4375 2733.0156,291.75 L2732.8438,291.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="2744.5" y="300.1543">InfoPanel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2716.5" x2="2799.5" y1="312" y2="312"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2716.5" x2="2799.5" y1="320" y2="320"/><!--MD5=[a520837ef4416b7ac44f8bb1541877a6]
+class JFrame--><rect fill="#FEFECE" filter="url(#f1n1mz1tbbls1z)" height="48" id="JFrame" style="stroke:#A80036;stroke-width:1.5;" width="74" x="2983" y="580"/><ellipse cx="2998" cy="596" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3000.3438,591.6719 C2999.4063,591.2344 2998.8125,591.0938 2997.9375,591.0938 C2995.3125,591.0938 2993.3125,593.1719 2993.3125,595.8906 L2993.3125,597.0156 C2993.3125,599.5938 2995.4219,601.4844 2998.3125,601.4844 C2999.5313,601.4844 3000.6875,601.1875 3001.4375,600.6406 C3002.0156,600.2344 3002.3438,599.7813 3002.3438,599.3906 C3002.3438,598.9375 3001.9531,598.5469 3001.4844,598.5469 C3001.2656,598.5469 3001.0625,598.625 3000.875,598.8125 C3000.4219,599.2969 3000.4219,599.2969 3000.2344,599.3906 C2999.8125,599.6563 2999.125,599.7813 2998.3594,599.7813 C2996.3125,599.7813 2995.0156,598.6875 2995.0156,596.9844 L2995.0156,595.8906 C2995.0156,594.1094 2996.2656,592.7969 2998,592.7969 C2998.5781,592.7969 2999.1875,592.9531 2999.6563,593.2031 C3000.1406,593.4844 3000.3125,593.7031 3000.4063,594.1094 C3000.4688,594.5156 3000.5,594.6406 3000.6406,594.7656 C3000.7813,594.9063 3001.0156,595.0156 3001.2344,595.0156 C3001.5,595.0156 3001.7656,594.875 3001.9375,594.6563 C3002.0469,594.5 3002.0781,594.3125 3002.0781,593.8906 L3002.0781,592.4688 C3002.0781,592.0313 3002.0625,591.9063 3001.9688,591.75 C3001.8125,591.4844 3001.5313,591.3438 3001.2344,591.3438 C3000.9375,591.3438 3000.7344,591.4375 3000.5156,591.75 L3000.3438,591.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="42" x="3012" y="600.1543">JFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2984" x2="3056" y1="612" y2="612"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2984" x2="3056" y1="620" y2="620"/><!--MD5=[5aad3a9cd73736a6490b541e0723f3c6]
+link App to GameModel--><path codeLine="18" d="M2023.12,187.31 C1829.2,262.24 1378.58,450.65 1056,697 C1025.34,720.42 996.057,752.46 974.457,778.63 " fill="none" id="App-GameModel" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="971.057,782.78,979.857,778.3574,974.2276,778.9138,973.6712,773.2844,971.057,782.78" style="stroke:#A80036;stroke-width:2.0;"/><path d="M2021.8262,183.5253 L2017.2376,193.8667 M2024.7026,190.9903 L2014.3612,186.4017 " fill="none" style="stroke:#A80036;stroke-width:2.0;"/><!--MD5=[992b2de29f9ba77db659bba8f58d410f]
+reverse link Tamagotchi to Cat--><path d="M1436.01,1436.112 C1454.2,1463.084 1470.27,1486.932 1482,1504.335 " fill="none" id="Tamagotchi-backto-Cat" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1430.14,1439.92,1424.76,1419.423,1441.75,1432.094,1430.14,1439.92" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c95ae832b1b034ec728abb283c20aa06]
+reverse link Tamagotchi to Dog--><path d="M1464.72,1418.846 C1464.81,1418.897 1464.91,1418.949 1465,1419 C1511.71,1444.94 1537.09,1410.428 1584,1436 C1613.07,1451.847 1636.78,1481.808 1651.7,1504.448 " fill="none" id="Tamagotchi-backto-Dog" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1461,1424.776,1447.52,1408.427,1468.26,1412.801,1461,1424.776" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1b08d28f8c247388a1dc551630a38eec]
+reverse link Tamagotchi to Robot--><path d="M1176.24,1438.761 C1168.02,1464.644 1160.76,1487.504 1155.42,1504.335 " fill="none" id="Tamagotchi-backto-Robot" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1169.66,1436.367,1182.38,1419.423,1183,1440.604,1169.66,1436.367" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[72cfdf6f4d0be32c8b3a4ab6894e5eba]
+reverse link Tamagotchi to Sheep--><path d="M1309.3,1439.138 C1314.1,1464.866 1318.34,1487.585 1321.46,1504.335 " fill="none" id="Tamagotchi-backto-Sheep" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="1302.4,1440.368,1305.62,1419.423,1316.17,1437.799,1302.4,1440.368" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[151398950f1116d4e9cb1ee1dd80d01c]
+link Food to Tamagotchi--><path codeLine="67" d="M1260,874.27 C1260,888.59 1260,905.4 1260,923.628 " fill="none" id="Food-Tamagotchi" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1260,928.806,1264,919.806,1260,923.806,1256,919.806,1260,928.806" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1256,874.08 L1264,882.08 M1264,874.08 L1256,882.08 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f38b9dd463217f6d9dd3ce7d330c8c16]
+link Tamagotchi to Need--><path codeLine="68" d="M1452.71,1174 C1460.88,1174 1469.06,1174 1477.24,1174 " fill="none" id="Tamagotchi-Need" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1482.33,1174,1473.33,1170,1477.33,1174,1473.33,1178,1482.33,1174" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1452.54,1178 L1460.54,1170 M1452.54,1170 L1460.54,1178 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[02f3e776d3a6768d35b615bef761bdc0]
+link Tamagotchi to Serializable--><path codeLine="128" d="M1072.28,1413.792 C1066.76,1421.255 1061.32,1428.671 1056,1436 C1039.08,1459.301 1020.87,1486.516 1007.87,1506.346 " fill="none" id="Tamagotchi-to-Serializable" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1005.02,1510.714,1013.2921,1505.3687,1007.7555,1506.5286,1006.5956,1500.992,1005.02,1510.714" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[667d1577fa16633dc33d1744e1739fc7]
+link GameModel to Tamagotchi--><path codeLine="130" d="M1002.31,872.3 C1024.07,889.07 1047.97,908.93 1068,929 C1068.18,929.179 1068.36,929.358 1068.54,929.537 " fill="none" id="GameModel-Tamagotchi" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="1072.28,933.324,1068.7965,924.1118,1068.7645,929.7685,1063.1077,929.7365,1072.28,933.324" style="stroke:#A80036;stroke-width:2.0;"/><path d="M999.8102,875.4161 L1011.026,873.9313 M1004.6757,869.0658 L1006.1605,880.2817 " fill="none" style="stroke:#A80036;stroke-width:2.0;"/><!--MD5=[717f40251392256b7aae2df48f521f09]
+reverse link Serializable to GameManager--><path codeLine="145" d="M935.016,1535 C876.896,1535 818.775,1535 760.654,1535 " fill="none" id="Serializable-backto-GameManager" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="940.279,1535,931.279,1531,935.279,1535,931.279,1539,940.279,1535" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9fa984c62fb3665c3edc6340087765fc]
+link sauvegarde to GMN44523--><path d="M402.75,1819.5 C414.314,1819.5 425.878,1819.5 437.442,1819.5 " fill="none" id="sauvegarde-GMN44523" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[4af0f89e0ddddc479b210bed61ac55bf]
+link GameSaver to sauvegarde--><path codeLine="165" d="M447.505,1737.156 C425.538,1755.866 400.428,1777.253 381.47,1793.4 " fill="none" id="GameSaver-to-sauvegarde" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="377.278,1796.97,386.7233,1794.1795,381.0845,1793.7279,381.536,1788.0891,377.278,1796.97" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a65eb036110f8f15bbea9e8703bc16a7]
+reverse link GameLoader to sauvegarde--><path codeLine="166" d="M246.514,1728.031 C271.975,1749.867 304.624,1777.869 326.809,1796.895 " fill="none" id="GameLoader-backto-sauvegarde" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="242.492,1724.581,246.721,1733.4757,246.2879,1727.8354,251.9281,1727.4023,242.492,1724.581" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b047fde166c362fdf357f07845563d3c]
+reverse link GameManager to GameLoader--><path codeLine="167" d="M514.44,1577.49 C437.862,1604.544 342.883,1639.204 279.033,1663.47 " fill="none" id="GameManager-backto-GameLoader" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="519.457,1575.719,509.6388,1574.9423,514.742,1577.383,512.3013,1582.4862,519.457,1575.719" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a431adc5335c5e47c3defa6aa1c8c16f]
+link GameManager to GameLoader--><path codeLine="175" d="M514.524,1586.213 C447.679,1611.046 366.798,1640.238 304.823,1661.819 " fill="none" id="GameManager-GameLoader" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="300.019,1663.49,309.8336,1664.3111,304.7414,1661.8473,307.2052,1656.7552,300.019,1663.49" style="stroke:#A80036;stroke-width:1.0;"/><path d="M513.3557,1582.3784 L508.6438,1592.6642 M516.1427,1589.8773 L505.8569,1585.1653 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b3e0948b74681d28a895837691667aea]
+link GameManager to GameSaver--><path codeLine="174" d="M586.215,1595.051 C570.596,1612.199 553.773,1630.669 538.991,1646.898 " fill="none" id="GameManager-GameSaver" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="535.279,1650.974,544.2972,1647.0151,538.6464,1647.278,538.3835,1641.6272,535.279,1650.974" style="stroke:#A80036;stroke-width:1.0;"/><path d="M583.2598,1592.3541 L583.7855,1603.6556 M589.1734,1597.7419 L577.8719,1598.2677 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e57779b2e0e3f5f933e77aaa57f99f6b]
+link GameModel to GameManager--><path codeLine="176" d="M919.187,873.85 C866.634,998.113 723.736,1336.003 665.359,1474.038 " fill="none" id="GameModel-GameManager" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="663.318,1478.863,670.5076,1472.1318,665.2655,1474.2579,663.1394,1469.0158,663.318,1478.863" style="stroke:#A80036;stroke-width:1.0;"/><path d="M915.5551,872.1474 L919.7892,882.6389 M922.9179,875.2761 L912.4264,879.5102 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4b2674e12988fa6e492452349d389b39]
+link GameManager to GameTimer--><path codeLine="177" d="M693.794,1595.061 C713.479,1616.673 735.075,1640.383 752.087,1659.06 " fill="none" id="GameManager-GameTimer" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="755.865,1663.208,752.7623,1653.8606,752.4983,1659.5113,746.8476,1659.2474,755.865,1663.208" style="stroke:#A80036;stroke-width:1.0;"/><path d="M690.8266,1597.7419 L702.1281,1598.2677 M696.7402,1592.3541 L696.2145,1603.6556 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a6a9ee2a8aa649704548ac38ec5718b7]
+link App to GameController--><path codeLine="186" d="M2118,212.47 C2118,294.57 2118,441.16 2118,529.51 " fill="none" id="App-GameController" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2118,534.72,2122,525.72,2118,529.72,2114,525.72,2118,534.72" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2114,212.3 L2122,220.3 M2122,212.3 L2114,220.3 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[61212d5962edc3d5ba8f8fc713940831]
+link GameController to GameListener--><path codeLine="206" d="M2118.33,678.53 C2118.49,713.61 2118.68,754.26 2118.81,783.83 " fill="none" id="GameController-GameListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2118.84,788.85,2122.8143,779.8386,2118.8257,783.85,2114.8143,779.8615,2118.84,788.85" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2114.3386,678.1228 L2122.3842,686.0769 M2122.3385,678.0771 L2114.3843,686.1226 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[50db5deea18db6acb34b5207d0606d76]
+link GameController to GameModel--><path codeLine="207" d="M1985.88,674.85 C1970.73,680.59 1955.24,685.51 1940,689 C1916.06,694.48 1078.43,686.99 1056,697 C1018.39,713.78 987.575,749.17 967.025,778.49 " fill="none" id="GameController-GameModel" style="stroke:#0000FF;stroke-width:2.0;"/><polygon fill="#0000FF" points="964.068,782.77,972.475,777.6395,966.9103,778.6565,965.8934,773.0918,964.068,782.77" style="stroke:#0000FF;stroke-width:2.0;"/><path d="M1984.4642,671.1115 L1979.8862,681.4577 M1987.3483,678.5736 L1977.0021,673.9956 " fill="none" style="stroke:#0000FF;stroke-width:2.0;"/><!--MD5=[05e205edae0d8125056b2f977380a90d]
+link App to GameView--><path codeLine="224" d="M2213.13,198.36 C2253.82,218.72 2301.62,243.33 2344,267 C2344.09,267.05 2344.18,267.1 2344.28,267.15 " fill="none" id="App-GameView" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2348.44,269.51,2342.5655,261.6049,2344.0848,267.0539,2338.6358,268.5733,2348.44,269.51" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2210.8759,201.7172 L2221.6135,198.1532 M2214.4627,194.5664 L2218.0267,205.304 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b057ffd45ba87c32f15f07e0c36cda14]
+link GameView to GameModel--><path codeLine="225" d="M2462.47,337.09 C2466.31,338.56 2470.18,339.88 2474,341 C2602.4,378.55 2983.24,301.8 3073,401 C3158.88,495.91 3163.33,598.31 3073,689 C3063.12,698.92 1068.81,691.33 1056,697 C1018.35,713.68 987.536,749.08 966.997,778.43 " fill="none" id="GameView-GameModel" style="stroke:#008000;stroke-width:2.0;"/><polygon fill="#008000" points="964.042,782.71,972.4482,777.5781,966.8837,778.596,965.8658,773.0315,964.042,782.71" style="stroke:#008000;stroke-width:2.0;"/><path d="M2460.7816,340.7225 L2471.1687,336.2382 M2463.733,333.2868 L2468.2173,343.6738 " fill="none" style="stroke:#008000;stroke-width:2.0;"/><!--MD5=[fbf26387acebee23c0f109bbefe53776]
+link GameController to GameView--><path codeLine="226" d="M2212.55,531.41 C2233.61,513.85 2255.24,494.48 2274,475 C2313.38,434.09 2351.85,381.23 2376.38,345.39 " fill="none" id="GameController-GameView" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2379.3,341.11,2370.9134,346.2738,2376.474,345.2348,2377.5131,350.7954,2379.3,341.11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2215.0219,534.5443 L2216.0503,523.2774 M2209.9027,528.3967 L2221.1695,529.4251 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6a0a2d82f50309d80f19c1ce080fd8a4]
+link GameView to GameFrame--><path codeLine="252" d="M2462.6,336.69 C2466.41,338.26 2470.23,339.71 2474,341 C2608.03,386.81 2649.14,368.46 2787,401 C2791.37,402.03 2795.82,403.12 2800.31,404.24 " fill="none" id="GameView-GameFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2805.19,405.47,2797.4331,399.4012,2800.3401,404.254,2795.4874,407.161,2805.19,405.47" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2460.8197,340.2802 L2471.302,336.0232 M2463.9323,332.9106 L2468.1893,343.3929 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[32563ca9a0526c6e64f0b9d12b00cdfd]
+link GameView to FoodFrame--><path codeLine="253" d="M2457.05,344.09 C2509.97,381.16 2593.82,436.72 2672,475 C2691.95,484.77 2699.95,480.57 2719,492 C2751.19,511.32 2782.53,539.79 2805.52,563.06 " fill="none" id="GameView-FoodFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2809.13,566.75,2805.6875,557.5224,2805.6304,563.1789,2799.9738,563.1218,2809.13,566.75" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2454.4609,347.1547 L2465.6029,345.1911 M2459.0501,340.6019 L2461.0137,351.7439 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e4abdc765fd86c08e4c84b46ae94138a]
+link GameView to StartFrame--><path codeLine="254" d="M2429.36,345.7 C2466.2,402.58 2532.69,505.25 2569.57,562.19 " fill="none" id="GameView-StartFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2572.39,566.54,2570.8645,556.81,2569.6761,562.3406,2564.1455,561.1522,2572.39,566.54" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2425.8244,347.6105 L2436.8856,349.9873 M2432.5434,343.2683 L2430.1666,354.3295 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a8e0fbb768702d83ff672d96490d251e]
+link GameFrame to GameListener--><path codeLine="256" d="M3029.7,457.73 C3047.08,465.57 3062.88,476.57 3074,492 C3125.19,563.03 3131.38,622.87 3074,689 C3023.9,746.74 2559.48,791.3 2297.22,812.11 " fill="none" id="GameFrame-GameListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2292.22,812.5,2301.5111,815.7674,2297.204,812.1001,2300.8713,807.7931,2292.22,812.5" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3027.7588,461.2675 L3038.279,457.1051 M3030.9378,453.9262 L3035.1001,464.4464 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[eb18c07b6ca2b89457718dfc51e29851]
+link StartFrame to GameListener--><path codeLine="257" d="M2513.05,643.26 C2425.76,683.52 2289.18,746.51 2201.91,786.76 " fill="none" id="StartFrame-GameListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2197.28,788.9,2207.1278,788.7544,2201.8185,786.802,2203.771,781.4928,2197.28,788.9" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2511.5531,639.5472 L2507.6482,650.1656 M2514.9099,646.8088 L2504.2914,642.904 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5b9b8e8de338c7079956d53ad676e8f]
+link FoodFrame to GameListener--><path codeLine="258" d="M2793.7,644.24 C2771.98,660.19 2745.33,677.52 2719,689 C2583.68,747.98 2419.59,782.92 2297.24,802.58 " fill="none" id="FoodFrame-GameListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2292.17,803.39,2301.6935,805.9007,2297.1058,802.5911,2300.4153,798.0034,2292.17,803.39" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2791.5814,640.8297 L2789.9109,652.0194 M2796.341,647.2598 L2785.1513,645.5894 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0eda4941fd4e19495d0cf39f4cae39e6]
+link GameFrame to Window--><path codeLine="260" d="M2805.48,438 C2800.41,438 2795.35,438 2790.28,438 " fill="none" id="GameFrame-to-Window" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2790.11,445,2770.11,438,2790.11,431,2790.11,445" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3b50acb2467615b47a39bf4054d86a79]
+reverse link Window to StartFrame--><path codeLine="261" d="M2692.93,484.37 C2671.65,510.41 2645.31,542.65 2625.46,566.94 " fill="none" id="Window-backto-StartFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2687.66,479.76,2705.73,468.7,2698.5,488.62,2687.66,479.76" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2a9b42a1c715b0690a22657bdf3f80eb]
+reverse link Window to FoodFrame--><path codeLine="262" d="M2761.75,485.49 C2779.39,511.32 2801.02,542.99 2817.37,566.94 " fill="none" id="Window-backto-FoodFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2755.78,489.16,2750.28,468.7,2767.34,481.27,2755.78,489.16" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[37223b750e64ec7715367ed525577e0e]
+link CarePanel to GameFrame--><path codeLine="270" d="M2994.06,328.3 C2981.64,345.38 2964.35,369.14 2949.11,390.1 " fill="none" id="CarePanel-to-GameFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2941.36,400.75,2948.1234,398.2486,2948.4157,391.0435,2941.6523,393.5448,2941.36,400.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b2a7c5d60f50e4b1ae9d6683edcbcae9]
+link NeedBar to NeedPanel--><path codeLine="271" d="M2883,175.26 C2883,199.72 2883,238.52 2883,266.95 " fill="none" id="NeedBar-to-NeedPanel" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2883,279.96,2887,273.96,2883,267.96,2879,273.96,2883,279.96" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1182d58b427b0cc115e9f57f81c0acd1]
+link NeedPanel to GameFrame--><path codeLine="272" d="M2888.65,328.3 C2892.65,344.83 2898.18,367.62 2903.14,388.07 " fill="none" id="NeedPanel-to-GameFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2906.21,400.75,2908.6788,393.9747,2903.3741,389.0899,2900.9054,395.8652,2906.21,400.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6ddea0706cb72e8478678ea3dfc48a20]
+link InfoPanel to GameFrame--><path codeLine="273" d="M2785.71,328.3 C2806.67,345.92 2836.11,370.68 2861.61,392.11 " fill="none" id="InfoPanel-to-GameFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2871.89,400.75,2869.8657,393.8288,2862.6984,393.0354,2864.7227,399.9566,2871.89,400.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7d381d5b1576a690622ed59881adf088]
+link Window to JFrame--><path codeLine="283" d="M2770.02,467.05 C2775.85,470.17 2781.94,472.95 2788,475 C2825.44,487.64 2932.46,469.58 2965,492 C2988.13,507.93 3001.97,536.5 3009.99,560.66 " fill="none" id="Window-to-JFrame" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3016.73,558.78,3015.52,579.94,3003.27,562.64,3016.73,558.78" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ec7b56ed4bf90e4c5fe3afbfc745383e]
+@startuml
+package com.lado.App
+{
+    Class App
+    {
+        -model : GameModel
+        -view : GameView
+        -controller : GameController
+        - -
+        +App()
+        +main(args : String[]) : void
+    }
+
+    
+
+
+    package "Model" #f2a5a2
+    {
+        App x-[thickness=2]-> GameModel
+        
+        class GameModel
+        {
+            + Tamagotchi : tamagotchi
+            + gameManager : gameManager
+            - -
+            + GameModel()
+        }
+
+        interface Serializable
+
+       
+        
+
+
+        package "Tamagotchi" #edc4c2{
+           
+            class Cat extends Tamagotchi
+            {
+                +Cat(name : String)
+                
+            }
+
+
+            class Dog extends Tamagotchi
+            {
+                +Dog(name : String)
+            }
+
+            class Robot extends Tamagotchi
+            {
+                +Robot(name : String)
+            }
+
+            class Sheep extends Tamagotchi
+            {
+                +Sheep(name : String)
+            }
+
+          
+
+            
+            class Food{
+                -id :   int
+                -name : String  
+                - -
+                +Food(id : int, name : String)
+            }
+            Food x- -> Tamagotchi
+            Tamagotchi x-right-> Need 
+
+            class Need
+            {
+                ~ name : String
+                ~ value : int
+                ~ factor : float
+                ~ critical : boolean
+                - -
+                ~ Need(name : String, value : int, factor : float, critical : boolean)
+                ~ calcDepletion(time : float) : void
+                ~ setVal(value : int) : void
+                + setFactor(factor : float) : void
+                + getVal() : int
+
+
+            }
+         
+            class Tamagotchi
+            {
+                ~ name : String
+                # breed : String
+                ~ favoriteFoods : String[]
+                - health : Need
+                - alive : boolean
+                - mood : String
+                - energy : Need
+                - hunger : Need
+                - cleanliness : Need
+                - happiness : Need
+                ~ CRITICAL_THRESHOLD : integer
+                # needs : Need[] = { energy, hunger, cleanliness, happiness }
+                - - -
+                + Tamagotchi(String name) : Tamagotchi
+                + Tamagotchi() : Tamagotchi
+                + scanCritical() : Boolean 
+                + depleteNeeds() : void 
+                + setDefaultStats() : void 
+                - - - -
+                + getName() : String
+                + setName(String newName) : void
+                - - -
+                + getBreed() : String
+                + setBreed(newBreed : int)void
+                - - -
+                + evalMood() : void
+                + getMood() : String
+                + setMood(newMood : String) : void
+                - - -
+                + checkHealth() : void
+                + kill() : void
+                + hurt(int damage) : void
+                + heal(int healValue) : void
+                + setHealth(int newHealth) : void
+                + boolean getAlive()
+                + void setAlive(boolean alive)
+                
+            }
+
+            
+                        Tamagotchi ..> Serializable
+
+            GameModel x-[thickness=2]-> Tamagotchi
+        }
+
+        package "GameManager" #edc4c2
+        {
+            class GameManager
+            {
+                # saveLocation : String = "../saveData/"
+                + saver : GameSaver
+                + loader : GameLoader
+                + timer : GameTimer
+                - -
+                + GameManager()
+            }
+                        
+                        GameManager .left.> Serializable
+
+            class GameSaver
+            {
+                +GameSaver(game : GameModel) : void
+                - -
+                + saveGame(model.tamagotchi) : void
+                # writeFile                
+            }
+
+            class GameLoader
+            {
+                +GameLoader(game : GameModel) : void
+            }
+
+            package "sauvegarde" <<Database>>  {
+                 
+            }
+            note right of sauvegarde : Fichier de sauvegarde stocké sur le disque
+
+            GameSaver -down-> sauvegarde
+            sauvegarde -up-> GameLoader
+            GameLoader -up-> GameManager
+
+    class GameTimer
+            {
+                +GameTimer(game : GameModel) : void
+            }
+
+            GameManager x- ->GameSaver
+            GameManager x- ->GameLoader
+            GameModel x- -> GameManager
+            GameManager x- -> GameTimer
+            
+        }
+
+    }
+
+
+        package "Controller" #7ad7ff  {
+
+            App x- -> GameController
+            
+        class GameController
+        {
+            -gameView : GameView
+            -gameModel : GameModel
+            -gameListener : GameListener
+            - -
+            +GameController(model : GameModel, view : GameView)
+            +start() : void
+            +update() : void
+            +updateTama() : void
+        }
+        class GameListener
+        {
+            +GameListener(model : GameModel, view : GameView)
+            - -
+            + <override> actionperformed(event : ActionEvent) : void
+        }
+        
+        GameController x- -> GameListener
+        GameController x-[#blue,thickness=2]-> GameModel
+
+
+    }
+
+
+
+    package "View" #b2ff91 {
+
+        class GameView
+        {
+            +GameView()
+            +update() : void
+        }
+
+     
+
+        App x- -> GameView
+        GameView x-[#green,thickness=2]-> GameModel
+        GameController x- -> GameView
+
+        package "UIPackage" #96ff69{
+
+            class GameFrame
+            {
+                - listener : GameListener
+                - -
+                + GameFrame(Model : GameModel)
+            }
+
+             class StartFrame
+            {
+                - listener : GameListener
+                - -
+                + StartFrame(Model : GameModel)
+            }
+
+
+            class FoodFrame
+            {
+                - listener : GameListener
+                - -
+                + FoodFrame(Model : GameModel)
+            }
+
+   GameView x- -> GameFrame
+        GameView x- -> FoodFrame
+        GameView x- -> StartFrame
+
+            GameFrame x- -> GameListener
+            StartFrame x- -> GameListener
+            FoodFrame x- -> GameListener
+    
+            Window <|-left- GameFrame
+            Window <|- - StartFrame
+            Window <|- - FoodFrame
+
+
+            class CarePanel
+            class NeedBar
+            class NeedPanel
+            class InfoPanel
+
+            CarePanel  - -o GameFrame
+            NeedBar  - -o NeedPanel
+            NeedPanel  - -o GameFrame
+            InfoPanel  - -o GameFrame
+
+            
+           
+            class Window
+            {
+                + Window()
+               
+            }
+
+            Window - -|> JFrame
+
+    }
+
+
+
+}
+'/
+@enduml
+
+@startuml
+package com.lado.App
+{
+    Class App
+    {
+        -model : GameModel
+        -view : GameView
+        -controller : GameController
+        - -
+        +App()
+        +main(args : String[]) : void
+    }
+
+    
+
+
+    package "Model" #f2a5a2
+    {
+        App x-[thickness=2]-> GameModel
+        
+        class GameModel
+        {
+            + Tamagotchi : tamagotchi
+            + gameManager : gameManager
+            - -
+            + GameModel()
+        }
+
+        interface Serializable
+
+       
+        
+
+
+        package "Tamagotchi" #edc4c2{
+           
+            class Cat extends Tamagotchi
+            {
+                +Cat(name : String)
+                
+            }
+
+
+            class Dog extends Tamagotchi
+            {
+                +Dog(name : String)
+            }
+
+            class Robot extends Tamagotchi
+            {
+                +Robot(name : String)
+            }
+
+            class Sheep extends Tamagotchi
+            {
+                +Sheep(name : String)
+            }
+
+          
+
+            
+            class Food{
+                -id :   int
+                -name : String  
+                - -
+                +Food(id : int, name : String)
+            }
+            Food x- -> Tamagotchi
+            Tamagotchi x-right-> Need 
+
+            class Need
+            {
+                ~ name : String
+                ~ value : int
+                ~ factor : float
+                ~ critical : boolean
+                - -
+                ~ Need(name : String, value : int, factor : float, critical : boolean)
+                ~ calcDepletion(time : float) : void
+                ~ setVal(value : int) : void
+                + setFactor(factor : float) : void
+                + getVal() : int
+
+
+            }
+         
+            class Tamagotchi
+            {
+                ~ name : String
+                # breed : String
+                ~ favoriteFoods : String[]
+                - health : Need
+                - alive : boolean
+                - mood : String
+                - energy : Need
+                - hunger : Need
+                - cleanliness : Need
+                - happiness : Need
+                ~ CRITICAL_THRESHOLD : integer
+                # needs : Need[] = { energy, hunger, cleanliness, happiness }
+                - - -
+                + Tamagotchi(String name) : Tamagotchi
+                + Tamagotchi() : Tamagotchi
+                + scanCritical() : Boolean 
+                + depleteNeeds() : void 
+                + setDefaultStats() : void 
+                - - - -
+                + getName() : String
+                + setName(String newName) : void
+                - - -
+                + getBreed() : String
+                + setBreed(newBreed : int)void
+                - - -
+                + evalMood() : void
+                + getMood() : String
+                + setMood(newMood : String) : void
+                - - -
+                + checkHealth() : void
+                + kill() : void
+                + hurt(int damage) : void
+                + heal(int healValue) : void
+                + setHealth(int newHealth) : void
+                + boolean getAlive()
+                + void setAlive(boolean alive)
+                
+            }
+
+            
+                        Tamagotchi ..> Serializable
+
+            GameModel x-[thickness=2]-> Tamagotchi
+        }
+
+        package "GameManager" #edc4c2
+        {
+            class GameManager
+            {
+                # saveLocation : String = "../saveData/"
+                + saver : GameSaver
+                + loader : GameLoader
+                + timer : GameTimer
+                - -
+                + GameManager()
+            }
+                        
+                        GameManager .left.> Serializable
+
+            class GameSaver
+            {
+                +GameSaver(game : GameModel) : void
+                - -
+                + saveGame(model.tamagotchi) : void
+                # writeFile                
+            }
+
+            class GameLoader
+            {
+                +GameLoader(game : GameModel) : void
+            }
+
+            package "sauvegarde" <<Database>>  {
+                 
+            }
+            note right of sauvegarde : Fichier de sauvegarde stocké sur le disque
+
+            GameSaver -down-> sauvegarde
+            sauvegarde -up-> GameLoader
+            GameLoader -up-> GameManager
+
+    class GameTimer
+            {
+                +GameTimer(game : GameModel) : void
+            }
+
+            GameManager x- ->GameSaver
+            GameManager x- ->GameLoader
+            GameModel x- -> GameManager
+            GameManager x- -> GameTimer
+            
+        }
+
+    }
+
+
+        package "Controller" #7ad7ff  {
+
+            App x- -> GameController
+            
+        class GameController
+        {
+            -gameView : GameView
+            -gameModel : GameModel
+            -gameListener : GameListener
+            - -
+            +GameController(model : GameModel, view : GameView)
+            +start() : void
+            +update() : void
+            +updateTama() : void
+        }
+        class GameListener
+        {
+            +GameListener(model : GameModel, view : GameView)
+            - -
+            + <override> actionperformed(event : ActionEvent) : void
+        }
+        
+        GameController x- -> GameListener
+        GameController x-[#blue,thickness=2]-> GameModel
+
+
+    }
+
+
+
+    package "View" #b2ff91 {
+
+        class GameView
+        {
+            +GameView()
+            +update() : void
+        }
+
+     
+
+        App x- -> GameView
+        GameView x-[#green,thickness=2]-> GameModel
+        GameController x- -> GameView
+
+        package "UIPackage" #96ff69{
+
+            class GameFrame
+            {
+                - listener : GameListener
+                - -
+                + GameFrame(Model : GameModel)
+            }
+
+             class StartFrame
+            {
+                - listener : GameListener
+                - -
+                + StartFrame(Model : GameModel)
+            }
+
+
+            class FoodFrame
+            {
+                - listener : GameListener
+                - -
+                + FoodFrame(Model : GameModel)
+            }
+
+   GameView x- -> GameFrame
+        GameView x- -> FoodFrame
+        GameView x- -> StartFrame
+
+            GameFrame x- -> GameListener
+            StartFrame x- -> GameListener
+            FoodFrame x- -> GameListener
+    
+            Window <|-left- GameFrame
+            Window <|- - StartFrame
+            Window <|- - FoodFrame
+
+
+            class CarePanel
+            class NeedBar
+            class NeedPanel
+            class InfoPanel
+
+            CarePanel  - -o GameFrame
+            NeedBar  - -o NeedPanel
+            NeedPanel  - -o GameFrame
+            InfoPanel  - -o GameFrame
+
+            
+           
+            class Window
+            {
+                + Window()
+               
+            }
+
+            Window - -|> JFrame
+
+    }
+
+
+
+}
+@enduml
+
+PlantUML version 1.2021.15(Tue Nov 30 16:45:34 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

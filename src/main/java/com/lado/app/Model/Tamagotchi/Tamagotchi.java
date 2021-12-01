@@ -9,7 +9,7 @@ package com.lado.app.Model.Tamagotchi;
 
 import java.io.Serializable;
 
-public class Tamagotchi implements Serializable{
+public class Tamagotchi implements java.io.Serializable{
 
   /** Caracteristiques innés ( initialisés a la naissance) */
   String name;
