@@ -1,6 +1,7 @@
 	
 @startuml game manager
 /' Guide : https://plantuml.com/en/sequence-diagram '/
+Actor Utilisateur
 
 activate Utilisateur
 
@@ -68,6 +69,11 @@ GameManager -> Utilisateur : Game close
 
 deactivate Utilisateur
 
-deactivate GameManager
+deactivate GameManager 
+
 
 @enduml
+
+
+
+
