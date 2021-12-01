@@ -7,7 +7,7 @@ name: Maven Build
 
 on:
   push:
-    branches: [ beta ]
+    branches: [ test ]
   pull_request:
     branches: [ beta ]
 
