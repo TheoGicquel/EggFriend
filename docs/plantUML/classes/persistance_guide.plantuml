@@ -1,0 +1,6 @@
+@startuml
+:Utilisateur: --> (click)
+"clique sur le bouton" as (click)
+(click) --> (eventListener)
+
+@enduml
