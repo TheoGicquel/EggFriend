@@ -59,6 +59,7 @@ package "com.lado.App" #white
                 + setFactor(factor : float) : void
                 + getVal() : int
             }
+            Need ..>Serializable 
             class Tamagotchi
             {
                 ~ name : String
