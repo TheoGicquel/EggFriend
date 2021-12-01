@@ -1,118 +1,270 @@
 @startuml Classes
-Class Tamagotchi
+
 
 package com.lado.App
 {
     Class App
-    App--GameModel
-    App--GameView
-    App--Controller
-    View--GameModel
-    Controller--GameModel
-    Controller--View
-
-    package Model
     {
+        -model : GameModel
+        -view : GameView
+        -controller : GameController
+        --
+        +App()
+        +main(args : String[]) : void
+    }
 
-        class DebugMode
+    
+
+
+    package "Model" #f2a5a2
+    {
+        App x--> GameModel
+        
         class GameModel
         {
             + Tamagotchi : tamagotchi
+            + gameManager : gameManager
+            --
+            + GameModel()
         }
-        GameModel-Tamagotchi
 
-        package Tamagotchi{
+       
+        
+
+
+        package "Tamagotchi" #edc4c2{
+           
             class Cat extends Tamagotchi
-            class Dog extends Tamagotchi
-            class Food{
+            {
+                +Cat(name : String)
                 
             }
-            Food->Tamagotchi
-            Need->Tamagotchi
+
+            class Dog extends Tamagotchi
+            {
+                +Dog(name : String)
+            }
+
+            class Robot extends Tamagotchi
+            {
+                +Robot(name : String)
+            }
+
+            class Sheep extends Tamagotchi
+            {
+                +Sheep(name : String)
+            }
+
+
+            
+            class Food{
+                -id :   int
+                -name : String  
+                --
+                +Food(id : int, name : String)
+            }
+            Food x-left-> Tamagotchi
+            Tamagotchi x--> Need 
 
             class Need
             {
+                ~ name : String
+                ~ value : int
+                ~ factor : float
+                ~ critical : boolean
+                --
+                ~ Need(name : String, value : int, factor : float, critical : boolean)
+                ~ calcDepletion(time : float) : void
+                ~ setVal(value : int) : void
+                + setFactor(factor : float) : void
+                + getVal() : int
 
 
             }
-            class Robot extends Tamagotchi
-            class Sheep extends Tamagotchi
+         
             class Tamagotchi
             {
-                String name
+                ~ name : String
                 # breed : String
-                + favoriteFoods : String[]
-                + health : Need
-                + alive : boolean
-                + energy : Need
-                + hunger : Need
-                + cleanliness : Need
-                + happiness : Need
-                + CRITICAL_THRESHOLD : integer
-                # protected needs : Need[]
-                + void setDefaultStats()
-                + Tamagotchi(String name)
-                + Tamagotchi() 
-                + Boolean scanCritical() 
-                + void depleteNeeds(float timeElapsed)
+                ~ favoriteFoods : String[]
+                - health : Need
+                - alive : boolean
+                - mood : String
+                - energy : Need
+                - hunger : Need
+                - cleanliness : Need
+                - happiness : Need
+                ~ CRITICAL_THRESHOLD : integer
+                # needs : Need[] = { energy, hunger, cleanliness, happiness }
+                ---
+                + Tamagotchi(String name) : Tamagotchi
+                + Tamagotchi() : Tamagotchi
+                + scanCritical() : Boolean 
+                + depleteNeeds() : void 
+                + setDefaultStats() : void 
                 ----
-                + String getName()
-                + void setName(String newName)
+                + getName() : String
+                + setName(String newName) : void
                 ---
-                + String getBreed()
-                + void setBreed(String newBreed)
+                + getBreed() : String
+                + setBreed(newBreed : int)void
                 ---
-                + void checkHealth()
-                + void kill()
-                + void hurt(int damage)
-                + void heal(int healValue)
-                + void setHealth(int newHealth)
+                + evalMood() : void
+                + getMood() : String
+                + setMood(newMood : String) : void
+                ---
+                + checkHealth() : void
+                + kill() : void
+                + hurt(int damage) : void
+                + heal(int healValue) : void
+                + setHealth(int newHealth) : void
                 + boolean getAlive()
                 + void setAlive(boolean alive)
+                
             }
+            GameModel x--> Tamagotchi
         }
 
-
-        package SystemPackage
+        package "saveData" #edc4c2
         {
-            class gameLoader
-            class gameSaver
-            class System
+            class GameManager
+            {
+                # saveLocation : String = "../saveData/"
+                + saver gameSaver
+                + loader gameLoader
+                --
+                + GameManager()
+            }
+
+            class GameSaver
+            {
+                +save(game : GameModel) : void
+            }
+
+            class GameLoader
+            {
+                +load(game : GameModel) : void
+            }
+            GameManager x-->GameSaver
+            GameManager x-->GameLoader
+            GameModel x-left-> GameManager
         }
+
     }
 
-    package View{
+
+        package "Controller" #7ad7ff  {
+
+            App x--> GameController
+            
+        class GameController
+        {
+            -gameView : GameView
+            -gameModel : GameModel
+            -gameListener : GameListener
+            --
+            +GameController(model : GameModel, view : GameView)
+            +start() : void
+            +update() : void
+        }
+        class GameListener
+        {
+            +GameListener(model : GameModel, view : GameView)
+            --
+            + <override> actionperformed(event : ActionEvent) : void
+        }
+        
+        GameController x--> GameListener
+        GameController x--> GameModel
+
+
+    }
+
+
+
+    package "View" #b2ff91 {
 
         class GameView
+        {
+            +GameView()
+            +update() : void
+        }
 
-        package UIPackage {
-            class CarePanel
-            class ContenuFenetre
-            class DebugFrame
-            class debugWindow
-            class FenetreGraphique
+     
+
+        App x--> GameView
+        GameView x--> GameModel
+        GameController x--> GameView
+
+        package "UIPackage" #96ff69{
+
             class GameFrame
+            {
+                - listener : GameListener
+                --
+                + GameFrame(Model : GameModel)
+            }
+
+             class StartFrame
+            {
+                - listener : GameListener
+                --
+                + StartFrame(Model : GameModel)
+            }
+
+
+            class FoodFrame
+            {
+                - listener : GameListener
+                --
+                + FoodFrame(Model : GameModel)
+            }
+
+   GameView x--> GameFrame
+        GameView x--> FoodFrame
+        GameView x--> StartFrame
+
+            GameFrame x--> GameListener
+            StartFrame x--> GameListener
+            FoodFrame x--> GameListener
+    
+            Window <|-- GameFrame
+            Window <|-- StartFrame
+            Window <|-- FoodFrame
+
+
+            class CarePanel
             class NeedBar
             class NeedPanel
-            class TamagotchiUI
-            class UIBuilder
+            class InfoPanel
+
+            CarePanel  .. GameFrame
+            NeedBar  x--> NeedPanel
+            NeedPanel  .. GameFrame
+            InfoPanel  .. GameFrame
+
+            
+           
             class Window
-        }
+            {
+                + Window()
+               
+            }
+
+            Window --|> JFrame
+
     }
 
-    package Controller {
 
-        class GameController
-        class classGameListener
-    }
 
 }
+'/
 
 
 
 
 
-
+@enduml Classes
 
 
 
