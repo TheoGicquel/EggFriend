@@ -125,29 +125,38 @@ package com.lado.App
             GameModel x--> Tamagotchi
         }
 
-        package "saveData" #edc4c2
+        package "GameManager" #edc4c2
         {
             class GameManager
             {
                 # saveLocation : String = "../saveData/"
-                + saver gameSaver
-                + loader gameLoader
+                + saver : GameSaver
+                + loader : GameLoader
+                + timer : GameTimer
                 --
                 + GameManager()
             }
 
             class GameSaver
             {
-                +save(game : GameModel) : void
+                +GameSaver(game : GameModel) : void
             }
 
             class GameLoader
             {
-                +load(game : GameModel) : void
+                +GameLoader(game : GameModel) : void
             }
+
+    class GameTimer
+            {
+                +GameTimer(game : GameModel) : void
+            }
+
             GameManager x-->GameSaver
             GameManager x-->GameLoader
-            GameModel x-left-> GameManager
+            GameModel x--> GameManager
+            GameManager x--> GameTimer
+            
         }
 
     }
@@ -166,6 +175,7 @@ package com.lado.App
             +GameController(model : GameModel, view : GameView)
             +start() : void
             +update() : void
+            +updateTama() : void
         }
         class GameListener
         {
@@ -238,10 +248,10 @@ package com.lado.App
             class NeedPanel
             class InfoPanel
 
-            CarePanel  .. GameFrame
-            NeedBar  x--> NeedPanel
-            NeedPanel  .. GameFrame
-            InfoPanel  .. GameFrame
+            CarePanel  --o GameFrame
+            NeedBar  --o NeedPanel
+            NeedPanel  --o GameFrame
+            InfoPanel  --o GameFrame
 
             
            
