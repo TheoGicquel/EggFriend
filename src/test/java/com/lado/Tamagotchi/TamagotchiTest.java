@@ -20,14 +20,7 @@ public class TamagotchiTest {
         Tamagotchi testTamagotchi = new Tamagotchi("iamtest");
     }
 */
-  @Test
-  public void testTamagotchiConstructor() {
-    try {
-      new Tamagotchi("tama");
-    } catch (Exception e) {
-      fail("Construction failed.");
-    }
-  }
+
 
   @Test
   public void testTamagotchiDefConstr() {
