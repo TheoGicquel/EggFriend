@@ -55,6 +55,7 @@ package com.lado.App
                 +Sheep(name : String)
             }
 
+          
 
             
             class Food{
@@ -63,8 +64,8 @@ package com.lado.App
                 --
                 +Food(id : int, name : String)
             }
-            Food x-left-> Tamagotchi
-            Tamagotchi x--> Need 
+            Food x--> Tamagotchi
+            Tamagotchi x-right-> Need 
 
             class Need
             {
@@ -140,12 +141,24 @@ package com.lado.App
             class GameSaver
             {
                 +GameSaver(game : GameModel) : void
+                --
+                + saveGame(model.tamagotchi) : void
+                # writeFile                
             }
 
             class GameLoader
             {
                 +GameLoader(game : GameModel) : void
             }
+
+            package "sauvegarde" <<Database>>  {
+                 
+            }
+            note right of sauvegarde : Fichier de sauvegarde stocké sur le disque
+
+            GameSaver -down-> sauvegarde
+            sauvegarde -up-> GameLoader
+            GameLoader -up-> GameManager
 
     class GameTimer
             {
