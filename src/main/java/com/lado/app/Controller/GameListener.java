@@ -2,6 +2,7 @@ package com.lado.app.Controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 import com.lado.app.View.GameView;
@@ -9,7 +10,7 @@ import com.lado.app.View.GameView;
 
 public class GameListener implements ActionListener {
 
-
+  private String lastInput;
 
 
 
@@ -25,6 +26,9 @@ public class GameListener implements ActionListener {
   public GameListener(Tamagotchi tamagotchi) {}
 
 
+  public void start(){
+    this.lastInput = "NONE";
+  }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -45,6 +49,13 @@ public class GameListener implements ActionListener {
         GameController.updateTama();
         
       }
+
+      if(inputText.equals("[DEBUG]"))
+      {
+        GameController.degradeTama();
+      }
+
+      GameController.updateView();
 
     }
 }

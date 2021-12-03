@@ -12,9 +12,9 @@ import com.lado.app.View.GameView;
  */
 public class App {
 
-  private GameModel model;
-  private GameView view;
-  private GameController controller;
+  public GameModel model;
+  public GameView view;
+  public GameController controller;
 
 
   public App() {

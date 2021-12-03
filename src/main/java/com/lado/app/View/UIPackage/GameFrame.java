@@ -2,7 +2,6 @@ package com.lado.app.View.UIPackage;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
-import javax.swing.JFrame;
 import javax.swing.border.Border;
 import com.lado.app.Controller.GameListener;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
@@ -42,10 +41,21 @@ public class GameFrame extends Window {
     JButton sleepBtn = new JButton("Sieste");
     JButton cleanBtn = new JButton("Laver");
 
+    JButton saveBtn = new JButton("Sauvegarder");
+    JButton refreshBtn = new JButton("Rafraichir");
+    JButton degradeBtn = new JButton("[DEBUG]");
+
+
     NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
+    JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
+
     for (JButton jButton : careButtons) {
+      jButton.addActionListener(listener);
+    }
+
+    for (JButton jButton : dataButtons) {
       jButton.addActionListener(listener);
     }
   
@@ -70,7 +80,7 @@ public class GameFrame extends Window {
     JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
     JPanel ui = new JPanel();
-    ui.setLayout(new BoxLayout(ui,BoxLayout.PAGE_AXIS));
+    ui.setLayout(new BoxLayout(ui,BoxLayout.LINE_AXIS));
 
   
 
@@ -89,12 +99,27 @@ public class GameFrame extends Window {
     }
 
     infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
-    infoPanel.setBorder(blueBorder);
-    needsUI.setBorder(blueBorder);
-    careUI.setBorder(blueBorder);
-    ui.add(infoPanel);
-    ui.add(needsUI);
-    ui.add(careUI);
+   // infoPanel.setBorder(blueBorder);
+    infoPanel.add(saveBtn);
+    infoPanel.add(degradeBtn);
+
+
+
+   // needsUI.setBorder(blueBorder);
+   // careUI.setBorder(blueBorder);
+
+    JPanel tamaPanel = new JPanel();
+    tamaPanel.setLayout(new BoxLayout(tamaPanel,BoxLayout.PAGE_AXIS));
+
+    JPanel needAndCarePanel = new JPanel();
+    needAndCarePanel.setLayout(new BoxLayout(needAndCarePanel,BoxLayout.PAGE_AXIS));
+    needAndCarePanel.add(needsUI);
+    needAndCarePanel.add(careUI);
+
+
+    tamaPanel.add(infoPanel);
+    ui.add(tamaPanel);
+    ui.add(needAndCarePanel);
 
     this.getContentPane().add(ui);
     this.pack();

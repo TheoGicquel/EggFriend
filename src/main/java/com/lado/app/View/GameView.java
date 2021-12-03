@@ -9,7 +9,7 @@ public class GameView {
     
     //DebugMode debug = new DebugMode();
     Tamagotchi tamagotchi = new Tamagotchi();
-
+    JFrame gameFrame;
 
        // FenetreGraphique fenetre = new FenetreGraphique();
     // fenetre.setVisible(true);
@@ -23,5 +23,14 @@ public class GameView {
 
         gameFrame.setVisible(true);
 
+    }
+
+
+    public void update() {
+    }
+
+
+    public void updateView() {
+        // TODO 
     }
 }

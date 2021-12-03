@@ -9,7 +9,7 @@ package com.lado.app.Model.Tamagotchi;
 
 import java.io.Serializable;
 
-public class Tamagotchi implements java.io.Serializable{
+public class Tamagotchi implements Serializable{
 
   /** Caracteristiques innés ( initialisés a la naissance) */
   String name;
@@ -31,7 +31,7 @@ public class Tamagotchi implements java.io.Serializable{
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
-    this.breed = "unknown";
+    this.breed = "Unknown";
     this.health = new Need("Vie", 100, 1.0f);
     this.energy = new Need("Energie", 100, 1.0f);
     this.hunger = new Need("Faim", 100, 1.0f);
