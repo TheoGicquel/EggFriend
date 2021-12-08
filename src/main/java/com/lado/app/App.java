@@ -12,9 +12,9 @@ import com.lado.app.View.GameView;
  */
 public class App {
 
-  public GameModel model;
-  public GameView view;
-  public GameController controller;
+  public static GameModel model;
+  public static GameView view;
+  public static GameController controller;
 
 
   public App() {
@@ -25,7 +25,7 @@ public class App {
 
   public static void main(String[] args) {
     App app = new App();
-    app.controller.start();
+    controller.start();
 
 
 

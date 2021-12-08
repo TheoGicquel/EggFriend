@@ -31,7 +31,7 @@ public class Tamagotchi implements Serializable{
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
-    this.breed = "Unknown";
+    this.breed = "unknown";
     this.health = new Need("Vie", 100, 1.0f);
     this.energy = new Need("Energie", 100, 1.0f);
     this.hunger = new Need("Faim", 100, 1.0f);

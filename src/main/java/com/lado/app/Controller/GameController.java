@@ -1,5 +1,7 @@
 package com.lado.app.Controller;
 
+import javax.print.event.PrintEvent;
+
 import com.lado.app.Model.*;
 import com.lado.app.View.*;
 
@@ -22,8 +24,10 @@ public class GameController {
     }
 
     public static void updateTama() {
-        float elapsedTime = gameModel.gameManager.getTimeElapsed();
-        gameModel.tamagotchi.depleteNeeds(elapsedTime);
+       
+        // float elapsedTime = gameModel.gameManager.getTimeElapsed();
+        //System.out.println("Elapsed time: " + elapsedTime);
+        //gameModel.tamagotchi.depleteNeeds(elapsedTime);
         
     }
 
@@ -32,7 +36,13 @@ public class GameController {
     }
 
     public static void updateView() {
-        gameView.updateView();
+        gameView.updateView(gameView.gameFrame);
+    }
+
+    public static void debug() {
+        System.out.println("Debugging");
+        System.out.println("Espece: " + gameModel.tamagotchi.getName());
+     
     }
 
     
