@@ -15,7 +15,15 @@ public class GameFrame extends Window {
 
      listener = new GameListener(tamagotchi);
 
-
+     this.setSize(400, 400);
+     this.setLocationRelativeTo(null);
+     this.setTitle("TITRE FENETRE");
+     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     this.setResizable(true);
+     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
+    this.setIconImage(appIcon.getImage());
+ 
+    
     Color backgroundColor = new Color(0xa0a0a0);
     this.getContentPane().setBackground(backgroundColor);
 
