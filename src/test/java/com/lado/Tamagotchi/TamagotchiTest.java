@@ -46,7 +46,46 @@ public class TamagotchiTest {
     testTamagotchi.setName("tamatest");
     assertEquals("tamatest", testTamagotchi.getName());
   }
+  
+  @Test
+  public void testGetBreed(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama","Cat");
+    assertEquals(testTamagotchi.getBreed());
+  }
+  
+  @Test
+  public void testSetBreed(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama","Cat");
+    testTamagotchi.setBreed("Dog");
+    assertEquals("Dog", testTamagotchi.getBreed());
+  }
 
+  @Test
+  public void testGetMood(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    assertEquals(testTamagotchi.getMood());
+  }
+  
+  @Test
+  public void testSetMood(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setMood("Joyeux");
+    assertEquals("Joyeux", testTamagotchi.getMood());
+  }
+  
+  @Test
+  public void testGetAlive(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    assertEquals(true,testTamagotchi.getAlive());
+  }
+  
+  @Test
+  public void testSetAlive(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setAlive("false");
+    assertEquals("false", testTamagotchi.setAlive());
+  }
+  
   @Test
   public void testAliveHealth() {
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
