@@ -15,8 +15,4 @@ public class GameModel {
         tamagotchi = new Tamagotchi();
 
     }
-
-
-
-
 }
