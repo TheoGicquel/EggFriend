@@ -50,20 +50,20 @@ public class TamagotchiTest {
   @Test
   public void testGetBreed(){
     Tamagotchi testTamagotchi = new Tamagotchi("tama","Cat");
-    assertEquals(testTamagotchi.getBreed());
+    assertEquals("Cat",testTamagotchi.getBreed());
   }
   
   @Test
   public void testSetBreed(){
     Tamagotchi testTamagotchi = new Tamagotchi("tama","Cat");
     testTamagotchi.setBreed("Dog");
-    assertEquals("Dog", testTamagotchi.getBreed());
+    assertEquals("tama","Dog", testTamagotchi.getBreed());
   }
 
   @Test
   public void testGetMood(){
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
-    assertEquals(testTamagotchi.getMood());
+    assertEquals("normal",testTamagotchi.getMood());
   }
   
   @Test
@@ -71,6 +71,12 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
     testTamagotchi.setMood("Joyeux");
     assertEquals("Joyeux", testTamagotchi.getMood());
+  }
+  
+  @Test
+  public void getFavoriteFood(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama","Dog");
+    assertEquals("Dog",testTamagotchi.getFavoriteFood());
   }
   
   @Test
@@ -102,6 +108,34 @@ public class TamagotchiTest {
     assertEquals(20, testTamagotchi.health.getVal());
   }
 
+  @Test
+  public void testSetEnergy(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setEnergy(30);
+    assertEquals(30, testTamagotchi.energy.getVal());
+  }
+  
+  @Test
+  public void testSetHunger(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setHunger(60);
+    assertEquals(60, testTamagotchi.hunger.getVal());
+  }
+  
+  @Test
+  public void testSetCleanliness(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setCleanliness(40);
+    assertEquals(40, testTamagotchi.cleanliness.getVal());
+  }
+  
+  @Test
+  public void testSetHappiness(){
+    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    testTamagotchi.setHappiness(50);
+    assertEquals(50,testTamagotchi.happiness.getVal());
+  }
+  
   @Test
   public void testHeal() {
     Tamagotchi testTamagotchi = new Tamagotchi("tama");
