@@ -3,27 +3,27 @@ package com.lado.app.Model.GameManager;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.*;
 
-
+import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class GameSaver {
 
-    Void savegame()
-    {
-        try (FileOutputStream fos = new FileOutputStream("object.dat");
-     ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-
-    // create a new user object
-    Tamagotchi user = new Tamagotchi();
-
-    // write object to file
-    oos.writeObject(user);
-
-} catch (IOException ex) {
-    ex.printStackTrace();
-}
-        return null;
+    public GameSaver(Tamagotchi tama){
+        Tamagotchi savetama = new Tamagotchi();
+        savetama = tama;
+        
+        try {
+            FileOutputStream fileOut =
+            new FileOutputStream("tamagotchisaving.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(savetama);
+            out.close();
+            fileOut.close();
+            System.out.printf("Serialized data is saved in tamagotchisaving.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
     }
-    
 }

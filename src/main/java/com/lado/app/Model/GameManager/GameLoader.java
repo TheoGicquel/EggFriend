@@ -1,3 +1,3 @@
 package com.lado.app.Model.GameManager;
 
-public class GameLoader{}
+public class GameLoader {}
