@@ -36,7 +36,7 @@ public class Tamagotchi implements Serializable{
     this.energy = new Need("Energie", 100, 1.0f);
     this.hunger = new Need("Faim", 100, 1.0f);
     this.cleanliness = new Need("Proprete", 100, 1.0f);
-    this.happiness = new Need("Bonnheur", 100, 1.0f);
+    this.happiness = new Need("Bonheur", 100, 1.0f);
     this.health.setCritical(true);
     this.mood = "normal";
   }
@@ -98,6 +98,12 @@ public class Tamagotchi implements Serializable{
     this.breed = newBreed;
   }
 
+  // ----- NOURRIITURE FAVORITE ------
+  
+  public String getFavoriteFood(){
+    return this.FavoriteFoods;
+  }
+  
   // -------------- VIE --------------
 
   public void checkHealth() {
@@ -136,7 +142,35 @@ public class Tamagotchi implements Serializable{
       this.setAlive(false);
     }
   }
+  
+  public void setEnergy(int energy){
+    this.energy.setVal(energy);
+    if (this.energy.getVal() == 0) {
+      this.setAlive(false);
+    }
+  }
+  
+  public void setHunger(int hunger){
+    this.hunger.setVal(h);
+    if (this.hunger.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
+  
+  public void setCleanliness(int clean){
+    this.cleanliness.setVal(clean);
+    if (this.cleanliness.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
 
+  public void setHappiness(int happy){
+    this.happiness.setVal(happy);
+    if (this.happiness.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
+  
   public boolean getAlive() {
     return this.alive;
   }
