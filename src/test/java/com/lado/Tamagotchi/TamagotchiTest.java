@@ -57,7 +57,7 @@ public class TamagotchiTest {
   public void testSetBreed(){
     Tamagotchi testTamagotchi = new Tamagotchi("tama","Cat");
     testTamagotchi.setBreed("Dog");
-    assertEquals("tama","Dog", testTamagotchi.getBreed());
+    assertEquals("Dog", testTamagotchi.getBreed());
   }
 
   @Test
