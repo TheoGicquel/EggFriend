@@ -34,7 +34,7 @@ public class GameListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
       String inputText = ae.getActionCommand();      
 
-      // TODO A completer
+      /**  !ToDo A completer*/
       System.out.println(inputText);
 
 

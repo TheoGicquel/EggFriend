@@ -15,7 +15,7 @@ public class Tamagotchi implements Serializable{
   String name;
   protected String breed;
   String favoriteFoods[];
-  //Breed breed; // object ?
+  Specie specie;
 
   // variables d'instance
   public Need health;
@@ -31,7 +31,7 @@ public class Tamagotchi implements Serializable{
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
-    this.breed = "Unknown";
+    this.breed = "Inconnu";
     this.health = new Need("Vie", 100, 1.0f);
     this.energy = new Need("Energie", 100, 1.0f);
     this.hunger = new Need("Faim", 100, 1.0f);
@@ -47,7 +47,14 @@ public class Tamagotchi implements Serializable{
   }
 
   public Tamagotchi() {
+    breed.
     setDefaultStats();
+  }
+
+
+  public Need[] getNeedArray()
+  {
+    return needs;
   }
 
   // -------------- ATTRIBUTS --------------
@@ -98,25 +105,40 @@ public class Tamagotchi implements Serializable{
     this.breed = newBreed;
   }
 
-  // ----- NOURRIITURE FAVORITE ------
+  // ----- NOURITTURE FAVORITE ------
   
-  public String getFavoriteFood(){
-    return this.FavoriteFoods;
+  public String[] getFavoriteFoods(){
+
+
+    return this.favoriteFoods;
+  }
+
+
+  public String getFavoriteFood(int index){
+    
+    return "N/A";
+
   }
   
-  // -------------- VIE --------------
+  // ---------------- VIE -------------
+  public int getHealth()
+  {
+    return this.health.getVal();
+  }
 
-  public void checkHealth() {
-    if (this.health.getVal() <= 0) {
-      kill();
-    } else {
-      setAlive(true);
+  public void setHealth(int newHealth) {
+    this.health.setVal(newHealth);
+    if (this.health.getVal() == 0) {
+      this.setAlive(false);
     }
   }
 
-  public void kill() {
-    this.health.setVal(0);
-    this.alive = false;
+  public void checkHealth() {
+    if (this.getHealth() <= 0) {
+      kill();
+    } else {
+      this.setAlive(alive);
+    }
   }
 
   public void hurt(int damage) {
@@ -136,41 +158,18 @@ public class Tamagotchi implements Serializable{
     this.setHealth(newHealth);
   }
 
-  public void setHealth(int newHealth) {
-    this.health.setVal(newHealth);
-    if (this.health.getVal() == 0) {
-      this.setAlive(false);
+
+  public void kill() {
+    /**  
+    for (Need besoin : needs) {
+      besoin.setVal(0);
+      
     }
-  }
-  
-  public void setEnergy(int energy){
-    this.energy.setVal(energy);
-    if (this.energy.getVal() == 0) {
-      this.setAlive(false);
-    }
-  }
-  
-  public void setHunger(int hunger){
-    this.hunger.setVal(h);
-    if (this.hunger.getVal() ==0){
-      this.setAlive(false);
-    }
-  }
-  
-  public void setCleanliness(int clean){
-    this.cleanliness.setVal(clean);
-    if (this.cleanliness.getVal() ==0){
-      this.setAlive(false);
-    }
+    **/
+    this.health.setVal(0);
+    this.alive = false;
   }
 
-  public void setHappiness(int happy){
-    this.happiness.setVal(happy);
-    if (this.happiness.getVal() ==0){
-      this.setAlive(false);
-    }
-  }
-  
   public boolean getAlive() {
     return this.alive;
   }
@@ -178,6 +177,72 @@ public class Tamagotchi implements Serializable{
   public void setAlive(boolean alive) {
     this.alive = alive;
   }
+
+
+
+
+  // ---------------- VIE -------------
+
+  public int getEnergy()
+  {
+    return this.energy.getVal();
+  }
+
+  public void setEnergy(int energy){
+    this.energy.setVal(energy);
+    if (this.energy.getVal() == 0) {
+      this.setAlive(false);
+    }
+  }
+  
+   // ---------------- FAIM -------------
+   
+   public int getHunger()
+   {
+     return this.hunger.getVal();
+   }
+
+  public void setHunger(int hunger){
+    this.hunger.setVal(hunger);
+    if (this.hunger.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
+
+  
+  // ---------------- PROPRETE -------------
+
+  public int getCleanliness()
+  {
+    return this.cleanliness.getVal();
+  }
+
+
+  public void setCleanliness(int clean){
+    this.cleanliness.setVal(clean);
+    if (this.cleanliness.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
+
+  // ---------------- BONNHEUR -------------
+
+  public int getHappiness()
+  {
+    return this.happiness.getVal();
+  }
+
+
+  public void setHappiness(int newHapinnes){
+    this.happiness.setVal(newHapinnes);
+    if (this.happiness.getVal() ==0){
+      this.setAlive(false);
+    }
+  }
+  
+
+  // ---------------- Hummeur -------------
+
 
   public void evalMood() {
     for (Need scannedNeed : needs) {

@@ -6,7 +6,7 @@ import com.lado.app.Model.Tamagotchi.Tamagotchi;
 public class GameModel {
 
     public Tamagotchi tamagotchi;
-    public DebugMode debug;
+    
     public GameManager gameManager;
     
 
