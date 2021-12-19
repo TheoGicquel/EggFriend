@@ -8,6 +8,7 @@
 package com.lado.app.Model.Tamagotchi;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Tamagotchi implements Serializable{
 
@@ -25,6 +26,8 @@ public class Tamagotchi implements Serializable{
   public Need cleanliness;
   public Need happiness;
   public String mood;
+  
+
   int CRITICAL_THRESHOLD = 5;
   protected Need[] needs = { energy, hunger, cleanliness, happiness };
 
@@ -47,8 +50,26 @@ public class Tamagotchi implements Serializable{
   }
 
   public Tamagotchi() {
-    breed.
+    this.specie = new Specie("unknown");
     setDefaultStats();
+  }
+
+
+  public List<String> getFoods()
+  {
+    return specie.getFavoriteFoods();
+  }
+
+
+  /**
+   * retourne le n ieme element de la liste
+   * Exemple : Premier element -> getFood(1);
+   * @param index
+   * @return
+   */
+  public String getFood(int index)
+  {
+    return specie.getFavoriteFood(index);
   }
 
 
@@ -91,18 +112,21 @@ public class Tamagotchi implements Serializable{
   public void setName(String newName) {
     this.name = newName;
   }
+  
 
   // -------------- ESPECE --------------
 
   /**
    * @return Espece du Tamagotchi
    */
-  public String getBreed() {
-    return this.breed;
+  public String getSpecie()
+  {
+    return this.specie.getName();
   }
 
-  public void setBreed(String newBreed) {
-    this.breed = newBreed;
+  public void setSpecie(String newSpecie)
+  {
+    this.specie.initialize(newSpecie);
   }
 
   // ----- NOURITTURE FAVORITE ------

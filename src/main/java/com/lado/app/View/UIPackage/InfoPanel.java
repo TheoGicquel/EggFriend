@@ -36,7 +36,7 @@ public class InfoPanel extends JPanel{
 
         Border blackline = BorderFactory.createLineBorder(Color.black);
         // this.setBorder(blackline);
-        String imagePath = "src/main/resources/" + tamagotchi.getBreed() + ".png";
+        String imagePath = "src/main/resources/" + tamagotchi.getSpecie() + ".png";
         JLabel image = new JLabel( new ImageIcon(imagePath) );
         image.setBounds(0, 0, 10, 10);
         
@@ -45,7 +45,7 @@ public class InfoPanel extends JPanel{
         JLabel nameLabel = new JLabel("Nom :   " + tamagotchi.getName());
         this.add(nameLabel);
 
-        JLabel ageLabel = new JLabel("Type :   " + tamagotchi.getBreed());
+        JLabel ageLabel = new JLabel("Type :   " + tamagotchi.getSpecie());
         this.add(ageLabel);
 
         JLabel moodLabel = new JLabel("Humeur :   " + tamagotchi.getMood());

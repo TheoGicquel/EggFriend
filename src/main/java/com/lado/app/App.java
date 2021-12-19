@@ -2,8 +2,7 @@ package com.lado.app;
 
 import com.lado.app.Controller.GameController;
 import com.lado.app.Model.GameModel;
-import com.lado.app.Model.Tamagotchi.Cat;
-import com.lado.app.Model.Tamagotchi.Dog;
+
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 import com.lado.app.View.GameView;
 
