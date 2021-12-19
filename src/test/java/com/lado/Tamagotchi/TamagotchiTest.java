@@ -1,14 +1,6 @@
 package com.lado.Tamagotchi;
 
 import static org.junit.Assert.*;
-
-import com.lado.app.Model.Tamagotchi.Cat;
-import com.lado.app.Model.Tamagotchi.Dog;
-
-
-
-
-
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 /** 
@@ -50,26 +42,7 @@ public class TamagotchiTest {
     assertEquals("tamatest", testTamagotchi.getName());
   }
   
-  /** 
-  @Test
-  public void testGetBreedInheritance(){
-    Tamagotchi testTamagotchi = new Cat();
-    assertEquals("Chat",testTamagotchi.getBreed());
-  }
-  **/
-  @Test
-  public void testSetBreed(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setBreed("Chien");
-    assertEquals("Chien", testTamagotchi.getBreed());
-  }
 
-
-  @Test
-  public void testDefaultBreed(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    assertEquals("Inconnu", testTamagotchi.getBreed());
-  }
 
   @Test
   public void testGetMood(){
@@ -84,34 +57,6 @@ public class TamagotchiTest {
     assertEquals("Joyeux", testTamagotchi.getMood());
   }
 
-  @Test
-  public void testGetAlive(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    assertEquals(true,testTamagotchi.getAlive());
-  }
-  
-  @Test
-  public void testSetAlive(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setAlive(false);
-    assertEquals(false, testTamagotchi.getAlive());
-  }
-  
-  @Test
-  public void testAliveHealth() {
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setHealth(0);
-    assertEquals(0, testTamagotchi.getHealth());
-    assertEquals(false, testTamagotchi.getAlive());
-  }
-
-  @Test
-  public void testSetHealth() {
-    Tamagotchi testTamagotchi = new Tamagotchi();
-
-    testTamagotchi.setHealth(20);
-    assertEquals(20, testTamagotchi.getHealth());
-  }
 
   @Test
   public void testSetEnergy(){
@@ -172,19 +117,8 @@ public class TamagotchiTest {
   }
   
 
-/** 
 
-  @Test
-  public void getFavoriteFoodDogByIndex(){
-    Tamagotchi dogTama = new Dog();
-    assertEquals("Os",dogTama.getFavoriteFood(0));
-  }
 
-  @Test
-  public void getFavoriteFoodDogByIndexError(){
-    Tamagotchi testTamagotchi = new Dog();
-    assertEquals("N/A",testTamagotchi.getFavoriteFood(1));
-  }
 
-**/
+
 }
