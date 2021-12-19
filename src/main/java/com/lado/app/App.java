@@ -5,6 +5,7 @@ import com.lado.app.Model.GameModel;
 
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 import com.lado.app.View.GameView;
+import com.lado.app.View.UIPackage.StartWindow;
 
 
 
@@ -28,11 +29,14 @@ public class App {
 
     // app.controller.start();
 
-    Tamagotchi mytama= new Tamagotchi();
-    mytama.setSpecie("Mouton");
+    // Tamagotchi mytama= new Tamagotchi();
+    // mytama.setSpecie("sheep");
     //mytama.getName();
     //System.out.println(mytama.getBreed());
 
+
+    
+    StartWindow startWindow = new StartWindow();
 
   }
 }

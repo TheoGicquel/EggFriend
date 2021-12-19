@@ -7,6 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -104,6 +105,9 @@ public class StartWindow implements ActionListener{
 
     }
 
+
+    
+
 //If you're here, the return value was null/empty.
 //setLabel("Come on, finish the sentence!");
     
@@ -122,7 +126,11 @@ public class StartWindow implements ActionListener{
            if(getNewGameConfirmation()==0)
            {
                frame.dispose();
-                
+               String tamaName=JOptionPane.showInputDialog(frame,"Enter Name");   
+               String tamaSpecie=JOptionPane.showInputDialog(frame,"Enter Name");   
+               Object[] specieListing = { "Chat","Chien","Mouton","Robot" };
+               
+               JComboBox comboBox = new JComboBox(specieListing);
                GameWindow gameWindow = new GameWindow();
            }
        } 
