@@ -5,7 +5,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-import com.lado.app.Model.Tamagotchi.Need;
 
 
 public class NeedPanel extends JPanel {

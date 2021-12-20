@@ -2,7 +2,6 @@ package com.lado.app.View.UIPackage;
 
 import javax.swing.JProgressBar;
 
-import com.lado.app.Model.Tamagotchi.Need;
 
 import java.awt.Color;
 

@@ -2,7 +2,6 @@ package com.lado.app.View;
 import javax.swing.JFrame;
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.GameFrame;
 
 public class GameView {
 
@@ -31,6 +30,6 @@ public class GameView {
 
 
     public void updateView() {
-        // TODO 
+        
     }
 }

@@ -13,13 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
-
-import javax.swing.border.Border;
-import javax.swing.BorderFactory;
-
-import java.awt.Color;
 
 
 
@@ -33,7 +27,7 @@ public class InfoPanel extends JPanel{
     InfoPanel(TamagotchiController controller)
     {
 
-        Border blackline = BorderFactory.createLineBorder(Color.black);
+       //Border blackline = BorderFactory.createLineBorder(Color.black);
         // this.setBorder(blackline);
         String imagePath = "src/main/resources/" + controller.getSpecie() + ".png";
         JLabel image = new JLabel( new ImageIcon(imagePath) );

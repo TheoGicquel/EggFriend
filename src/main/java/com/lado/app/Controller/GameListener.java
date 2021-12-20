@@ -10,7 +10,6 @@ import com.lado.app.View.GameView;
 
 public class GameListener implements ActionListener {
 
-  private String lastInput;
 
 
 
@@ -27,7 +26,6 @@ public class GameListener implements ActionListener {
 
 
   public void start(){
-    this.lastInput = "NONE";
   }
 
     @Override

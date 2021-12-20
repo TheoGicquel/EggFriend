@@ -10,22 +10,17 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
-import com.lado.app.App;
 import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.GameManager.GameLoader;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 import java.awt.Color;
-import java.awt.Insets;
 
 
 public class StartView implements ActionListener{
@@ -173,7 +168,7 @@ public class StartView implements ActionListener{
                String tamaName="";
                while(tamaName.length()<=1){
                 tamaName = ">";
-                 tamaName = tamaName + JOptionPane.showInputDialog(frame,"Enter Name");   
+                 tamaName = tamaName + JOptionPane.showInputDialog(frame,"Nom du Tamagotchi :");   
                }
 
                tamaName.substring(1);
@@ -204,7 +199,7 @@ public class StartView implements ActionListener{
             {
               TamagotchiController.loadGameAction();
               frame.dispose();
-               GameView gameView = new GameView(model, false);
+              GameView gameView = new GameView(model, false);
 
             }
           }

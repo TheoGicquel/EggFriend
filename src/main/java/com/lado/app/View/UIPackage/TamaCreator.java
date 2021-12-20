@@ -1,5 +1,4 @@
 package com.lado.app.View.UIPackage;
-import java.io.IOException;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
@@ -12,7 +11,7 @@ public class TamaCreator {
         String[] specieList= {"Chat","Chien","Mouton"};
         JTextField namefield = new JTextField("Nom");
         
-        JComboBox specieChoice = new JComboBox(specieList);
+        JComboBox<String> specieChoice = new JComboBox<>(specieList);
 
        
         specieChoice.setEditable(false);

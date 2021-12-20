@@ -5,7 +5,6 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import com.lado.app.Controller.GameListener;
 import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
  
 public class GameFrame extends Window {
   private GameListener listener;
@@ -62,7 +61,7 @@ public class GameFrame extends Window {
     JButton degradeBtn = new JButton("[DEBUG]");
 
 
-    NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
+    //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
     JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};

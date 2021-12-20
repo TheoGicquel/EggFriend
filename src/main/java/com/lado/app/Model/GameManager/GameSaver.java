@@ -3,9 +3,7 @@ package com.lado.app.Model.GameManager;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.io.*;
 
-import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class GameSaver {

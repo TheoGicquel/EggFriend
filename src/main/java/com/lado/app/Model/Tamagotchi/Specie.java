@@ -1,18 +1,15 @@
 package com.lado.app.Model.Tamagotchi;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.jar.Attributes.Name;
 
 public class Specie {
  
     private String name;
     private String text;
-    private String imageName;
     private List<String> favoriteFoods = new ArrayList<>();
-
+    private String imageName;
 
     public Specie(String choice)
     {

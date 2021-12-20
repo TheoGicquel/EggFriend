@@ -1,13 +1,10 @@
 package com.lado.app.Controller;
 
-import java.util.EventListener;
 
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.StartView;;
 
 public class TamagotchiController{
     private Tamagotchi model;
-    private StartView startView;
     public int getHunger;
     public Object getCleanlinessNaming;
 
