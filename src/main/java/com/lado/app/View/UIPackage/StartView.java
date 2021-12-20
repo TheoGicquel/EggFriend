@@ -94,101 +94,15 @@ public class StartView implements ActionListener{
     }
 
 
-    boolean getNewGameConfirmation()
-    {
 
-        int n = JOptionPane.showConfirmDialog(
-            frame,
-            "Souhaitez-vous vraiment créer une nouvelle partie ?\n Votre ancienne partie sera écrasée",
-            "Confirmation de nouvelle partie",
-            JOptionPane.YES_NO_OPTION);
 
-            System.out.println("N FORM :");
-            System.out.println(n);
-            if(n==0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
 
-    }
-
-    String SpecieSelector() {
-        boolean isFormValid = false;
-        String result = "";
-        String[] specieList = {
-          "...",
-          "Chat",
-          "Chien",
-          "Mouton",
-          "Robot"
-        };
-        final JComboBox < String > combo = new JComboBox < > (specieList);
-   
-        String[] options = {
-          "OK"
-        };
-   
-        String title = "Title";
-   
-        while (!isFormValid) {
-          int selection = JOptionPane.showOptionDialog(null, combo, title,
-            JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-            options, options[0]);
-   
-          System.out.println("selection is: " + options[selection]);
-   
-          Object specie = combo.getSelectedItem();
-          if (specie.toString() == "...") {
-            JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
-          } else {
-            isFormValid = true;
-            result = specie.toString();
-          }
-   
-        }
-        return result;
-   
-      }
 
     @Override
     public void actionPerformed(ActionEvent e) {
        if(e.getSource()==newGameButton)
        {
-          
-           if(getNewGameConfirmation()==true)
-           {
-               
-               
-               // Recuperation nom
-               
-               String tamaName="";
-               while(tamaName.length()<=1){
-                tamaName = ">";
-                 tamaName = tamaName + JOptionPane.showInputDialog(frame,"Nom du Tamagotchi :");   
-               }
-
-               tamaName.substring(1);
-               
-               // choix espece
-              
-              String tamaSpecie=SpecieSelector();
-
-               
-
-                System.out.println("TAMA NAME :");
-                System.out.println(tamaName);
-                System.out.println("TAMA Specie :");
-                System.out.println(tamaSpecie);
-
-                model.InitializeNewGame(tamaName,tamaSpecie);
-                GameFrame gameFrame = new GameFrame(model,false);
-                frame.dispose();
-
-           }
+         model.newGame(frame);
        }
 
        if(e.getSource()==loadGameButton)

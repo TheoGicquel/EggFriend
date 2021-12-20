@@ -1,37 +1,41 @@
 package com.lado.app.Controller;
 
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
-public class TamagotchiController{
+import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.View.UIPackage.GameFrame;
+import com.lado.app.View.UIPackage.NewGameConfirmationDialog;
+import com.lado.app.View.UIPackage.NewGameNameDialog;
+import com.lado.app.View.UIPackage.SpecieSelector;
+
+public class TamagotchiController {
     private Tamagotchi model;
     public int getHunger;
     public Object getCleanlinessNaming;
 
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
-        
+
     }
 
-    public TamagotchiController()
-    {
+    public TamagotchiController() {
         this.model = new Tamagotchi();
-        
-    
+
+
 
         // de cette façon c'est coté controller que tu instancie et lie les controllers à la vue
-       // this.startView.frame.newGameButton().addActionListener(new StartButtonListener());
+        // this.startView.frame.newGameButton().addActionListener(new StartButtonListener());
     }
 
-    public static void loadGameAction()
-    {
+    public static void loadGameAction() {
 
     }
 
-    public void InitializeNewGame(String tamaName, String tamaSpecie)
-    {
-    model.setName(tamaName);
-    model.setSpecie(tamaSpecie);
+    public void InitializeNewGame(String tamaName, String tamaSpecie) {
+        model.setName(tamaName);
+        model.setSpecie(tamaSpecie);
     }
 
     public int getHapiness() {
@@ -87,12 +91,28 @@ public class TamagotchiController{
     }
 
     public String getName() {
-        return null;
+        return model.getName();
     }
 
     public String getMood() {
-        return null;
+        return model.getMood();
     }
 
-    
+    public void newGame(JFrame frame) {
+
+        NewGameConfirmationDialog confirmation = new NewGameConfirmationDialog();
+        if (confirmation.get(frame)) {
+            // choix espece
+            SpecieSelector selector = new SpecieSelector();
+            String tamaSpecie = selector.SpecieSelect();
+            // Recuperation nom
+            NewGameNameDialog nameDialog = new NewGameNameDialog();
+            String tamaName = nameDialog.get(frame);
+            this.InitializeNewGame(tamaName, tamaSpecie);
+            new GameFrame(this, false);
+            frame.dispose();
+
+        }
+    }
+
 }
