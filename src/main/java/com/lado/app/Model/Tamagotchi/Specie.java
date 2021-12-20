@@ -9,7 +9,6 @@ public class Specie {
     private String name;
     private String text;
     private List<String> favoriteFoods = new ArrayList<>();
-    private String imageName;
 
     public Specie(String choice)
     {
@@ -28,7 +27,7 @@ public class Specie {
     {
         this.setName(nName);
         this.setText(ntext);
-        this.setImageName(nImageName);
+  
         this.setFavoriteFoods(foodArray);
     }
 
@@ -123,12 +122,6 @@ public class Specie {
     }
     
 
-    public void setImageName(String newText)
-    {
-        if(newText.length()>0)
-        {
-            this.imageName=newText;
-        }
-    }
+
 
 }
