@@ -90,6 +90,10 @@ public class TamagotchiController {
         return model.getSpecie();
     }
 
+    public String getSpecieName() {
+        return model.getSpecieText();
+    }
+
     public String getName() {
         return model.getName();
     }

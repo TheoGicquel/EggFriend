@@ -38,7 +38,7 @@ public class InfoPanel extends JPanel{
         JLabel nameLabel = new JLabel("Nom :   " + controller.getName());
         this.add(nameLabel);
 
-        JLabel ageLabel = new JLabel("Type :   " + controller.getSpecie());
+        JLabel ageLabel = new JLabel("Type :   " + controller.getSpecieName());
         this.add(ageLabel);
 
         JLabel moodLabel = new JLabel("Humeur :   " + controller.getMood());

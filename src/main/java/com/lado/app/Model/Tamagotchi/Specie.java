@@ -34,40 +34,36 @@ public class Specie {
 
     void initialize(String choice){
 
-        switch(choice){
-   
-            case "Mouton": 
-                this.setName("sheep");
-                this.setText("Mouton");
-                this.addFood("Herbe");
-                break;
-        
-            case "Robot":
-                this.setName("robot");
-                this.setText("Robot");
-                this.addFood("Herbe");
-                break;
-        
-            case "Chien":
-                this.setName("dog");
-                this.setText("Chien");
-                this.addFood("Os");
-                break;
-                
-            case "Chat":
-                this.setName("cat");
-                this.setText("Chat");
-                this.addFood("Poisson");
-                break;
-            case "unknown":
+        if(choice == "cat"||choice == "Chat"){
+            this.setName("cat");
+            this.setText("Chat");
+            this.addFood("Poisson");
+        }
+
+        else if(choice == "dog"||choice == "Chien"){
+            this.setName("dog");
+            this.setText("Chien");
+            this.addFood("Os");
+        }
+
+        else if(choice == "sheep"||choice == "Mouton"){
+            this.setName("sheep");
+            this.setText("Mouton");
+            this.addFood("Herbe");
+        }
+
+        else if(choice == "robot"||choice == "Robot"){
+            this.setName("robot");
+            this.setText("Robot");
+            this.addFood("Herbe");
+        }
+        else
+        {
+                System.out.println("ERREUR CONSTRUCTEUR SPECIE :");
+                System.out.println(choice);
                 this.setName("unknown");
                 this.setText("Inconnu");
                 this.addFood("Nourriture");
-                break;
-            default:
-                System.out.println("ERREUR CONSTRUCTEUR SPECIE :");
-                System.out.println(choice);
-
         }
     }
 
