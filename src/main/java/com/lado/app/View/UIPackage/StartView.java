@@ -1,5 +1,7 @@
 package com.lado.app.View.UIPackage;
 
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +20,7 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import com.lado.app.App;
+import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
@@ -25,14 +28,15 @@ import java.awt.Color;
 import java.awt.Insets;
 
 
-public class StartWindow implements ActionListener{
-    JFrame frame = new JFrame("TamagotchiGame - Accueil");
+public class StartView implements ActionListener{
+    public JFrame frame = new JFrame("TamagotchiGame - Accueil");
     JButton newGameButton = new JButton("Nouvelle Partie");
     JButton loadGameButton = new JButton("Charger Partie");
     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
-
-    public StartWindow()
+    TamagotchiController model;
+    public StartView()
     {
+        model = new TamagotchiController();
         Border blackline = BorderFactory.createLineBorder(Color.black);
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
@@ -95,7 +99,7 @@ public class StartWindow implements ActionListener{
     }
 
 
-    int getNewGameConfirmation()
+    boolean getNewGameConfirmation()
     {
 
         int n = JOptionPane.showConfirmDialog(
@@ -104,60 +108,65 @@ public class StartWindow implements ActionListener{
             "Confirmation de nouvelle partie",
             JOptionPane.YES_NO_OPTION);
 
-
-            return n;
+            System.out.println("N FORM :");
+            System.out.println(n);
+            if(n==0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
     }
 
-    String formProcedure()
-    {
-            boolean isFormValid = false;
-            String result = "";
-            String[] specieList = { "...","Chat", "Chien", "Mouton", "Robot" };
-            final JComboBox<String> combo = new JComboBox<>(specieList);
-      
-            String[] options = { "OK"};
-      
-            String title = "Title";
-        
-        while(!isFormValid){
-            int selection = JOptionPane.showOptionDialog(null, combo, title,
-                  JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-                  options, options[0]);
-      
-            
-               
-               System.out.println("selection is: " + options[selection]);
-            
-               Object specie = combo.getSelectedItem();
-               if(specie.toString() == "...")
-               {
-                   JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
-               }
-               else
-               {
-                   isFormValid = true;
-                   result = specie.toString();
-               }
-
-
-
-
-            }
+    String SpecieSelector() {
+        boolean isFormValid = false;
+        String result = "";
+        String[] specieList = {
+          "...",
+          "Chat",
+          "Chien",
+          "Mouton",
+          "Robot"
+        };
+        final JComboBox < String > combo = new JComboBox < > (specieList);
+   
+        String[] options = {
+          "OK"
+        };
+   
+        String title = "Title";
+   
+        while (!isFormValid) {
+          int selection = JOptionPane.showOptionDialog(null, combo, title,
+            JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+            options, options[0]);
+   
+          System.out.println("selection is: " + options[selection]);
+   
+          Object specie = combo.getSelectedItem();
+          if (specie.toString() == "...") {
+            JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
+          } else {
+            isFormValid = true;
+            result = specie.toString();
+          }
+   
+        }
         return result;
-           
-
-            
-            }
-           
+   
+      }
 
     @Override
     public void actionPerformed(ActionEvent e) {
        if(e.getSource()==newGameButton)
        {
-           if(getNewGameConfirmation()==0)
+          
+           if(getNewGameConfirmation()==true)
            {
-               frame.dispose();
+               
                
                // Recuperation nom
                
@@ -171,7 +180,7 @@ public class StartWindow implements ActionListener{
                
                // choix espece
               
-              String tamaSpecie=formProcedure();
+              String tamaSpecie=SpecieSelector();
 
                
 
@@ -180,31 +189,34 @@ public class StartWindow implements ActionListener{
                 System.out.println("TAMA Specie :");
                 System.out.println(tamaSpecie);
 
-               GameWindow gameWindow = new GameWindow(tamaName,tamaSpecie);
+                model.InitializeNewGame(tamaName,tamaSpecie);
+                GameFrame gameFrame = new GameFrame(model,false);
+                frame.dispose();
+
            }
-       } 
+       }
 
        if(e.getSource()==loadGameButton)
        {
-           
-           try{
-                GameLoader loader = new GameLoader(); 
-                if(loader.loadingSuccess())
-                {
-                    
-                    Tamagotchi tamaToLoad = loader.loadTamagotchi();
-                    GameWindow gameWindow = new GameWindow(tamaToLoad);
-                }
-                
+        try{
+            GameLoader loader = new GameLoader();
+            if(loader.loadingSuccess())
+            {
+              TamagotchiController.loadGameAction();
+              frame.dispose();
+               GameView gameView = new GameView(model, false);
 
-              }
-              catch(Exception ex)
+            }
+          }
+          catch(Exception ex)
               {
                 JOptionPane.showMessageDialog(null, "Erreur lors du chargement de la partie");
            }
-           //frame.dispose();
+            
 
        }
+
+
         
     }
 }

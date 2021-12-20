@@ -1,4 +1,4 @@
-package com.lado.app.MVC.View;
+package com.lado.app.View.UIPackage;
 
     
 
@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import com.lado.app.MVC.Controller.TamagotchiController;
+import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 

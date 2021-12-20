@@ -12,7 +12,7 @@ import com.lado.app.Model.Tamagotchi.Need;
 import java.awt.Color;
 
 public class CarePanel extends JPanel{
-    CarePanel(Need inputNeed,JButton careButton)
+    CarePanel(JButton careButton)
     {
         Border blackline = BorderFactory.createLineBorder(Color.black);
        // this.setBorder(blackline);

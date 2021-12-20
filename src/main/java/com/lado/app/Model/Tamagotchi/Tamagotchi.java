@@ -1,31 +1,23 @@
-/**
- * Décrivez votre classe Tamagotchi ici.
- *
- * @author (Ryan)
- * @version (13/10/21)
- */
-
 package com.lado.app.Model.Tamagotchi;
-
-import java.io.Serializable;
 import java.util.List;
 
-public class Tamagotchi implements Serializable{
-
-  /** Caracteristiques innés ( initialisés a la naissance) */
-  String name;
-  protected String breed;
-  String favoriteFoods[];
-  Specie specie;
+/**
+ * Classe Model de Tamagotchi
+ */
+public class Tamagotchi {
+      /** Caracteristiques innés ( initialisés a la naissance) */
+  private String name;
+  private String favoriteFoods[];
+  private Specie specie;
 
   // variables d'instance
-  public Need health;
-  public boolean alive;
+   public Need health;
+  private boolean alive;
   public Need energy;
   public Need hunger;
   public Need cleanliness;
   public Need happiness;
-  public String mood;
+  private String mood;
   
 
   int CRITICAL_THRESHOLD = 5;
@@ -34,12 +26,12 @@ public class Tamagotchi implements Serializable{
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
-    this.breed = "Inconnu";
-    this.health = new Need("Vie", 100, 1.0f);
-    this.energy = new Need("Energie", 100, 1.0f);
-    this.hunger = new Need("Faim", 100, 1.0f);
-    this.cleanliness = new Need("Proprete", 100, 1.0f);
-    this.happiness = new Need("Bonheur", 100, 1.0f);
+    this.setSpecie("unknown");
+    this.health = new Need("Vie","Mourrant", 100, 1.0f);
+    this.energy = new Need("Energie","Fatigué", 100, 1.0f);
+    this.hunger = new Need("Faim","Affamé", 100, 1.0f);
+    this.cleanliness = new Need("Proprete","Sale", 100, 1.0f);
+    this.happiness = new Need("Bonheur","Déprimé", 100, 1.0f);
     this.health.setCritical(true);
     this.mood = "normal";
   }
@@ -127,6 +119,11 @@ public class Tamagotchi implements Serializable{
   public void setSpecie(String newSpecie)
   {
     this.specie.initialize(newSpecie);
+  }
+
+  public String getSpecieText()
+  {
+    return this.specie.getText();
   }
 
   // ----- NOURITTURE FAVORITE ------
@@ -265,16 +262,17 @@ public class Tamagotchi implements Serializable{
   }
   
 
-  // ---------------- Hummeur -------------
+  // ---------------- Humeur -------------
 
 
-  public void evalMood() {
+  public void evalMood()
+  {
     for (Need scannedNeed : needs) {
-      if (scannedNeed.getVal() <= 50) {
-        this.mood = scannedNeed.getName();
+      if (scannedNeed.getVal() <= 50)
+      {
+        this.setMood(scannedNeed.getDescriptor());
       }
-    }
-    
+    }  
   }
 
 public String getMood() {

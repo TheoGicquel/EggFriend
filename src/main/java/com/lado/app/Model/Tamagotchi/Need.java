@@ -1,15 +1,18 @@
 package com.lado.app.Model.Tamagotchi;
 
+
 public class Need {
 
-  String name;
-  int value;
-  float factor;
-  boolean critical;
+  private String name;
+  private int value;
+  private float factor;
+  private boolean critical;
+ private String descriptor;
 
-  Need(String name, int value, Float factor) {
+  Need(String name,String descriptor, int value, Float factor) {
     this.value = value;
     this.name = name;
+    this.descriptor = descriptor;
     this.factor = factor;
     this.critical = false;
   }
@@ -17,12 +20,17 @@ public class Need {
   Need() {
     this.value = 100;
     this.name = "unknown";
+    this.descriptor = "descriptor";
     this.factor = 1;
     this.critical = false;
   }
 
   void setCritical(boolean critical) {
     this.critical = critical;
+  }
+
+  boolean isCritical() {
+    return this.critical;
   }
 
   /***
@@ -63,4 +71,11 @@ public class Need {
   public int getVal() {
     return this.value;
   }
+
+public String getDescriptor() {
+    return this.descriptor;
+}
+
+
+
 }

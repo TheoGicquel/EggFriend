@@ -12,8 +12,7 @@ import javax.swing.ImageIcon;
 
 import javax.swing.JLabel;
 
-
-
+import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 
@@ -31,24 +30,24 @@ import java.awt.Color;
  */
 public class InfoPanel extends JPanel{
     
-    InfoPanel(Tamagotchi tamagotchi)
+    InfoPanel(TamagotchiController controller)
     {
 
         Border blackline = BorderFactory.createLineBorder(Color.black);
         // this.setBorder(blackline);
-        String imagePath = "src/main/resources/" + tamagotchi.getSpecie() + ".png";
+        String imagePath = "src/main/resources/" + controller.getSpecie() + ".png";
         JLabel image = new JLabel( new ImageIcon(imagePath) );
         image.setBounds(0, 0, 10, 10);
         
         this.add(image);
 
-        JLabel nameLabel = new JLabel("Nom :   " + tamagotchi.getName());
+        JLabel nameLabel = new JLabel("Nom :   " + controller.getName());
         this.add(nameLabel);
 
-        JLabel ageLabel = new JLabel("Type :   " + tamagotchi.getSpecie());
+        JLabel ageLabel = new JLabel("Type :   " + controller.getSpecie());
         this.add(ageLabel);
 
-        JLabel moodLabel = new JLabel("Humeur :   " + tamagotchi.getMood());
+        JLabel moodLabel = new JLabel("Humeur :   " + controller.getMood());
         this.add(moodLabel);
     }
 }

@@ -1,11 +1,12 @@
 package com.lado.app.Model.Tamagotchi;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.jar.Attributes.Name;
 
-class Specie {
+public class Specie {
  
     private String name;
     private String text;
