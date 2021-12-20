@@ -34,31 +34,34 @@ public class Specie {
 
 
     void initialize(String choice){
-        this.setName(choice);
-        this.setImageName(choice);
 
         switch(choice){
    
-            case "sheep": 
+            case "Mouton": 
+                this.setName("sheep");
                 this.setText("Mouton");
                 this.addFood("Herbe");
                 break;
         
-            case "robot":
+            case "Robot":
+                this.setName("robot");
                 this.setText("Robot");
                 this.addFood("Herbe");
                 break;
         
-            case "dog":
+            case "Chien":
+                this.setName("dog");
                 this.setText("Chien");
                 this.addFood("Os");
                 break;
                 
-            case "cat":
+            case "Chat":
+                this.setName("cat");
                 this.setText("Chat");
                 this.addFood("Poisson");
                 break;
             case "unknown":
+                this.setName("unknown");
                 this.setText("Inconnu");
                 this.addFood("Nourriture");
                 break;
