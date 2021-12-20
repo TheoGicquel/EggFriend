@@ -25,7 +25,7 @@ public class GameLoader {
            return;
         }
     }
-    Tamagotchi loadTamagotchi()
+    public Tamagotchi loadTamagotchi()
     {
         return tamaload;
     }

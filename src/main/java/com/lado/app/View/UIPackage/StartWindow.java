@@ -8,14 +8,18 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import com.lado.app.App;
+import com.lado.app.Model.GameManager.GameLoader;
+import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 import java.awt.Color;
 import java.awt.Insets;
@@ -105,19 +109,47 @@ public class StartWindow implements ActionListener{
 
     }
 
+    String formProcedure()
+    {
+            boolean isFormValid = false;
+            String result = "";
+            String[] specieList = { "...","Chat", "Chien", "Mouton", "Robot" };
+            final JComboBox<String> combo = new JComboBox<>(specieList);
+      
+            String[] options = { "OK"};
+      
+            String title = "Title";
+        
+        while(!isFormValid){
+            int selection = JOptionPane.showOptionDialog(null, combo, title,
+                  JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+                  options, options[0]);
+      
+            
+               
+               System.out.println("selection is: " + options[selection]);
+            
+               Object specie = combo.getSelectedItem();
+               if(specie.toString() == "...")
+               {
+                   JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
+               }
+               else
+               {
+                   isFormValid = true;
+                   result = specie.toString();
+               }
 
-    
-
-//If you're here, the return value was null/empty.
-//setLabel("Come on, finish the sentence!");
-    
 
 
 
+            }
+        return result;
+           
 
-
-
-
+            
+            }
+           
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -126,19 +158,47 @@ public class StartWindow implements ActionListener{
            if(getNewGameConfirmation()==0)
            {
                frame.dispose();
-               String tamaName=JOptionPane.showInputDialog(frame,"Enter Name");   
-               String tamaSpecie=JOptionPane.showInputDialog(frame,"Enter Name");   
-               Object[] specieListing = { "Chat","Chien","Mouton","Robot" };
                
-               JComboBox comboBox = new JComboBox(specieListing);
-               GameWindow gameWindow = new GameWindow();
+               // Recuperation nom
+               
+               String tamaName="";
+               while(tamaName.length()<=1){
+                tamaName = ">";
+                 tamaName = tamaName + JOptionPane.showInputDialog(frame,"Enter Name");   
+               }
+
+               tamaName.substring(1);
+               
+               // choix espece
+              
+              String tamaSpecie=formProcedure();
+
+               
+
+                System.out.println("TAMA NAME :");
+                System.out.println(tamaName);
+                System.out.println("TAMA Specie :");
+                System.out.println(tamaSpecie);
+
+               GameWindow gameWindow = new GameWindow(tamaName,tamaSpecie);
            }
        } 
 
        if(e.getSource()==loadGameButton)
        {
            frame.dispose();
-           JOptionPane.showMessageDialog(null, "Veuillez Sélectionner une espèce", "Erreur de sélection", JOptionPane.NO_OPTION);
+           try{
+                GameLoader loader = new GameLoader(); 
+
+                Tamagotchi tamaToLoad = loader.loadTamagotchi();
+                
+                GameWindow gameWindow = new GameWindow(tamaToLoad);
+
+              }
+              catch(Exception ex)
+              {
+                JOptionPane.showMessageDialog(null, "Erreur lors du chargement de la partie");
+           }
 
        }
         

@@ -2,7 +2,7 @@ package com.lado.app;
 
 import com.lado.app.Controller.GameController;
 import com.lado.app.Model.GameModel;
-
+import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 import com.lado.app.View.GameView;
 import com.lado.app.View.UIPackage.StartWindow;
@@ -27,7 +27,8 @@ public class App {
   // App app = new App();
   public static void main(String[] args) {
 
-    // app.controller.start();
+    //App app = new App();
+   // app.controller.start();
 
     // Tamagotchi mytama= new Tamagotchi();
     // mytama.setSpecie("sheep");
@@ -39,4 +40,7 @@ public class App {
     StartWindow startWindow = new StartWindow();
 
   }
+
+
+  
 }
