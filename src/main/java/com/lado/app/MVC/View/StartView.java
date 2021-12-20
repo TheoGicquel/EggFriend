@@ -21,8 +21,8 @@ import javax.swing.border.EmptyBorder;
 
 import com.lado.app.App;
 import com.lado.app.MVC.Controller.TamagotchiController;
+import com.lado.app.MVC.Model.Tamagotchi;
 import com.lado.app.Model.GameManager.GameLoader;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 import java.awt.Color;
 import java.awt.Insets;
@@ -33,9 +33,10 @@ public class StartView implements ActionListener{
     JButton newGameButton = new JButton("Nouvelle Partie");
     JButton loadGameButton = new JButton("Charger Partie");
     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
-
+    TamagotchiController model;
     public StartView()
     {
+        model = new TamagotchiController();
         Border blackline = BorderFactory.createLineBorder(Color.black);
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
@@ -157,7 +158,7 @@ public class StartView implements ActionListener{
            
            if(getNewGameConfirmation()==0)
            {
-               frame.dispose();
+               
                
                // Recuperation nom
                
@@ -180,20 +181,31 @@ public class StartView implements ActionListener{
                 System.out.println("TAMA Specie :");
                 System.out.println(tamaSpecie);
 
-               GameView GameView = new GameView(tamaName,tamaSpecie);
+                model.InitializeNewGame(tamaName,tamaSpecie);
+                GameView GameView = new GameView(model,false);
+                frame.dispose();
+
            }
        } 
 
        if(e.getSource()==loadGameButton)
        {
-            TamagotchiController.loadGameAction();
+            GameLoader loader = new GameLoader();
+            if(loader.loadingSuccess())
+            {
+              TamagotchiController.loadGameAction();
+               frame.dispose();
+
+            }
+            
 
        }
 
        if(e.getSource()==newGameButton)
        {
-           frame.dispose();
-           new StartView();
+          GameView GameView = new GameView(model,true);
+          frame.dispose();
+
        }
         
     }

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import com.lado.app.MVC.Controller.TamagotchiController;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 
@@ -18,16 +19,19 @@ public class GameView implements ActionListener {
     JLabel label = new JLabel("HElo");
     JButton myvButton = new JButton("bou");
 
-    GameView(String NewTamaName, String newTamaSpecie)
-    {
-        frame.setTitle("TamagotchiGame - " + NewTamaName);
-        genericConstructor();
-    }
 
 
-    GameView(Tamagotchi tama)
+
+    GameView(TamagotchiController model, boolean isNewGame)
     {
-        frame.setTitle("TamagotchiGame - " + tama.getName());
+        if(isNewGame)
+        {
+            frame.setTitle("TamagotchiGame - Nouvelle Partie");
+        }
+        else
+        {
+            frame.setTitle("TamagotchiGame - Charger Partie");
+        }
         genericConstructor();
     }
 

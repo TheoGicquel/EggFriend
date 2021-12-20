@@ -9,22 +9,30 @@ public class GameLoader {
     public Tamagotchi tamaload; 
     
     public GameLoader() {
-        tamaload = null;
-        try {
-           FileInputStream fileIn = new FileInputStream("tamagotchisaving.ser");
-           ObjectInputStream in = new ObjectInputStream(fileIn);
-           tamaload = (Tamagotchi) in.readObject();
-           in.close();
-           fileIn.close();
-        } catch (IOException i) {
-           i.printStackTrace();
-           return;
-        } catch (ClassNotFoundException c) {
-           System.out.println("Tamagotchi save not found");
-           c.printStackTrace();
-           return;
-        }
+        
+
     }
+
+    public boolean loadingSuccess()
+    {
+        try {
+            FileInputStream fileIn = new FileInputStream("tamagotchisaving.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            tamaload = (Tamagotchi) in.readObject();
+            in.close();
+            fileIn.close();
+         } catch (IOException i) {
+            i.printStackTrace();
+            return false;
+         } catch (ClassNotFoundException c) {
+            System.out.println("Tamagotchi save not found");
+            c.printStackTrace();
+            return false;
+         }
+        return true;
+    }
+
+
     public Tamagotchi loadTamagotchi()
     {
         return tamaload;

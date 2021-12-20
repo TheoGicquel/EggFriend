@@ -12,13 +12,13 @@ public class TamagotchiController{
 
     public TamagotchiController(Tamagotchi model, TamagotchiView view) {
         this.model = model;
-        this.view = view;
+        
     }
 
     public TamagotchiController()
     {
         this.model = new Tamagotchi();
-        this.startView = new StartView();
+        
     
 
         // de cette façon c'est coté controller que tu instancie et lie les controllers à la vue
@@ -28,6 +28,12 @@ public class TamagotchiController{
     public static void loadGameAction()
     {
 
+    }
+
+    public void InitializeNewGame(String tamaName, String tamaSpecie)
+    {
+    model.setName(tamaName);
+    model.setSpecie(tamaSpecie);
     }
 
     

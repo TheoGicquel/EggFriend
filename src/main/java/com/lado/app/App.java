@@ -1,6 +1,7 @@
 package com.lado.app;
 
 import com.lado.app.Controller.GameController;
+import com.lado.app.MVC.Controller.TamagotchiController;
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
@@ -35,9 +36,8 @@ public class App {
     //mytama.getName();
     //System.out.println(mytama.getBreed());
 
-
+    StartWindow startWindow = new StartWindow();
     
-    //StartWindow startWindow = new StartWindow();
 
   }
 

@@ -186,19 +186,23 @@ public class StartWindow implements ActionListener{
 
        if(e.getSource()==loadGameButton)
        {
-           frame.dispose();
+           
            try{
                 GameLoader loader = new GameLoader(); 
-
-                Tamagotchi tamaToLoad = loader.loadTamagotchi();
+                if(loader.loadingSuccess())
+                {
+                    
+                    Tamagotchi tamaToLoad = loader.loadTamagotchi();
+                    GameWindow gameWindow = new GameWindow(tamaToLoad);
+                }
                 
-                GameWindow gameWindow = new GameWindow(tamaToLoad);
 
               }
               catch(Exception ex)
               {
                 JOptionPane.showMessageDialog(null, "Erreur lors du chargement de la partie");
            }
+           //frame.dispose();
 
        }
         
