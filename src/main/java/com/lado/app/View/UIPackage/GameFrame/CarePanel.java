@@ -1,4 +1,4 @@
-package com.lado.app.View.UIPackage;
+package com.lado.app.View.UIPackage.GameFrame;
 
 import javax.swing.JButton;
 

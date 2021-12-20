@@ -1,10 +1,11 @@
-package com.lado.app.View.UIPackage;
+package com.lado.app.View.UIPackage.GameFrame;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.border.Border;
 import com.lado.app.Controller.GameListener;
 import com.lado.app.Controller.TamagotchiController;
+import com.lado.app.View.UIPackage.Legacy.Window;
  
 public class GameFrame extends Window {
   private GameListener listener;

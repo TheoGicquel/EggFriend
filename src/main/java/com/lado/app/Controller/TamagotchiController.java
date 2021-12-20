@@ -5,10 +5,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.GameFrame;
 import com.lado.app.View.UIPackage.NewGameConfirmationDialog;
 import com.lado.app.View.UIPackage.NewGameNameDialog;
 import com.lado.app.View.UIPackage.SpecieSelector;
+import com.lado.app.View.UIPackage.GameFrame.GameFrame;
 
 public class TamagotchiController {
     private Tamagotchi model;

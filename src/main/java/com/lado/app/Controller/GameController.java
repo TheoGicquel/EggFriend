@@ -1,7 +1,7 @@
 package com.lado.app.Controller;
 
 import com.lado.app.Model.*;
-import com.lado.app.View.*;
+import com.lado.app.View.UIPackage.Legacy.GameView;
 
 public class GameController {
 
@@ -13,7 +13,7 @@ public class GameController {
         GameController.gameModel = model;
         GameController.gameView = view;
       
-        GameController.gameListener = new GameListener(GameController.gameModel,GameController.gameView);
+        //GameController.gameListener = new GameListener(GameController.gameModel,GameController.gameView);
         
     }
 

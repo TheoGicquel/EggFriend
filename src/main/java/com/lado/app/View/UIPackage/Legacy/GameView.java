@@ -1,4 +1,4 @@
-package com.lado.app.View;
+package com.lado.app.View.UIPackage.Legacy;
 import javax.swing.JFrame;
 import com.lado.app.Model.GameModel;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;

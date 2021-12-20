@@ -2,9 +2,8 @@ package com.lado.app;
 
 import com.lado.app.Controller.GameController;
 import com.lado.app.Model.GameModel;
-
-import com.lado.app.View.GameView;
 import com.lado.app.View.UIPackage.StartView;
+import com.lado.app.View.UIPackage.Legacy.GameView;
 
 
 
