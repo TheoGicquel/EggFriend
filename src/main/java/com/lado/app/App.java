@@ -37,7 +37,7 @@ public class App {
 
 
     
-    StartWindow startWindow = new StartWindow();
+    //StartWindow startWindow = new StartWindow();
 
   }
 
