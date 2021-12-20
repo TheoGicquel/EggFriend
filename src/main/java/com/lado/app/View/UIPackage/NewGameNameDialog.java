@@ -7,13 +7,15 @@ public class NewGameNameDialog {
     
     public String get(JFrame frame)
     {
-    String tamaName="";
-    while(tamaName.length()<=1){
-     tamaName = ">";
-      tamaName = tamaName + JOptionPane.showInputDialog(frame,"Nom du Tamagotchi :");   
-    }
-    tamaName = tamaName.substring(1);
+      String response;
 
-    return tamaName;
+      response = JOptionPane.showInputDialog(frame,"Nom du Tamagotchi :");
+      if ((response != null) && (response.length() > 0)) {
+        return response;
+      }
+      else
+      {
+        return "???";
+      }
     }
 }
