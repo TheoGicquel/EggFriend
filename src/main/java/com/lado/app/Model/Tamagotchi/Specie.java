@@ -58,14 +58,12 @@ public class Specie implements Serializable{
             this.setText("Robot");
             this.addFood("Herbe");
         }
-        else
-        {
-                System.out.println("ERREUR CONSTRUCTEUR SPECIE :");
-                System.out.println(choice);
-                this.setName("unknown");
-                this.setText("Inconnu");
-                this.addFood("Nourriture");
+        else if(choice == "unknown"||choice == "Inconnu"){
+            this.setName("unknown");
+            this.setText("Inconnu");
+            this.addFood("Herbe");
         }
+
     }
 
     public void setName(String newName)

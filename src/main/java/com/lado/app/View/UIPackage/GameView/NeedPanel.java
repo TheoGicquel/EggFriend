@@ -29,7 +29,7 @@ public class NeedPanel extends JPanel {
     void updateNeed(int value)
     {
         this.bar.setValue(value);
-        this.bar.setString(value+"%");
+        this.bar.setString(value+" %");
     }
 
     
