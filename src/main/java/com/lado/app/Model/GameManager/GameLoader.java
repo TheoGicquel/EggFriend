@@ -22,11 +22,15 @@ public class GameLoader {
             in.close();
             fileIn.close();
          } catch (IOException i) {
-            i.printStackTrace();
+            //i.printStackTrace();
+            System.out.println(i.getMessage());
+
             return false;
          } catch (ClassNotFoundException c) {
             System.out.println("Tamagotchi save not found");
-            c.printStackTrace();
+            //c.printStackTrace();
+            System.out.println(c.getMessage());
+
             return false;
          }
         return true;

@@ -4,11 +4,13 @@ package com.lado.app.Controller;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.NewGameConfirmationDialog;
-import com.lado.app.View.UIPackage.NewGameNameDialog;
-import com.lado.app.View.UIPackage.SpecieSelector;
-import com.lado.app.View.UIPackage.GameFrame.GameFrame;
+import com.lado.app.View.UIPackage.oldGameView;
+import com.lado.app.View.UIPackage.GameView.GameView;
+import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
+import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
+import com.lado.app.View.UIPackage.StartView.SpecieSelector;
 
 public class TamagotchiController {
     private Tamagotchi model;
@@ -113,10 +115,27 @@ public class TamagotchiController {
             NewGameNameDialog nameDialog = new NewGameNameDialog();
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
-            new GameFrame(this, false);
+            new GameView(this, false);
             frame.dispose();
 
         }
     }
 
+    public void loadGame(JFrame frame)
+    {
+            GameLoader loader = new GameLoader();
+            boolean successful = loader.loadingSuccess();
+            if(!successful){
+                JOptionPane.showMessageDialog(null, "Erreur lors du chargement de la partie");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Chargement de la partie réussi");
+                this.model = loader.loadTamagotchi();
+                frame.dispose();
+                GameView gameView = new GameView(this, false);
+            }
+    }
+
 }
+
