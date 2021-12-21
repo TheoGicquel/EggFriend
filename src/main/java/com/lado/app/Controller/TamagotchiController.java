@@ -125,6 +125,12 @@ public class TamagotchiController {
         }
     }
 
+
+    public void saveGame()
+    {
+        saver.save(model);
+    }
+
     public void loadGame(JFrame frame)
     {
             

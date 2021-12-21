@@ -37,6 +37,7 @@ public class StartView implements ActionListener{
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
         Border buttonBorder = new EmptyBorder(10,40,10,20);
+        frame.setLocationRelativeTo(null);
 
 
         //newGameButton.setBounds(100,100,200,40);

@@ -5,13 +5,21 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import com.lado.app.Controller.GameListener;
 import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.View.UIPackage.Legacy.Window;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
  
-public class GameView{
-  private GameListener listener;
+public class GameView implements ActionListener{
+  
+  private TamagotchiController model;
+  private JButton saveBtn;
+  private JButton refreshBtn;
+  private JButton degradeBtn;
   
   public GameView(TamagotchiController model,boolean isNewGame) {
     JFrame frame = new JFrame();
+    this.model = model;
+
+
 
 
     if(isNewGame)
@@ -59,9 +67,9 @@ public class GameView{
     JButton sleepBtn = new JButton("Sieste");
     JButton cleanBtn = new JButton("Laver");
 
-    JButton saveBtn = new JButton("Sauvegarder");
-    JButton refreshBtn = new JButton("Rafraichir");
-    JButton degradeBtn = new JButton("[DEBUG]");
+    saveBtn = new JButton("Sauvegarder");
+    refreshBtn = new JButton("Rafraichir");
+    degradeBtn = new JButton("[DEBUG]");
 
 
     //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
@@ -70,13 +78,14 @@ public class GameView{
     JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
 
     for (JButton jButton : careButtons) {
-      jButton.addActionListener(listener);
+      jButton.addActionListener(this);
     }
 
     for (JButton jButton : dataButtons) {
-      jButton.addActionListener(listener);
+      jButton.addActionListener(this);
     }
   
+    saveBtn.addActionListener(this);
 
 
     Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
@@ -142,6 +151,17 @@ public class GameView{
     frame.getContentPane().add(ui);
     frame.pack();
     frame.setVisible(true);
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    
+    if(e.getSource()==saveBtn)
+    {
+      System.out.println("SAVE !!");
+      model.saveGame();
+    }
+    
   }
 
 
