@@ -6,12 +6,12 @@ import com.lado.app.Model.Tamagotchi.Tamagotchi;
 public class GameModel {
 
     public Tamagotchi tamagotchi;
-    public DebugMode debug;
+    
     public GameManager gameManager;
     
 
     public GameModel() {
-        GameManager gameManager = new GameManager(tamagotchi);
+        new GameManager(tamagotchi);
         tamagotchi = new Tamagotchi();
 
     }

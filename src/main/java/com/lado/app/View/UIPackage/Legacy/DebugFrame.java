@@ -1,4 +1,4 @@
-package com.lado.app.View.UIPackage;
+package com.lado.app.View.UIPackage.Legacy;
 import javax.swing.*;
 
 import javax.swing.JFrame;

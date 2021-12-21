@@ -10,7 +10,7 @@ public class GameManager {
   public GameTimer timer;
 
   public GameManager(Tamagotchi tama) {
-    saver = new GameSaver(tama);
+    saver = new GameSaver();
     loader = new GameLoader();
     timer = new GameTimer();
   }
