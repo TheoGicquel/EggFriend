@@ -19,9 +19,10 @@ public class App {
 
 
   public App() {
-    model = new GameModel();
-    view = new  GameView(model);
-    controller = new GameController(model,view);
+    TamagotchiController controller = new TamagotchiController();
+
+    new StartView(controller);
+   
   }
   // App app = new App();
   public static void main(String[] args) {
@@ -34,10 +35,8 @@ public class App {
     //mytama.getName();
     //System.out.println(mytama.getBreed());
 
-
-    TamagotchiController controller = new TamagotchiController();
-
-    new StartView(controller);
+    new App();
+  
     
 
   }
