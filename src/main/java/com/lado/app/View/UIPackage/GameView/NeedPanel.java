@@ -1,22 +1,21 @@
-package com.lado.app.View.UIPackage;
+package com.lado.app.View.UIPackage.GameView;
 
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-import com.lado.app.Model.Tamagotchi.Need;
 
 
 public class NeedPanel extends JPanel {
 
 
-    NeedPanel(Need inputNeed,String buttonString, String iconPath)
+    NeedPanel(int inputValue,String buttonString, String iconPath)
     {
         //Border blackline = BorderFactory.createLineBorder(Color.black);
         // this.setBorder(blackline);
-        JLabel nameLabel = new JLabel(inputNeed.getName());
-        JProgressBar bar = new NeedBar(inputNeed); 
+        JLabel nameLabel = new JLabel(buttonString);
+        JProgressBar bar = new NeedBar(inputValue); 
     
         this.add(bar);
         this.add(nameLabel);

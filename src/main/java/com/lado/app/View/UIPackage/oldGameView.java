@@ -1,5 +1,6 @@
 package com.lado.app.View.UIPackage;
 
+    
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,25 +8,28 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.Controller.TamagotchiController;
 
 
 
-public class GameWindow implements ActionListener {
+public class oldGameView implements ActionListener {
     JFrame frame = new JFrame();
     JLabel label = new JLabel("HElo");
     JButton myvButton = new JButton("bou");
 
-    GameWindow(String NewTamaName, String newTamaSpecie)
-    {
-        frame.setTitle("TamagotchiGame - " + NewTamaName);
-        genericConstructor();
-    }
 
 
-    GameWindow(Tamagotchi tama)
+
+    public oldGameView(TamagotchiController model, boolean isNewGame)
     {
-        frame.setTitle("TamagotchiGame - " + tama.getName());
+        if(isNewGame)
+        {
+            frame.setTitle("TamagotchiGame - Nouvelle Partie");
+        }
+        else
+        {
+            frame.setTitle("TamagotchiGame - Charger Partie");
+        }
         genericConstructor();
     }
 
@@ -57,3 +61,4 @@ public class GameWindow implements ActionListener {
     }
 }
  
+

@@ -1,17 +1,15 @@
 package com.lado.app.Model.Tamagotchi;
 
-import java.io.IOException;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.jar.Attributes.Name;
 
-public class Specie {
+public class Specie implements Serializable{
  
     private String name;
     private String text;
-    private String imageName;
     private List<String> favoriteFoods = new ArrayList<>();
-
 
     public Specie(String choice)
     {
@@ -30,44 +28,43 @@ public class Specie {
     {
         this.setName(nName);
         this.setText(ntext);
-        this.setImageName(nImageName);
+  
         this.setFavoriteFoods(foodArray);
     }
 
 
     void initialize(String choice){
-        this.setName(choice);
-        this.setImageName(choice);
 
-        switch(choice){
-   
-            case "sheep": 
-                this.setText("Mouton");
-                this.addFood("Herbe");
-                break;
-        
-            case "robot":
-                this.setText("Robot");
-                this.addFood("Herbe");
-                break;
-        
-            case "dog":
-                this.setText("Chien");
-                this.addFood("Os");
-                break;
-                
-            case "cat":
-                this.setText("Chat");
-                this.addFood("Poisson");
-                break;
-            case "unknown":
-                this.setText("Inconnu");
-                this.addFood("Nourriture");
-                break;
-            default:
+        if(choice == "cat"||choice == "Chat"){
+            this.setName("cat");
+            this.setText("Chat");
+            this.addFood("Poisson");
+        }
+
+        else if(choice == "dog"||choice == "Chien"){
+            this.setName("dog");
+            this.setText("Chien");
+            this.addFood("Os");
+        }
+
+        else if(choice == "sheep"||choice == "Mouton"){
+            this.setName("sheep");
+            this.setText("Mouton");
+            this.addFood("Herbe");
+        }
+
+        else if(choice == "robot"||choice == "Robot"){
+            this.setName("robot");
+            this.setText("Robot");
+            this.addFood("Herbe");
+        }
+        else
+        {
                 System.out.println("ERREUR CONSTRUCTEUR SPECIE :");
                 System.out.println(choice);
-
+                this.setName("unknown");
+                this.setText("Inconnu");
+                this.addFood("Nourriture");
         }
     }
 
@@ -122,12 +119,6 @@ public class Specie {
     }
     
 
-    public void setImageName(String newText)
-    {
-        if(newText.length()>0)
-        {
-            this.imageName=newText;
-        }
-    }
+
 
 }

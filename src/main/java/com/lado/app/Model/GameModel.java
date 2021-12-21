@@ -11,7 +11,7 @@ public class GameModel {
     
 
     public GameModel() {
-        GameManager gameManager = new GameManager(tamagotchi);
+        new GameManager(tamagotchi);
         tamagotchi = new Tamagotchi();
 
     }
