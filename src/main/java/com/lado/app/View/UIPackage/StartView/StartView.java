@@ -29,10 +29,10 @@ public class StartView implements ActionListener{
     public StartView()
     {
         controller = new TamagotchiController();
-        Border blackline = BorderFactory.createLineBorder(Color.black);
+        //Border blackline = BorderFactory.createLineBorder(Color.black);
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
-        Border buttonBorder = new EmptyBorder(10,40,10,20);
+     //   Border buttonBorder = new EmptyBorder(10,40,10,20);
         frame.setLocationRelativeTo(null);
 
 

@@ -6,6 +6,9 @@ import javax.swing.border.Border;
 import com.lado.app.Controller.TamagotchiController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
  
 public class GameView implements ActionListener{
   
@@ -13,13 +16,33 @@ public class GameView implements ActionListener{
   private JButton saveBtn;
   private JButton refreshBtn;
   private JButton degradeBtn;
+
+  long firsttime=System.currentTimeMillis();
+
+  
   
   public GameView(TamagotchiController model,boolean isNewGame) {
     JFrame frame = new JFrame();
     this.model = model;
+    firsttime= System.currentTimeMillis();
+    Runnable helloRunnable = new Runnable() {
+      public void run() {
+        System.out.println("TIME !");
+        long now =  System.currentTimeMillis();
+        System.out.println(now);
+        System.out.println("DIF :");
+        System.out.println(now-firsttime);
+        System.out.println("DIF divided:");
+        System.out.println((now-firsttime)/1000);
 
+        firsttime = now;
 
+          model.updateModel();
+      }
+  };
 
+  ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
 
     if(isNewGame)
     {
@@ -71,7 +94,7 @@ public class GameView implements ActionListener{
     degradeBtn = new JButton("[DEBUG]");
 
 
-    //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
+    NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
     JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
@@ -84,10 +107,10 @@ public class GameView implements ActionListener{
       jButton.addActionListener(this);
     }
   
-    saveBtn.addActionListener(this);
+   
 
 
-    Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
+    //Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
     JPanel healthPanel = new NeedPanel(model.getHealth(),model.getHealthNaming(),"icon");
     JPanel hungerPanel = new NeedPanel(model.getHunger(),model.getHungerNaming(),"icon");

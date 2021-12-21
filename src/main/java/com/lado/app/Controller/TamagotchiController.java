@@ -30,8 +30,7 @@ public class TamagotchiController {
          saver = new GameSaver();
 
 
-        // de cette façon c'est coté controller que tu instancie et lie les controllers à la vue
-        // this.startView.frame.newGameButton().addActionListener(new StartButtonListener());
+
     }
 
     public static void loadGameAction() {
@@ -145,6 +144,10 @@ public class TamagotchiController {
                 frame.dispose();
                 GameView gameView = new GameView(this, false);
             }
+    }
+
+    public void updateModel() {
+        this.model.update();
     }
 
 }

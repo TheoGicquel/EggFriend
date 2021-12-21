@@ -19,6 +19,7 @@ public class Tamagotchi implements Serializable{
   public Need cleanliness;
   public Need happiness;
   private String mood;
+  private long lastModifiedDate;
   
 
   int CRITICAL_THRESHOLD = 5;
@@ -89,6 +90,11 @@ public class Tamagotchi implements Serializable{
     for (Need currentNeed : needs) {
       currentNeed.calcDepletion(timeElapsed);
     }
+  }
+
+  public void update()
+  {
+
   }
 
   // -------------- NOM  --------------
