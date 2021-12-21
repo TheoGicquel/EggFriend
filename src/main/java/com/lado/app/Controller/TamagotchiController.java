@@ -159,7 +159,7 @@ public class TamagotchiController {
                 JOptionPane.showMessageDialog(null, "Chargement de la partie réussi");
                 this.model = loader.loadTamagotchi();
                 frame.dispose();
-                GameView gameView = new GameView(this, false);
+                new GameView(this, false);
             }
     }
 
