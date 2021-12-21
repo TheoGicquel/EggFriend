@@ -12,7 +12,7 @@ import com.lado.app.Controller.TamagotchiController;
 
 
 
-public class GameView implements ActionListener {
+public class oldGameView implements ActionListener {
     JFrame frame = new JFrame();
     JLabel label = new JLabel("HElo");
     JButton myvButton = new JButton("bou");
@@ -20,7 +20,7 @@ public class GameView implements ActionListener {
 
 
 
-    GameView(TamagotchiController model, boolean isNewGame)
+    public oldGameView(TamagotchiController model, boolean isNewGame)
     {
         if(isNewGame)
         {

@@ -2,7 +2,7 @@
  * @file InfoPanel.java
  * @author Theo Gicquel
 */
-package com.lado.app.View.UIPackage.GameFrame;
+package com.lado.app.View.UIPackage.GameView;
 
 import javax.swing.JPanel;
 

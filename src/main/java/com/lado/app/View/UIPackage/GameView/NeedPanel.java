@@ -1,4 +1,4 @@
-package com.lado.app.View.UIPackage.GameFrame;
+package com.lado.app.View.UIPackage.GameView;
 
 
 import javax.swing.JLabel;
