@@ -3,7 +3,6 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.border.Border;
-import com.lado.app.Controller.GameListener;
 import com.lado.app.Controller.TamagotchiController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

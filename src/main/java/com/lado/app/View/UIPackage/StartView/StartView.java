@@ -9,17 +9,13 @@ import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.Model.GameManager.GameLoader;
-import com.lado.app.View.UIPackage.oldGameView;
 
 import java.awt.Color;
 
@@ -29,10 +25,10 @@ public class StartView implements ActionListener{
     JButton newGameButton = new JButton("Nouvelle Partie");
     JButton loadGameButton = new JButton("Charger Partie");
     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
-    TamagotchiController model;
+    TamagotchiController controller;
     public StartView()
     {
-        model = new TamagotchiController();
+        controller = new TamagotchiController();
         Border blackline = BorderFactory.createLineBorder(Color.black);
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
@@ -104,12 +100,12 @@ public class StartView implements ActionListener{
     public void actionPerformed(ActionEvent e) {
        if(e.getSource()==newGameButton)
        {
-         model.newGame(frame);
+         controller.newGame(frame);
        }
 
        if(e.getSource()==loadGameButton)
        {
-         model.loadGame(frame);
+         controller.loadGame(frame);
 
 
        }
