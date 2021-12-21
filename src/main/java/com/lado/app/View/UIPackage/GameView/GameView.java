@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  
 public class GameView implements ActionListener{
   
-  private TamagotchiController model;
+  private TamagotchiController controller;
   private JButton saveBtn;
   private JButton refreshBtn;
   private JButton degradeBtn;
@@ -20,14 +20,36 @@ public class GameView implements ActionListener{
   JButton playBtn;
   JButton sleepBtn;
   JButton cleanBtn;
+  NeedBar hungerBar;
+  NeedBar healthBar;
+  NeedBar happinessBar;
+  NeedBar energyBar;
+  JFrame frame;
 
+  NeedPanel healthPanel;
+  NeedPanel hungerPanel;
+  NeedPanel energyPanel;
+  NeedPanel cleanLinessPanel;
+  NeedPanel happinessPanel;
+
+
+  CarePanel hungerCarePanel;
+  CarePanel energyCarePanel;
+  CarePanel cleanlinessCarePanel;
+  CarePanel happinessCarePanel;
+
+  JPanel needsUI;
+  JPanel needAndCarePanel;
+  JPanel ui;
+
+  JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
   
   
-  public GameView(TamagotchiController model,boolean isNewGame) {
-    JFrame frame = new JFrame();
-    this.model = model;
+  public GameView(TamagotchiController controller,boolean isNewGame) {
+    frame = new JFrame();
+    this.controller = controller;
     firsttime= System.currentTimeMillis();
 
 
@@ -57,7 +79,7 @@ public class GameView implements ActionListener{
     frame.getContentPane().setBackground(backgroundColor);
 
     JLabel nameLbl = new JLabel();
-    nameLbl.setText("Name: " + model.getName());
+    nameLbl.setText("Name: " + controller.getName());
 
     //nameLbl.setIcon(appIcon);
     nameLbl.setFont(new Font("Arial", Font.BOLD, 14));
@@ -68,11 +90,11 @@ public class GameView implements ActionListener{
     frame.add(nameLbl);
 
 
-    NeedBar hungerBar = new NeedBar(model.getHunger());
-    NeedBar healthBar = new NeedBar(model.getHealth());
-    NeedBar happinessBar = new NeedBar(model.getHapiness());
-    NeedBar energyBar = new NeedBar(model.getEnergy());
-
+     hungerBar = new NeedBar(11);
+     healthBar = new NeedBar(controller.getHealth());
+     happinessBar = new NeedBar(controller.getHapiness());
+     energyBar = new NeedBar(controller.getEnergy());
+      testbar = new JProgressBar();
     feedBtn = new JButton("Nourrir");
     playBtn = new JButton("Jouer");
     sleepBtn = new JButton("Sieste");
@@ -83,7 +105,7 @@ public class GameView implements ActionListener{
     degradeBtn = new JButton("[DEBUG]");
 
 
-    NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
+    //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
     JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
@@ -101,36 +123,37 @@ public class GameView implements ActionListener{
 
     //Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
-    JPanel healthPanel = new NeedPanel(model.getHealth(),model.getHealthNaming(),"icon");
-    JPanel hungerPanel = new NeedPanel(model.getHunger(),model.getHungerNaming(),"icon");
-    JPanel energyPanel = new NeedPanel(model.getEnergy(),model.getEnergyNaming(),"icon");
-    JPanel cleanLinessPanel = new NeedPanel(model.getCleanliness(),model.getCleanlinessNaming(),"icon");
-    JPanel happinessPanel = new NeedPanel(model.getHappiness(),model.getCleanlinessNaming(),"icon");
+     healthPanel = new NeedPanel(controller.getHealth(),controller.getHealthNaming(),"icon");
+     hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming(),"icon");
+     energyPanel = new NeedPanel(controller.getEnergy(),controller.getEnergyNaming(),"icon");
+     cleanLinessPanel = new NeedPanel(controller.getCleanliness(),controller.getCleanlinessNaming(),"icon");
+     happinessPanel = new NeedPanel(controller.getHappiness(),controller.getHapinessNaming(),"icon");
 
-    JPanel hungerCarePanel = new CarePanel(feedBtn);
-    JPanel energyCarePanel = new CarePanel(sleepBtn);
-    JPanel cleanlinessCarePanel = new CarePanel(cleanBtn);
-    JPanel happinessCarePanel = new CarePanel(playBtn);
+     hungerCarePanel = new CarePanel(feedBtn);
+     energyCarePanel = new CarePanel(sleepBtn);
+     cleanlinessCarePanel = new CarePanel(cleanBtn);
+     happinessCarePanel = new CarePanel(playBtn);
 
-    JPanel infoPanel = new InfoPanel(model);
+    JPanel infoPanel = new InfoPanel(controller);
   
     JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
     JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
-    JPanel ui = new JPanel();
+    ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.LINE_AXIS));
 
   
 
 
-    JPanel needsUI = new JPanel();
+    needsUI = new JPanel();
     needsUI.setLayout(new BoxLayout(needsUI,BoxLayout.PAGE_AXIS));
 
     JPanel careUI = new JPanel();
 
-    for (JPanel needPanel : needPanels) {
+    
+   for (JPanel needPanel : needPanels) {
       needsUI.add(needPanel);
-    }
+   }
 
     for (JPanel carePanel : carePanels) {
       careUI.add(carePanel);
@@ -149,7 +172,7 @@ public class GameView implements ActionListener{
     JPanel tamaPanel = new JPanel();
     tamaPanel.setLayout(new BoxLayout(tamaPanel,BoxLayout.PAGE_AXIS));
 
-    JPanel needAndCarePanel = new JPanel();
+    needAndCarePanel = new JPanel();
     needAndCarePanel.setLayout(new BoxLayout(needAndCarePanel,BoxLayout.PAGE_AXIS));
     needAndCarePanel.add(needsUI);
     needAndCarePanel.add(careUI);
@@ -158,37 +181,64 @@ public class GameView implements ActionListener{
     tamaPanel.add(infoPanel);
     ui.add(tamaPanel);
     ui.add(needAndCarePanel);
-
+    
+    
     frame.getContentPane().add(ui);
     frame.pack();
     frame.setVisible(true);
+    frame.repaint();
   }
 
   @Override
   public void actionPerformed(ActionEvent e) {
+    System.out.println(e.getActionCommand());
    
     if(e.getSource()==saveBtn)
     {
-      System.out.println("SAVE !!");
-      model.saveGame();
+      controller.saveGame();
     }
 
     if(e.getSource()==degradeBtn)
     {
       System.out.println("degradeBTN");
+      healthPanel.updateNeed(56);
+      hungerPanel.updateNeed(23);
+      energyPanel.updateNeed(07);
+      cleanLinessPanel.updateNeed(12);
+      happinessPanel.updateNeed(34);
     }
 
     if(e.getSource()==refreshBtn)
     {
-      System.out.println("REFRESH !!");
-     // model.refresh();
+      
+      controller.refreshAction();
     }
 
     if(e.getSource()==feedBtn)
     {
-      System.out.println("FEED !!");
-     // model.feed();
+      controller.feedAction();
+      hungerPanel.updateNeed(23);
     }
+
+    if(e.getSource()==cleanBtn)
+    {
+      controller.cleanAction();
+      cleanLinessPanel.updateNeed(controller.getCleanliness());
+    }
+
+    if(e.getSource()==sleepBtn)
+    {
+      controller.sleepAction();
+      energyPanel.updateNeed(controller.getEnergy());
+    }
+
+    if(e.getSource()==playBtn)
+    {
+      controller.playAction();
+      happinessPanel.updateNeed(controller.getHappiness());
+    }
+
+
     
   }
 

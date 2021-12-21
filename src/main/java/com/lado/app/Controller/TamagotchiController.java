@@ -46,7 +46,7 @@ public class TamagotchiController {
         };
           ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
           executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
-      
+    
 
     }
 
@@ -80,7 +80,7 @@ public class TamagotchiController {
     }
 
     public String getHungerNaming() {
-        return model.health.getName();
+        return model.hunger.getName();
     }
 
     public String getEnerggNaming() {
@@ -163,9 +163,59 @@ public class TamagotchiController {
             }
     }
 
+    public int fetchHunger() {
+        return model.getHunger();
+    }
+
+    public int fetchEnergy() {
+        return model.getEnergy();
+    }
+
+    public int fetchHealth() {
+        return model.getHealth();
+    }
+
+    public int fetchHappiness() {
+        return model.getHappiness();
+    }
+
+    public int fetchCleanliness() {
+        return model.getCleanliness();
+    }
+
+
     public void updateModel() {
         this.model.update();
     }
+
+    public void feedAction() {
+        updateModel();
+    }
+
+    public void refreshAction() {
+        updateModel();
+
+    }
+
+    public void degrade() {
+        updateModel();
+
+    }
+
+    public void cleanAction() {
+        updateModel();
+
+    }
+
+    public void sleepAction() {
+        updateModel();
+    }
+
+    public void playAction() {
+        updateModel();
+    }
+
+    
 
 }
 
