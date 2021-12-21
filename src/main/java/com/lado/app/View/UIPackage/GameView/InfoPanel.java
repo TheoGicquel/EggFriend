@@ -29,7 +29,11 @@ public class InfoPanel extends JPanel{
 
        //Border blackline = BorderFactory.createLineBorder(Color.black);
         // this.setBorder(blackline);
+        // en dev
         String imagePath = "src/main/resources/" + controller.getSpecie() + ".png";
+
+        // En production
+           // String imagePath = "resources/" + controller.getSpecie() + ".png";
         JLabel image = new JLabel( new ImageIcon(imagePath) );
         image.setBounds(0, 0, 10, 10);
         

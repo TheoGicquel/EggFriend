@@ -58,7 +58,11 @@ public class StartView implements ActionListener{
         JPanel titleImagePanel = new JPanel();
         titleImagePanel.setLayout(new BoxLayout(titleImagePanel,BoxLayout.X_AXIS));
 
+        // dev
         String titleImagePath = "src/main/resources/titleImage.png";
+
+        // prod
+       // String titleImagePath = "./classes/titleImage.jpg";
 
         JLabel titleImage = new JLabel( new ImageIcon(titleImagePath) );
 
