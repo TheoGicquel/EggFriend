@@ -1,10 +1,11 @@
 package com.lado.app.Model.Tamagotchi;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Specie {
+public class Specie implements Serializable{
  
     private String name;
     private String text;

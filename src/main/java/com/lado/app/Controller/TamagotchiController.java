@@ -5,8 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.lado.app.Model.GameManager.GameLoader;
+import com.lado.app.Model.GameManager.GameSaver;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.oldGameView;
 import com.lado.app.View.UIPackage.GameView.GameView;
 import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
 import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
@@ -16,6 +16,8 @@ public class TamagotchiController {
     private Tamagotchi model;
     public int getHunger;
     public Object getCleanlinessNaming;
+    private GameLoader loader;
+    private GameSaver saver;
 
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
@@ -24,7 +26,8 @@ public class TamagotchiController {
 
     public TamagotchiController() {
         this.model = new Tamagotchi();
-
+        loader = new GameLoader();
+         saver = new GameSaver();
 
 
         // de cette façon c'est coté controller que tu instancie et lie les controllers à la vue
@@ -115,6 +118,7 @@ public class TamagotchiController {
             NewGameNameDialog nameDialog = new NewGameNameDialog();
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
+            saver.save(model);
             new GameView(this, false);
             frame.dispose();
 
@@ -123,7 +127,7 @@ public class TamagotchiController {
 
     public void loadGame(JFrame frame)
     {
-            GameLoader loader = new GameLoader();
+            
             boolean successful = loader.loadingSuccess();
             if(!successful){
                 JOptionPane.showMessageDialog(null, "Erreur lors du chargement de la partie");

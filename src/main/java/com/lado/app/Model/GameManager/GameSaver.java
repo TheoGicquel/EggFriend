@@ -7,9 +7,15 @@ import java.io.ObjectOutputStream;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class GameSaver {
+    Tamagotchi savetama;
+    
+    public GameSaver(){
+        savetama = new Tamagotchi();
 
-    public GameSaver(Tamagotchi tama){
-        Tamagotchi savetama = new Tamagotchi();
+    }
+
+    public int save(Tamagotchi tama)
+    {
         savetama = tama;
         
         try {
@@ -20,8 +26,10 @@ public class GameSaver {
             out.close();
             fileOut.close();
             System.out.printf("Serialized data is saved in tamagotchisaving.ser");
+            return 0;
         } catch (IOException i) {
             i.printStackTrace();
+            return 1;
         }
     }
 }

@@ -1,10 +1,11 @@
 package com.lado.app.Model.Tamagotchi;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Classe Model de Tamagotchi
  */
-public class Tamagotchi {
+public class Tamagotchi implements Serializable{
       /** Caracteristiques innés ( initialisés a la naissance) */
   private String name;
   private String favoriteFoods[];

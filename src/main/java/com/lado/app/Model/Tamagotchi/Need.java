@@ -1,7 +1,8 @@
 package com.lado.app.Model.Tamagotchi;
 
+import java.io.Serializable;
 
-public class Need {
+public class Need implements Serializable{
 
   private String name;
   private int value;
