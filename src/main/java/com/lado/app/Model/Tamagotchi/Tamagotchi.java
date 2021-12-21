@@ -2,6 +2,8 @@ package com.lado.app.Model.Tamagotchi;
 import java.io.Serializable;
 import java.util.List;
 
+
+
 /**
  * Classe Model de Tamagotchi
  */
@@ -19,7 +21,7 @@ public class Tamagotchi implements Serializable{
   public Need cleanliness;
   public Need happiness;
   private String mood;
-  private long lastModifiedDate;
+  private long lastModifiedTime;
   
 
   int CRITICAL_THRESHOLD = 5;
@@ -289,5 +291,22 @@ public String getMood() {
 public void setMood(String mood) {
     this.mood = mood;
 }
+
+
+public long getModifiedTime()
+{
+  return lastModifiedTime;
+}
+
+public void setModifiedTime(long time)
+{
+  this.lastModifiedTime = time;
+}
+
+public void updateTime()
+{
+  this.lastModifiedTime = System.currentTimeMillis();
+}
+
 
 }
