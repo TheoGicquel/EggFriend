@@ -1,6 +1,11 @@
 package com.lado.app.Controller;
 
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -29,7 +34,19 @@ public class TamagotchiController {
         loader = new GameLoader();
          saver = new GameSaver();
 
-
+         Runnable helloRunnable = new Runnable() {
+            public void run() {
+              System.out.println("TIME !");
+              long now =  System.currentTimeMillis();
+              System.out.println(now);
+            
+      
+                model.update();
+            }
+        };
+          ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+          executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
+      
 
     }
 

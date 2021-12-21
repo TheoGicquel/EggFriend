@@ -16,6 +16,10 @@ public class GameView implements ActionListener{
   private JButton saveBtn;
   private JButton refreshBtn;
   private JButton degradeBtn;
+  JButton feedBtn;
+  JButton playBtn;
+  JButton sleepBtn;
+  JButton cleanBtn;
 
   long firsttime=System.currentTimeMillis();
 
@@ -25,24 +29,9 @@ public class GameView implements ActionListener{
     JFrame frame = new JFrame();
     this.model = model;
     firsttime= System.currentTimeMillis();
-    Runnable helloRunnable = new Runnable() {
-      public void run() {
-        System.out.println("TIME !");
-        long now =  System.currentTimeMillis();
-        System.out.println(now);
-        System.out.println("DIF :");
-        System.out.println(now-firsttime);
-        System.out.println("DIF divided:");
-        System.out.println((now-firsttime)/1000);
 
-        firsttime = now;
 
-          model.updateModel();
-      }
-  };
 
-  ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
 
     if(isNewGame)
     {
@@ -60,7 +49,7 @@ executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
     // frame.setTitle("TITRE FENETRE");
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      frame.setResizable(true);
-     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
+     ImageIcon appIcon = new ImageIcon("resources/images/logo.png");
     frame.setIconImage(appIcon.getImage());
  
     
@@ -84,10 +73,10 @@ executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
     NeedBar happinessBar = new NeedBar(model.getHapiness());
     NeedBar energyBar = new NeedBar(model.getEnergy());
 
-    JButton feedBtn = new JButton("Nourrir");
-    JButton playBtn = new JButton("Jouer");
-    JButton sleepBtn = new JButton("Sieste");
-    JButton cleanBtn = new JButton("Laver");
+    feedBtn = new JButton("Nourrir");
+    playBtn = new JButton("Jouer");
+    sleepBtn = new JButton("Sieste");
+    cleanBtn = new JButton("Laver");
 
     saveBtn = new JButton("Sauvegarder");
     refreshBtn = new JButton("Rafraichir");
@@ -177,11 +166,28 @@ executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
 
   @Override
   public void actionPerformed(ActionEvent e) {
-    
+   
     if(e.getSource()==saveBtn)
     {
       System.out.println("SAVE !!");
       model.saveGame();
+    }
+
+    if(e.getSource()==degradeBtn)
+    {
+      System.out.println("degradeBTN");
+    }
+
+    if(e.getSource()==refreshBtn)
+    {
+      System.out.println("REFRESH !!");
+     // model.refresh();
+    }
+
+    if(e.getSource()==feedBtn)
+    {
+      System.out.println("FEED !!");
+     // model.feed();
     }
     
   }
