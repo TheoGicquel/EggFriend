@@ -2,13 +2,10 @@ package com.lado.app.View.UIPackage.GameView;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
-import javax.swing.border.Border;
 import com.lado.app.Controller.TamagotchiController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+
  
 public class GameView implements ActionListener{
   

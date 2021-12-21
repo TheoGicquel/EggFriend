@@ -1,7 +1,6 @@
 package com.lado.app.View.UIPackage.GameView;
 
 
-import java.awt.Color;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
