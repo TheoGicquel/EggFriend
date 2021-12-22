@@ -1,28 +1,31 @@
 package com.lado.app.Model.Tamagotchi;
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 public class SpecieTest {
 
+
+
     @Test
-    public void testSetBreed(){
-      Tamagotchi testTamagotchi = new Tamagotchi();
-      testTamagotchi.setSpecie("dog");
-      assertEquals("dog", testTamagotchi.getSpecie());
+    public void getFavoriteFoods() {
+        Specie specie = new Specie("cat");
+        List<String> expected = new ArrayList<>();
+        expected = specie.getFavoriteFoods();
+        assertEquals(expected, specie.getFavoriteFoods());
     }
-  
-  
-    @Test
-    public void testDefaultBreed(){
-      Tamagotchi testTamagotchi = new Tamagotchi();
-      assertEquals("unknown", testTamagotchi.getSpecie());
-    }
-/** 
+
+
+
+  /*
     @Test
     public void getFavoriteFoodDogByIndex(){
       Tamagotchi dogTama = new Tamagotchi();
       dogTama.setSpecie("dog");
-      assertEquals("Os",dogTama.getFood(1));
+      assertEquals("Os",dogTama.getFood(0));
     }
   
     /** 

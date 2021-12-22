@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.lang.model.util.ElementScanner6;
+
 public class Specie implements Serializable{
  
     private String name;
@@ -23,7 +25,8 @@ public class Specie implements Serializable{
      * @param ntext
      * @param nImageName
      * @param foodArray
-     */
+     
+    @Deprecated
     public Specie(String nName,String ntext,String nImageName,List<String> foodArray)
     {
         this.setName(nName);
@@ -31,7 +34,7 @@ public class Specie implements Serializable{
   
         this.setFavoriteFoods(foodArray);
     }
-
+    */
 
     void initialize(String choice){
 
@@ -56,12 +59,16 @@ public class Specie implements Serializable{
         else if(choice == "robot"||choice == "Robot"){
             this.setName("robot");
             this.setText("Robot");
-            this.addFood("Herbe");
+            this.addFood("Vis");
         }
         else if(choice == "unknown"||choice == "Inconnu"){
             this.setName("unknown");
             this.setText("Inconnu");
-            this.addFood("Herbe");
+            this.addFood("Nourriture");
+        }else{
+            this.setName("unknown");
+            this.setText("Inconnu");
+            this.addFood("Nourriture");
         }
 
     }
