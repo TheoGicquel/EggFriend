@@ -41,10 +41,7 @@ public class Tamagotchi implements Serializable{
     //this.lastModifiedTime = System.currentTimeMillis();
   }
 
-  public Tamagotchi(String name) {
-    setDefaultStats();
-    this.name = name;
-  }
+
 
   public Tamagotchi() {
     this.specie = new Specie("unknown");

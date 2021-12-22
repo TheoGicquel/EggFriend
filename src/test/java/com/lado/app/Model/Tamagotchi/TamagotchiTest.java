@@ -16,7 +16,6 @@ public class TamagotchiTest {
 
 
 
-
   @Test
   public void testTamagotchiDefConstr() {
     Tamagotchi testTamagotchi = new Tamagotchi();
