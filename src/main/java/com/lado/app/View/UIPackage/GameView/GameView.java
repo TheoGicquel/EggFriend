@@ -193,7 +193,7 @@ public class GameView implements ActionListener{
     frame.repaint();
 
 
-    
+  
     Runnable viewUpdater = new Runnable(){
       public void run() {
           updateData();
