@@ -33,9 +33,9 @@ public class Tamagotchi implements Serializable{
     this.setSpecie("unknown");
     this.health = new Need("Vie","Mourrant", 50, 0.01f);
     this.energy = new Need("Energie","Fatigué", 50, 0.01f);
-    this.hunger = new Need("Faim","Affamé", 32, 0.01f);
-    this.cleanliness = new Need("Proprete","Sale", 32, 0.01f);
-    this.happiness = new Need("Bonheur","Déprimé", 32, 0.01f);
+    this.hunger = new Need("Faim","Affamé", 50, 0.03f);
+    this.cleanliness = new Need("Proprete","Sale", 50, 0.01f);
+    this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
   }

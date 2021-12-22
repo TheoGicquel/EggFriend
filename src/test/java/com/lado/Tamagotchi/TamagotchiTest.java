@@ -20,13 +20,14 @@ public class TamagotchiTest {
   @Test
   public void testTamagotchiDefConstr() {
     Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setDefaultStats();
     assertEquals("Tamago", testTamagotchi.getName());
     assertEquals(true, testTamagotchi.getAlive());
-    assertEquals(100, testTamagotchi.getHealth());
-    assertEquals(100, testTamagotchi.getEnergy());
-    assertEquals(100, testTamagotchi.getHunger());
-    assertEquals(100, testTamagotchi.getCleanliness());
-    assertEquals(100, testTamagotchi.getHappiness());
+    assertEquals(50, testTamagotchi.getHealth());
+    assertEquals(50, testTamagotchi.getEnergy());
+    assertEquals(50, testTamagotchi.getHunger());
+    assertEquals(50, testTamagotchi.getCleanliness());
+    assertEquals(50, testTamagotchi.getHappiness());
   }
 
   @Test
