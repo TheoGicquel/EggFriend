@@ -60,7 +60,7 @@ public class Need implements Serializable{
     } else {
       
     }
-    System.out.println(this.value);
+    //System.out.println(this.value);
     return this.value;
   }
 

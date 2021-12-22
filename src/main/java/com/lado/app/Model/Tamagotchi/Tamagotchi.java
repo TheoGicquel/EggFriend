@@ -38,6 +38,7 @@ public class Tamagotchi implements Serializable{
     this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
+    //this.lastModifiedTime = System.currentTimeMillis();
   }
 
   public Tamagotchi(String name) {

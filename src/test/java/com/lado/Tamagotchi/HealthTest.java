@@ -26,6 +26,16 @@ public class HealthTest {
       assertEquals(0, testTamagotchi.getHealth());
       assertEquals(false, testTamagotchi.getAlive());
     }
+
+    @Test
+    public void reviveExpectedFailure()
+    {
+      Tamagotchi testTamagotchi = new Tamagotchi();
+      testTamagotchi.setHealth(0);
+      testTamagotchi.setAlive(false);
+      testTamagotchi.setHealth(100);
+      assertEquals(false, testTamagotchi.getAlive());
+    }
   
     @Test
     public void testSetHealth() {
