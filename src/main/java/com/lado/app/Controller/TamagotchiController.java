@@ -1,9 +1,6 @@
 package com.lado.app.Controller;
 
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 
 import javax.swing.JFrame;
