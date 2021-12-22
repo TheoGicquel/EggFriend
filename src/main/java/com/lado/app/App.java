@@ -3,7 +3,7 @@ package com.lado.app;
 
 import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.GameModel;
-import com.lado.app.View.UIPackage.Legacy.GameView;
+import com.lado.app.View.UIPackage.GameView.GameView;
 import com.lado.app.View.UIPackage.StartView.StartView;
 
 
