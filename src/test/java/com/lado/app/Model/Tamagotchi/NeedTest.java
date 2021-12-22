@@ -24,8 +24,10 @@ public class NeedTest {
 
     @Test
     public void needFullConstructor(){
-       Need testNeed = new Need("Boire","soif",32, 0.2f);
-
+        Need testNeed = new Need("Boire","soif",32, 0.2f);
+        assertEquals(32,testNeed.getVal());
+        assertEquals("Boire",testNeed.getName());
+        assertEquals("soif",testNeed.getDescriptor());
     }
 
     @Test
@@ -41,6 +43,82 @@ public class NeedTest {
         testnNeed.setVal(55);
         assertEquals(55, testnNeed.getVal());
     }
+
+    @Test
+    public void needSetValUnderflowAttempt()
+    {
+        Need testnNeed = new Need("Boire","soif",32, 0.2f);
+        testnNeed.setVal(-25);
+        assertEquals(0, testnNeed.getVal());
+    }
+
+    @Test
+    public void needSetValOverflowAttempt()
+    {
+        Need testnNeed = new Need("Boire","soif",32, 0.2f);
+        testnNeed.setVal(125);
+        assertEquals(100, testnNeed.getVal());
+        
+    }
+
+    @Test
+    public void needGetCritical()
+    {
+        Need testNeed = new Need("Boire","soif",32, 0.2f);
+        assertEquals(false, testNeed.isCritical());
+    }
+
+    @Test
+    public void needSetCritical()
+    {
+        Need testNeed = new Need("Boire","soif",32, 0.2f);
+        testNeed.setCritical(true);
+        assertEquals(true, testNeed.isCritical());
+
+        testNeed.setCritical(false);
+        assertEquals(false, testNeed.isCritical());
+        
+    }
+
+    @Test
+    public void needSetName()
+    {
+        Need testNeed = new Need("Boire","soif",32, 0.2f);
+        testNeed.setName("Aglouglou");
+        assertEquals("Aglouglou", testNeed.getName());
+    }
+
+    @Test
+    public void getFactorByDefaultConstructor()
+    {
+        Need testneed = new Need();
+        assertEquals(0.01f, testneed.getFactor(),0.01f);
+    }
+
+
+    @Test
+    public void getFactorByConstructor()
+    {
+        Need testNeed = new Need("Boire","soif",32, 0.1337f);
+        assertEquals(0.1337f, testNeed.getFactor(),0.0001f);
+    }
+
+    @Test
+    public void setFactor()
+    {
+        Need testNeed = new Need();
+        testNeed.setFactor(0.404f);
+        assertEquals(0.404f, testNeed.getFactor(),0.0001f);
+    }
+
+    @Test
+    public void needCalcDepletion()
+    {
+        Need testNeed = new Need("Boire","soif",32, 0.2f);
+        testNeed.calcDepletion(1000);
+        assertEquals(30, testNeed.getVal());
+    }
+
 
     
     

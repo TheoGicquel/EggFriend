@@ -40,7 +40,7 @@ public class Need implements Serializable{
    * @param timeElapsed
    */
   void calcDepletion(long timeElapsed) {
-    System.out.println("calcDepletion");
+    //System.out.println("calcDepletion");
    // System.out.println("elapsed : [" + timeElapsed + "ms ]");
    // System.out.println("factor : [" + this.factor + "]");
    // System.out.println("value : [" + this.value + "]");
@@ -81,7 +81,7 @@ public class Need implements Serializable{
     return this.value;
   }
 
-  
+
   Float getFactor() {
     return this.factor;
   }
