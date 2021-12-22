@@ -1,15 +1,19 @@
 package com.lado.app.Model.Tamagotchi;
 
-public class Need {
+import java.io.Serializable;
 
-  String name;
-  int value;
-  float factor;
-  boolean critical;
+public class Need implements Serializable{
 
-  Need(String name, int value, Float factor) {
+  private String name;
+  private int value;
+  private float factor;
+  private boolean critical;
+ private String descriptor;
+
+  Need(String name,String descriptor, int value, Float factor) {
     this.value = value;
     this.name = name;
+    this.descriptor = descriptor;
     this.factor = factor;
     this.critical = false;
   }
@@ -17,7 +21,8 @@ public class Need {
   Need() {
     this.value = 100;
     this.name = "unknown";
-    this.factor = 1;
+    this.descriptor = "descriptor";
+    this.factor = 0.01f;
     this.critical = false;
   }
 
@@ -25,25 +30,37 @@ public class Need {
     this.critical = critical;
   }
 
+  boolean isCritical() {
+    return this.critical;
+  }
+
   /***
-   * @brief change la valeur du besoin selon le temps écoulé (minutes) et
+   * @brief change la valeur du besoin selon le temps écoulé (secondes) et
    *  le facteur d'évolution du besoin
-   * @param time
+   * @param timeElapsed
    */
-  void calcDepletion(Float time) {
-    int newValue = (int) (this.value - (time * this.factor));
+  void calcDepletion(long timeElapsed) {
+    System.out.println("calcDepletion");
+    System.out.println("elapsed : [" + timeElapsed + "ms ]");
+    System.out.println("factor : [" + this.factor + "]");
+    System.out.println("value : [" + this.value + "]");
+    int newValue = (int) (this.value - (timeElapsed * (this.factor/100)));
     this.setVal(newValue);
   }
 
   int setVal(int value) {
-    if (value < 0) {
+    System.out.println("[setval :" + value + "]");
+
+    this.value = value;
+
+    if (this.value < 0) {
       this.value = 0;
-    } else if (value > 100) {
+    } else if (this.value > 100) {
       this.value = 100;
     } else {
-      this.value = value;
+      
     }
-
+    System.out.println(this.value);
     return this.value;
   }
 
@@ -63,4 +80,11 @@ public class Need {
   public int getVal() {
     return this.value;
   }
+
+public String getDescriptor() {
+    return this.descriptor;
+}
+
+
+
 }

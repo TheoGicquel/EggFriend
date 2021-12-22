@@ -1,7 +1,6 @@
 package com.lado.Tamagotchi;
 
 import static org.junit.Assert.*;
-
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 /** 
@@ -14,12 +13,8 @@ import org.junit.Test;
 
 public class TamagotchiTest {
 
-  /* *
-    @Before
-    public void createTamagotchiInstance() {
-        Tamagotchi testTamagotchi = new Tamagotchi("iamtest");
-    }
-*/
+
+
 
 
   @Test
@@ -27,51 +22,79 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi();
     assertEquals("Tamago", testTamagotchi.getName());
     assertEquals(true, testTamagotchi.getAlive());
-    assertEquals(100, testTamagotchi.health.getVal());
-    assertEquals(100, testTamagotchi.energy.getVal());
-    assertEquals(100, testTamagotchi.hunger.getVal());
-    assertEquals(100, testTamagotchi.cleanliness.getVal());
-    assertEquals(100, testTamagotchi.happiness.getVal());
+    assertEquals(100, testTamagotchi.getHealth());
+    assertEquals(100, testTamagotchi.getEnergy());
+    assertEquals(100, testTamagotchi.getHunger());
+    assertEquals(100, testTamagotchi.getCleanliness());
+    assertEquals(100, testTamagotchi.getHappiness());
   }
 
   @Test
-  public void testGetName() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
-    assertEquals("tama", testTamagotchi.getName());
+  public void testDefaultGetName() {
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    assertEquals("Tamago", testTamagotchi.getName());
   }
 
   @Test
   public void testSetName() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    Tamagotchi testTamagotchi = new Tamagotchi();
     testTamagotchi.setName("tamatest");
     assertEquals("tamatest", testTamagotchi.getName());
   }
+  
+
 
   @Test
-  public void testAliveHealth() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
-    testTamagotchi.setHealth(0);
-    assertEquals(0, testTamagotchi.health.getVal());
-    assertEquals(false, testTamagotchi.getAlive());
+  public void testGetMood(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    assertEquals("normal",testTamagotchi.getMood());
   }
+  
+  @Test
+  public void testSetMood(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setMood("Joyeux");
+    assertEquals("Joyeux", testTamagotchi.getMood());
+  }
+
 
   @Test
-  public void testSetHealth() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
-
-    testTamagotchi.setHealth(20);
-    assertEquals(20, testTamagotchi.health.getVal());
+  public void testSetEnergy(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setEnergy(30);
+    assertEquals(30, testTamagotchi.getEnergy());
   }
-
+  
+  @Test
+  public void testSetHunger(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setHunger(60);
+    assertEquals(60, testTamagotchi.getHunger());
+  }
+  
+  @Test
+  public void testSetCleanliness(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setCleanliness(40);
+    assertEquals(40, testTamagotchi.getCleanliness());
+  }
+  
+  @Test
+  public void testSetHappiness(){
+    Tamagotchi testTamagotchi = new Tamagotchi();
+    testTamagotchi.setHappiness(50);
+    assertEquals(50,testTamagotchi.getHappiness());
+  }
+  
   @Test
   public void testHeal() {
-    Tamagotchi testTamagotchi = new Tamagotchi("tama");
+    Tamagotchi testTamagotchi = new Tamagotchi();
     testTamagotchi.setHealth(30);
     testTamagotchi.heal(12);
-    assertEquals(42, testTamagotchi.health.getVal());
+    assertEquals(42, testTamagotchi.getHealth());
 
     testTamagotchi.heal(120);
-    assertEquals(100, testTamagotchi.health.getVal());
+    assertEquals(100, testTamagotchi.getHealth());
   }
 
   @Test
@@ -79,10 +102,23 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi();
     testTamagotchi.setHealth(43);
     testTamagotchi.hurt(13);
-    assertEquals(30, testTamagotchi.health.getVal());
+    assertEquals(30, testTamagotchi.getHealth());
 
     testTamagotchi.hurt(900);
-    assertEquals(0, testTamagotchi.health.getVal());
+    assertEquals(0, testTamagotchi.getHealth());
     assertEquals(false, testTamagotchi.getAlive());
   }
+
+
+  @Test
+  public void getFavoriteFoodDefaultByIndex(){
+    Tamagotchi foodtama = new Tamagotchi();
+    assertEquals("N/A",foodtama.getFavoriteFood(0));
+  }
+  
+
+
+
+
+
 }

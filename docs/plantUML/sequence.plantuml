@@ -1,0 +1,79 @@
+	
+@startuml game manager
+/' Guide : https://plantuml.com/en/sequence-diagram '/
+Actor Utilisateur
+
+activate Utilisateur
+
+Utilisateur -> GameManager : connection
+
+
+/'
+Gestion de la sauvegarde'/
+deactivate Utilisateur
+
+
+alt Existing Save
+
+GameManager -> GameLoader: Loading Save
+
+activate GameLoader
+
+GameLoader --> GameManager: Loading Accepted
+
+
+
+else Non Existing Save
+
+    GameLoader --> GameManager: Loading Failure
+
+    deactivate GameLoader
+
+    activate GameManager
+
+    GameManager -> Utilisateur : Create Save
+
+    activate Utilisateur
+
+    Utilisateur -> GameManager : Save Finalized
+
+    deactivate Utilisateur
+
+    GameManager -> GameSaver : Saving
+
+    deactivate GameManager
+
+end
+
+/'
+Dans le jeu
+'/ 
+
+Utilisateur -> GameManager : play game
+
+activate GameManager
+
+GameManager -> GameTimer : Time Management
+
+GameTimer -> GameManager : Real Time
+
+...Later...
+
+Utilisateur -> GameManager : Save and Quit
+
+activate Utilisateur
+
+GameManager -> GameSaver : Saving
+
+GameManager -> Utilisateur : Game close
+
+deactivate Utilisateur
+
+deactivate GameManager 
+
+
+@enduml
+
+
+
+
