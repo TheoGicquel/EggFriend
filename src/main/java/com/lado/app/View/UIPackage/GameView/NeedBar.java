@@ -14,8 +14,5 @@ public class NeedBar extends JProgressBar{
         this.setValue(input);   
     }
     
-    void updateNeed(int value)
-    {
-        this.setValue(value);
-    }
+
 }

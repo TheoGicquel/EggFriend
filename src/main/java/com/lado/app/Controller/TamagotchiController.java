@@ -1,6 +1,11 @@
 package com.lado.app.Controller;
 
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -18,6 +23,7 @@ public class TamagotchiController {
     public Object getCleanlinessNaming;
     private GameLoader loader;
     private GameSaver saver;
+    private GameView gameview;
 
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
@@ -30,8 +36,6 @@ public class TamagotchiController {
          saver = new GameSaver();
 
 
-        // de cette façon c'est coté controller que tu instancie et lie les controllers à la vue
-        // this.startView.frame.newGameButton().addActionListener(new StartButtonListener());
     }
 
     public static void loadGameAction() {
@@ -39,6 +43,7 @@ public class TamagotchiController {
     }
 
     public void InitializeNewGame(String tamaName, String tamaSpecie) {
+        model.setModifiedTime(System.currentTimeMillis());
         model.setName(tamaName);
         model.setSpecie(tamaSpecie);
     }
@@ -64,7 +69,7 @@ public class TamagotchiController {
     }
 
     public String getHungerNaming() {
-        return model.health.getName();
+        return model.hunger.getName();
     }
 
     public String getEnerggNaming() {
@@ -119,7 +124,7 @@ public class TamagotchiController {
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
-            new GameView(this, false);
+            this.gameview = new GameView(this, false);
             frame.dispose();
 
         }
@@ -143,9 +148,80 @@ public class TamagotchiController {
                 JOptionPane.showMessageDialog(null, "Chargement de la partie réussi");
                 this.model = loader.loadTamagotchi();
                 frame.dispose();
-                GameView gameView = new GameView(this, false);
+                new GameView(this, false);
             }
     }
+
+    public int fetchHunger() {
+        return model.getHunger();
+    }
+
+    public int fetchEnergy() {
+        return model.getEnergy();
+    }
+
+    public int fetchHealth() {
+        return model.getHealth();
+    }
+
+    public int fetchHappiness() {
+        return model.getHappiness();
+    }
+
+    public int fetchCleanliness() {
+        return model.getCleanliness();
+    }
+
+
+    public void updateModel() {
+        this.model.update();
+    }
+
+    public void feedAction() {
+        System.out.println("feed");
+        System.out.println(model.getHunger());
+        int curhunger = model.getHunger();
+        System.out.println(curhunger);
+
+        model.setHunger(curhunger + 10);
+        System.out.println("feedAction : " + model.getHunger());
+        updateModel();
+    }
+
+    public void refreshAction() {
+        updateModel();
+
+    }
+
+    public void degrade() {
+        model.setHunger(model.getHunger()-10);
+        model.setEnergy(model.getEnergy()-10);
+        model.setHealth(model.getHealth()-10);
+        model.setCleanliness(model.getCleanliness()-10);
+        model.setHappiness(model.getHappiness()-10);
+
+        updateModel();
+
+    }
+
+    public void cleanAction() {
+        updateModel();
+
+    }
+
+    public void sleepAction() {
+        updateModel();
+    }
+
+    public void playAction() {
+        updateModel();
+    }
+
+	public void updateView() {
+        gameview.updateData();
+	}
+
+    
 
 }
 

@@ -13,7 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 
 import com.lado.app.Controller.TamagotchiController;
 
@@ -26,13 +25,13 @@ public class StartView implements ActionListener{
     JButton loadGameButton = new JButton("Charger Partie");
     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
     TamagotchiController controller;
-    public StartView()
+    public StartView(TamagotchiController controller)
     {
-        controller = new TamagotchiController();
-        Border blackline = BorderFactory.createLineBorder(Color.black);
+        this.controller = controller;
+        //Border blackline = BorderFactory.createLineBorder(Color.black);
         Border blueLine = BorderFactory.createLineBorder(Color.blue);
         Border redLine = BorderFactory.createLineBorder(Color.red);
-        Border buttonBorder = new EmptyBorder(10,40,10,20);
+     //   Border buttonBorder = new EmptyBorder(10,40,10,20);
         frame.setLocationRelativeTo(null);
 
 
@@ -59,7 +58,11 @@ public class StartView implements ActionListener{
         JPanel titleImagePanel = new JPanel();
         titleImagePanel.setLayout(new BoxLayout(titleImagePanel,BoxLayout.X_AXIS));
 
+        // dev
         String titleImagePath = "src/main/resources/titleImage.png";
+
+        // prod
+       // String titleImagePath = "./classes/titleImage.jpg";
 
         JLabel titleImage = new JLabel( new ImageIcon(titleImagePath) );
 

@@ -1,6 +1,7 @@
 package com.lado.app;
 
-import com.lado.app.Controller.GameController;
+
+import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.GameModel;
 import com.lado.app.View.UIPackage.Legacy.GameView;
 import com.lado.app.View.UIPackage.StartView.StartView;
@@ -14,13 +15,14 @@ public class App {
 
   public GameModel model;
   public GameView view;
-  public GameController controller;
+  public TamagotchiController controller;
 
 
   public App() {
-    model = new GameModel();
-    view = new  GameView(model);
-    controller = new GameController(model,view);
+    TamagotchiController controller = new TamagotchiController();
+
+    new StartView(controller);
+   
   }
   // App app = new App();
   public static void main(String[] args) {
@@ -33,7 +35,8 @@ public class App {
     //mytama.getName();
     //System.out.println(mytama.getBreed());
 
-    new StartView();
+    new App();
+  
     
 
   }
