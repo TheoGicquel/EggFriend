@@ -1,6 +1,6 @@
 package com.lado.app;
 
-import com.lado.app.Controller.GameController;
+
 import com.lado.app.Controller.TamagotchiController;
 import com.lado.app.Model.GameModel;
 import com.lado.app.View.UIPackage.Legacy.GameView;
@@ -15,7 +15,7 @@ public class App {
 
   public GameModel model;
   public GameView view;
-  public GameController controller;
+  public TamagotchiController controller;
 
 
   public App() {
