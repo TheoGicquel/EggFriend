@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 
 
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 import org.junit.Test;
 
