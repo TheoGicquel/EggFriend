@@ -41,7 +41,9 @@ public class Need implements Serializable{
    */
   void calcDepletion(long timeElapsed) {
     System.out.println("calcDepletion");
-    System.out.println(timeElapsed);
+    System.out.println("elaped : [" + timeElapsed + "]");
+    System.out.println("factor : [" + this.factor + "]");
+    System.out.println("value : [" + this.value + "]");
     int newValue = (int) (this.value - (timeElapsed * this.factor));
     this.setVal(newValue);
   }

@@ -31,11 +31,11 @@ public class Tamagotchi implements Serializable{
     this.alive = true;
     this.name = "Tamago";
     this.setSpecie("unknown");
-    this.health = new Need("Vie","Mourrant", 100, 0.01f);
-    this.energy = new Need("Energie","Fatigué", 100, 0.01f);
-    this.hunger = new Need("Faim","Affamé", 100, 0.01f);
-    this.cleanliness = new Need("Proprete","Sale", 100, 0.01f);
-    this.happiness = new Need("Bonheur","Déprimé", 100, 1.1f);
+    this.health = new Need("Vie","Mourrant", 50, 0.01f);
+    this.energy = new Need("Energie","Fatigué", 50, 0.01f);
+    this.hunger = new Need("Faim","Affamé", 32, 0.01f);
+    this.cleanliness = new Need("Proprete","Sale", 32, 0.01f);
+    this.happiness = new Need("Bonheur","Déprimé", 32, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
   }
@@ -97,7 +97,7 @@ public class Tamagotchi implements Serializable{
     this.cleanliness.calcDepletion(timeElapsed);
     this.happiness.calcDepletion(timeElapsed);
 
-
+    this.updateTime();
   }
 
   public void update()
