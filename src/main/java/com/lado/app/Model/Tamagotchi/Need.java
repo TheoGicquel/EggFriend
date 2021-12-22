@@ -81,6 +81,10 @@ public class Need implements Serializable{
     return this.value;
   }
 
+  
+  Float getFactor() {
+    return this.factor;
+  }
 public String getDescriptor() {
     return this.descriptor;
 }

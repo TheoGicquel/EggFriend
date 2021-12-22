@@ -1,8 +1,7 @@
-package com.lado.Tamagotchi;
+package com.lado.app.Model.Tamagotchi;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 
 public class HealthTest {

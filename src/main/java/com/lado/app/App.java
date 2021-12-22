@@ -1,19 +1,15 @@
 package com.lado.app;
 
-
 import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.Model.GameModel;
 import com.lado.app.View.UIPackage.GameView.GameView;
 import com.lado.app.View.UIPackage.StartView.StartView;
-
-
 
 /**
  * Hello world!
  */
 public class App {
 
-  public GameModel model;
+
   public GameView view;
   public TamagotchiController controller;
 
