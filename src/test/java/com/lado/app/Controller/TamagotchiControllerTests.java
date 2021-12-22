@@ -4,7 +4,7 @@ package com.lado.app.Controller;
 
 import static org.junit.Assert.assertEquals;
 
-import javax.swing.JFrame;
+
 
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
@@ -14,13 +14,13 @@ public class TamagotchiControllerTests {
 
     @Test
     public void ControllerEmptyConstructor() {
-        TamagotchiController controller = new TamagotchiController();
+        new TamagotchiController();
     }
 
     @Test
     public void ControllerConstructor() {
         Tamagotchi model = new Tamagotchi();
-        TamagotchiController controller = new TamagotchiController(model);
+         new TamagotchiController(model);
         
     }
 
@@ -29,11 +29,13 @@ public class TamagotchiControllerTests {
         Tamagotchi model = new Tamagotchi();
         TamagotchiController controller = new TamagotchiController(model);
         int def= 50;
-        assertEquals(def, model.getHunger());
-        assertEquals(def, model.getCleanliness());
-        assertEquals(def, model.getEnergy());
-        assertEquals(def, model.getHappiness());
-        assertEquals(def, model.getHealth());
+        assertEquals(def, controller.getHunger());
+        assertEquals(def, controller.getCleanliness());
+        assertEquals(def, controller.getEnergy());
+        assertEquals(def, controller.getHappiness());
+        assertEquals(def, controller.getHealth());
+
+        
 
         
     }
