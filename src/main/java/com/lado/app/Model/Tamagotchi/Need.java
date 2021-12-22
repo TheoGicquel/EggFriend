@@ -41,10 +41,10 @@ public class Need implements Serializable{
    */
   void calcDepletion(long timeElapsed) {
     System.out.println("calcDepletion");
-    System.out.println("elaped : [" + timeElapsed + "]");
+    System.out.println("elapsed : [" + timeElapsed + "ms ]");
     System.out.println("factor : [" + this.factor + "]");
     System.out.println("value : [" + this.value + "]");
-    int newValue = (int) (this.value - (timeElapsed * this.factor));
+    int newValue = (int) (this.value - (timeElapsed * (this.factor/100)));
     this.setVal(newValue);
   }
 
