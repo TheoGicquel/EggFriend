@@ -22,7 +22,7 @@ public class Need implements Serializable{
     this.value = 100;
     this.name = "unknown";
     this.descriptor = "descriptor";
-    this.factor = 1;
+    this.factor = 0.01f;
     this.critical = false;
   }
 
@@ -35,24 +35,30 @@ public class Need implements Serializable{
   }
 
   /***
-   * @brief change la valeur du besoin selon le temps écoulé (minutes) et
+   * @brief change la valeur du besoin selon le temps écoulé (secondes) et
    *  le facteur d'évolution du besoin
-   * @param time
+   * @param timeElapsed
    */
-  void calcDepletion(Float time) {
-    int newValue = (int) (this.value - (time * this.factor));
+  void calcDepletion(long timeElapsed) {
+    System.out.println("calcDepletion");
+    System.out.println(timeElapsed);
+    int newValue = (int) (this.value - (timeElapsed * this.factor));
     this.setVal(newValue);
   }
 
   int setVal(int value) {
-    if (value < 0) {
+    System.out.println("[setval :" + value + "]");
+
+    this.value = value;
+
+    if (this.value < 0) {
       this.value = 0;
-    } else if (value > 100) {
+    } else if (this.value > 100) {
       this.value = 100;
     } else {
-      this.value = value;
+      
     }
-
+    System.out.println(this.value);
     return this.value;
   }
 

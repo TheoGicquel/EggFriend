@@ -23,6 +23,7 @@ public class TamagotchiController {
     public Object getCleanlinessNaming;
     private GameLoader loader;
     private GameSaver saver;
+    private GameView gameview;
 
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
@@ -34,19 +35,6 @@ public class TamagotchiController {
         loader = new GameLoader();
          saver = new GameSaver();
 
-         Runnable helloRunnable = new Runnable() {
-            public void run() {
-              System.out.println("TIME !");
-              long now =  System.currentTimeMillis();
-              System.out.println(now);
-            
-      
-                model.update();
-            }
-        };
-          ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-          executor.scheduleAtFixedRate(helloRunnable, 0, 5, TimeUnit.SECONDS);
-    
 
     }
 
@@ -55,6 +43,7 @@ public class TamagotchiController {
     }
 
     public void InitializeNewGame(String tamaName, String tamaSpecie) {
+        model.setModifiedTime(System.currentTimeMillis());
         model.setName(tamaName);
         model.setSpecie(tamaSpecie);
     }
@@ -135,7 +124,7 @@ public class TamagotchiController {
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
-            new GameView(this, false);
+            this.gameview = new GameView(this, false);
             frame.dispose();
 
         }
@@ -189,6 +178,8 @@ public class TamagotchiController {
     }
 
     public void feedAction() {
+        model.setHunger(model.getHunger()+10);
+        System.out.println("feedAction : " + model.getHunger());
         updateModel();
     }
 
@@ -198,6 +189,12 @@ public class TamagotchiController {
     }
 
     public void degrade() {
+        model.setHunger(model.getHunger()-10);
+        model.setEnergy(model.getEnergy()-10);
+        model.setHealth(model.getHealth()-10);
+        model.setCleanliness(model.getCleanliness()-10);
+        model.setHappiness(model.getHappiness()-10);
+
         updateModel();
 
     }
@@ -214,6 +211,10 @@ public class TamagotchiController {
     public void playAction() {
         updateModel();
     }
+
+	public void updateView() {
+        gameview.updateData();
+	}
 
     
 

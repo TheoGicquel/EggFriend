@@ -31,11 +31,11 @@ public class Tamagotchi implements Serializable{
     this.alive = true;
     this.name = "Tamago";
     this.setSpecie("unknown");
-    this.health = new Need("Vie","Mourrant", 100, 1.0f);
-    this.energy = new Need("Energie","Fatigué", 100, 1.0f);
-    this.hunger = new Need("Faim","Affamé", 100, 1.0f);
-    this.cleanliness = new Need("Proprete","Sale", 100, 1.0f);
-    this.happiness = new Need("Bonheur","Déprimé", 100, 1.0f);
+    this.health = new Need("Vie","Mourrant", 100, 0.01f);
+    this.energy = new Need("Energie","Fatigué", 100, 0.01f);
+    this.hunger = new Need("Faim","Affamé", 100, 0.01f);
+    this.cleanliness = new Need("Proprete","Sale", 100, 0.01f);
+    this.happiness = new Need("Bonheur","Déprimé", 100, 1.1f);
     this.health.setCritical(true);
     this.mood = "normal";
   }
@@ -88,16 +88,46 @@ public class Tamagotchi implements Serializable{
     return false;
   }
 
-  public void depleteNeeds(float timeElapsed) {
-    for (Need currentNeed : needs) {
-      currentNeed.calcDepletion(timeElapsed);
-    }
+  public void depleteNeeds(long timeElapsed) {
+
+    this.health.calcDepletion(timeElapsed);
+    //this.alive.calcDepletion(timeElapsed);
+    this.energy.calcDepletion(timeElapsed);
+    this.hunger.calcDepletion(timeElapsed);
+    this.cleanliness.calcDepletion(timeElapsed);
+    this.happiness.calcDepletion(timeElapsed);
+
+
   }
 
   public void update()
   {
-
+    long now = System.currentTimeMillis();
+    long elapsedTime = now - lastModifiedTime;
+    System.out.println("update : elapsed time : " + elapsedTime);
+    depleteNeeds(elapsedTime);
   }
+
+
+
+  public long getModifiedTime()
+  {
+    return lastModifiedTime;
+  }
+  
+  public void setModifiedTime(long time)
+  {
+    this.lastModifiedTime = time;
+  }
+  
+  public void updateTime()
+  {
+    this.lastModifiedTime = System.currentTimeMillis();
+  }
+  
+  
+
+
 
   // -------------- NOM  --------------
   /**
@@ -290,22 +320,6 @@ public String getMood() {
 
 public void setMood(String mood) {
     this.mood = mood;
-}
-
-
-public long getModifiedTime()
-{
-  return lastModifiedTime;
-}
-
-public void setModifiedTime(long time)
-{
-  this.lastModifiedTime = time;
-}
-
-public void updateTime()
-{
-  this.lastModifiedTime = System.currentTimeMillis();
 }
 
 

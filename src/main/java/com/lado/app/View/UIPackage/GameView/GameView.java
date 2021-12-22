@@ -5,6 +5,9 @@ import javax.swing.*;
 import com.lado.app.Controller.TamagotchiController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
  
 public class GameView implements ActionListener{
@@ -42,12 +45,16 @@ public class GameView implements ActionListener{
   JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
+
   
   
   public GameView(TamagotchiController controller,boolean isNewGame) {
     frame = new JFrame();
     this.controller = controller;
     firsttime= System.currentTimeMillis();
+
+
+
 
 
 
@@ -184,6 +191,40 @@ public class GameView implements ActionListener{
     frame.pack();
     frame.setVisible(true);
     frame.repaint();
+
+
+    
+    Runnable viewUpdater = new Runnable(){
+      public void run() {
+          updateData();
+          System.out.println("update" + System.currentTimeMillis());
+      }     
+    };
+
+    
+    ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+    executor.scheduleAtFixedRate(viewUpdater, 0, 5, TimeUnit.SECONDS);
+
+  }
+
+
+  public void updateData() {
+    controller.updateModel();
+    updateNeedBars();
+    //controller.updateView();
+    
+    
+
+  }
+
+  public void updateNeedBars()
+  {
+    healthPanel.updateNeed(controller.getHealth());
+    hungerPanel.updateNeed(controller.getHunger());
+    energyPanel.updateNeed(controller.getEnergy());
+    cleanLinessPanel.updateNeed(controller.getCleanliness());
+    happinessPanel.updateNeed(controller.getHappiness());
+    frame.repaint();
   }
 
   @Override
@@ -198,11 +239,7 @@ public class GameView implements ActionListener{
     if(e.getSource()==degradeBtn)
     {
       System.out.println("degradeBTN");
-      healthPanel.updateNeed(56);
-      hungerPanel.updateNeed(23);
-      energyPanel.updateNeed(07);
-      cleanLinessPanel.updateNeed(12);
-      happinessPanel.updateNeed(34);
+      controller.degrade();
     }
 
     if(e.getSource()==refreshBtn)
@@ -214,7 +251,8 @@ public class GameView implements ActionListener{
     if(e.getSource()==feedBtn)
     {
       controller.feedAction();
-      hungerPanel.updateNeed(23);
+      hungerPanel.updateNeed(controller.getHunger());
+      
     }
 
     if(e.getSource()==cleanBtn)
@@ -235,7 +273,7 @@ public class GameView implements ActionListener{
       happinessPanel.updateNeed(controller.getHappiness());
     }
 
-
+    updateNeedBars();
     
   }
 
