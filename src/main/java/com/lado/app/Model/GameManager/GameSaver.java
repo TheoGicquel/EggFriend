@@ -4,32 +4,26 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class GameSaver {
-    Tamagotchi savetama;
-    
-    public GameSaver(){
-        savetama = new Tamagotchi();
 
-    }
-
-    public int save(Tamagotchi tama)
+    Void savegame()
     {
-        savetama = tama;
-        
-        try {
-            FileOutputStream fileOut =
-            new FileOutputStream("tamagotchisaving.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(savetama);
-            out.close();
-            fileOut.close();
-            System.out.printf("Serialized data is saved in tamagotchisaving.ser");
-            return 0;
-        } catch (IOException i) {
-            i.printStackTrace();
-            return 1;
-        }
+        try (FileOutputStream fos = new FileOutputStream("object.dat");
+     ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+    // create a new user object
+    Tamagotchi user = new Tamagotchi();
+
+    // write object to file
+    oos.writeObject(user);
+
+} catch (IOException ex) {
+    ex.printStackTrace();
+}
+        return null;
     }
+    
 }
