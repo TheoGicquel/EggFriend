@@ -5,7 +5,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.lang.model.util.ElementScanner6;
 
 public class Specie implements Serializable{
  
