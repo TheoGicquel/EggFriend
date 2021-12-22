@@ -1,5 +1,5 @@
-
-package com.lado.app.View.UIPackage.Legacy;
+// PACKAGE DISCONTINUE
+package com.lado.app.View.UIPackage;
 
 import java.awt.*;
 import java.awt.event.*;

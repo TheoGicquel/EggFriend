@@ -1,5 +1,7 @@
 @startuml Classes
-package "com.lado.App" #white
+
+
+package com.lado.App
 {
     Class App
     {
@@ -10,9 +12,14 @@ package "com.lado.App" #white
         +App()
         +main(args : String[]) : void
     }
+
+    
+
+
     package "Model" #f2a5a2
     {
-        App x-[thickness=2]-> GameModel
+        App x--> GameModel
+        
         class GameModel
         {
             + Tamagotchi : tamagotchi
@@ -20,36 +27,45 @@ package "com.lado.App" #white
             --
             + GameModel()
         }
-        interface Serializable
+
+       
+        
+
+
         package "Tamagotchi" #edc4c2{
-            /'
+           
             class Cat extends Tamagotchi
             {
                 +Cat(name : String)
+                
             }
+
             class Dog extends Tamagotchi
             {
                 +Dog(name : String)
             }
+
             class Robot extends Tamagotchi
             {
                 +Robot(name : String)
             }
+
             class Sheep extends Tamagotchi
             {
                 +Sheep(name : String)
             }
-            '/
+
+
+            
             class Food{
                 -id :   int
                 -name : String  
                 --
                 +Food(id : int, name : String)
             }
-            Food x--> Tamagotchi
-            Tamagotchi x-right-> Need 
+            Food x-left-> Tamagotchi
+            Tamagotchi x--> Need 
 
-            Need ..>Serializable 
             class Need
             {
                 ~ name : String
@@ -62,7 +78,10 @@ package "com.lado.App" #white
                 ~ setVal(value : int) : void
                 + setFactor(factor : float) : void
                 + getVal() : int
+
+
             }
+         
             class Tamagotchi
             {
                 ~ name : String
@@ -101,10 +120,11 @@ package "com.lado.App" #white
                 + setHealth(int newHealth) : void
                 + boolean getAlive()
                 + void setAlive(boolean alive)
+                
             }
-                        Tamagotchi ..> Serializable
-            GameModel x-[thickness=2]-> Tamagotchi
+            GameModel x--> Tamagotchi
         }
+
         package "GameManager" #edc4c2
         {
             class GameManager
@@ -116,40 +136,36 @@ package "com.lado.App" #white
                 --
                 + GameManager()
             }
-                        GameManager .left.> Serializable
+
             class GameSaver
             {
                 +GameSaver(game : GameModel) : void
-                --
-                + saveGame(model.tamagotchi) : void
-                # writeFile                
             }
+
             class GameLoader
             {
                 +GameLoader(game : GameModel) : void
             }
-            package "sauvegarde" <<Database>>  {
-            }
-            note right of sauvegarde : Fichier de sauvegarde stocké sur le disque
-            GameSaver -down-> sauvegarde
-            sauvegarde -up-> GameLoader
-            GameLoader -up-> GameManager
-            /'
+
     class GameTimer
             {
                 +GameTimer(game : GameModel) : void
             }
-            '/
+
             GameManager x-->GameSaver
             GameManager x-->GameLoader
             GameModel x--> GameManager
             GameManager x--> GameTimer
+            
         }
+
     }
-    
-    /'
+
+
         package "Controller" #7ad7ff  {
+
             App x--> GameController
+            
         class GameController
         {
             -gameView : GameView
@@ -167,62 +183,107 @@ package "com.lado.App" #white
             --
             + <override> actionperformed(event : ActionEvent) : void
         }
+        
         GameController x--> GameListener
-        GameController x-[#blue,thickness=2]-> GameModel
-    } 
-    '/
-    /'
+        GameController x--> GameModel
+
+
+    }
+
+
+
     package "View" #b2ff91 {
+
         class GameView
         {
             +GameView()
             +update() : void
         }
+
+     
+
         App x--> GameView
-        GameView x-[#green,thickness=2]-> GameModel
+        GameView x--> GameModel
         GameController x--> GameView
+
         package "UIPackage" #96ff69{
+
             class GameFrame
             {
                 - listener : GameListener
                 --
                 + GameFrame(Model : GameModel)
             }
+
              class StartFrame
             {
                 - listener : GameListener
                 --
                 + StartFrame(Model : GameModel)
             }
+
+
             class FoodFrame
             {
                 - listener : GameListener
                 --
                 + FoodFrame(Model : GameModel)
             }
+
    GameView x--> GameFrame
         GameView x--> FoodFrame
         GameView x--> StartFrame
+
             GameFrame x--> GameListener
             StartFrame x--> GameListener
             FoodFrame x--> GameListener
-            Window <|-left- GameFrame
+    
+            Window <|-- GameFrame
             Window <|-- StartFrame
             Window <|-- FoodFrame
+
+
             class CarePanel
             class NeedBar
             class NeedPanel
             class InfoPanel
+
             CarePanel  --o GameFrame
             NeedBar  --o NeedPanel
             NeedPanel  --o GameFrame
             InfoPanel  --o GameFrame
+
+            
+           
             class Window
             {
                 + Window()
+               
             }
+
             Window --|> JFrame
+
     }
+
+
+
 }
 '/
+
+
+
+
+
 @enduml Classes
+
+
+
+
+
+
+
+
+
+
+
+@enduml

@@ -1,7 +1,5 @@
 package com.lado.app.Model.GameManager;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
-
 public class GameManager {
 
   protected String saveLocation = "../saveData/";
@@ -9,7 +7,7 @@ public class GameManager {
   public GameLoader loader;
   public GameTimer timer;
 
-  public GameManager(Tamagotchi tama) {
+  public GameManager() {
     saver = new GameSaver();
     loader = new GameLoader();
     timer = new GameTimer();
@@ -20,5 +18,3 @@ public class GameManager {
 }
 
 }
-
-

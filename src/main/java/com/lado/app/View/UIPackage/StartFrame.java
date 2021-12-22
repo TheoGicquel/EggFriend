@@ -1,5 +1,5 @@
 package com.lado.app.View.UIPackage;
 
-public class FoodFrame extends Window {
+public class StartFrame extends Window {
     
 }

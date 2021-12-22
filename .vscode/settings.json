@@ -2,6 +2,5 @@
     "java.project.sourcePaths": [
         "TamagotchiGame"
     ],
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
