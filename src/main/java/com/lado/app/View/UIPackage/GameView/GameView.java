@@ -45,7 +45,7 @@ public class GameView implements ActionListener{
   JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
-
+  public GameView(){}
   
   
   public GameView(TamagotchiController controller,boolean isNewGame) {
