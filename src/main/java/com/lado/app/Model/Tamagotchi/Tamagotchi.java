@@ -88,7 +88,7 @@ public class Tamagotchi implements Serializable{
 
   public void depleteNeeds(long timeElapsed) {
 
-    this.health.calcDepletion(timeElapsed);
+    //this.health.calcDepletion(timeElapsed);
     //this.alive.calcDepletion(timeElapsed);
     this.energy.calcDepletion(timeElapsed);
     this.hunger.calcDepletion(timeElapsed);
@@ -106,6 +106,7 @@ public class Tamagotchi implements Serializable{
     if(elapsedTime > 1000)
     {
       depleteNeeds(elapsedTime);
+      checkHealth();
     }
     
   }
@@ -206,6 +207,7 @@ public class Tamagotchi implements Serializable{
   public void hurt(int damage) {
     int newHealth = this.health.getVal() - damage;
     if (newHealth <= 0) {
+      this.setHealth(0);
       this.kill();
     } else {
       this.setHealth(newHealth);
@@ -222,14 +224,13 @@ public class Tamagotchi implements Serializable{
 
 
   public void kill() {
-    /**  
-    for (Need besoin : needs) {
-      besoin.setVal(0);
-      
-    }
-    **/
-    this.health.setVal(0);
-    this.alive = false;
+
+
+    this.setAlive(false);
+
+    this.setCleanliness(0);
+    this.setHunger(0);
+    this.setHappiness(0);
   }
 
   public boolean getAlive() {

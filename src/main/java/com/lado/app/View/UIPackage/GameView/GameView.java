@@ -42,6 +42,8 @@ public class GameView implements ActionListener{
   JPanel needAndCarePanel;
   JPanel ui;
 
+  InfoPanel infoPanel;
+
   JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
@@ -133,7 +135,7 @@ public class GameView implements ActionListener{
      cleanlinessCarePanel = new CarePanel(cleanBtn);
      happinessCarePanel = new CarePanel(playBtn);
 
-    JPanel infoPanel = new InfoPanel(controller);
+     infoPanel = new InfoPanel(controller);
   
     JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
     JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
@@ -207,7 +209,7 @@ public class GameView implements ActionListener{
     controller.updateModel();
     updateNeedBars();
     //controller.updateView();
-    
+    updateImage();
     
 
   }
@@ -220,6 +222,25 @@ public class GameView implements ActionListener{
     cleanLinessPanel.updateNeed(controller.getCleanliness());
     happinessPanel.updateNeed(controller.getHappiness());
     frame.repaint();
+  }
+
+  public void updateImage()
+  {
+    if(!controller.isTamagotchiAlive())
+    {
+      infoPanel.setDeadImage();
+      infoPanel.revalidate();
+      infoPanel.repaint();
+      frame.revalidate();
+      frame.repaint();
+
+    }
+
+  }
+
+  public void updateMood()
+  {
+    
   }
 
   @Override
