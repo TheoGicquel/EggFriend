@@ -64,9 +64,14 @@ public class GameView implements ActionListener{
     // frame.setTitle("TITRE FENETRE");
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      frame.setResizable(true);
-     imageLogoUrl = GameView.class.getResource("images/logo.png");
-     ImageIcon appIcon = new ImageIcon(imageLogoUrl);
-    frame.setIconImage(appIcon.getImage());
+     
+
+     imageLogoUrl = getClass().getClassLoader().getResource("images/logo.png");
+     if(imageLogoUrl != null)
+     {
+      ImageIcon appIcon = new ImageIcon(imageLogoUrl);
+      frame.setIconImage(appIcon.getImage());
+     }
  
     
     Color backgroundColor = new Color(0xa0a0a0);
@@ -187,7 +192,7 @@ public class GameView implements ActionListener{
     Runnable viewUpdater = new Runnable(){
       public void run() {
           updateData();
-          System.out.println("update" + System.currentTimeMillis());
+          //System.out.println("update" + System.currentTimeMillis());
       }     
     };
 
@@ -219,7 +224,7 @@ public class GameView implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e) {
-    System.out.println(e.getActionCommand());
+    //System.out.println(e.getActionCommand());
    
     if(e.getSource()==saveBtn)
     {
@@ -228,7 +233,7 @@ public class GameView implements ActionListener{
 
     if(e.getSource()==degradeBtn)
     {
-      System.out.println("degradeBTN");
+      //System.out.println("degradeBTN");
       controller.degrade();
     }
 

@@ -31,14 +31,17 @@ public class InfoPanel extends JPanel{
     {
 
 
-        String imagePath = "images/" + controller.getSpecie() + ".png";
-        tamagotchiImageUrl = GameView.class.getResource(imagePath);
-
         
+        String imagePath = "images/" + controller.getSpecie() + ".png";
+        
+        tamagotchiImageUrl = getClass().getClassLoader().getResource(imagePath);
+        System.out.println(tamagotchiImageUrl);
+        if(tamagotchiImageUrl != null)
+        {
         JLabel image = new JLabel( new ImageIcon(tamagotchiImageUrl) );
         image.setBounds(0, 0, 10, 10);
-        
         this.add(image);
+        }
 
         JLabel nameLabel = new JLabel("Nom :   " + controller.getName());
         this.add(nameLabel);
