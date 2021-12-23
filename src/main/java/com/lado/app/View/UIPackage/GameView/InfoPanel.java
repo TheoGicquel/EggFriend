@@ -78,7 +78,7 @@ public class InfoPanel extends JPanel{
         }
         else
         {
-            moodLabel.setText("Statut :   " + " Mort☠️");
+            moodLabel.setText("Statut :   " + " Mort ☠️");
         }
     }
 }

@@ -198,10 +198,6 @@ public class TamagotchiController {
         updateModel();
     }
 
-
-
-
-
     /**
      * On nettoie le tamagotchi
      * Augmente propreté
