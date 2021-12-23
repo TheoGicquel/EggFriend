@@ -29,6 +29,7 @@ public class InfoPanel extends JPanel{
     java.net.URL tamagotchiDeadUrl;
     TamagotchiController controller;
     JLabel image;
+    JLabel moodLabel;
 
     InfoPanel(TamagotchiController gameController)
     {
@@ -53,7 +54,7 @@ public class InfoPanel extends JPanel{
         JLabel ageLabel = new JLabel("Type :   " + controller.getSpecieName());
         this.add(ageLabel);
 
-        JLabel moodLabel = new JLabel("Humeur :   " + controller.getMood());
+        moodLabel = new JLabel("Statut :   " + controller.getMood());
         this.add(moodLabel);
     }
 
@@ -68,5 +69,16 @@ public class InfoPanel extends JPanel{
             this.revalidate();
         }
 
+    }
+
+    public void updateMoodLabel()
+    {
+        if(controller.isTamagotchiAlive()){
+        moodLabel.setText("Statut :   " + controller.getMood());
+        }
+        else
+        {
+            moodLabel.setText("Statut :   " + " Mort☠️");
+        }
     }
 }

@@ -24,7 +24,7 @@ public class Tamagotchi implements Serializable{
   private long lastModifiedTime;
   
 
-  int CRITICAL_THRESHOLD = 5;
+  int CRITICAL_THRESHOLD = 10;
   protected Need[] needs = { energy, hunger, cleanliness, happiness };
 
   public void setDefaultStats() {
@@ -107,8 +107,9 @@ public class Tamagotchi implements Serializable{
     {
       depleteNeeds(elapsedTime);
       checkHealth();
+     
     }
-    
+    evalMood();
   }
 
 
@@ -231,6 +232,10 @@ public class Tamagotchi implements Serializable{
     this.setCleanliness(0);
     this.setHunger(0);
     this.setHappiness(0);
+    this.setEnergy(0);
+    this.setHealth(0);
+    this.setMood("Mort");
+
   }
 
   public boolean getAlive() {
@@ -309,12 +314,42 @@ public class Tamagotchi implements Serializable{
 
   public void evalMood()
   {
-    for (Need scannedNeed : needs) {
-      if (scannedNeed.getVal() <= 50)
-      {
-        this.setMood(scannedNeed.getDescriptor());
-      }
-    }  
+    int lowestNeed = 50;
+    String worstMood="N/A";
+
+    if(this.hunger.getVal() < lowestNeed)
+    {
+      worstMood = this.hunger.getDescriptor();
+      lowestNeed = this.cleanliness.getVal();
+    }
+
+    if(this.cleanliness.getVal() < lowestNeed)
+    {
+      worstMood = this.cleanliness.getDescriptor();
+      lowestNeed = this.cleanliness.getVal();
+    }
+
+    if(this.happiness.getVal() < lowestNeed)
+    {
+      worstMood = this.happiness.getDescriptor();
+      lowestNeed = this.happiness.getVal();
+    }
+
+    if(this.energy.getVal() < lowestNeed)
+    {
+      worstMood = this.energy.getDescriptor();
+      lowestNeed = this.energy.getVal();
+    }
+
+    if(worstMood!="N/A")
+    {
+      this.setMood(worstMood);
+    }
+    else
+    {
+      this.setMood("NormalA");
+    }
+
   }
 
 public String getMood() {

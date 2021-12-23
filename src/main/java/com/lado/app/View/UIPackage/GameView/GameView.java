@@ -210,6 +210,7 @@ public class GameView implements ActionListener{
     updateNeedBars();
     //controller.updateView();
     updateImage();
+    infoPanel.updateMoodLabel();
     
 
   }
@@ -238,10 +239,7 @@ public class GameView implements ActionListener{
 
   }
 
-  public void updateMood()
-  {
-    
-  }
+
 
   @Override
   public void actionPerformed(ActionEvent e) {
@@ -288,8 +286,8 @@ public class GameView implements ActionListener{
       controller.playAction();
       happinessPanel.updateNeed(controller.getHappiness());
     }
-
-    updateNeedBars();
+    
+    updateData();
     
   }
 
