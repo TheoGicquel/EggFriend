@@ -353,7 +353,7 @@ public class Tamagotchi implements Serializable{
     }
     else
     {
-      this.setMood("NormalA");
+      this.setMood("Normal");
     }
 
   }
