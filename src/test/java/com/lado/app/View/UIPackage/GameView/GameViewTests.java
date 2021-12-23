@@ -11,7 +11,8 @@ public class GameViewTests {
 
     @Test
     public void viewEmptyConstructor() {
-       GameView view = new GameView();
+       new GameView();
+
     }
 
 
