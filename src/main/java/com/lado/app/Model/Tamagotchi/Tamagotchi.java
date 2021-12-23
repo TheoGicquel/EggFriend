@@ -22,10 +22,7 @@ public class Tamagotchi implements Serializable{
   public Need happiness;
   private String mood;
   private long lastModifiedTime;
-  
-
-  int CRITICAL_THRESHOLD = 10;
-  protected Need[] needs = { energy, hunger, cleanliness, happiness };
+  Need[] needs;
 
   public void setDefaultStats() {
     this.alive = true;
@@ -39,6 +36,8 @@ public class Tamagotchi implements Serializable{
     this.health.setCritical(true);
     this.mood = "normal";
     //this.lastModifiedTime = System.currentTimeMillis();
+    Need[] needs = { energy, hunger, cleanliness, happiness };
+
   }
 
 
@@ -74,17 +73,7 @@ public class Tamagotchi implements Serializable{
 
   // -------------- ATTRIBUTS --------------
 
-  /**
-   * @brief Retourne si un des besoins est en état critique
-   */
-  public Boolean scanCritical() {
-    for (Need scannedNeed : needs) {
-      if (scannedNeed.getVal() <= CRITICAL_THRESHOLD) {
-        return true;
-      }
-    }
-    return false;
-  }
+
 
   public void depleteNeeds(long timeElapsed) {
 
@@ -106,9 +95,12 @@ public class Tamagotchi implements Serializable{
     if(elapsedTime > 1000)
     {
       depleteNeeds(elapsedTime);
-      checkHealth();
+      evalHealth();
+      
      
     }
+    checkHealth();
+
     evalMood();
   }
 
@@ -191,19 +183,42 @@ public class Tamagotchi implements Serializable{
   }
 
   public void setHealth(int newHealth) {
-    this.health.setVal(newHealth);
-    if (this.health.getVal() == 0) {
-      this.setAlive(false);
+    if (this.health.getVal() != 0) {
+      this.health.setVal(newHealth);
     }
   }
 
   public void checkHealth() {
     if (this.getHealth() <= 0) {
-      kill();
+      this.setAlive(false);
     } else {
-      this.setAlive(alive);
+      this.setAlive(true);
     }
   }
+
+  /**
+   * @brief Modifie la vie du Tamagotchi selon si 
+   * les besoins sont en dessous de leur valeur de danger
+   */
+  public void evalHealth()
+  {
+       if(hunger.isNeedBelowCritical()){
+         this.hurt(2);
+       }
+
+       if(energy.isNeedBelowCritical()){
+         this.hurt(2);
+       }
+
+        if(cleanliness.isNeedBelowCritical()){
+          this.hurt(2);
+        }
+
+        if(happiness.isNeedBelowCritical()){
+          this.hurt(2);
+        }
+  }
+
 
   public void hurt(int damage) {
     int newHealth = this.health.getVal() - damage;
@@ -225,8 +240,8 @@ public class Tamagotchi implements Serializable{
 
 
   public void kill() {
-
-
+    if(this.alive){
+    System.out.println("KILL");
     this.setAlive(false);
 
     this.setCleanliness(0);
@@ -235,7 +250,7 @@ public class Tamagotchi implements Serializable{
     this.setEnergy(0);
     this.setHealth(0);
     this.setMood("Mort");
-
+    }
   }
 
   public boolean getAlive() {
@@ -257,9 +272,8 @@ public class Tamagotchi implements Serializable{
   }
 
   public void setEnergy(int energy){
-    this.energy.setVal(energy);
-    if (this.energy.getVal() == 0) {
-      this.setAlive(false);
+    if (this.energy.getVal() != 0) {
+      this.energy.setVal(energy);
     }
   }
   
@@ -272,9 +286,6 @@ public class Tamagotchi implements Serializable{
 
   public void setHunger(int hunger){
     this.hunger.setVal(hunger);
-    if (this.hunger.getVal() ==0){
-      this.setAlive(false);
-    }
   }
 
   
@@ -288,9 +299,6 @@ public class Tamagotchi implements Serializable{
 
   public void setCleanliness(int clean){
     this.cleanliness.setVal(clean);
-    if (this.cleanliness.getVal() ==0){
-      this.setAlive(false);
-    }
   }
 
   // ---------------- BONNHEUR -------------
@@ -303,9 +311,7 @@ public class Tamagotchi implements Serializable{
 
   public void setHappiness(int newHapinnes){
     this.happiness.setVal(newHapinnes);
-    if (this.happiness.getVal() ==0){
-      this.setAlive(false);
-    }
+
   }
   
 

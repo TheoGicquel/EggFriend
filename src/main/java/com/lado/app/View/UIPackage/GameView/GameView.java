@@ -212,6 +212,7 @@ public class GameView implements ActionListener{
     updateImage();
     infoPanel.updateMoodLabel();
     
+    
 
   }
 
