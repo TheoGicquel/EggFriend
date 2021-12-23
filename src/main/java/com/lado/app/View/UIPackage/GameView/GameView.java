@@ -55,20 +55,7 @@ public class GameView implements ActionListener{
     this.controller = controller;
     firsttime= System.currentTimeMillis();
 
-
-
-
-
-
-
-    if(isNewGame)
-    {
-        frame.setTitle("TamagotchiGame - Nouvelle Partie");
-    }
-    else
-    {
-        frame.setTitle("TamagotchiGame - Charger Partie");
-    }
+    frame.setTitle("EggFriend -"+controller.getName());
 
      //listener = new GameListener(model);
 

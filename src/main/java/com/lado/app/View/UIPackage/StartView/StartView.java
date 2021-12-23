@@ -20,7 +20,7 @@ import java.awt.Color;
 
 
 public class StartView implements ActionListener{
-    public JFrame frame = new JFrame("TamagotchiGame - Accueil");
+    public JFrame frame = new JFrame("EggFriend - Accueil");
     JButton newGameButton = new JButton("Nouvelle Partie");
     JButton loadGameButton = new JButton("Charger Partie");
     ImageIcon appIcon = new ImageIcon("src/main/resources/images/logo.png");
