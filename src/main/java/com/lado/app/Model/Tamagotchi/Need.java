@@ -40,16 +40,16 @@ public class Need implements Serializable{
    * @param timeElapsed
    */
   void calcDepletion(long timeElapsed) {
-    System.out.println("calcDepletion");
-    System.out.println("elapsed : [" + timeElapsed + "ms ]");
-    System.out.println("factor : [" + this.factor + "]");
-    System.out.println("value : [" + this.value + "]");
+    //System.out.println("calcDepletion");
+   // System.out.println("elapsed : [" + timeElapsed + "ms ]");
+   // System.out.println("factor : [" + this.factor + "]");
+   // System.out.println("value : [" + this.value + "]");
     int newValue = (int) (this.value - (timeElapsed * (this.factor/100)));
     this.setVal(newValue);
   }
 
   int setVal(int value) {
-    System.out.println("[setval :" + value + "]");
+//    System.out.println("[setval :" + value + "]");
 
     this.value = value;
 
@@ -60,7 +60,7 @@ public class Need implements Serializable{
     } else {
       
     }
-    System.out.println(this.value);
+    //System.out.println(this.value);
     return this.value;
   }
 
@@ -81,6 +81,10 @@ public class Need implements Serializable{
     return this.value;
   }
 
+
+  Float getFactor() {
+    return this.factor;
+  }
 public String getDescriptor() {
     return this.descriptor;
 }

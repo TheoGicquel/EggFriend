@@ -1,7 +1,7 @@
-package com.lado.Tamagotchi;
+package com.lado.app.Model.Tamagotchi;
 
 import static org.junit.Assert.*;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+
 
 /** 
 import java.io.ByteArrayOutputStream;
@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TamagotchiTest {
-
 
 
 

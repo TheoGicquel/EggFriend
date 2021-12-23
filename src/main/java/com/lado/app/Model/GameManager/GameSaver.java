@@ -6,6 +6,9 @@ import java.io.ObjectOutputStream;
 
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
+/**
+ * @brief sauvegarde le Tamagotchi fourni en entrée
+ */
 public class GameSaver {
     Tamagotchi savetama;
     
@@ -25,7 +28,7 @@ public class GameSaver {
             out.writeObject(savetama);
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved in tamagotchisaving.ser");
+            //System.out.printf("game Saved");
             return 0;
         } catch (IOException i) {
             i.printStackTrace();

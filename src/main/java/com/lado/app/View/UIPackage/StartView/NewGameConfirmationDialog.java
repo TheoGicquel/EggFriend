@@ -12,8 +12,8 @@ public class NewGameConfirmationDialog {
                 "Confirmation de nouvelle partie",
                 JOptionPane.YES_NO_OPTION);
     
-                System.out.println("N FORM :");
-                System.out.println(n);
+                //System.out.println("N FORM :");
+                //System.out.println(n);
                 if(n==0)
                 {
                     return true;

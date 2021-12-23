@@ -29,6 +29,16 @@ public class AppTest
         }
     }
 
+    @Test
+    public void testAppC() {
+        try {
+            String args[] = {"c"};
+            App.main(args);
+        } catch (Exception e) {
+            fail("Construction failed.");
+        }
+    }
+
     /** 
     @Test
     public void testAppMain()

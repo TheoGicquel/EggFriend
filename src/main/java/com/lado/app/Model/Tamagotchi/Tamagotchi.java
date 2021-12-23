@@ -38,12 +38,10 @@ public class Tamagotchi implements Serializable{
     this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
+    //this.lastModifiedTime = System.currentTimeMillis();
   }
 
-  public Tamagotchi(String name) {
-    setDefaultStats();
-    this.name = name;
-  }
+
 
   public Tamagotchi() {
     this.specie = new Specie("unknown");
@@ -104,7 +102,7 @@ public class Tamagotchi implements Serializable{
   {
     long now = System.currentTimeMillis();
     long elapsedTime = now - lastModifiedTime;
-    System.out.println("update : elapsed time : " + elapsedTime);
+    //System.out.println("update : elapsed time : " + elapsedTime);
     if(elapsedTime > 1000)
     {
       depleteNeeds(elapsedTime);

@@ -24,20 +24,24 @@ import com.lado.app.Controller.TamagotchiController;
  */
 public class InfoPanel extends JPanel{
     
+
+    java.net.URL tamagotchiImageUrl;
+
     InfoPanel(TamagotchiController controller)
     {
 
-       //Border blackline = BorderFactory.createLineBorder(Color.black);
-        // this.setBorder(blackline);
-        // en dev
-        String imagePath = "src/main/resources/" + controller.getSpecie() + ".png";
 
-        // En production
-           // String imagePath = "resources/" + controller.getSpecie() + ".png";
-        JLabel image = new JLabel( new ImageIcon(imagePath) );
-        image.setBounds(0, 0, 10, 10);
         
+        String imagePath = "images/" + controller.getSpecie() + ".png";
+        
+        tamagotchiImageUrl = getClass().getClassLoader().getResource(imagePath);
+        System.out.println(tamagotchiImageUrl);
+        if(tamagotchiImageUrl != null)
+        {
+        JLabel image = new JLabel( new ImageIcon(tamagotchiImageUrl) );
+        image.setBounds(0, 0, 10, 10);
         this.add(image);
+        }
 
         JLabel nameLabel = new JLabel("Nom :   " + controller.getName());
         this.add(nameLabel);

@@ -45,7 +45,9 @@ public class GameView implements ActionListener{
   JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
+  java.net.URL imageLogoUrl;
 
+  public GameView(){}
   
   
   public GameView(TamagotchiController controller,boolean isNewGame) {
@@ -53,20 +55,7 @@ public class GameView implements ActionListener{
     this.controller = controller;
     firsttime= System.currentTimeMillis();
 
-
-
-
-
-
-
-    if(isNewGame)
-    {
-        frame.setTitle("TamagotchiGame - Nouvelle Partie");
-    }
-    else
-    {
-        frame.setTitle("TamagotchiGame - Charger Partie");
-    }
+    frame.setTitle("EggFriend -"+controller.getName());
 
      //listener = new GameListener(model);
 
@@ -75,8 +64,14 @@ public class GameView implements ActionListener{
     // frame.setTitle("TITRE FENETRE");
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      frame.setResizable(true);
-     ImageIcon appIcon = new ImageIcon("resources/images/logo.png");
-    frame.setIconImage(appIcon.getImage());
+     
+
+     imageLogoUrl = getClass().getClassLoader().getResource("images/logo.png");
+     if(imageLogoUrl != null)
+     {
+      ImageIcon appIcon = new ImageIcon(imageLogoUrl);
+      frame.setIconImage(appIcon.getImage());
+     }
  
     
     Color backgroundColor = new Color(0xa0a0a0);
@@ -197,7 +192,7 @@ public class GameView implements ActionListener{
     Runnable viewUpdater = new Runnable(){
       public void run() {
           updateData();
-          System.out.println("update" + System.currentTimeMillis());
+          //System.out.println("update" + System.currentTimeMillis());
       }     
     };
 
@@ -229,7 +224,7 @@ public class GameView implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e) {
-    System.out.println(e.getActionCommand());
+    //System.out.println(e.getActionCommand());
    
     if(e.getSource()==saveBtn)
     {
@@ -238,7 +233,7 @@ public class GameView implements ActionListener{
 
     if(e.getSource()==degradeBtn)
     {
-      System.out.println("degradeBTN");
+      //System.out.println("degradeBTN");
       controller.degrade();
     }
 

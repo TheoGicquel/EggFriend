@@ -175,13 +175,13 @@ public class TamagotchiController {
     }
 
     public void feedAction() {
-        System.out.println("feed");
-        System.out.println(model.getHunger());
+        //System.out.println("feed");
+        //System.out.println(model.getHunger());
         int curhunger = model.getHunger();
-        System.out.println(curhunger);
+        //System.out.println(curhunger);
 
         model.setHunger(curhunger + 10);
-        System.out.println("feedAction : " + model.getHunger());
+        //System.out.println("feedAction : " + model.getHunger());
         updateModel();
     }
 
