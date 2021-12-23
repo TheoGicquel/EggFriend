@@ -22,7 +22,7 @@ public class SpecieSelector {
     public String SpecieSelect() {
         
    
-        String title = "Title";
+        String title = "Selection de l'espèce";
    
         while (!isFormValid) {
           int selection = JOptionPane.showOptionDialog(null, combo, title,

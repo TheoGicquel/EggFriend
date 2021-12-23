@@ -22,6 +22,19 @@ public class TamagotchiController {
     private GameSaver saver;
     private GameView gameview;
 
+    // Constantes de satisfaction
+    final int hungerIncrease = 10;
+    final int cleanlinessIncrease = 10;
+    final int happinessIncrease = 10;
+    final int energyIncrease = 10;
+
+    // Constantes de dépense causées par actions
+    final int hungerDecrease = 5; 
+    final int cleanlinessDecrease = 5; 
+    final int happinessDecrease = 7; 
+    final int energyDecrease = 5; 
+
+
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
 
@@ -149,45 +162,10 @@ public class TamagotchiController {
             }
     }
 
-    public int fetchHunger() {
-        return model.getHunger();
-    }
-
-    public int fetchEnergy() {
-        return model.getEnergy();
-    }
-
-    public int fetchHealth() {
-        return model.getHealth();
-    }
-
-    public int fetchHappiness() {
-        return model.getHappiness();
-    }
-
-    public int fetchCleanliness() {
-        return model.getCleanliness();
-    }
 
 
     public void updateModel() {
         this.model.update();
-    }
-
-    public void feedAction() {
-        //System.out.println("feed");
-        //System.out.println(model.getHunger());
-        int curhunger = model.getHunger();
-        //System.out.println(curhunger);
-
-        model.setHunger(curhunger + 10);
-        //System.out.println("feedAction : " + model.getHunger());
-        updateModel();
-    }
-
-    public void refreshAction() {
-        updateModel();
-
     }
 
     public void degrade() {
@@ -201,22 +179,71 @@ public class TamagotchiController {
 
     }
 
+
+    public void refreshAction() {
+        updateModel();
+
+    }
+
+    /**
+     * On nourrit le tamagotchi
+     * Augmente la satisfaction de faim
+     * Diminue la propreté
+     */
+    public void feedAction() {
+        if(model.getAlive()){
+            model.setHunger(model.getHunger() + hungerIncrease);
+            model.setCleanliness(model.getCleanliness() - cleanlinessDecrease);
+        }
+        updateModel();
+    }
+
+    /**
+     * On nettoie le tamagotchi
+     * Augmente propreté
+     * Descend bonnheur
+     */
     public void cleanAction() {
+        if(model.getAlive()){
+            model.setCleanliness(model.getCleanliness() + cleanlinessIncrease);
+            model.setHappiness(model.getHappiness() - happinessDecrease);
+        }
         updateModel();
-
     }
 
+
+    /**
+     * On fait dormir le tamagotchi
+     * Augmente Energie
+     */
     public void sleepAction() {
+        if(model.getAlive()){
+            model.setEnergy(model.getEnergy() + energyIncrease);
+        }
         updateModel();
     }
 
+    /**
+     * On joue avec le tamagotchi
+     * Augmente bonnheur
+     * Descend faim
+     * Descend energie
+     */
     public void playAction() {
+        if(model.getAlive()){
+            model.setHappiness(model.getHappiness() + happinessIncrease);
+            model.setEnergy(model.getEnergy() - energyDecrease);
+        }
         updateModel();
     }
 
 	public void updateView() {
         gameview.updateData();
 	}
+
+    public boolean isTamagotchiAlive() {
+        return model.getAlive();
+    }
 
     
 

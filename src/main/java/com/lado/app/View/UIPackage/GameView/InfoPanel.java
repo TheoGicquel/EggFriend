@@ -26,9 +26,14 @@ public class InfoPanel extends JPanel{
     
 
     java.net.URL tamagotchiImageUrl;
+    java.net.URL tamagotchiDeadUrl;
+    TamagotchiController controller;
+    JLabel image;
+    JLabel moodLabel;
 
-    InfoPanel(TamagotchiController controller)
+    InfoPanel(TamagotchiController gameController)
     {
+        controller = gameController;
 
 
         
@@ -38,7 +43,7 @@ public class InfoPanel extends JPanel{
         System.out.println(tamagotchiImageUrl);
         if(tamagotchiImageUrl != null)
         {
-        JLabel image = new JLabel( new ImageIcon(tamagotchiImageUrl) );
+        image = new JLabel( new ImageIcon(tamagotchiImageUrl) );
         image.setBounds(0, 0, 10, 10);
         this.add(image);
         }
@@ -49,7 +54,31 @@ public class InfoPanel extends JPanel{
         JLabel ageLabel = new JLabel("Type :   " + controller.getSpecieName());
         this.add(ageLabel);
 
-        JLabel moodLabel = new JLabel("Humeur :   " + controller.getMood());
+        moodLabel = new JLabel("Statut :   " + controller.getMood());
         this.add(moodLabel);
+    }
+
+    public void setDeadImage()
+    {
+        String deadImagePath = "images/" + controller.getSpecie() + "_dead.png";
+        
+        tamagotchiDeadUrl = getClass().getClassLoader().getResource(deadImagePath);
+        if(tamagotchiDeadUrl != null)
+        {
+            this.image = new JLabel( new ImageIcon(tamagotchiDeadUrl) );
+            this.revalidate();
+        }
+
+    }
+
+    public void updateMoodLabel()
+    {
+        if(controller.isTamagotchiAlive()){
+        moodLabel.setText("Statut :   " + controller.getMood());
+        }
+        else
+        {
+            moodLabel.setText("Statut :   " + " Mort ☠️");
+        }
     }
 }
