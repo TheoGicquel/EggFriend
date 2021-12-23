@@ -102,7 +102,7 @@ public class Tamagotchi implements Serializable{
   {
     long now = System.currentTimeMillis();
     long elapsedTime = now - lastModifiedTime;
-    System.out.println("update : elapsed time : " + elapsedTime);
+    //System.out.println("update : elapsed time : " + elapsedTime);
     if(elapsedTime > 1000)
     {
       depleteNeeds(elapsedTime);
