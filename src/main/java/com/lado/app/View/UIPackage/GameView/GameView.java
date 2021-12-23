@@ -45,6 +45,8 @@ public class GameView implements ActionListener{
   JProgressBar testbar;
   long firsttime=System.currentTimeMillis();
 
+  java.net.URL imageLogoUrl;
+
   public GameView(){}
   
   
@@ -75,7 +77,8 @@ public class GameView implements ActionListener{
     // frame.setTitle("TITRE FENETRE");
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      frame.setResizable(true);
-     ImageIcon appIcon = new ImageIcon("resources/images/logo.png");
+     imageLogoUrl = GameView.class.getResource("images/logo.png");
+     ImageIcon appIcon = new ImageIcon(imageLogoUrl);
     frame.setIconImage(appIcon.getImage());
  
     
