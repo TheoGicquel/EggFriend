@@ -204,16 +204,14 @@ public class GameView implements ActionListener{
 
   }
 
-
+  /**
+   * Actualise la View avec les informations fournies par le controller
+   */
   public void updateData() {
     controller.updateModel();
     updateNeedBars();
-    //controller.updateView();
     updateImage();
     infoPanel.updateMoodLabel();
-    
-    
-
   }
 
   public void updateNeedBars()
@@ -248,7 +246,7 @@ public class GameView implements ActionListener{
    
     if(e.getSource()==saveBtn)
     {
-      controller.saveGame();
+      controller.saveGameAction();
     }
 
     if(e.getSource()==degradeBtn)
