@@ -1,8 +1,5 @@
 package com.lado.app.Controller;
 
-
-
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -14,10 +11,8 @@ import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
 import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
 import com.lado.app.View.UIPackage.StartView.SpecieSelector;
 
-public class TamagotchiController {
+public class TamagotchiController extends TamagotchiBasicController {
     private Tamagotchi model;
-    public int getHunger;
-    public Object getCleanlinessNaming;
     private GameLoader loader;
     private GameSaver saver;
     private GameView gameview;
@@ -37,7 +32,6 @@ public class TamagotchiController {
 
     public TamagotchiController(Tamagotchi model) {
         this.model = model;
-
     }
 
     public TamagotchiController() {
@@ -48,9 +42,7 @@ public class TamagotchiController {
 
     }
 
-    public static void loadGameAction() {
 
-    }
 
     public void InitializeNewGame(String tamaName, String tamaSpecie) {
         model.setModifiedTime(System.currentTimeMillis());
@@ -58,69 +50,6 @@ public class TamagotchiController {
         model.setSpecie(tamaSpecie);
     }
 
-    public int getHapiness() {
-        return model.happiness.getVal();
-    }
-
-    public int getHunger() {
-        return model.hunger.getVal();
-    }
-
-    public int getEnergy() {
-        return model.energy.getVal();
-    }
-
-    public int getHealth() {
-        return model.health.getVal();
-    }
-
-    public String getHealthNaming() {
-        return model.health.getName();
-    }
-
-    public String getHungerNaming() {
-        return model.hunger.getName();
-    }
-
-    public String getEnerggNaming() {
-        return model.energy.getName();
-    }
-
-    public String getHapinessNaming() {
-        return model.happiness.getName();
-    }
-
-    public int getCleanliness() {
-        return model.cleanliness.getVal();
-    }
-
-    public int getHappiness() {
-        return model.happiness.getVal();
-    }
-
-    public String getCleanlinessNaming() {
-        return model.cleanliness.getName();
-    }
-
-    public String getEnergyNaming() {
-        return model.energy.getName();
-    }
-
-    public String getSpecie() {
-        return model.getSpecie();
-    }
-
-    public String getSpecieName() {
-        return model.getSpecieText();
-    }
-
-    public String getName() {
-        return model.getName();
-    }
-
-    public String getMood() {
-        return model.getMood();
-    }
 
     public void newGame(JFrame frame) {
 
@@ -241,9 +170,7 @@ public class TamagotchiController {
         gameview.updateData();
 	}
 
-    public boolean isTamagotchiAlive() {
-        return model.getAlive();
-    }
+
 
     
 
