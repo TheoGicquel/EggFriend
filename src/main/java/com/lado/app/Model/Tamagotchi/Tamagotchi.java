@@ -22,7 +22,7 @@ public class Tamagotchi implements Serializable{
   public Need happiness;
   private String mood;
   private long lastModifiedTime;
-  Need[] needs;
+  Need[] needs = { energy, hunger, cleanliness, happiness };
 
   public void setDefaultStats() {
     this.alive = true;
@@ -36,7 +36,7 @@ public class Tamagotchi implements Serializable{
     this.health.setCritical(true);
     this.mood = "normal";
     //this.lastModifiedTime = System.currentTimeMillis();
-    Need[] needs = { energy, hunger, cleanliness, happiness };
+
 
   }
 
@@ -171,9 +171,7 @@ public class Tamagotchi implements Serializable{
 
 
   public String getFavoriteFood(int index){
-    
-    return "N/A";
-
+    return this.specie.getFavoriteFood(index);
   }
   
   // ---------------- VIE -------------

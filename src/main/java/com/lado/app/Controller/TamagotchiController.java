@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.GameManager.GameSaver;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.View.UIPackage.GameView.FoodChoiceDialog;
 import com.lado.app.View.UIPackage.GameView.GameView;
 import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
 import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
@@ -70,7 +71,7 @@ public class TamagotchiController extends TamagotchiBasicController {
     }
 
 
-    public void saveGame()
+    public void saveGameAction()
     {
         saver.save(model);
     }
@@ -121,8 +122,22 @@ public class TamagotchiController extends TamagotchiBasicController {
      */
     public void feedAction() {
         if(model.getAlive()){
-            model.setHunger(model.getHunger() + hungerIncrease);
-            model.setCleanliness(model.getCleanliness() - cleanlinessDecrease);
+            FoodChoiceDialog foodChoice = new FoodChoiceDialog();
+            String chosenFood = foodChoice.FoodSelect();
+            
+            if(model.getSpecie()!="Robot" && chosenFood.equals("Vis"))
+            {
+                model.kill();
+            }
+            else
+            {
+                if(chosenFood.equals(model.getFavoriteFood(0)))
+                {
+                    System.out.println("Good choice");
+                    model.setHunger(model.getHunger() + hungerIncrease);
+                    model.setCleanliness(model.getCleanliness() - cleanlinessDecrease);
+                }
+            }
         }
         updateModel();
     }

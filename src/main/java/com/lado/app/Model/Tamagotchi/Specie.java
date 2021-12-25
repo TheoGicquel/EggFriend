@@ -36,7 +36,7 @@ public class Specie implements Serializable{
     */
 
     void initialize(String choice){
-
+        favoriteFoods.clear();
         if(choice == "cat"||choice == "Chat"){
             this.setName("cat");
             this.setText("Chat");
@@ -119,7 +119,15 @@ public class Specie implements Serializable{
 
     public String getFavoriteFood(int index)
     {
-        return favoriteFoods.get(index);
+        if(favoriteFoods.size()>index)
+        {
+            return favoriteFoods.get(index);
+        }
+        else
+        {
+            return "";
+        }
+
     }
     
 
