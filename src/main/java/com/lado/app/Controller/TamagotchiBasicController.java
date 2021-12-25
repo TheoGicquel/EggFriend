@@ -3,9 +3,13 @@ package com.lado.app.Controller;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class TamagotchiBasicController {
-    private Tamagotchi model;
+    Tamagotchi model;
 
     
+    public TamagotchiBasicController(Tamagotchi newModel) {
+        this.model = newModel;
+    }
+
     /// Getters et setters appliqués au Tamagotchi
     public int getHapiness() {
         return model.happiness.getVal();

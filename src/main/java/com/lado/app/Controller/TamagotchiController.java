@@ -12,7 +12,6 @@ import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
 import com.lado.app.View.UIPackage.StartView.SpecieSelector;
 
 public class TamagotchiController extends TamagotchiBasicController {
-    private Tamagotchi model;
     private GameLoader loader;
     private GameSaver saver;
     private GameView gameview;
@@ -31,11 +30,12 @@ public class TamagotchiController extends TamagotchiBasicController {
 
 
     public TamagotchiController(Tamagotchi model) {
-        this.model = model;
+        super(model);      
     }
 
     public TamagotchiController() {
-        this.model = new Tamagotchi();
+        super(new Tamagotchi());
+        
         loader = new GameLoader();
          saver = new GameSaver();
 
