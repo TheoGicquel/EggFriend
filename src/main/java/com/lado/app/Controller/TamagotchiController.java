@@ -2,7 +2,6 @@ package com.lado.app.Controller;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.GameManager.GameSaver;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
@@ -43,14 +42,11 @@ public class TamagotchiController extends TamagotchiBasicController {
 
     }
 
-
-
     public void InitializeNewGame(String tamaName, String tamaSpecie) {
         model.setModifiedTime(System.currentTimeMillis());
         model.setName(tamaName);
         model.setSpecie(tamaSpecie);
     }
-
 
     public void newGame(JFrame frame) {
 
@@ -69,7 +65,6 @@ public class TamagotchiController extends TamagotchiBasicController {
 
         }
     }
-
 
     public void saveGameAction()
     {
@@ -94,8 +89,6 @@ public class TamagotchiController extends TamagotchiBasicController {
             }
     }
 
-
-
     public void updateModel() {
         this.model.update();
     }
@@ -110,7 +103,6 @@ public class TamagotchiController extends TamagotchiBasicController {
         updateModel();
 
     }
-
 
     public void refreshAction() {
         updateModel();
@@ -147,7 +139,6 @@ public class TamagotchiController extends TamagotchiBasicController {
         updateModel();
     }
 
-
     /**
      * On fait dormir le tamagotchi
      * Augmente Energie
@@ -172,14 +163,4 @@ public class TamagotchiController extends TamagotchiBasicController {
         }
         updateModel();
     }
-
-	public void updateView() {
-        gameview.updateData();
-	}
-
-
-
-    
-
 }
-
