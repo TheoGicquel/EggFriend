@@ -1,5 +1,7 @@
 package com.lado.app.Model.Tamagotchi;
 import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,6 +25,8 @@ public class Tamagotchi implements Serializable{
   private String mood;
   private long lastModifiedTime;
   Need[] needs = { energy, hunger, cleanliness, happiness };
+  // create list of needs
+  private List<Need> needsList;
 
   public void setDefaultStats() {
     this.alive = true;
@@ -36,8 +40,12 @@ public class Tamagotchi implements Serializable{
     this.health.setCritical(true);
     this.mood = "normal";
     //this.lastModifiedTime = System.currentTimeMillis();
-
-
+    needsList = new ArrayList<Need>();
+    this.needsList.add(health);
+    this.needsList.add(energy);
+    this.needsList.add(hunger);
+    this.needsList.add(cleanliness);
+    this.needsList.add(happiness);
   }
 
 
@@ -200,21 +208,16 @@ public class Tamagotchi implements Serializable{
    */
   public void evalHealth()
   {
-       if(hunger.isNeedBelowCritical()){
-         this.hurt(2);
-       }
-
-       if(energy.isNeedBelowCritical()){
-         this.hurt(2);
-       }
-
-        if(cleanliness.isNeedBelowCritical()){
-          this.hurt(2);
-        }
-
-        if(happiness.isNeedBelowCritical()){
-          this.hurt(2);
-        }
+    if(needsList!=null)
+    {
+    for (Need n : needsList)
+    {
+      if(n.isNeedBelowCritical())
+      {
+        this.hurt(2);
+      }
+    }
+  }
   }
 
 
@@ -315,45 +318,28 @@ public class Tamagotchi implements Serializable{
 
   // ---------------- Humeur -------------
 
-
-  public void evalMood()
-  {
+  /**
+   * Evalue le besoin le plus bas du Tamagotchi et l'applique a son Humeur
+   */
+  public void evalMood() {
     int lowestNeed = 50;
-    String worstMood="N/A";
-
-    if(this.hunger.getVal() < lowestNeed)
+    String worstMood = "N/A";
+    if (needsList != null)
     {
-      worstMood = this.hunger.getDescriptor();
-      lowestNeed = this.cleanliness.getVal();
+      for (Need n: needsList)
+      {
+        if (n.getVal() < lowestNeed)
+        {
+          lowestNeed = n.getVal();
+          worstMood = n.getName();
+          System.out.println("lowest need : " + lowestNeed);
+          System.out.println("worst mood : " + worstMood);
+        }
+      }
+     
     }
-
-    if(this.cleanliness.getVal() < lowestNeed)
-    {
-      worstMood = this.cleanliness.getDescriptor();
-      lowestNeed = this.cleanliness.getVal();
-    }
-
-    if(this.happiness.getVal() < lowestNeed)
-    {
-      worstMood = this.happiness.getDescriptor();
-      lowestNeed = this.happiness.getVal();
-    }
-
-    if(this.energy.getVal() < lowestNeed)
-    {
-      worstMood = this.energy.getDescriptor();
-      lowestNeed = this.energy.getVal();
-    }
-
-    if(worstMood!="N/A")
-    {
-      this.setMood(worstMood);
-    }
-    else
-    {
-      this.setMood("Normal");
-    }
-
+    if (worstMood != "N/A") {this.setMood(worstMood);} 
+    else {this.setMood("Normal");}
   }
 
 public String getMood() {

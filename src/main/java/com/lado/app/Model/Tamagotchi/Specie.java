@@ -11,6 +11,8 @@ public class Specie implements Serializable{
     private String name;
     private String text;
     private List<String> favoriteFoods = new ArrayList<>();
+   // private List<String> favoriteFoods = new ArrayList<>();
+
 
     public Specie(String choice)
     {

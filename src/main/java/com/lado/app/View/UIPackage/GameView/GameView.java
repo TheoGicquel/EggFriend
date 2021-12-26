@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class GameView implements ActionListener{
   
   private TamagotchiController controller;
-  private JButton saveBtn;
+  private JButton quitBtn;
   private JButton refreshBtn;
   private JButton degradeBtn;
   JButton feedBtn;
@@ -101,7 +101,7 @@ public class GameView implements ActionListener{
     sleepBtn = new JButton("Sieste");
     cleanBtn = new JButton("Laver");
 
-    saveBtn = new JButton("Sauvegarder");
+    quitBtn = new JButton("Quitter");
     refreshBtn = new JButton("Rafraichir");
     degradeBtn = new JButton("[DEBUG]");
 
@@ -109,7 +109,7 @@ public class GameView implements ActionListener{
     //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
-    JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
+    JButton[] dataButtons = {quitBtn,refreshBtn,degradeBtn};
 
     for (JButton jButton : careButtons) {
       jButton.addActionListener(this);
@@ -162,7 +162,7 @@ public class GameView implements ActionListener{
 
     infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
    // infoPanel.setBorder(blueBorder);
-    infoPanel.add(saveBtn);
+    infoPanel.add(quitBtn);
     infoPanel.add(degradeBtn);
 
 
@@ -244,7 +244,7 @@ public class GameView implements ActionListener{
   public void actionPerformed(ActionEvent e) {
     //System.out.println(e.getActionCommand());
    
-    if(e.getSource()==saveBtn)
+    if(e.getSource()==quitBtn)
     {
       controller.saveGameAction();
     }

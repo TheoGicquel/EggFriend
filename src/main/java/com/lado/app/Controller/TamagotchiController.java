@@ -18,9 +18,9 @@ public class TamagotchiController extends TamagotchiBasicController {
     private GameView gameview;
 
     // Constantes de satisfaction
-    final int hungerIncrease = 10;
-    final int cleanlinessIncrease = 10;
-    final int happinessIncrease = 10;
+    final int hungerIncrease = 40;
+    final int cleanlinessIncrease = 20;
+    final int happinessIncrease = 40;
     final int energyIncrease = 10;
 
     // Constantes de dépense causées par actions
@@ -74,6 +74,8 @@ public class TamagotchiController extends TamagotchiBasicController {
     public void saveGameAction()
     {
         saver.save(model);
+        System.exit(0);
+
     }
 
     public void loadGame(JFrame frame)
@@ -118,25 +120,16 @@ public class TamagotchiController extends TamagotchiBasicController {
     /**
      * On nourrit le tamagotchi
      * Augmente la satisfaction de faim
-     * Diminue la propreté
      */
     public void feedAction() {
         if(model.getAlive()){
             FoodChoiceDialog foodChoice = new FoodChoiceDialog();
             String chosenFood = foodChoice.FoodSelect();
             
-            if(model.getSpecie()!="Robot" && chosenFood.equals("Vis"))
+            if(chosenFood.equals(model.getFavoriteFood(0)))
             {
-                model.kill();
-            }
-            else
-            {
-                if(chosenFood.equals(model.getFavoriteFood(0)))
-                {
-                    System.out.println("Good choice");
-                    model.setHunger(model.getHunger() + hungerIncrease);
-                    model.setCleanliness(model.getCleanliness() - cleanlinessDecrease);
-                }
+                model.setHunger(model.getHunger() + hungerIncrease);
+                model.setHappiness(model.getHappiness()+ 5);
             }
         }
         updateModel();
@@ -145,12 +138,11 @@ public class TamagotchiController extends TamagotchiBasicController {
     /**
      * On nettoie le tamagotchi
      * Augmente propreté
-     * Descend bonnheur
+
      */
     public void cleanAction() {
         if(model.getAlive()){
             model.setCleanliness(model.getCleanliness() + cleanlinessIncrease);
-            model.setHappiness(model.getHappiness() - happinessDecrease);
         }
         updateModel();
     }
