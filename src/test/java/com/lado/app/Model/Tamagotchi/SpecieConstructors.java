@@ -32,7 +32,7 @@ public class SpecieConstructors {
       Specie specie = new Specie("dog");
       assertEquals("dog", specie.getName());
       assertEquals("Chien", specie.getText());
-      assertEquals("Os", specie.getFavoriteFood(0));
+      assertEquals("Croquettes", specie.getFavoriteFood(0));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class SpecieConstructors {
       Specie specie = new Specie("robot");
       assertEquals("robot", specie.getName());
       assertEquals("Robot", specie.getText());
-      assertEquals("Vis", specie.getFavoriteFood(0));
+      assertEquals("Ecrous", specie.getFavoriteFood(0));
     }
 
     @Test

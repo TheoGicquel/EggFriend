@@ -25,7 +25,7 @@ public class SpecieTest {
     public void getFavoriteFoodDogByIndex(){
       Tamagotchi dogTama = new Tamagotchi();
       dogTama.setSpecie("dog");
-      assertEquals("Os",dogTama.getFood(0));
+      assertEquals("Croquettes",dogTama.getFood(0));
     }
   
 

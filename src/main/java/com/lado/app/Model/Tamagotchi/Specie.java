@@ -43,12 +43,13 @@ public class Specie implements Serializable{
             this.setName("cat");
             this.setText("Chat");
             this.addFood("Poisson");
+            this.addFood("Croquettes");
         }
 
         else if(choice == "dog"||choice == "Chien"){
             this.setName("dog");
             this.setText("Chien");
-            this.addFood("Os");
+            this.addFood("Croquettes");
         }
 
         else if(choice == "sheep"||choice == "Mouton"){
@@ -60,7 +61,7 @@ public class Specie implements Serializable{
         else if(choice == "robot"||choice == "Robot"){
             this.setName("robot");
             this.setText("Robot");
-            this.addFood("Vis");
+            this.addFood("Ecrous");
         }
         else if(choice == "unknown"||choice == "Inconnu"){
             this.setName("unknown");
@@ -69,7 +70,7 @@ public class Specie implements Serializable{
         }else{
             this.setName("unknown");
             this.setText("Inconnu");
-            this.addFood("Nourriture");
+            this.addFood("N/A");
         }
 
     }

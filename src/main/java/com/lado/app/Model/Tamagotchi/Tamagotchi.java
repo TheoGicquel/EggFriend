@@ -1,6 +1,5 @@
 package com.lado.app.Model.Tamagotchi;
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -331,9 +330,8 @@ public class Tamagotchi implements Serializable{
         if (n.getVal() < lowestNeed)
         {
           lowestNeed = n.getVal();
-          worstMood = n.getName();
-          System.out.println("lowest need : " + lowestNeed);
-          System.out.println("worst mood : " + worstMood);
+          worstMood = n.getDescriptor();
+
         }
       }
      

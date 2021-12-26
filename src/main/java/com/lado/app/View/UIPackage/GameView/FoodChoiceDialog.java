@@ -9,7 +9,7 @@ public class FoodChoiceDialog {
   private boolean isFormValid = false;
 
   String result = "";
-  String[] foodlist = {"...","Poisson","Os","Vis","Herbe"};
+  String[] foodlist = {"...","Poisson","Croquettes","Ecrous","Herbe"};
   final JComboBox < String > combo = new JComboBox < > (foodlist);
   String[] options = {"A Table !"};
 
