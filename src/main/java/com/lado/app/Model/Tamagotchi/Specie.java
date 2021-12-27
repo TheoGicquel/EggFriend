@@ -11,7 +11,6 @@ public class Specie implements Serializable{
     private String name;
     private String text;
     private List<String> favoriteFoods = new ArrayList<>();
-   // private List<String> favoriteFoods = new ArrayList<>();
 
 
     public Specie(String choice)
@@ -20,45 +19,29 @@ public class Specie implements Serializable{
     }
 
 
-    /***
-     * @brief Constructeur complet
-     * @param nName
-     * @param ntext
-     * @param nImageName
-     * @param foodArray
-     
-    @Deprecated
-    public Specie(String nName,String ntext,String nImageName,List<String> foodArray)
-    {
-        this.setName(nName);
-        this.setText(ntext);
-  
-        this.setFavoriteFoods(foodArray);
-    }
-    */
 
     void initialize(String choice){
         favoriteFoods.clear();
-        if(choice == "cat"||choice == "Chat"){
+        if("cat".equals(choice)||"Chat".equals(choice)){
             this.setName("cat");
             this.setText("Chat");
             this.addFood("Poisson");
             this.addFood("Croquettes");
         }
 
-        else if(choice == "dog"||choice == "Chien"){
+        else if("dog".equals(choice)||"Chien".equals(choice)){
             this.setName("dog");
             this.setText("Chien");
             this.addFood("Croquettes");
         }
 
-        else if(choice == "sheep"||choice == "Mouton"){
+        else if("sheep".equals(choice)||"Mouton".equals(choice)){
             this.setName("sheep");
             this.setText("Mouton");
             this.addFood("Herbe");
         }
 
-        else if(choice == "robot"||choice == "Robot"){
+        else if("robot".equals(choice)||"Robot".equals(choice)){
             this.setName("robot");
             this.setText("Robot");
             this.addFood("Ecrous");
@@ -106,7 +89,7 @@ public class Specie implements Serializable{
     public void addFood(String newFood)
     {
         if(newFood.length()>0)
-        this.favoriteFoods.add(newFood);
+            this.favoriteFoods.add(newFood);
     }
 
 
