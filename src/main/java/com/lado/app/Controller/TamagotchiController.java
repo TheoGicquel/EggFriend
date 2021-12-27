@@ -60,7 +60,7 @@ public class TamagotchiController extends TamagotchiBasicController {
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
-            new GameView(this, false);
+            new GameView(this);
             frame.dispose();
 
         }
@@ -85,7 +85,7 @@ public class TamagotchiController extends TamagotchiBasicController {
                 JOptionPane.showMessageDialog(null, "Chargement de la partie réussi");
                 this.model = loader.loadTamagotchi();
                 frame.dispose();
-                new GameView(this, false);
+                new GameView(this);
             }
     }
 
