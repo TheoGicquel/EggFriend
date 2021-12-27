@@ -40,7 +40,6 @@ public class InfoPanel extends JPanel{
         String imagePath = "images/" + controller.getSpecie() + ".png";
         
         tamagotchiImageUrl = getClass().getClassLoader().getResource(imagePath);
-        System.out.println(tamagotchiImageUrl);
         if(tamagotchiImageUrl != null)
         {
         image = new JLabel( new ImageIcon(tamagotchiImageUrl) );

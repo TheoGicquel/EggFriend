@@ -63,11 +63,7 @@ public class Specie implements Serializable{
             this.setText("Robot");
             this.addFood("Ecrous");
         }
-        else if(choice == "unknown"||choice == "Inconnu"){
-            this.setName("unknown");
-            this.setText("Inconnu");
-            this.addFood("Nourriture");
-        }else{
+        else{
             this.setName("unknown");
             this.setText("Inconnu");
             this.addFood("N/A");

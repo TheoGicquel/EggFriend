@@ -28,9 +28,7 @@ public class SpecieSelector {
           int selection = JOptionPane.showOptionDialog(null, combo, title,
             JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
             options, options[0]);
-   
-          //System.out.println("selection is: " + options[selection]);
-   
+      
           Object specie = combo.getSelectedItem();
           if (specie.toString() == "...") {
             JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");

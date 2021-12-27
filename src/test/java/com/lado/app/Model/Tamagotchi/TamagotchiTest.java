@@ -119,7 +119,7 @@ public class TamagotchiTest {
   @Test
   public void getFavoriteFoodDefaultByIndex(){
     Tamagotchi foodtama = new Tamagotchi();
-    assertEquals("Nourriture",foodtama.getFavoriteFood(0));
+    assertEquals("N/A",foodtama.getFavoriteFood(0));
   }
   
 

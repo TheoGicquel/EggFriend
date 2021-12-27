@@ -31,7 +31,6 @@ public class FoodChoiceDialog {
             JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
             options, options[0]);
    
-          //System.out.println("selection is: " + options[selection]);
    
           Object specie = combo.getSelectedItem();
           if (specie.toString() == "...") {

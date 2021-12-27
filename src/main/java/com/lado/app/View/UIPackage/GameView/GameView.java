@@ -194,7 +194,6 @@ public class GameView implements ActionListener{
     Runnable viewUpdater = new Runnable(){
       public void run() {
           updateData();
-          //System.out.println("update" + System.currentTimeMillis());
       }     
     };
 
@@ -242,7 +241,6 @@ public class GameView implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e) {
-    //System.out.println(e.getActionCommand());
    
     if(e.getSource()==quitBtn)
     {
@@ -251,7 +249,6 @@ public class GameView implements ActionListener{
 
     if(e.getSource()==degradeBtn)
     {
-      //System.out.println("degradeBTN");
       controller.degrade();
     }
 

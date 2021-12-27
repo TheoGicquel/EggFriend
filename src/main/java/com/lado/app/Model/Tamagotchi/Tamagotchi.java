@@ -26,7 +26,7 @@ public class Tamagotchi implements Serializable{
   Need[] needs = { energy, hunger, cleanliness, happiness };
   // create list of needs
   private List<Need> needsList;
-
+  private int depleteDelay;
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
@@ -45,6 +45,7 @@ public class Tamagotchi implements Serializable{
     this.needsList.add(hunger);
     this.needsList.add(cleanliness);
     this.needsList.add(happiness);
+    depleteDelay = 1000;// 1 seconde
   }
 
 
@@ -98,8 +99,7 @@ public class Tamagotchi implements Serializable{
   {
     long now = System.currentTimeMillis();
     long elapsedTime = now - lastModifiedTime;
-    //System.out.println("update : elapsed time : " + elapsedTime);
-    if(elapsedTime > 1000)
+    if(elapsedTime > depleteDelay)
     {
       depleteNeeds(elapsedTime);
       evalHealth();
@@ -241,7 +241,6 @@ public class Tamagotchi implements Serializable{
 
   public void kill() {
     if(this.alive){
-    System.out.println("KILL");
     this.setAlive(false);
 
     this.setCleanliness(0);
