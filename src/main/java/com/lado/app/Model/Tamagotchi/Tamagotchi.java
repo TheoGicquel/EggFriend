@@ -255,7 +255,7 @@ public class Tamagotchi implements Serializable{
     }
   }
 
-  public boolean getAlive() {
+  public boolean isAlive() {
     return this.alive;
   }
 

@@ -77,6 +77,6 @@ public class TamagotchiBasicController {
     }
 
     public boolean isTamagotchiAlive() {
-        return model.getAlive();
+        return model.isAlive();
     }
 }

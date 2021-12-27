@@ -8,7 +8,7 @@ public class EvalTests {
     public void killTest(){
       Tamagotchi tama = new Tamagotchi();
       tama.kill();
-      assertEquals(false,tama.getAlive());
+      assertEquals(false,tama.isAlive());
       assertEquals("Mort",tama.getMood());
 
     }

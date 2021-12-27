@@ -111,7 +111,7 @@ public class TamagotchiController extends TamagotchiBasicController {
      * Augmente la satisfaction de faim
      */
     public void feedAction() {
-        if(model.getAlive()){
+        if(model.isAlive()){
             FoodChoiceDialog foodChoice = new FoodChoiceDialog();
             String chosenFood = foodChoice.foodSelect();
             
@@ -130,7 +130,7 @@ public class TamagotchiController extends TamagotchiBasicController {
 
      */
     public void cleanAction() {
-        if(model.getAlive()){
+        if(model.isAlive()){
             model.setCleanliness(model.getCleanliness() + CLEAN_INCR);
         }
         updateModel();
@@ -141,7 +141,7 @@ public class TamagotchiController extends TamagotchiBasicController {
      * Augmente Energie
      */
     public void sleepAction() {
-        if(model.getAlive()){
+        if(model.isAlive()){
             model.setEnergy(model.getEnergy() + ENRGY_INCR);
         }
         updateModel();
@@ -154,7 +154,7 @@ public class TamagotchiController extends TamagotchiBasicController {
      * Descend energie
      */
     public void playAction() {
-        if(model.getAlive()){
+        if(model.isAlive()){
             model.setHappiness(model.getHappiness() + HAPPY_INCR);
             model.setEnergy(model.getEnergy() - ENRGY_DECR);
         }

@@ -70,7 +70,7 @@ public class TestSpecieConstructors {
       Specie specie = new Specie("unknown");
       assertEquals("unknown", specie.getName());
       assertEquals("Inconnu", specie.getText());
-      assertEquals("Nourriture", specie.getFavoriteFood(0));
+      assertEquals("N/A", specie.getFavoriteFood(0));
     }
 
 }
