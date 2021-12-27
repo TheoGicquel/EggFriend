@@ -11,3 +11,5 @@ Projet de groupe de réalisation d'un [Tamagotchi](https://en.wikipedia.org/wiki
 ## Documentation
 * [Cahier des charges](https://docs.google.com/document/d/1CRq8gfZVj4WrMXI6eR8T7Iw_RYOO4IuYPifF_Ejfh94/edit)
 * [Dépôt GIT](https://github.com/TheoGicquel/Tamagochi-Simulation)
+* [Tests Unitaires](src/test/java/com/lado/)
+* [Rapport de coverage](docs/Code%20Coverage.lnk)
