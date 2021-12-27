@@ -12,51 +12,51 @@ public class TamagotchiBasicController {
 
     /// Getters et setters appliqués au Tamagotchi
     public int getHapiness() {
-        return model.happiness.getVal();
+        return model.getHappiness();
     }
 
     public int getHunger() {
-        return model.hunger.getVal();
+        return model.getHunger();
     }
 
     public int getEnergy() {
-        return model.energy.getVal();
+        return model.getEnergy();
     }
 
     public int getHealth() {
-        return model.health.getVal();
+        return model.getHealth();
     }
 
     public String getHealthNaming() {
-        return model.health.getName();
+        return model.getHealthName();
     }
 
     public String getHungerNaming() {
-        return model.hunger.getName();
+        return model.getHungerName();
     }
 
     public String getEnerggNaming() {
-        return model.energy.getName();
+        return model.getEnergyName();
     }
 
     public String getHapinessNaming() {
-        return model.happiness.getName();
+        return model.getHappinessName();
     }
 
     public int getCleanliness() {
-        return model.cleanliness.getVal();
+        return model.getCleanliness();
     }
 
     public int getHappiness() {
-        return model.happiness.getVal();
+        return model.getHappiness();
     }
 
     public String getCleanlinessNaming() {
-        return model.cleanliness.getName();
+        return model.getCleanlinessName();
     }
 
     public String getEnergyNaming() {
-        return model.energy.getName();
+        return model.getEnergyName();
     }
 
     public String getSpecie() {

@@ -15,12 +15,12 @@ public class Tamagotchi implements Serializable{
   private Specie specie;
 
   // variables d'instance
-   public Need health;
+  private Need health;
   private boolean alive;
-  public Need energy;
-  public Need hunger;
-  public Need cleanliness;
-  public Need happiness;
+  private Need energy;
+  private Need hunger;
+  private Need cleanliness;
+  private Need happiness;
   private String mood;
   private long lastModifiedTime;
   Need[] needs = { energy, hunger, cleanliness, happiness };
@@ -38,7 +38,6 @@ public class Tamagotchi implements Serializable{
     this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
-    //this.lastModifiedTime = System.currentTimeMillis();
     needsList = new ArrayList<Need>();
     this.needsList.add(health);
     this.needsList.add(energy);
@@ -85,8 +84,7 @@ public class Tamagotchi implements Serializable{
 
   public void depleteNeeds(long timeElapsed) {
 
-    //this.health.calcDepletion(timeElapsed);
-    //this.alive.calcDepletion(timeElapsed);
+
     this.energy.calcDepletion(timeElapsed);
     this.hunger.calcDepletion(timeElapsed);
     this.cleanliness.calcDepletion(timeElapsed);
@@ -185,6 +183,11 @@ public class Tamagotchi implements Serializable{
   public int getHealth()
   {
     return this.health.getVal();
+  }
+
+  public String getHealthName()
+  {
+    return this.health.getName();
   }
 
   public void setHealth(int newHealth) {
@@ -345,6 +348,30 @@ public String getMood() {
 
 public void setMood(String mood) {
     this.mood = mood;
+}
+
+
+
+public String getHungerName() {
+  return hunger.getName();
+}
+
+
+
+public String getEnergyName() {
+    return energy.getName();
+}
+
+
+
+public String getHappinessName() {
+    return energy.getName();
+}
+
+
+
+public String getCleanlinessName() {
+    return cleanliness.getName();
 }
 
 
