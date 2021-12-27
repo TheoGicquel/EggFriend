@@ -1,12 +1,12 @@
-package com.lado.app.View.UIPackage;
+package com.lado.app.view.uipackage;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-public class TamaCreator {
+public class Tamacreator {
 
     
-    TamaCreator()
+    Tamacreator()
     {
         String[] specieList= {"Chat","Chien","Mouton"};
         JTextField namefield = new JTextField("Nom");

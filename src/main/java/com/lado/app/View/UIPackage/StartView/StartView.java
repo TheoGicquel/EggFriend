@@ -1,4 +1,4 @@
-package com.lado.app.View.UIPackage.StartView;
+package com.lado.app.view.uipackage.startview;
 
 
 
@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-import com.lado.app.Controller.TamagotchiController;
+import com.lado.app.controller.TamagotchiController;
 
 
 

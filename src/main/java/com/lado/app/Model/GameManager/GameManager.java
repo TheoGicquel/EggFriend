@@ -1,6 +1,6 @@
-package com.lado.app.Model.GameManager;
+package com.lado.app.model.gamemanager;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.model.tamagotchi.Tamagotchi;
 
 public class GameManager {
 

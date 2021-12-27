@@ -1,8 +1,10 @@
-package com.lado.app.View.UIPackage.GameView;
+package com.lado.app.view.uipackage.gameview;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
-import com.lado.app.Controller.TamagotchiController;
+
+import com.lado.app.controller.TamagotchiController;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.Executors;

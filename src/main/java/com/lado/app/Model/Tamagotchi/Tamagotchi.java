@@ -1,4 +1,4 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

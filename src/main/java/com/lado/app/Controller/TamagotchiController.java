@@ -1,16 +1,17 @@
-package com.lado.app.Controller;
+package com.lado.app.controller;
 
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import com.lado.app.Model.GameManager.GameLoader;
-import com.lado.app.Model.GameManager.GameSaver;
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
-import com.lado.app.View.UIPackage.GameView.FoodChoiceDialog;
-import com.lado.app.View.UIPackage.GameView.GameView;
-import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
-import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
-import com.lado.app.View.UIPackage.StartView.SpecieSelector;
+
+import com.lado.app.model.gamemanager.GameLoader;
+import com.lado.app.model.gamemanager.GameSaver;
+import com.lado.app.model.tamagotchi.Tamagotchi;
+import com.lado.app.view.uipackage.gameview.FoodChoiceDialog;
+import com.lado.app.view.uipackage.gameview.GameView;
+import com.lado.app.view.uipackage.startview.NewGameConfirmationDialog;
+import com.lado.app.view.uipackage.startview.NewGameNameDialog;
+import com.lado.app.view.uipackage.startview.SpecieSelector;
 
 public class TamagotchiController extends TamagotchiBasicController {
     private GameLoader loader;

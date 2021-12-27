@@ -2,16 +2,15 @@
  * @file InfoPanel.java
  * @author Theo Gicquel
 */
-package com.lado.app.View.UIPackage.GameView;
+package com.lado.app.view.uipackage.gameview;
 
 import javax.swing.JPanel;
 
+import com.lado.app.controller.TamagotchiController;
 
 import javax.swing.ImageIcon;
 
 import javax.swing.JLabel;
-
-import com.lado.app.Controller.TamagotchiController;
 
 
 

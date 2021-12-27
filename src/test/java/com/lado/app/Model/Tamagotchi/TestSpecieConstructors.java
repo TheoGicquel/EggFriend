@@ -1,5 +1,6 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class TestSpecieConstructors {

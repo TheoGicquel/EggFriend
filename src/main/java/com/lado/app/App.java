@@ -1,7 +1,7 @@
 package com.lado.app;
 
-import com.lado.app.Controller.TamagotchiController;
-import com.lado.app.View.UIPackage.StartView.StartView;
+import com.lado.app.controller.TamagotchiController;
+import com.lado.app.view.uipackage.startview.StartView;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 
 import static org.junit.Assert.*;
 
@@ -21,7 +21,7 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi();
     testTamagotchi.setDefaultStats();
     assertEquals("Tamago", testTamagotchi.getName());
-    assertEquals(true, testTamagotchi.getAlive());
+    assertEquals(true, testTamagotchi.isAlive());
     assertEquals(50, testTamagotchi.getHealth());
     assertEquals(50, testTamagotchi.getEnergy());
     assertEquals(50, testTamagotchi.getHunger());
@@ -112,7 +112,7 @@ public class TamagotchiTest {
     Tamagotchi testTamagotchi = new Tamagotchi();
     testTamagotchi.hurt(900);
     assertEquals(0, testTamagotchi.getHealth());
-    assertEquals(false, testTamagotchi.getAlive());
+    assertEquals(false, testTamagotchi.isAlive());
   }
 */
 

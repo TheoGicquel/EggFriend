@@ -1,5 +1,4 @@
-
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
