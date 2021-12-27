@@ -34,6 +34,7 @@ public class GameView implements ActionListener{
   JButton playBtn;
   JButton sleepBtn;
   JButton cleanBtn;
+  /// 
   NeedBar hungerBar;
   NeedBar healthBar;
   NeedBar happinessBar;
@@ -102,12 +103,12 @@ public class GameView implements ActionListener{
     frame.add(nameLbl);
 
 
-     hungerBar = new NeedBar(11);
+     hungerBar = new NeedBar(controller.getHunger());
      healthBar = new NeedBar(controller.getHealth());
      happinessBar = new NeedBar(controller.getHapiness());
      energyBar = new NeedBar(controller.getEnergy());
-      testbar = new JProgressBar();
-    feedBtn = new JButton("Nourrir");
+
+      feedBtn = new JButton("Nourrir");
     playBtn = new JButton("Jouer");
     sleepBtn = new JButton("Sieste");
     cleanBtn = new JButton("Laver");

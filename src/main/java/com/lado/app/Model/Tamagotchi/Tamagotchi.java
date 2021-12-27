@@ -365,7 +365,7 @@ public String getEnergyName() {
 
 
 public String getHappinessName() {
-    return energy.getName();
+    return happiness.getName();
 }
 
 
