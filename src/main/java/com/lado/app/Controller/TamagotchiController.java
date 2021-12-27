@@ -54,8 +54,11 @@ public class TamagotchiController extends TamagotchiBasicController {
             SpecieSelector selector = new SpecieSelector();
             String tamaSpecie = selector.specieSelect();
             // Recuperation nom
-            NewGameNameDialog nameDialog = new NewGameNameDialog();
-            String tamaName = nameDialog.get(frame);
+            String tamaName="";
+            while (tamaName.length() == 0 || tamaName.length() > 20) {
+                NewGameNameDialog nameDialog = new NewGameNameDialog();
+                tamaName = nameDialog.get(frame);
+            }
             this.initializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
             new GameView(this);
