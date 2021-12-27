@@ -1,34 +1,36 @@
-package com.lado.app.View.UIPackage.StartView;
+package com.lado.app.View.UIPackage.GameView;
 
 import javax.swing.JComboBox;
+
 import javax.swing.JOptionPane;
 
-public class SpecieSelector {
+public class FoodChoiceDialog {
+    
   private boolean isFormValid = false;
 
   String result = "";
-  String[] specieList = {"...","Chat","Chien","Mouton","Robot"};
-  final JComboBox < String > combo = new JComboBox < > (specieList);
-  String[] options = {"Ok"};
-
+  String[] foodlist = {"...","Poisson","Croquettes","Ecrous","Herbe"};
+  final JComboBox < String > combo = new JComboBox < > (foodlist);
+  String[] options = {"A Table !"};
 
 
 
 
     
-    public String specieSelect() {
+    public String FoodSelect() {
         
    
-        String title = "Selection de l'espèce";
+        String title = "Selection de la nourriture";
    
         while (!isFormValid) {
           JOptionPane.showOptionDialog(null, combo, title,
             JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
             options, options[0]);
-      
+   
+   
           Object specie = combo.getSelectedItem();
           if (specie.toString().equals("...")) {
-            JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
+            JOptionPane.showMessageDialog(null, "Veuillez choisir une nourriture");
           } else {
             isFormValid = true;
             result = specie.toString();
@@ -38,3 +40,5 @@ public class SpecieSelector {
         return result;
     }
 }
+
+

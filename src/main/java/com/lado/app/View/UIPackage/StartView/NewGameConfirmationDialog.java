@@ -11,18 +11,7 @@ public class NewGameConfirmationDialog {
                 "Souhaitez-vous vraiment créer une nouvelle partie ?\n Votre ancienne partie sera écrasée",
                 "Confirmation de nouvelle partie",
                 JOptionPane.YES_NO_OPTION);
-    
-                //System.out.println("N FORM :");
-                //System.out.println(n);
-                if(n==0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-    
+                return(n==0);    
         }
     
     }

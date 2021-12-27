@@ -1,31 +1,25 @@
 package com.lado.app.Controller;
 
-
-
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 import com.lado.app.Model.GameManager.GameLoader;
 import com.lado.app.Model.GameManager.GameSaver;
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.View.UIPackage.GameView.FoodChoiceDialog;
 import com.lado.app.View.UIPackage.GameView.GameView;
 import com.lado.app.View.UIPackage.StartView.NewGameConfirmationDialog;
 import com.lado.app.View.UIPackage.StartView.NewGameNameDialog;
 import com.lado.app.View.UIPackage.StartView.SpecieSelector;
 
-public class TamagotchiController {
-    private Tamagotchi model;
-    public int getHunger;
-    public Object getCleanlinessNaming;
+public class TamagotchiController extends TamagotchiBasicController {
     private GameLoader loader;
     private GameSaver saver;
-    private GameView gameview;
+    
 
     // Constantes de satisfaction
-    final int hungerIncrease = 10;
-    final int cleanlinessIncrease = 10;
-    final int happinessIncrease = 10;
+    final int hungerIncrease = 40;
+    final int cleanlinessIncrease = 20;
+    final int happinessIncrease = 40;
     final int energyIncrease = 10;
 
     // Constantes de dépense causées par actions
@@ -36,19 +30,15 @@ public class TamagotchiController {
 
 
     public TamagotchiController(Tamagotchi model) {
-        this.model = model;
-
+        super(model);      
     }
 
     public TamagotchiController() {
-        this.model = new Tamagotchi();
+        super(new Tamagotchi());
+        
         loader = new GameLoader();
          saver = new GameSaver();
 
-
-    }
-
-    public static void loadGameAction() {
 
     }
 
@@ -58,92 +48,29 @@ public class TamagotchiController {
         model.setSpecie(tamaSpecie);
     }
 
-    public int getHapiness() {
-        return model.happiness.getVal();
-    }
-
-    public int getHunger() {
-        return model.hunger.getVal();
-    }
-
-    public int getEnergy() {
-        return model.energy.getVal();
-    }
-
-    public int getHealth() {
-        return model.health.getVal();
-    }
-
-    public String getHealthNaming() {
-        return model.health.getName();
-    }
-
-    public String getHungerNaming() {
-        return model.hunger.getName();
-    }
-
-    public String getEnerggNaming() {
-        return model.energy.getName();
-    }
-
-    public String getHapinessNaming() {
-        return model.happiness.getName();
-    }
-
-    public int getCleanliness() {
-        return model.cleanliness.getVal();
-    }
-
-    public int getHappiness() {
-        return model.happiness.getVal();
-    }
-
-    public String getCleanlinessNaming() {
-        return model.cleanliness.getName();
-    }
-
-    public String getEnergyNaming() {
-        return model.energy.getName();
-    }
-
-    public String getSpecie() {
-        return model.getSpecie();
-    }
-
-    public String getSpecieName() {
-        return model.getSpecieText();
-    }
-
-    public String getName() {
-        return model.getName();
-    }
-
-    public String getMood() {
-        return model.getMood();
-    }
-
     public void newGame(JFrame frame) {
 
         NewGameConfirmationDialog confirmation = new NewGameConfirmationDialog();
         if (confirmation.get(frame)) {
             // choix espece
             SpecieSelector selector = new SpecieSelector();
-            String tamaSpecie = selector.SpecieSelect();
+            String tamaSpecie = selector.specieSelect();
             // Recuperation nom
             NewGameNameDialog nameDialog = new NewGameNameDialog();
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
-            this.gameview = new GameView(this, false);
+            new GameView(this, false);
             frame.dispose();
 
         }
     }
 
-
-    public void saveGame()
+    public void saveGameAction()
     {
         saver.save(model);
+        System.exit(0);
+
     }
 
     public void loadGame(JFrame frame)
@@ -162,8 +89,6 @@ public class TamagotchiController {
             }
     }
 
-
-
     public void updateModel() {
         this.model.update();
     }
@@ -179,7 +104,6 @@ public class TamagotchiController {
 
     }
 
-
     public void refreshAction() {
         updateModel();
 
@@ -188,12 +112,17 @@ public class TamagotchiController {
     /**
      * On nourrit le tamagotchi
      * Augmente la satisfaction de faim
-     * Diminue la propreté
      */
     public void feedAction() {
         if(model.getAlive()){
-            model.setHunger(model.getHunger() + hungerIncrease);
-            model.setCleanliness(model.getCleanliness() - cleanlinessDecrease);
+            FoodChoiceDialog foodChoice = new FoodChoiceDialog();
+            String chosenFood = foodChoice.FoodSelect();
+            
+            if(chosenFood.equals(model.getFavoriteFood(0)))
+            {
+                model.setHunger(model.getHunger() + hungerIncrease);
+                model.setHappiness(model.getHappiness()+ 5);
+            }
         }
         updateModel();
     }
@@ -201,16 +130,14 @@ public class TamagotchiController {
     /**
      * On nettoie le tamagotchi
      * Augmente propreté
-     * Descend bonnheur
+
      */
     public void cleanAction() {
         if(model.getAlive()){
             model.setCleanliness(model.getCleanliness() + cleanlinessIncrease);
-            model.setHappiness(model.getHappiness() - happinessDecrease);
         }
         updateModel();
     }
-
 
     /**
      * On fait dormir le tamagotchi
@@ -236,16 +163,4 @@ public class TamagotchiController {
         }
         updateModel();
     }
-
-	public void updateView() {
-        gameview.updateData();
-	}
-
-    public boolean isTamagotchiAlive() {
-        return model.getAlive();
-    }
-
-    
-
 }
-

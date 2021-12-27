@@ -2,7 +2,7 @@ package com.lado.app.Model.Tamagotchi;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class SpecieConstructors {
+public class TestSpecieConstructors {
     @Test
     public void testSetBreed(){
       Tamagotchi testTamagotchi = new Tamagotchi();
@@ -32,7 +32,7 @@ public class SpecieConstructors {
       Specie specie = new Specie("dog");
       assertEquals("dog", specie.getName());
       assertEquals("Chien", specie.getText());
-      assertEquals("Os", specie.getFavoriteFood(0));
+      assertEquals("Croquettes", specie.getFavoriteFood(0));
     }
 
     @Test
@@ -42,6 +42,17 @@ public class SpecieConstructors {
       assertEquals("sheep", specie.getName());
       assertEquals("Mouton", specie.getText());
       assertEquals("Herbe", specie.getFavoriteFood(0));
+      
+    }
+
+    @Test
+    public void testMouton()
+    {
+      Specie specie = new Specie("Mouton");
+      assertEquals("sheep", specie.getName());
+      assertEquals("Mouton", specie.getText());
+      assertEquals("Herbe", specie.getFavoriteFood(0));
+      
     }
 
     @Test
@@ -50,7 +61,7 @@ public class SpecieConstructors {
       Specie specie = new Specie("robot");
       assertEquals("robot", specie.getName());
       assertEquals("Robot", specie.getText());
-      assertEquals("Vis", specie.getFavoriteFood(0));
+      assertEquals("Ecrous", specie.getFavoriteFood(0));
     }
 
     @Test

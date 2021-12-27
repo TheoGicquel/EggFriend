@@ -12,62 +12,44 @@ public class Specie implements Serializable{
     private String text;
     private List<String> favoriteFoods = new ArrayList<>();
 
+
     public Specie(String choice)
     {
         initialize(choice);
     }
 
 
-    /***
-     * @brief Constructeur complet
-     * @param nName
-     * @param ntext
-     * @param nImageName
-     * @param foodArray
-     
-    @Deprecated
-    public Specie(String nName,String ntext,String nImageName,List<String> foodArray)
-    {
-        this.setName(nName);
-        this.setText(ntext);
-  
-        this.setFavoriteFoods(foodArray);
-    }
-    */
 
     void initialize(String choice){
-
-        if(choice == "cat"||choice == "Chat"){
+        favoriteFoods.clear();
+        if("cat".equals(choice)||"Chat".equals(choice)){
             this.setName("cat");
             this.setText("Chat");
             this.addFood("Poisson");
+            this.addFood("Croquettes");
         }
 
-        else if(choice == "dog"||choice == "Chien"){
+        else if("dog".equals(choice)||"Chien".equals(choice)){
             this.setName("dog");
             this.setText("Chien");
-            this.addFood("Os");
+            this.addFood("Croquettes");
         }
 
-        else if(choice == "sheep"||choice == "Mouton"){
+        else if("sheep".equals(choice)||"Mouton".equals(choice)){
             this.setName("sheep");
             this.setText("Mouton");
             this.addFood("Herbe");
         }
 
-        else if(choice == "robot"||choice == "Robot"){
+        else if("robot".equals(choice)||"Robot".equals(choice)){
             this.setName("robot");
             this.setText("Robot");
-            this.addFood("Vis");
+            this.addFood("Ecrous");
         }
-        else if(choice == "unknown"||choice == "Inconnu"){
+        else{
             this.setName("unknown");
             this.setText("Inconnu");
-            this.addFood("Nourriture");
-        }else{
-            this.setName("unknown");
-            this.setText("Inconnu");
-            this.addFood("Nourriture");
+            this.addFood("N/A");
         }
 
     }
@@ -107,7 +89,7 @@ public class Specie implements Serializable{
     public void addFood(String newFood)
     {
         if(newFood.length()>0)
-        this.favoriteFoods.add(newFood);
+            this.favoriteFoods.add(newFood);
     }
 
 
@@ -119,7 +101,15 @@ public class Specie implements Serializable{
 
     public String getFavoriteFood(int index)
     {
-        return favoriteFoods.get(index);
+        if(favoriteFoods.size()>index)
+        {
+            return favoriteFoods.get(index);
+        }
+        else
+        {
+            return "";
+        }
+
     }
     
 

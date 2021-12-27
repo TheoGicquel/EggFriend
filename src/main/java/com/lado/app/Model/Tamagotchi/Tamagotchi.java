@@ -1,5 +1,6 @@
 package com.lado.app.Model.Tamagotchi;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,16 +15,18 @@ public class Tamagotchi implements Serializable{
   private Specie specie;
 
   // variables d'instance
-   public Need health;
+  private Need health;
   private boolean alive;
-  public Need energy;
-  public Need hunger;
-  public Need cleanliness;
-  public Need happiness;
+  private Need energy;
+  private Need hunger;
+  private Need cleanliness;
+  private Need happiness;
   private String mood;
   private long lastModifiedTime;
-  Need[] needs;
-
+  Need[] needs = { energy, hunger, cleanliness, happiness };
+  // create list of needs
+  private List<Need> needsList;
+  private int depleteDelay;
   public void setDefaultStats() {
     this.alive = true;
     this.name = "Tamago";
@@ -35,9 +38,13 @@ public class Tamagotchi implements Serializable{
     this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
-    //this.lastModifiedTime = System.currentTimeMillis();
-    Need[] needs = { energy, hunger, cleanliness, happiness };
-
+    needsList = new ArrayList<Need>();
+    this.needsList.add(health);
+    this.needsList.add(energy);
+    this.needsList.add(hunger);
+    this.needsList.add(cleanliness);
+    this.needsList.add(happiness);
+    depleteDelay = 1000;// 1 seconde
   }
 
 
@@ -77,8 +84,7 @@ public class Tamagotchi implements Serializable{
 
   public void depleteNeeds(long timeElapsed) {
 
-    //this.health.calcDepletion(timeElapsed);
-    //this.alive.calcDepletion(timeElapsed);
+
     this.energy.calcDepletion(timeElapsed);
     this.hunger.calcDepletion(timeElapsed);
     this.cleanliness.calcDepletion(timeElapsed);
@@ -91,8 +97,7 @@ public class Tamagotchi implements Serializable{
   {
     long now = System.currentTimeMillis();
     long elapsedTime = now - lastModifiedTime;
-    //System.out.println("update : elapsed time : " + elapsedTime);
-    if(elapsedTime > 1000)
+    if(elapsedTime > depleteDelay)
     {
       depleteNeeds(elapsedTime);
       evalHealth();
@@ -171,15 +176,18 @@ public class Tamagotchi implements Serializable{
 
 
   public String getFavoriteFood(int index){
-    
-    return "N/A";
-
+    return this.specie.getFavoriteFood(index);
   }
   
   // ---------------- VIE -------------
   public int getHealth()
   {
     return this.health.getVal();
+  }
+
+  public String getHealthName()
+  {
+    return this.health.getName();
   }
 
   public void setHealth(int newHealth) {
@@ -202,21 +210,16 @@ public class Tamagotchi implements Serializable{
    */
   public void evalHealth()
   {
-       if(hunger.isNeedBelowCritical()){
-         this.hurt(2);
-       }
-
-       if(energy.isNeedBelowCritical()){
-         this.hurt(2);
-       }
-
-        if(cleanliness.isNeedBelowCritical()){
-          this.hurt(2);
-        }
-
-        if(happiness.isNeedBelowCritical()){
-          this.hurt(2);
-        }
+    if(needsList!=null)
+    {
+    for (Need n : needsList)
+    {
+      if(n.isNeedBelowCritical())
+      {
+        this.hurt(2);
+      }
+    }
+  }
   }
 
 
@@ -241,7 +244,6 @@ public class Tamagotchi implements Serializable{
 
   public void kill() {
     if(this.alive){
-    System.out.println("KILL");
     this.setAlive(false);
 
     this.setCleanliness(0);
@@ -317,45 +319,27 @@ public class Tamagotchi implements Serializable{
 
   // ---------------- Humeur -------------
 
-
-  public void evalMood()
-  {
+  /**
+   * Evalue le besoin le plus bas du Tamagotchi et l'applique a son Humeur
+   */
+  public void evalMood() {
     int lowestNeed = 50;
-    String worstMood="N/A";
-
-    if(this.hunger.getVal() < lowestNeed)
+    String worstMood = "N/A";
+    if (needsList != null)
     {
-      worstMood = this.hunger.getDescriptor();
-      lowestNeed = this.cleanliness.getVal();
-    }
+      for (Need n: needsList)
+      {
+        if (n.getVal() < lowestNeed)
+        {
+          lowestNeed = n.getVal();
+          worstMood = n.getDescriptor();
 
-    if(this.cleanliness.getVal() < lowestNeed)
-    {
-      worstMood = this.cleanliness.getDescriptor();
-      lowestNeed = this.cleanliness.getVal();
+        }
+      }
+     
     }
-
-    if(this.happiness.getVal() < lowestNeed)
-    {
-      worstMood = this.happiness.getDescriptor();
-      lowestNeed = this.happiness.getVal();
-    }
-
-    if(this.energy.getVal() < lowestNeed)
-    {
-      worstMood = this.energy.getDescriptor();
-      lowestNeed = this.energy.getVal();
-    }
-
-    if(worstMood!="N/A")
-    {
-      this.setMood(worstMood);
-    }
-    else
-    {
-      this.setMood("Normal");
-    }
-
+    if (worstMood.equals("N/A")) {this.setMood(worstMood);} 
+    else {this.setMood("Normal");}
   }
 
 public String getMood() {
@@ -364,6 +348,30 @@ public String getMood() {
 
 public void setMood(String mood) {
     this.mood = mood;
+}
+
+
+
+public String getHungerName() {
+  return hunger.getName();
+}
+
+
+
+public String getEnergyName() {
+    return energy.getName();
+}
+
+
+
+public String getHappinessName() {
+    return energy.getName();
+}
+
+
+
+public String getCleanlinessName() {
+    return cleanliness.getName();
 }
 
 

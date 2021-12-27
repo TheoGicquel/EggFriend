@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class GameView implements ActionListener{
   
   private TamagotchiController controller;
-  private JButton saveBtn;
+  private JButton quitBtn;
   private JButton refreshBtn;
   private JButton degradeBtn;
   JButton feedBtn;
@@ -59,12 +59,10 @@ public class GameView implements ActionListener{
 
     frame.setTitle("EggFriend -"+controller.getName());
 
-     //listener = new GameListener(model);
 
      frame.setSize(400, 400);
      frame.setLocationRelativeTo(null);
-    // frame.setTitle("TITRE FENETRE");
-     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
      frame.setResizable(true);
      
 
@@ -82,11 +80,10 @@ public class GameView implements ActionListener{
     JLabel nameLbl = new JLabel();
     nameLbl.setText("Name: " + controller.getName());
 
-    //nameLbl.setIcon(appIcon);
     nameLbl.setFont(new Font("Arial", Font.BOLD, 14));
     nameLbl.setForeground(Color.WHITE);
-    nameLbl.setHorizontalTextPosition(JLabel.CENTER);
-    nameLbl.setVerticalTextPosition(JLabel.TOP);
+    nameLbl.setHorizontalTextPosition(SwingConstants.CENTER);
+    nameLbl.setVerticalTextPosition(SwingConstants.TOP);
 
     frame.add(nameLbl);
 
@@ -101,15 +98,14 @@ public class GameView implements ActionListener{
     sleepBtn = new JButton("Sieste");
     cleanBtn = new JButton("Laver");
 
-    saveBtn = new JButton("Sauvegarder");
+    quitBtn = new JButton("Quitter");
     refreshBtn = new JButton("Rafraichir");
     degradeBtn = new JButton("[DEBUG]");
 
 
-    //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
-    JButton[] dataButtons = {saveBtn,refreshBtn,degradeBtn};
+    JButton[] dataButtons = {quitBtn,refreshBtn,degradeBtn};
 
     for (JButton jButton : careButtons) {
       jButton.addActionListener(this);
@@ -122,7 +118,6 @@ public class GameView implements ActionListener{
    
 
 
-    //Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
      healthPanel = new NeedPanel(controller.getHealth(),controller.getHealthNaming(),"icon");
      hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming(),"icon");
@@ -161,14 +156,11 @@ public class GameView implements ActionListener{
     }
 
     infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
-   // infoPanel.setBorder(blueBorder);
-    infoPanel.add(saveBtn);
+    infoPanel.add(quitBtn);
     infoPanel.add(degradeBtn);
 
 
 
-   // needsUI.setBorder(blueBorder);
-   // careUI.setBorder(blueBorder);
 
     JPanel tamaPanel = new JPanel();
     tamaPanel.setLayout(new BoxLayout(tamaPanel,BoxLayout.PAGE_AXIS));
@@ -194,7 +186,6 @@ public class GameView implements ActionListener{
     Runnable viewUpdater = new Runnable(){
       public void run() {
           updateData();
-          //System.out.println("update" + System.currentTimeMillis());
       }     
     };
 
@@ -204,16 +195,14 @@ public class GameView implements ActionListener{
 
   }
 
-
+  /**
+   * Actualise la View avec les informations fournies par le controller
+   */
   public void updateData() {
     controller.updateModel();
     updateNeedBars();
-    //controller.updateView();
     updateImage();
     infoPanel.updateMoodLabel();
-    
-    
-
   }
 
   public void updateNeedBars()
@@ -244,16 +233,14 @@ public class GameView implements ActionListener{
 
   @Override
   public void actionPerformed(ActionEvent e) {
-    //System.out.println(e.getActionCommand());
    
-    if(e.getSource()==saveBtn)
+    if(e.getSource()==quitBtn)
     {
-      controller.saveGame();
+      controller.saveGameAction();
     }
 
     if(e.getSource()==degradeBtn)
     {
-      //System.out.println("degradeBTN");
       controller.degrade();
     }
 

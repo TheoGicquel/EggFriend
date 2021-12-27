@@ -20,21 +20,27 @@ public class SpecieTest {
 
 
 
-  /*
+
     @Test
     public void getFavoriteFoodDogByIndex(){
       Tamagotchi dogTama = new Tamagotchi();
       dogTama.setSpecie("dog");
-      assertEquals("Os",dogTama.getFood(0));
+      assertEquals("Croquettes",dogTama.getFood(0));
     }
   
-    /** 
+
     @Test
     public void getFavoriteFoodDogByIndexError(){
       Tamagotchi testTamagotchi = new Tamagotchi();
-      testTamagotchi.setSpecie("Chat");
-      assertEquals("Poisson",testTamagotchi.getFood(1));
+      testTamagotchi.setSpecie("Chien");
+      assertEquals("",testTamagotchi.getFood(1));
     }
-     */
+
+    @Test
+    public void getFavoriteFoodCatByIndex(){
+      Tamagotchi dogTama = new Tamagotchi();
+      dogTama.setSpecie("cat");
+      assertEquals("Poisson",dogTama.getFood(0));
+    }
     
 }
