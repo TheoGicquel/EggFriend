@@ -15,10 +15,6 @@ public class FoodChoiceDialog {
 
 
 
-    public FoodChoiceDialog()
-    {
-
-    }
 
     
     public String FoodSelect() {
@@ -33,7 +29,7 @@ public class FoodChoiceDialog {
    
    
           Object specie = combo.getSelectedItem();
-          if (specie.toString() == "...") {
+          if (specie.toString().equals("...")) {
             JOptionPane.showMessageDialog(null, "Veuillez choisir une nourriture");
           } else {
             isFormValid = true;

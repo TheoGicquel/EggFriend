@@ -338,7 +338,7 @@ public class Tamagotchi implements Serializable{
       }
      
     }
-    if (worstMood != "N/A") {this.setMood(worstMood);} 
+    if (worstMood.equals("N/A")) {this.setMood(worstMood);} 
     else {this.setMood("Normal");}
   }
 

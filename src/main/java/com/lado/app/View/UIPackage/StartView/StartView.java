@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
+import javax.swing.WindowConstants;
 
 import com.lado.app.Controller.TamagotchiController;
 
@@ -75,13 +75,11 @@ public class StartView implements ActionListener{
         buttonPanel.add(loadGameButton);
         buttonPanel.add(newGameButton);
 
-       /// mainPanel.setBorder(redLine);
 
         mainPanel.add(titleImagePanel);
         mainPanel.add(buttonPanel);
 
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //buttonPanel.setBounds(0,0,300,300);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setSize(500,500);
         
         frame.getContentPane().add(mainPanel);

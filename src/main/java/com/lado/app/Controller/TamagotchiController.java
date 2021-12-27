@@ -14,7 +14,7 @@ import com.lado.app.View.UIPackage.StartView.SpecieSelector;
 public class TamagotchiController extends TamagotchiBasicController {
     private GameLoader loader;
     private GameSaver saver;
-    private GameView gameview;
+    
 
     // Constantes de satisfaction
     final int hungerIncrease = 40;
@@ -54,13 +54,13 @@ public class TamagotchiController extends TamagotchiBasicController {
         if (confirmation.get(frame)) {
             // choix espece
             SpecieSelector selector = new SpecieSelector();
-            String tamaSpecie = selector.SpecieSelect();
+            String tamaSpecie = selector.specieSelect();
             // Recuperation nom
             NewGameNameDialog nameDialog = new NewGameNameDialog();
             String tamaName = nameDialog.get(frame);
             this.InitializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
-            this.gameview = new GameView(this, false);
+            new GameView(this, false);
             frame.dispose();
 
         }

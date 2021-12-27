@@ -30,11 +30,11 @@ public class InfoPanel extends JPanel{
     TamagotchiController controller;
     JLabel image;
     JLabel moodLabel;
+    private static final String LABEL_PRETEXT = "Statut :   ";
 
     InfoPanel(TamagotchiController gameController)
     {
         controller = gameController;
-
 
         
         String imagePath = "images/" + controller.getSpecie() + ".png";
@@ -53,7 +53,7 @@ public class InfoPanel extends JPanel{
         JLabel ageLabel = new JLabel("Type :   " + controller.getSpecieName());
         this.add(ageLabel);
 
-        moodLabel = new JLabel("Statut :   " + controller.getMood());
+        moodLabel = new JLabel(LABEL_PRETEXT + controller.getMood());
         this.add(moodLabel);
     }
 
@@ -73,11 +73,11 @@ public class InfoPanel extends JPanel{
     public void updateMoodLabel()
     {
         if(controller.isTamagotchiAlive()){
-        moodLabel.setText("Statut :   " + controller.getMood());
+        moodLabel.setText(LABEL_PRETEXT + controller.getMood());
         }
         else
         {
-            moodLabel.setText("Statut :   " + " Mort ☠️");
+            moodLabel.setText(LABEL_PRETEXT + " Mort ☠️");
         }
     }
 }

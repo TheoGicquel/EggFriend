@@ -59,12 +59,10 @@ public class GameView implements ActionListener{
 
     frame.setTitle("EggFriend -"+controller.getName());
 
-     //listener = new GameListener(model);
 
      frame.setSize(400, 400);
      frame.setLocationRelativeTo(null);
-    // frame.setTitle("TITRE FENETRE");
-     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
      frame.setResizable(true);
      
 
@@ -82,11 +80,10 @@ public class GameView implements ActionListener{
     JLabel nameLbl = new JLabel();
     nameLbl.setText("Name: " + controller.getName());
 
-    //nameLbl.setIcon(appIcon);
     nameLbl.setFont(new Font("Arial", Font.BOLD, 14));
     nameLbl.setForeground(Color.WHITE);
-    nameLbl.setHorizontalTextPosition(JLabel.CENTER);
-    nameLbl.setVerticalTextPosition(JLabel.TOP);
+    nameLbl.setHorizontalTextPosition(SwingConstants.CENTER);
+    nameLbl.setVerticalTextPosition(SwingConstants.TOP);
 
     frame.add(nameLbl);
 
@@ -106,7 +103,6 @@ public class GameView implements ActionListener{
     degradeBtn = new JButton("[DEBUG]");
 
 
-    //NeedBar needBars[] = {hungerBar, healthBar, happinessBar, energyBar};
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
     JButton[] dataButtons = {quitBtn,refreshBtn,degradeBtn};
@@ -122,7 +118,6 @@ public class GameView implements ActionListener{
    
 
 
-    //Border blueBorder = BorderFactory.createLineBorder(Color.BLUE);
 
      healthPanel = new NeedPanel(controller.getHealth(),controller.getHealthNaming(),"icon");
      hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming(),"icon");
@@ -161,14 +156,11 @@ public class GameView implements ActionListener{
     }
 
     infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
-   // infoPanel.setBorder(blueBorder);
     infoPanel.add(quitBtn);
     infoPanel.add(degradeBtn);
 
 
 
-   // needsUI.setBorder(blueBorder);
-   // careUI.setBorder(blueBorder);
 
     JPanel tamaPanel = new JPanel();
     tamaPanel.setLayout(new BoxLayout(tamaPanel,BoxLayout.PAGE_AXIS));

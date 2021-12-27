@@ -13,24 +13,21 @@ public class SpecieSelector {
 
 
 
-    public SpecieSelector()
-    {
 
-    }
 
     
-    public String SpecieSelect() {
+    public String specieSelect() {
         
    
         String title = "Selection de l'espèce";
    
         while (!isFormValid) {
-          int selection = JOptionPane.showOptionDialog(null, combo, title,
+          JOptionPane.showOptionDialog(null, combo, title,
             JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,
             options, options[0]);
       
           Object specie = combo.getSelectedItem();
-          if (specie.toString() == "...") {
+          if (specie.toString().equals("...")) {
             JOptionPane.showMessageDialog(null, "Veuillez choisir une espèce");
           } else {
             isFormValid = true;

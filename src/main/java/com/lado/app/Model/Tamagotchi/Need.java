@@ -71,8 +71,6 @@ public class Need implements Serializable{
       this.value = 0;
     } else if (this.value > 100) {
       this.value = 100;
-    } else {
-      
     }
     return this.value;
   }
