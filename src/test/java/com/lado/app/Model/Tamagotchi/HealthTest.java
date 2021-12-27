@@ -6,16 +6,16 @@ import static org.junit.Assert.*;
 
 public class HealthTest {
     @Test
-    public void testGetAlive(){
+    public void testisAlive(){
       Tamagotchi testTamagotchi = new Tamagotchi();
-      assertEquals(true,testTamagotchi.getAlive());
+      assertEquals(true,testTamagotchi.isAlive());
     }
     
     @Test
     public void testSetAlive(){
       Tamagotchi testTamagotchi = new Tamagotchi();
       testTamagotchi.setAlive(false);
-      assertEquals(false, testTamagotchi.getAlive());
+      assertEquals(false, testTamagotchi.isAlive());
     }
     
     /** 
@@ -24,7 +24,7 @@ public class HealthTest {
       Tamagotchi testTamagotchi = new Tamagotchi();
       testTamagotchi.setHealth(0);
       assertEquals(0, testTamagotchi.getHealth());
-      assertEquals(false, testTamagotchi.getAlive());
+      assertEquals(false, testTamagotchi.isAlive());
     }
     */
     @Test
@@ -34,7 +34,7 @@ public class HealthTest {
       testTamagotchi.setHealth(0);
       testTamagotchi.setAlive(false);
       testTamagotchi.setHealth(100);
-      assertEquals(false, testTamagotchi.getAlive());
+      assertEquals(false, testTamagotchi.isAlive());
     }
   
     @Test
