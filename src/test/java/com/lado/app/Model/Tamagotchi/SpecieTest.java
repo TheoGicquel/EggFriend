@@ -42,5 +42,19 @@ public class SpecieTest {
       dogTama.setSpecie("cat");
       assertEquals("Poisson",dogTama.getFood(0));
     }
+
+    @Test
+    public void getTextTestCat(){
+      Tamagotchi cat = new Tamagotchi();
+      cat.setSpecie("cat");
+      assertEquals("Chat",cat.getSpecieText());
+    }
+
+    @Test
+    public void getTextTestDog(){
+      Tamagotchi cat = new Tamagotchi();
+      cat.setSpecie("dog");
+      assertEquals("Chien",cat.getSpecieText());
+    }
     
 }

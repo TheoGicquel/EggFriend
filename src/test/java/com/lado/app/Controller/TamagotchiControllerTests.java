@@ -44,26 +44,4 @@ public class TamagotchiControllerTests {
         assertEquals(def, controller.getHealth());
     }
 
-
-
-
-
-
-    
-    
-   // Cause interrution
-    /** 
-    @Test
-    public void newGameTest() {
-        TamagotchiController controller = new TamagotchiController();
-        JFrame frame = new JFrame();
-        controller.newGame(frame);
-    }
-    */
-
-
-
-
-
-    
 }

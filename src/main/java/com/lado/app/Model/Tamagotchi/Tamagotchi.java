@@ -82,9 +82,7 @@ public class Tamagotchi implements Serializable{
 
 
   public void depleteNeeds(long timeElapsed) {
-    //System.out.println("elapsedTime : " + timeElapsed);
     int secondElapsed = (int) (timeElapsed / 1000);
-    //System.out.println("Secondes : " + secondElapsed);
     /// !IMPORTANT : nombres de secondes qui déclenchent la maj de la valeur du besoin
     if(secondElapsed > 60)
     {
