@@ -206,14 +206,13 @@ public class GameView implements ActionListener{
   {
     Runnable viewUpdater = new RunnableImplementation();
     ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-    executor.scheduleAtFixedRate(viewUpdater, 0, 5, TimeUnit.SECONDS);
+    executor.scheduleAtFixedRate(viewUpdater, 0, 1, TimeUnit.SECONDS);
   }
 
   /**
    * Actualise la View avec les informations fournies par le controller
    */
   public void updateData() {
-    controller.updateModel();
     updateNeedBars();
     updateImage();
     infoPanel.updateMoodLabel();

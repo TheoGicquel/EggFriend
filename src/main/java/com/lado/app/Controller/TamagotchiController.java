@@ -1,6 +1,9 @@
 package com.lado.app.controller;
 
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -12,23 +15,14 @@ import com.lado.app.view.uipackage.gameview.GameView;
 import com.lado.app.view.uipackage.startview.NewGameConfirmationDialog;
 import com.lado.app.view.uipackage.startview.NewGameNameDialog;
 import com.lado.app.view.uipackage.startview.SpecieSelector;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class TamagotchiController extends TamagotchiBasicController {
     private GameLoader loader;
     private GameSaver saver;
     
-    /// Les constantes sont static car partagées entre toutes les instances de la classe
-    /// Constantes de satisfaction
-    private static final int HUNGR_INCR = 40;
-    private static final int CLEAN_INCR = 20;
-    private static final int HAPPY_INCR = 40;
-    private static final int ENRGY_INCR = 10;
-
-    private static final int ENRGY_DECR = 5; 
-
-
     public TamagotchiController(Tamagotchi model) {
-        super(model);      
+        super(model); 
     }
 
     public TamagotchiController() {
@@ -37,13 +31,31 @@ public class TamagotchiController extends TamagotchiBasicController {
         loader = new GameLoader();
          saver = new GameSaver();
 
-
     }
+
+  /**
+   * Evenement qui actualise la vue toutes les 5 secondes,
+   * Lié par {@link #initTimer()}
+   */
+  private final class RunnableImplementation implements Runnable {
+    public void run() {
+        updateModel();
+    }
+  }
+
+    public void needTimerInit()
+    {
+      Runnable needTimer = new RunnableImplementation();
+      ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+      executor.scheduleAtFixedRate(needTimer, 0, 1, TimeUnit.SECONDS);
+    }
+
 
     public void initializeNewGame(String tamaName, String tamaSpecie) {
         model.setModifiedTime(System.currentTimeMillis());
         model.setName(tamaName);
         model.setSpecie(tamaSpecie);
+        needTimerInit();
     }
 
     public void newGame(JFrame frame) {
@@ -85,6 +97,8 @@ public class TamagotchiController extends TamagotchiBasicController {
             {
                 JOptionPane.showMessageDialog(null, "Chargement de la partie réussi");
                 this.model = loader.loadTamagotchi();
+                needTimerInit();
+                updateModel();
                 frame.dispose();
                 new GameView(this);
             }
@@ -121,34 +135,34 @@ public class TamagotchiController extends TamagotchiBasicController {
             
             if(chosenFood.equals(model.getFavoriteFood(0)))
             {
-                model.setHunger(model.getHunger() + HUNGR_INCR);
+                model.setHunger(model.getHunger() + 40);
                 model.setHappiness(model.getHappiness()+ 5);
             }
         }
-        updateModel();
     }
 
     /**
      * On nettoie le tamagotchi
      * Augmente propreté
-
+     * Baisse le bonheur
      */
     public void cleanAction() {
         if(model.isAlive()){
-            model.setCleanliness(model.getCleanliness() + CLEAN_INCR);
+            model.setCleanliness(model.getCleanliness() + 40);
+            model.setHappiness(model.getHappiness()-5);
         }
-        updateModel();
     }
 
     /**
      * On fait dormir le tamagotchi
      * Augmente Energie
+     * Baisse Bonnheur
      */
     public void sleepAction() {
         if(model.isAlive()){
-            model.setEnergy(model.getEnergy() + ENRGY_INCR);
+            model.setEnergy(model.getEnergy() + 50);
+            model.setHappiness(model.getHappiness()+5);
         }
-        updateModel();
     }
 
     /**
@@ -159,9 +173,9 @@ public class TamagotchiController extends TamagotchiBasicController {
      */
     public void playAction() {
         if(model.isAlive()){
-            model.setHappiness(model.getHappiness() + HAPPY_INCR);
-            model.setEnergy(model.getEnergy() - ENRGY_DECR);
+            model.setHappiness(model.getHappiness() + 40);
+            model.setEnergy(model.getEnergy() - 20);
+            model.setHunger(model.getHunger() - 10);
         }
-        updateModel();
     }
 }

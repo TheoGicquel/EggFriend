@@ -41,7 +41,7 @@ public class Need implements Serializable{
    * Détermine si le besoin est inférieur à la valeur critique
    * @return true si inférieur, false sinon
    */
-  boolean isNeedBelowCritical()
+  boolean isBelowCritical()
   {
     return(this.getVal() <= CRITICAL_THRESHOLD);
   }
@@ -49,11 +49,12 @@ public class Need implements Serializable{
   /***
    * @brief change la valeur du besoin selon le temps écoulé (secondes) et
    *  le facteur d'évolution du besoin
-   * @param timeElapsed
+   * @param timeElapsed temps en milisecondes écoulée depuis la dernière modification
    */
-  void calcDepletion(long timeElapsed) {
-    int newValue = (int) (this.value - (timeElapsed * (this.factor/100)));
-    this.setVal(newValue);
+  void calcDepletion(int secondsElapsed) {
+    int output = this.getVal() - (int)(secondsElapsed * this.factor);
+    //System.out.println("New Value of need " + this.name + " is " + output);
+    this.setVal(output);
   }
 
   int setVal(int value) {

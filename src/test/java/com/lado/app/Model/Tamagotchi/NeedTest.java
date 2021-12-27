@@ -112,9 +112,17 @@ public class NeedTest {
     @Test
     public void needCalcDepletion()
     {
-        Need testNeed = new Need("Boire","soif",32, 0.2f);
-        testNeed.calcDepletion(1000);
-        assertEquals(30, testNeed.getVal());
+        Need testNeed = new Need("Boire","soif",50, 0.05f);
+        testNeed.calcDepletion(60);
+        assertEquals(47, testNeed.getVal());
+    }
+
+    @Test
+    public void needCalcDepletionTwoMinutes()
+    {
+        Need testNeed = new Need("Boire","soif",50, 0.05f);
+        testNeed.calcDepletion(120);
+        assertEquals(44, testNeed.getVal());
     }
 
 
