@@ -1,4 +1,4 @@
-package com.lado.app.View.UIPackage.StartView;
+package com.lado.app.view.uipackage.startview;
 
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;

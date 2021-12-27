@@ -1,7 +1,5 @@
-package com.lado.app.View.UIPackage.GameView;
-
-
-
+package com.lado.app.view.uipackage.gameview;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
@@ -10,8 +8,8 @@ public class GameViewTests {
 
     @Test
     public void viewEmptyConstructor() {
-       new GameView();
-
+       GameView view =  new GameView();
+        assertNotNull(view);
     }
 
 

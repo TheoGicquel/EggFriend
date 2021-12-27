@@ -1,4 +1,4 @@
-package com.lado.app.Model.GameManager;
+package com.lado.app.model.gamemanager;
 import java.time.LocalDateTime; 
 
 public class GameTimer {

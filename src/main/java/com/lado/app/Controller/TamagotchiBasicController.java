@@ -1,6 +1,6 @@
-package com.lado.app.Controller;
+package com.lado.app.controller;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.model.tamagotchi.Tamagotchi;
 
 public class TamagotchiBasicController {
     Tamagotchi model;
@@ -76,6 +76,6 @@ public class TamagotchiBasicController {
     }
 
     public boolean isTamagotchiAlive() {
-        return model.getAlive();
+        return model.isAlive();
     }
 }

@@ -1,4 +1,4 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Tamagotchi implements Serializable{
     this.happiness = new Need("Bonheur","Déprimé", 50, 0.01f);
     this.health.setCritical(true);
     this.mood = "normal";
-    needsList = new ArrayList<Need>();
+    needsList = new ArrayList<>();
     this.needsList.add(health);
     this.needsList.add(energy);
     this.needsList.add(hunger);
@@ -197,7 +197,7 @@ public class Tamagotchi implements Serializable{
   }
 
   public void checkHealth() {
-    if (this.getHealth() <= 0) {
+    if(this.getHealth() <= 0) {
       this.setAlive(false);
     } else {
       this.setAlive(true);
@@ -255,7 +255,7 @@ public class Tamagotchi implements Serializable{
     }
   }
 
-  public boolean getAlive() {
+  public boolean isAlive() {
     return this.alive;
   }
 

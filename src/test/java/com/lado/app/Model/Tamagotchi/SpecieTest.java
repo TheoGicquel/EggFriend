@@ -1,4 +1,4 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;

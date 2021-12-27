@@ -1,10 +1,10 @@
-package com.lado.app.Model.GameManager;
+package com.lado.app.model.gamemanager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.model.tamagotchi.Tamagotchi;
 
 /**
  * @brief sauvegarde le Tamagotchi fourni en entrée

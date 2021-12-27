@@ -1,8 +1,10 @@
-package com.lado.app.View.UIPackage.GameView;
+package com.lado.app.view.uipackage.gameview;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
-import com.lado.app.Controller.TamagotchiController;
+
+import com.lado.app.controller.TamagotchiController;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.Executors;
@@ -12,6 +14,18 @@ import java.util.concurrent.TimeUnit;
  
 public class GameView implements ActionListener{
   
+  /**
+   * Evenement qui actualise la vue toutes les 5 secondes,
+   * Lié par {@link #initTimer()}
+   */
+  private final class RunnableImplementation implements Runnable {
+    public void run() {
+        updateData();
+    }
+  }
+
+
+
   private TamagotchiController controller;
   private JButton quitBtn;
   private JButton refreshBtn;
@@ -52,7 +66,7 @@ public class GameView implements ActionListener{
   public GameView(){}
   
   
-  public GameView(TamagotchiController controller,boolean isNewGame) {
+  public GameView(TamagotchiController controller) {
     frame = new JFrame();
     this.controller = controller;
     firsttime= System.currentTimeMillis();
@@ -132,8 +146,8 @@ public class GameView implements ActionListener{
 
      infoPanel = new InfoPanel(controller);
   
-    JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
-    JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
+    JPanel[] carePanels = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
+    JPanel[] needPanels = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
     ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.LINE_AXIS));
@@ -182,17 +196,16 @@ public class GameView implements ActionListener{
     frame.repaint();
 
 
-  
-    Runnable viewUpdater = new Runnable(){
-      public void run() {
-          updateData();
-      }     
-    };
+    initTimer();
 
-    
+
+  }
+
+  public void initTimer()
+  {
+    Runnable viewUpdater = new RunnableImplementation();
     ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
     executor.scheduleAtFixedRate(viewUpdater, 0, 5, TimeUnit.SECONDS);
-
   }
 
   /**

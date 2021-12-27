@@ -1,5 +1,6 @@
-package com.lado.app.Model.Tamagotchi;
+package com.lado.app.model.tamagotchi;
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class TestSpecieConstructors {
@@ -70,7 +71,7 @@ public class TestSpecieConstructors {
       Specie specie = new Specie("unknown");
       assertEquals("unknown", specie.getName());
       assertEquals("Inconnu", specie.getText());
-      assertEquals("Nourriture", specie.getFavoriteFood(0));
+      assertEquals("N/A", specie.getFavoriteFood(0));
     }
 
 }

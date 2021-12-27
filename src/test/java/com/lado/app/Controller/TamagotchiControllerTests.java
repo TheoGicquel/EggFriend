@@ -1,11 +1,11 @@
-package com.lado.app.Controller;
+package com.lado.app.controller;
 
 
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import com.lado.app.Model.Tamagotchi.Tamagotchi;
+import com.lado.app.model.tamagotchi.Tamagotchi;
 
 import org.junit.Test;
 
