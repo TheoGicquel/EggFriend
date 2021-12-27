@@ -7,7 +7,6 @@ package com.lado.app.View.UIPackage.GameView;
 import javax.swing.JPanel;
 
 
-
 import javax.swing.ImageIcon;
 
 import javax.swing.JLabel;
@@ -27,14 +26,18 @@ public class InfoPanel extends JPanel{
 
     java.net.URL tamagotchiImageUrl;
     java.net.URL tamagotchiDeadUrl;
-    TamagotchiController controller;
+    /* 
+    * on déclare le controller comme étant transient car il ne sera pas serialisé 
+    * et donc non persistant
+    */
+    transient TamagotchiController controller;
     JLabel image;
     JLabel moodLabel;
     private static final String LABEL_PRETEXT = "Statut :   ";
 
     InfoPanel(TamagotchiController gameController)
     {
-        controller = gameController;
+        this.controller = gameController;
 
         
         String imagePath = "images/" + controller.getSpecie() + ".png";

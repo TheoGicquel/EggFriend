@@ -1,5 +1,6 @@
 package com.lado.app.Controller;
 
+
 import com.lado.app.Model.Tamagotchi.Tamagotchi;
 
 public class TamagotchiBasicController {

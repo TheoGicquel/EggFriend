@@ -144,8 +144,8 @@ public class GameView implements ActionListener{
 
      infoPanel = new InfoPanel(controller);
   
-    JPanel carePanels[] = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
-    JPanel needPanels[] = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
+    JPanel[] carePanels = {hungerCarePanel, energyCarePanel, cleanlinessCarePanel, happinessCarePanel};
+    JPanel[] needPanels = {healthPanel, hungerPanel, energyPanel, cleanLinessPanel, happinessPanel};
 
     ui = new JPanel();
     ui.setLayout(new BoxLayout(ui,BoxLayout.LINE_AXIS));

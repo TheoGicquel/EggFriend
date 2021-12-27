@@ -3,7 +3,7 @@ package com.lado.app.Model.Tamagotchi;
 import java.io.Serializable;
 
 public class Need implements Serializable{
-  private int CRITICAL_THRESHOLD = 10;
+  private static final int CRITICAL_THRESHOLD = 10;
 
   private String name;
   private int value;
@@ -43,14 +43,7 @@ public class Need implements Serializable{
    */
   boolean isNeedBelowCritical()
   {
-    if(this.getVal() <= CRITICAL_THRESHOLD)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+    return(this.getVal() <= CRITICAL_THRESHOLD);
   }
 
   /***

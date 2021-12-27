@@ -17,7 +17,7 @@ public class FoodChoiceDialog {
 
 
     
-    public String FoodSelect() {
+    public String foodSelect() {
         
    
         String title = "Selection de la nourriture";

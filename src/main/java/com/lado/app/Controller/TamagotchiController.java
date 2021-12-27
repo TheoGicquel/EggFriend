@@ -1,5 +1,6 @@
 package com.lado.app.Controller;
 
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import com.lado.app.Model.GameManager.GameLoader;
@@ -15,18 +16,14 @@ public class TamagotchiController extends TamagotchiBasicController {
     private GameLoader loader;
     private GameSaver saver;
     
+    /// Les constantes sont static car partagées entre toutes les instances de la classe
+    /// Constantes de satisfaction
+    private static final int HUNGR_INCR = 40;
+    private static final int CLEAN_INCR = 20;
+    private static final int HAPPY_INCR = 40;
+    private static final int ENRGY_INCR = 10;
 
-    // Constantes de satisfaction
-    final int hungerIncrease = 40;
-    final int cleanlinessIncrease = 20;
-    final int happinessIncrease = 40;
-    final int energyIncrease = 10;
-
-    // Constantes de dépense causées par actions
-    final int hungerDecrease = 5; 
-    final int cleanlinessDecrease = 5; 
-    final int happinessDecrease = 7; 
-    final int energyDecrease = 5; 
+    private static final int ENRGY_DECR = 5; 
 
 
     public TamagotchiController(Tamagotchi model) {
@@ -42,7 +39,7 @@ public class TamagotchiController extends TamagotchiBasicController {
 
     }
 
-    public void InitializeNewGame(String tamaName, String tamaSpecie) {
+    public void initializeNewGame(String tamaName, String tamaSpecie) {
         model.setModifiedTime(System.currentTimeMillis());
         model.setName(tamaName);
         model.setSpecie(tamaSpecie);
@@ -58,7 +55,7 @@ public class TamagotchiController extends TamagotchiBasicController {
             // Recuperation nom
             NewGameNameDialog nameDialog = new NewGameNameDialog();
             String tamaName = nameDialog.get(frame);
-            this.InitializeNewGame(tamaName, tamaSpecie);
+            this.initializeNewGame(tamaName, tamaSpecie);
             saver.save(model);
             new GameView(this);
             frame.dispose();
@@ -116,11 +113,11 @@ public class TamagotchiController extends TamagotchiBasicController {
     public void feedAction() {
         if(model.getAlive()){
             FoodChoiceDialog foodChoice = new FoodChoiceDialog();
-            String chosenFood = foodChoice.FoodSelect();
+            String chosenFood = foodChoice.foodSelect();
             
             if(chosenFood.equals(model.getFavoriteFood(0)))
             {
-                model.setHunger(model.getHunger() + hungerIncrease);
+                model.setHunger(model.getHunger() + HUNGR_INCR);
                 model.setHappiness(model.getHappiness()+ 5);
             }
         }
@@ -134,7 +131,7 @@ public class TamagotchiController extends TamagotchiBasicController {
      */
     public void cleanAction() {
         if(model.getAlive()){
-            model.setCleanliness(model.getCleanliness() + cleanlinessIncrease);
+            model.setCleanliness(model.getCleanliness() + CLEAN_INCR);
         }
         updateModel();
     }
@@ -145,7 +142,7 @@ public class TamagotchiController extends TamagotchiBasicController {
      */
     public void sleepAction() {
         if(model.getAlive()){
-            model.setEnergy(model.getEnergy() + energyIncrease);
+            model.setEnergy(model.getEnergy() + ENRGY_INCR);
         }
         updateModel();
     }
@@ -158,8 +155,8 @@ public class TamagotchiController extends TamagotchiBasicController {
      */
     public void playAction() {
         if(model.getAlive()){
-            model.setHappiness(model.getHappiness() + happinessIncrease);
-            model.setEnergy(model.getEnergy() - energyDecrease);
+            model.setHappiness(model.getHappiness() + HAPPY_INCR);
+            model.setEnergy(model.getEnergy() - ENRGY_DECR);
         }
         updateModel();
     }
