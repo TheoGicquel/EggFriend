@@ -1,9 +1,12 @@
 package com.lado.app.model.tamagotchi;
+/**
+ * @file Tamagotchi.java
+ * @author Théo Gicquel
+ * 
+ */
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 /**
  * Classe Model de Tamagotchi

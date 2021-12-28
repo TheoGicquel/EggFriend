@@ -1,8 +1,11 @@
 package com.lado.app.model.tamagotchi;
+/**
+ * @file HealthTest.java
+ * @author Théo Gicquel
+ * Tests de la vie et de la mort du tamagotchi
+ */
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-
 
 public class HealthTest {
     @Test
@@ -18,15 +21,6 @@ public class HealthTest {
       assertEquals(false, testTamagotchi.isAlive());
     }
     
-    /** 
-    @Test
-    public void testAliveHealth() {
-      Tamagotchi testTamagotchi = new Tamagotchi();
-      testTamagotchi.setHealth(0);
-      assertEquals(0, testTamagotchi.getHealth());
-      assertEquals(false, testTamagotchi.isAlive());
-    }
-    */
     @Test
     public void reviveExpectedFailure()
     {

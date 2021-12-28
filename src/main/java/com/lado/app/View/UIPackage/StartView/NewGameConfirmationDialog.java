@@ -1,5 +1,9 @@
 package com.lado.app.view.uipackage.startview;
-
+/**
+ * @file NewGameNameDialog.java
+ * @author Théo Gicquel
+ * Dialogue de confirmation de nouvelle partie
+ */
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 

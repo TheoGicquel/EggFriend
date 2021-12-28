@@ -1,8 +1,10 @@
 package com.lado.app.model.tamagotchi;
-
+/**
+ * @file TestMood.java
+ * @author Théo Gicquel
+ * @author Emilie Kermorvant
+ */
 import static org.junit.Assert.*;
-
-
 import org.junit.Test;
 
 public class TestMood {

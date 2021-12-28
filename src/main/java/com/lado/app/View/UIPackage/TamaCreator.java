@@ -1,8 +1,14 @@
 package com.lado.app.view.uipackage;
+/**
+ * @file Tamacreator.java
+ * @author Théo Gicquel
+ * Créateur de Tamagotchi via menus
+ */
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
 public class Tamacreator {
 
     
@@ -24,12 +30,10 @@ public class Tamacreator {
                                         JOptionPane.DEFAULT_OPTION,
                                         null,options, null);
 
-        //add combos to JOptionPane
         jop.add(specieChoice);
         jop.add(namefield);
         jop.setBounds(0, 0, 200, 200);
 
-        //create a JDialog and add JOptionPane to it 
         JDialog diag = new JDialog();
         diag.getContentPane().add(jop);
         diag.pack();

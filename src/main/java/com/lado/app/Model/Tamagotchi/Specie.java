@@ -1,5 +1,9 @@
 package com.lado.app.model.tamagotchi;
-
+/**
+ * @file Specie.java
+ * @author Théo Gicquel
+ * Objet représentant l'espèce d'un Tamagotchi ( Chien, Chat, Mouton, etc...)
+ */
 
 import java.io.Serializable;
 import java.util.ArrayList;

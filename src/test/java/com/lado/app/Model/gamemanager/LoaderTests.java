@@ -1,17 +1,16 @@
 package com.lado.app.model.gamemanager;
 /**
  * @file LoaderTests.java
- * @author Theo Gicquel
+ * @author Théo Gicquel
  * Tests du chargment de données de sauvegarde
+ * @deprecated
+ * Cause un écrasement de données de sauvegarde qui peuvent être utilisées par le projet
  */
 /** 
 import static org.junit.Assert.*;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 import org.junit.Test;
 public class LoaderTests {
-
-    /// Ces tests entrent en conflit avec les données sauvegardées localement
-    
 
     @Test
     public void LoaderTestNoSaveData(){

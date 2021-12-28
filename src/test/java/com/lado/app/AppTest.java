@@ -1,5 +1,9 @@
 package com.lado.app;
-
+/**
+ * @file AppTest.java
+ * @author Théo Gicquel
+ * Tests de l'application
+ */
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.junit.Before;

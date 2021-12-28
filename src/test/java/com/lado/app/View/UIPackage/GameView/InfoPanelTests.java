@@ -1,10 +1,14 @@
 package com.lado.app.view.uipackage.gameview;
+/**
+ * @file InfoPanelTests.java
+ * @author Théo Gicquel
+ * Tests du JPanel d'affichage des informations
+ */
 import static org.junit.Assert.*;
-
 import com.lado.app.controller.TamagotchiController;
 import com.lado.app.model.tamagotchi.Tamagotchi;
-
 import org.junit.Test;
+
 public class InfoPanelTests {
     @Test
     public void TestDefaultInfoMoodLabel(){

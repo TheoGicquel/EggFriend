@@ -1,9 +1,13 @@
 package com.lado.app.model.gamemanager;
+/**
+ * @file GameLoader.java
+ * @author Corentin Quiniou
+ * @author Théo Gicquel
+ * Systéme chargement de partie du jeu
+ * @see Serializable
+ */
 import java.io.*;
-
 import com.lado.app.model.tamagotchi.Tamagotchi;
-
-
 
 public class GameLoader {
 

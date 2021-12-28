@@ -1,19 +1,20 @@
 package com.lado.app.controller;
-
-
-
+/**
+ * @file TamagothiControllerTests.java
+ * @author Théo Gicquel
+ * Tests du controlleur affectant le Tamagotchi
+ */
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
 import com.lado.app.model.tamagotchi.Tamagotchi;
-
 import org.junit.Test;
 
 public class TamagotchiControllerTests {
 
     @Test
     public void ControllerEmptyConstructor() {
-        new TamagotchiController();
+        TamagotchiController controller = new TamagotchiController();
+        assertNotNull(controller);
     }
 
     @Test

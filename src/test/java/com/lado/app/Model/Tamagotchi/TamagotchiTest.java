@@ -1,20 +1,13 @@
 package com.lado.app.model.tamagotchi;
-
+/**
+ * @file Tamagotchi.java
+ * @author Theo Gicquel 
+ * Test de la classe Tamagotchi
+ */
 import static org.junit.Assert.*;
-
-
-/** 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import org.junit.After;
-import org.junit.Before;
-**/
 import org.junit.Test;
 
 public class TamagotchiTest {
-
-
-
 
   @Test
   public void testTamagotchiDefConstr() {
@@ -42,34 +35,7 @@ public class TamagotchiTest {
     assertEquals("tamatest", testTamagotchi.getName());
   }
   
-  @Test
-  public void testSetEnergy(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setEnergy(30);
-    assertEquals(30, testTamagotchi.getEnergy());
-  }
-  
-  @Test
-  public void testSetHunger(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setHunger(60);
-    assertEquals(60, testTamagotchi.getHunger());
-  }
-  
-  @Test
-  public void testSetCleanliness(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setCleanliness(40);
-    assertEquals(40, testTamagotchi.getCleanliness());
-  }
-  
-  @Test
-  public void testSetHappiness(){
-    Tamagotchi testTamagotchi = new Tamagotchi();
-    testTamagotchi.setHappiness(50);
-    assertEquals(50,testTamagotchi.getHappiness());
-  }
-  
+
   @Test
   public void testHeal() {
     Tamagotchi testTamagotchi = new Tamagotchi();

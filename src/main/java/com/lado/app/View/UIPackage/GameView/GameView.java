@@ -1,17 +1,19 @@
 package com.lado.app.view.uipackage.gameview;
+/**
+ * @file GameView.java
+ * @author Théo Gicquel
+ * Vue principale du jeu dans lequel 
+ */
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
-
 import com.lado.app.controller.TamagotchiController;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
- 
 public class GameView implements ActionListener{
   
   /**
@@ -129,16 +131,12 @@ public class GameView implements ActionListener{
     for (JButton jButton : dataButtons) {
       jButton.addActionListener(this);
     }
-  
-   
 
-
-
-     healthPanel = new NeedPanel(controller.getHealth(),controller.getHealthNaming(),"icon");
-     hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming(),"icon");
-     energyPanel = new NeedPanel(controller.getEnergy(),controller.getEnergyNaming(),"icon");
-     cleanLinessPanel = new NeedPanel(controller.getCleanliness(),controller.getCleanlinessNaming(),"icon");
-     happinessPanel = new NeedPanel(controller.getHappiness(),controller.getHapinessNaming(),"icon");
+     healthPanel = new NeedPanel(controller.getHealth(),controller.getHealthNaming());
+     hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming());
+     energyPanel = new NeedPanel(controller.getEnergy(),controller.getEnergyNaming());
+     cleanLinessPanel = new NeedPanel(controller.getCleanliness(),controller.getCleanlinessNaming());
+     happinessPanel = new NeedPanel(controller.getHappiness(),controller.getHapinessNaming());
 
      hungerCarePanel = new CarePanel(feedBtn);
      energyCarePanel = new CarePanel(sleepBtn);

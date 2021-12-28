@@ -1,5 +1,10 @@
 package com.lado.app.controller;
-
+/**
+ * @file TamagotchiBasicController.java
+ * @author Théo Gicquel
+ * Contrôleur de de base du Tamagotchi
+ * Définit tous les getters et setters de base
+ */
 import com.lado.app.model.tamagotchi.Tamagotchi;
 
 public class TamagotchiBasicController {

@@ -1,8 +1,11 @@
 package com.lado.app.view.uipackage.gameview;
+/**
+ * @file GameViewTests.java
+ * @author Théo Gicquel
+ * Tests de l'interface graphique principale
+ */
 import static org.junit.Assert.assertNotNull;
-
 import org.junit.Test;
-
 
 public class GameViewTests {
 

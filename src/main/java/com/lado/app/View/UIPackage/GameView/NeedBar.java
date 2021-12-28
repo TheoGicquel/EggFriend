@@ -1,10 +1,17 @@
 package com.lado.app.view.uipackage.gameview;
-
+/**
+ * @file NeedBar.java
+ * @author Théo Gicquel
+ * @author Corentin Quiniou
+ * Description de la barre de besoins
+ * @see GameView
+ */
 import javax.swing.JProgressBar;
-
-
 import java.awt.Color;
-
+/** 
+* JProgressbar avec couleur prédéfinie
+* Utilisé par {@link #GameView}
+*/
 public class NeedBar extends JProgressBar{
     NeedBar(int input)
     {

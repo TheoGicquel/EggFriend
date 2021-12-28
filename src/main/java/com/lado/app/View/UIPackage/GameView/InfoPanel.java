@@ -1,6 +1,6 @@
 /**
  * @file InfoPanel.java
- * @author Theo Gicquel
+ * @author Théo Gicquel
 */
 package com.lado.app.view.uipackage.gameview;
 

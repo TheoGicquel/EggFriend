@@ -1,12 +1,14 @@
 package com.lado.app.controller;
-
-
+/**
+ * @file TamagotchiController.java
+ * @author Théo Gicquel
+ * Contrôleur de l'application
+ * Définit les actions possible entre la vue et le modèle
+ */
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 import com.lado.app.model.gamemanager.GameLoader;
 import com.lado.app.model.gamemanager.GameSaver;
 import com.lado.app.model.tamagotchi.Tamagotchi;

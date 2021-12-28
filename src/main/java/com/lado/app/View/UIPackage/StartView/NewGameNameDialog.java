@@ -1,5 +1,9 @@
 package com.lado.app.view.uipackage.startview;
-
+/**
+ * @file NewGameNameDialog.java
+ * @author Théo Gicquel
+ * Fenêtre de saisie du nom du nouveau joueur
+ */
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 

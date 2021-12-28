@@ -1,6 +1,10 @@
 package com.lado.app.model.tamagotchi;
+/**
+ * @file TestSpeceConstructors.java
+ * @author Théo Gicquel
+ * Tests des fonctions liées a l'espèce du Tamagotchi
+ */
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class TestSpecieConstructors {

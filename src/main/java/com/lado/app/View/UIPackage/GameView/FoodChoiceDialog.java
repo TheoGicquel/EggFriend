@@ -1,7 +1,10 @@
 package com.lado.app.view.uipackage.gameview;
-
+/**
+ * @file FoodChoiceDialog.java
+ * @author Théo Gicquel
+ * Panneau de choix de nourriture du Tamagotchi 
+ */
 import javax.swing.JComboBox;
-
 import javax.swing.JOptionPane;
 
 public class FoodChoiceDialog {

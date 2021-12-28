@@ -1,9 +1,11 @@
 package com.lado.app.model.tamagotchi;
-
+/**
+ * @file NeedTest.java
+ * @author Théo Gicquel
+ * Tests des besoins du Tamagotchi
+ */
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-
 
 public class NeedTest {
 

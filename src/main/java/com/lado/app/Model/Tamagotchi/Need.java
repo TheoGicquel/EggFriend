@@ -1,5 +1,9 @@
 package com.lado.app.model.tamagotchi;
-
+/**
+ * @file Need.java
+ * @author Théo Gicquel
+ * Objet représentant un besoin du Tamagotchi (faim, hygiène, énergie, santé,etc..)
+ */
 import java.io.Serializable;
 
 public class Need implements Serializable{

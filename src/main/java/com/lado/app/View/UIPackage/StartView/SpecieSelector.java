@@ -1,5 +1,9 @@
 package com.lado.app.view.uipackage.startview;
-
+/**
+ * @file specieSelector.java
+ * @author Théo Gicquel
+ * Classe de fenêtre de choix de l'espèce du nouveau Tamagotchi
+ */
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 

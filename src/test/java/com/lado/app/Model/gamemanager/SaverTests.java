@@ -1,9 +1,12 @@
 package com.lado.app.model.gamemanager;
 /**
- * 
+ * @file SaverTests.java
+ * @author Théo Gicquel
+ * Tests du systeme de sauvegarde
  * @deprecated
  * Cause un écrasement de données de sauvegarde qui peuvent être utilisées par le projet
- */ 
+ * 
+ */
 /*
 import static org.junit.Assert.*;
 

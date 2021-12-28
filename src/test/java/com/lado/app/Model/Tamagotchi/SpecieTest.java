@@ -1,14 +1,15 @@
 package com.lado.app.model.tamagotchi;
+/**
+ * @file SpecieTest.java
+ * @author Theo Gicquel
+ * Tests de la l'espece du Tamagotchi
+ */
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Test;
 
 public class SpecieTest {
-
-
 
     @Test
     public void getFavoriteFoods() {
