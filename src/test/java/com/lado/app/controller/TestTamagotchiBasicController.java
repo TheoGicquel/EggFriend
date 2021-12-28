@@ -10,63 +10,65 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.lado.app.controller.TamagotchiBasicController;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 
-public class TamagotchiBasicControllerTests {
+public class TestTamagotchiBasicController {
     private Tamagotchi tama;
     private TamagotchiBasicController controller;
 
     @Before
-    public void TestInit() {
+    public void testInit() {
         tama = new Tamagotchi();
         controller = new TamagotchiBasicController(tama);
     } 
 
     @Test
-    public void TestGetHappiness() {
+    public void testGetHappiness() {
         assertEquals(50, controller.getHappiness());
     }
 
     @Test
-    public void TestGetHunger() {
+    public void testGetHunger() {
         assertEquals(50, controller.getHappiness());
     }
 
     @Test
-    public void TestGetEnergy() {
+    public void testGetEnergy() {
         assertEquals(50, controller.getHappiness());
     }
 
     @Test
-    public void TestGetHealth() {
+    public void testGetHealth() {
         assertEquals(50, controller.getHappiness());
     }
 
     //
 
     @Test
-    public void TestGetHappinessNaming() {
+    public void testGetHappinessNaming() {
         assertEquals("Bonheur", controller.getHappinessNaming());
     }
 
     @Test
-    public void TestGetHungerNaming() {
+    public void testGetHungerNaming() {
         assertEquals("Faim", controller.getHungerNaming());
     }
 
     @Test
-    public void TestGetEnergyNaming() {
+    public void testGetEnergyNaming() {
         assertEquals("Energie", controller.getEnergyNaming());
     }
 
     @Test
-    public void TestGetHealthNaming() {
+    public void testGetHealthNaming() {
         assertEquals("Vie", controller.getHealthNaming());
     }
 
 
     @Test
-    public void TestIsTamagotchiAlive() {
+    public void testIsTamagotchiAlive() {
         assertEquals(true, controller.isTamagotchiAlive());
     }
 

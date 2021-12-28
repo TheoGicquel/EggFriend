@@ -9,7 +9,7 @@ import static org.junit.Assert.assertNotNull;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 import org.junit.Test;
 
-public class TamagotchiControllerTests {
+public class TestTamagotchiController {
 
     @Test
     public void ControllerEmptyConstructor() {

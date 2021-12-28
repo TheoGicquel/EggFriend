@@ -9,7 +9,7 @@ import com.lado.app.controller.TamagotchiController;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 import org.junit.Test;
 
-public class InfoPanelTests {
+public class TestInfoPanel {
     @Test
     public void TestDefaultInfoMoodLabel(){
       TamagotchiController controller = new TamagotchiController();

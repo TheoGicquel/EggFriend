@@ -7,7 +7,7 @@ package com.lado.app.view.uipackage.gameview;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
-public class GameViewTests {
+public class TestGameview {
 
     @Test
     public void viewEmptyConstructor() {

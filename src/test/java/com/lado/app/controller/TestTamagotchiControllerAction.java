@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 
-public class TamagotchiControllerActionTests {
+public class TestTamagotchiControllerAction {
         
 
     @Test
