@@ -7,7 +7,7 @@ package com.lado.app.model.tamagotchi;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class TamagotchiSettersTest {
+public class TestTamagotchiSetters {
     @Test
     public void testSetEnergy(){
       Tamagotchi testTamagotchi = new Tamagotchi();

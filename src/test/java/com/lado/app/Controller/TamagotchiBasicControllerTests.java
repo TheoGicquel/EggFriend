@@ -17,7 +17,7 @@ public class TamagotchiBasicControllerTests {
     private TamagotchiBasicController controller;
 
     @Before
-    public void init() {
+    public void TestInit() {
         tama = new Tamagotchi();
         controller = new TamagotchiBasicController(tama);
     } 

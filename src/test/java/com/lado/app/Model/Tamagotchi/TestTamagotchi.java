@@ -7,7 +7,7 @@ package com.lado.app.model.tamagotchi;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class TamagotchiTest {
+public class TestTamagotchi {
 
   @Test
   public void testTamagotchiDefConstr() {

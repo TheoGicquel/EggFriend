@@ -40,7 +40,7 @@ public class TamagotchiControllerActionTests {
         TamagotchiController controller = new TamagotchiController(tama);
         assertEquals(true, controller.isTamagotchiAlive());
         controller.playAction();
-        assertEquals(100, controller.getEnergy());
-        assertEquals(55, controller.getHappiness());
+        assertEquals(30, controller.getEnergy());
+        assertEquals(90, controller.getHappiness());
     }
 }

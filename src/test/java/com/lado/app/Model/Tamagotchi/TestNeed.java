@@ -7,13 +7,13 @@ package com.lado.app.model.tamagotchi;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class NeedTest {
+public class TestNeed {
 
    
 
 
     @Test
-    public void needDefaultConstructor()
+    public void testneedDefaultConstructor()
     {
         Need testNeed = new Need();
         assertEquals(100,testNeed.getVal());
@@ -23,7 +23,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needFullConstructor(){
+    public void testneedFullConstructor(){
         Need testNeed = new Need("Boire","soif",32, 0.2f);
         assertEquals(32,testNeed.getVal());
         assertEquals("Boire",testNeed.getName());
@@ -31,13 +31,13 @@ public class NeedTest {
     }
 
     @Test
-    public void needGetName(){
+    public void testneedGetName(){
         Need testnNeed = new Need("Boire","soif",32, 0.2f);
         assertEquals("Boire", testnNeed.getName());
     }
 
     @Test
-    public void needSetValNormal()
+    public void testneedSetValNormal()
     {
         Need testnNeed = new Need("Boire","soif",32, 0.2f);
         testnNeed.setVal(55);
@@ -45,7 +45,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needSetValUnderflowAttempt()
+    public void testneedSetValUnderflowAttempt()
     {
         Need testnNeed = new Need("Boire","soif",32, 0.2f);
         testnNeed.setVal(-25);
@@ -53,7 +53,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needSetValOverflowAttempt()
+    public void testneedSetValOverflowAttempt()
     {
         Need testnNeed = new Need("Boire","soif",32, 0.2f);
         testnNeed.setVal(125);
@@ -62,14 +62,14 @@ public class NeedTest {
     }
 
     @Test
-    public void needGetCritical()
+    public void testneedGetCritical()
     {
         Need testNeed = new Need("Boire","soif",32, 0.2f);
         assertEquals(false, testNeed.isCritical());
     }
 
     @Test
-    public void needSetCritical()
+    public void testneedSetCritical()
     {
         Need testNeed = new Need("Boire","soif",32, 0.2f);
         testNeed.setCritical(true);
@@ -81,7 +81,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needSetName()
+    public void testneedSetName()
     {
         Need testNeed = new Need("Boire","soif",32, 0.2f);
         testNeed.setName("Aglouglou");
@@ -89,7 +89,7 @@ public class NeedTest {
     }
 
     @Test
-    public void getFactorByDefaultConstructor()
+    public void testgetFactorByDefaultConstructor()
     {
         Need testneed = new Need();
         assertEquals(0.01f, testneed.getFactor(),0.01f);
@@ -97,14 +97,14 @@ public class NeedTest {
 
 
     @Test
-    public void getFactorByConstructor()
+    public void testgetFactorByConstructor()
     {
         Need testNeed = new Need("Boire","soif",32, 0.1337f);
         assertEquals(0.1337f, testNeed.getFactor(),0.0001f);
     }
 
     @Test
-    public void setFactor()
+    public void testsetFactor()
     {
         Need testNeed = new Need();
         testNeed.setFactor(0.404f);
@@ -112,7 +112,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needCalcDepletion()
+    public void testneedCalcDepletion()
     {
         Need testNeed = new Need("Boire","soif",50, 0.05f);
         testNeed.calcDepletion(60);
@@ -120,7 +120,7 @@ public class NeedTest {
     }
 
     @Test
-    public void needCalcDepletionTwoMinutes()
+    public void testneedCalcDepletionTwoMinutes()
     {
         Need testNeed = new Need("Boire","soif",50, 0.05f);
         testNeed.calcDepletion(120);
