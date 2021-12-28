@@ -15,10 +15,7 @@ public class TamagotchiBasicController {
         this.model = newModel;
     }
 
-    /// Getters et setters appliqués au Tamagotchi
-    public int getHapiness() {
-        return model.getHappiness();
-    }
+    /// Getters  appliqués au Tamagotchi
 
     public int getHunger() {
         return model.getHunger();
@@ -30,6 +27,14 @@ public class TamagotchiBasicController {
 
     public int getHealth() {
         return model.getHealth();
+    }
+
+    public int getCleanliness() {
+        return model.getCleanliness();
+    }
+
+    public int getHappiness() {
+        return model.getHappiness();
     }
 
     public String getHealthNaming() {
@@ -44,16 +49,8 @@ public class TamagotchiBasicController {
         return model.getEnergyName();
     }
 
-    public String getHapinessNaming() {
+    public String getHappinessNaming() {
         return model.getHappinessName();
-    }
-
-    public int getCleanliness() {
-        return model.getCleanliness();
-    }
-
-    public int getHappiness() {
-        return model.getHappiness();
     }
 
     public String getCleanlinessNaming() {

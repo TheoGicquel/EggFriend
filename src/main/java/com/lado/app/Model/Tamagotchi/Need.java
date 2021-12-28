@@ -57,7 +57,6 @@ public class Need implements Serializable{
    */
   void calcDepletion(int secondsElapsed) {
     int output = this.getVal() - (int)(secondsElapsed * this.factor);
-    //System.out.println("New Value of need " + this.name + " is " + output);
     this.setVal(output);
   }
 

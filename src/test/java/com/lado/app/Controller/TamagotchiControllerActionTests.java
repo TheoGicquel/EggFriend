@@ -19,7 +19,7 @@ public class TamagotchiControllerActionTests {
         assertEquals(true, controller.isTamagotchiAlive());
         controller.cleanAction();
         assertEquals(90, controller.getCleanliness());
-        assertEquals(45, controller.getHapiness());
+        assertEquals(45, controller.getHappiness());
     }
 
 
@@ -29,7 +29,7 @@ public class TamagotchiControllerActionTests {
         TamagotchiController controller = new TamagotchiController(tama);
         assertEquals(true, controller.isTamagotchiAlive());
         controller.playAction();
-        assertEquals(90, controller.getHapiness());
+        assertEquals(90, controller.getHappiness());
         assertEquals(40, controller.getHunger());
     }
     
@@ -41,6 +41,6 @@ public class TamagotchiControllerActionTests {
         assertEquals(true, controller.isTamagotchiAlive());
         controller.playAction();
         assertEquals(100, controller.getEnergy());
-        assertEquals(55, controller.getHapiness());
+        assertEquals(55, controller.getHappiness());
     }
 }

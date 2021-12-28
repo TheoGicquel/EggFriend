@@ -110,16 +110,7 @@ public class TamagotchiController extends TamagotchiBasicController {
         this.model.update();
     }
 
-    public void degrade() {
-        model.setHunger(model.getHunger()-10);
-        model.setEnergy(model.getEnergy()-10);
-        model.setHealth(model.getHealth()-10);
-        model.setCleanliness(model.getCleanliness()-10);
-        model.setHappiness(model.getHappiness()-10);
 
-        updateModel();
-
-    }
 
     public void refreshAction() {
         updateModel();

@@ -31,7 +31,6 @@ public class GameView implements ActionListener{
   private TamagotchiController controller;
   private JButton quitBtn;
   private JButton refreshBtn;
-  private JButton degradeBtn;
   JButton feedBtn;
   JButton playBtn;
   JButton sleepBtn;
@@ -107,7 +106,7 @@ public class GameView implements ActionListener{
 
      hungerBar = new NeedBar(controller.getHunger());
      healthBar = new NeedBar(controller.getHealth());
-     happinessBar = new NeedBar(controller.getHapiness());
+     happinessBar = new NeedBar(controller.getHappiness());
      energyBar = new NeedBar(controller.getEnergy());
 
       feedBtn = new JButton("Nourrir");
@@ -117,12 +116,11 @@ public class GameView implements ActionListener{
 
     quitBtn = new JButton("Quitter");
     refreshBtn = new JButton("Rafraichir");
-    degradeBtn = new JButton("[DEBUG]");
 
 
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
-    JButton[] dataButtons = {quitBtn,refreshBtn,degradeBtn};
+    JButton[] dataButtons = {quitBtn,refreshBtn};
 
     for (JButton jButton : careButtons) {
       jButton.addActionListener(this);
@@ -136,7 +134,7 @@ public class GameView implements ActionListener{
      hungerPanel = new NeedPanel(controller.getHunger(),controller.getHungerNaming());
      energyPanel = new NeedPanel(controller.getEnergy(),controller.getEnergyNaming());
      cleanLinessPanel = new NeedPanel(controller.getCleanliness(),controller.getCleanlinessNaming());
-     happinessPanel = new NeedPanel(controller.getHappiness(),controller.getHapinessNaming());
+     happinessPanel = new NeedPanel(controller.getHappiness(),controller.getHappinessNaming());
 
      hungerCarePanel = new CarePanel(feedBtn);
      energyCarePanel = new CarePanel(sleepBtn);
@@ -170,7 +168,6 @@ public class GameView implements ActionListener{
 
     infoPanel.setLayout(new BoxLayout(infoPanel,BoxLayout.PAGE_AXIS));
     infoPanel.add(quitBtn);
-    infoPanel.add(degradeBtn);
 
 
 
@@ -249,10 +246,7 @@ public class GameView implements ActionListener{
       controller.saveGameAction();
     }
 
-    if(e.getSource()==degradeBtn)
-    {
-      controller.degrade();
-    }
+
 
     if(e.getSource()==refreshBtn)
     {
