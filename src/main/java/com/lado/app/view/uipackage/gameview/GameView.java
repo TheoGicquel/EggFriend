@@ -30,7 +30,6 @@ public class GameView implements ActionListener{
 
   private TamagotchiController controller;
   private JButton quitBtn;
-  private JButton refreshBtn;
   JButton feedBtn;
   JButton playBtn;
   JButton sleepBtn;
@@ -115,12 +114,11 @@ public class GameView implements ActionListener{
     cleanBtn = new JButton("Laver");
 
     quitBtn = new JButton("Quitter");
-    refreshBtn = new JButton("Rafraichir");
 
 
     JButton[] careButtons = {feedBtn, playBtn, sleepBtn, cleanBtn};
 
-    JButton[] dataButtons = {quitBtn,refreshBtn};
+    JButton[] dataButtons = {quitBtn};
 
     for (JButton jButton : careButtons) {
       jButton.addActionListener(this);
@@ -244,14 +242,6 @@ public class GameView implements ActionListener{
     if(e.getSource()==quitBtn)
     {
       controller.saveGameAction();
-    }
-
-
-
-    if(e.getSource()==refreshBtn)
-    {
-      
-      controller.refreshAction();
     }
 
     if(e.getSource()==feedBtn)

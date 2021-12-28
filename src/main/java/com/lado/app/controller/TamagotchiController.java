@@ -111,12 +111,6 @@ public class TamagotchiController extends TamagotchiBasicController {
     }
 
 
-
-    public void refreshAction() {
-        updateModel();
-
-    }
-
     /**
      * On nourrit le tamagotchi
      * Augmente la satisfaction de faim
