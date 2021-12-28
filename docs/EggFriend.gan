@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-11-16" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-12-12" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
     <description>
         <![CDATA[Déroulement de projet de développement de l'application EggFriend]]>
     </description>
-    <view zooming-state="default:1" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="268" order="0"/>
-        <field id="tpd4" name="Date de début" width="143" order="1"/>
-        <field id="tpd5" name="Date de fin" width="142" order="2"/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="411" order="0"/>
+        <field id="tpd4" name="Date de début" width="72" order="1"/>
+        <field id="tpd5" name="Date de fin" width="70" order="2"/>
         <option id="color.recent">
             <![CDATA[#ffffff #ffcc66 #33ff33 #ff6666 #ffff99 #ffff66 #f4f4f4 #000000 #ff9933 #6666ff]]>
         </option>
@@ -38,7 +38,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="51" name="Analyse des besoins" color="#000000" meeting="false" start="2021-09-08" duration="36" complete="0" thirdDate="2021-09-08" thirdDate-constraint="1" expand="false">
+        <task id="51" name="Analyse des besoins" color="#000000" meeting="false" start="2021-09-08" duration="36" complete="0" thirdDate="2021-09-08" thirdDate-constraint="1" expand="true">
             <depend id="88" type="2" difference="0" hardness="Strong"/>
             <task id="20" name="Premier Dépôt - Spécifications" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2021-09-10" duration="34" complete="0" thirdDate="2021-09-08" thirdDate-constraint="1" priority="2" expand="true">
                 <depend id="41" type="2" difference="0" hardness="Strong"/>
@@ -61,7 +61,7 @@
                 <depend id="15" type="3" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="52" name="Application des corrections" color="#000000" meeting="false" start="2021-11-17" duration="15" complete="0" thirdDate="2021-11-17" thirdDate-constraint="1" expand="false">
+        <task id="52" name="Application des corrections" color="#000000" meeting="false" start="2021-11-17" duration="15" complete="0" thirdDate="2021-11-17" thirdDate-constraint="1" expand="true">
             <depend id="41" type="2" difference="0" hardness="Strong"/>
             <task id="86" name="Obtention des correction a apporter" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2021-11-17" duration="1" complete="0" thirdDate="2021-11-17" thirdDate-constraint="1" expand="true">
                 <depend id="17" type="2" difference="0" hardness="Strong"/>
@@ -85,7 +85,7 @@
                 <depend id="41" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="366" name="Conception Détailée" meeting="false" start="2021-12-02" duration="1" complete="0" expand="false">
+        <task id="366" name="Conception Détailée" meeting="false" start="2021-12-02" duration="1" complete="0" expand="true">
             <task id="41" name="Deuxième Dépôt - Premier livrable" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2021-12-02" duration="1" complete="0" thirdDate="2021-08-23" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -144,8 +144,8 @@
                 </task>
             </task>
         </task>
-        <task id="402" name="Codage/Réalisation" color="#000000" meeting="false" start="2021-12-29" duration="17" complete="0" thirdDate="2021-11-22" thirdDate-constraint="0" expand="true">
-            <task id="42" name="Dépôt final - Deuxieme livrable" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-01-03" duration="12" complete="0" thirdDate="2022-01-04" thirdDate-constraint="0" expand="true"/>
+        <task id="402" name="Codage/Réalisation" color="#000000" meeting="false" start="2021-12-29" duration="7" complete="0" thirdDate="2021-11-22" thirdDate-constraint="0" expand="true">
+            <task id="42" name="Dépôt final - Deuxieme livrable" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-01-03" duration="2" complete="0" thirdDate="2022-01-04" thirdDate-constraint="0" expand="true"/>
             <task id="429" name="Finalisation Diagramme de classes" color="#ffcc66" meeting="false" start="2021-12-29" duration="1" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -193,16 +193,21 @@
         <allocation task-id="98" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="429" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="1185" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="0" function="Default:1" responsible="false" load="10.0"/>
+        <allocation task-id="324" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="308" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="15" resource-id="1" function="3" responsible="true" load="100.0"/>
         <allocation task-id="24" resource-id="1" function="3" responsible="true" load="100.0"/>
         <allocation task-id="25" resource-id="1" function="3" responsible="true" load="100.0"/>
         <allocation task-id="305" resource-id="1" function="3" responsible="false" load="2.0"/>
         <allocation task-id="1177" resource-id="1" function="3" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="1" function="3" responsible="true" load="80.0"/>
         <allocation task-id="15" resource-id="2" function="3" responsible="false" load="40.0"/>
         <allocation task-id="32" resource-id="2" function="3" responsible="true" load="100.0"/>
         <allocation task-id="590" resource-id="2" function="3" responsible="false" load="100.0"/>
         <allocation task-id="1137" resource-id="2" function="3" responsible="true" load="100.0"/>
         <allocation task-id="348" resource-id="2" function="3" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="2" function="3" responsible="false" load="10.0"/>
         <allocation task-id="15" resource-id="3" function="1" responsible="false" load="30.0"/>
         <allocation task-id="381" resource-id="3" function="1" responsible="true" load="100.0"/>
         <allocation task-id="1138" resource-id="3" function="1" responsible="true" load="100.0"/>

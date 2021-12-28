@@ -125,32 +125,6 @@
 			</execution>
 		</executions>
 	</plugin>
-<!-- Generer des diagrammes Plantuml-->
-<plugin>
-    <groupId>com.iluwatar.urm</groupId>
-    <artifactId>urm-maven-plugin</artifactId>
-    <version>1.4.8</version>
-    <configuration>
-        <outputDirectory>${project.basedir}/target/uml</outputDirectory>
-        <packages>
-            <param>com.lado.app</param>
-        </packages>
-        <ignores>
-        </ignores>
-        <includeMainDirectory>true</includeMainDirectory>
-        <includeTestDirectory>false</includeTestDirectory>
-        <presenter>plantuml</presenter>
-    </configuration>
-    <executions>
-        <execution>
-          <?m2e execute onConfiguration,onIncremental?>
-            <phase>process-classes</phase>
-            <goals>
-                <goal>map</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
 
     </plugins>
   </build>
