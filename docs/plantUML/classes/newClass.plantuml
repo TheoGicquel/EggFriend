@@ -1,0 +1,282 @@
+@startuml class_diagram
+package com.lado.app {
+  class App {
+    + App()
+    + main(args : String[]) {static}
+  }
+  note left: Point d'entrée de l'éxécutable
+
+
+package controller  #7ad7ff {
+  class TamagotchiBasicController {
+    ~ model : Tamagotchi
+    + TamagotchiBasicController(newModel : Tamagotchi)
+    + getCleanliness() : int
+    + getCleanlinessNaming() : String
+    + getEnerggNaming() : String
+    + getEnergy() : int
+    + getEnergyNaming() : String
+    + getHappiness() : int
+    + getHappinessNaming() : String
+    + getHealth() : int
+    + getHealthNaming() : String
+    + getHunger() : int
+    + getHungerNaming() : String
+    + getMood() : String
+    + getName() : String
+    + getSpecie() : String
+    + getSpecieName() : String
+    + isTamagotchiAlive() : boolean
+  }
+  class TamagotchiController {
+    - loader : GameLoader
+    - saver : GameSaver
+    + TamagotchiController()
+    + TamagotchiController(model : Tamagotchi)
+    + cleanAction()
+    + feedAction()
+    + initializeNewGame(tamaName : String, tamaSpecie : String)
+    + loadGame(frame : JFrame)
+    + needTimerInit()
+    + newGame(frame : JFrame)
+    + playAction()
+    + saveGameAction()
+    + sleepAction()
+    + updateModel()
+  }
+  -class RunnableImplementation {
+    - RunnableImplementation()
+    + run()
+  }
+}
+package view.uipackage #b2ff91{
+note "Fait appel au controlleur parent" as NOTE_CONTROLLER
+
+
+
+package startview  #96ff69{
+  class NewGameConfirmationDialog {
+    + NewGameConfirmationDialog()
+    + get(frame : JFrame) : boolean
+  }
+  
+  NewGameConfirmationDialog - NOTE_CONTROLLER
+  class NewGameNameDialog {
+    + NewGameNameDialog()
+    + get(frame : JFrame) : String
+  }
+  NewGameNameDialog - NOTE_CONTROLLER
+  class SpecieSelector {
+    ~ combo : JComboBox<String>
+    - isFormValid : boolean
+    ~ options : String[]
+    ~ result : String
+    ~ specieList : String[]
+    + SpecieSelector()
+    + specieSelect() : String
+  }
+  SpecieSelector - NOTE_CONTROLLER
+  class StartView {
+    ~ controller : TamagotchiController
+    - frame : JFrame
+    ~ iconUrl : URL
+    ~ loadGameButton : JButton
+    ~ newGameButton : JButton
+    ~ titleImageUrl : URL
+    + StartView(controller : TamagotchiController)
+    + actionPerformed(e : ActionEvent)
+  }
+  StartView -up- App
+}
+package gameview  #96ff69{
+  class FoodChoiceDialog {
+    ~ combo : JComboBox<String>
+    ~ foodlist : String[]
+    - isFormValid : boolean
+    ~ options : String[]
+    ~ result : String
+    + FoodChoiceDialog()
+    + foodSelect() : String
+  }
+  FoodChoiceDialog -- NOTE_CONTROLLER
+  class GameView {
+    ~ cleanBtn : JButton
+    ~ cleanLinessPanel : NeedPanel
+    ~ cleanlinessCarePanel : CarePanel
+    - controller : TamagotchiController
+    ~ energyBar : NeedBar
+    ~ energyCarePanel : CarePanel
+    ~ energyPanel : NeedPanel
+    ~ feedBtn : JButton
+    ~ firsttime : long
+    ~ frame : JFrame
+    ~ happinessBar : NeedBar
+    ~ happinessCarePanel : CarePanel
+    ~ happinessPanel : NeedPanel
+    ~ healthBar : NeedBar
+    ~ healthPanel : NeedPanel
+    ~ hungerBar : NeedBar
+    ~ hungerCarePanel : CarePanel
+    ~ hungerPanel : NeedPanel
+    ~ imageLogoUrl : URL
+    ~ infoPanel : InfoPanel
+    ~ needAndCarePanel : JPanel
+    ~ needsUI : JPanel
+    ~ playBtn : JButton
+    - quitBtn : JButton
+    ~ sleepBtn : JButton
+    ~ testbar : JProgressBar
+    ~ ui : JPanel
+    + GameView()
+    + GameView(controller : TamagotchiController)
+    + actionPerformed(e : ActionEvent)
+    + initTimer()
+    + updateData()
+    + updateImage()
+    + updateNeedBars()
+  }
+  -class RunnableImplementation {
+    - RunnableImplementation()
+    + run()
+  }
+}
+
+}
+package model #f2a5a2
+{
+package tamagotchi #edc4c2 {
+  class Need <<Serializable>>{
+    - CRITICAL_THRESHOLD : int {static}
+    - critical : boolean
+    - descriptor : String
+    - factor : float
+    - name : String
+    - value : int
+    ~ Need()
+    ~ Need(name : String, descriptor : String, value : int, factor : Float)
+    ~ calcDepletion(secondsElapsed : int)
+    + getDescriptor() : String
+    ~ getFactor() : Float
+    + getName() : String
+    + getVal() : int
+    ~ isBelowCritical() : boolean
+    ~ isCritical() : boolean
+    ~ setCritical(critical : boolean)
+    + setFactor(factor : Float)
+    + setName(name : String)
+    ~ setVal(value : int) : int
+  }
+  class Specie  <<Serializable>> {
+    - favoriteFoods : List<String>
+    - name : String
+    - text : String
+    + Specie(choice : String)
+    + addFood(newFood : String)
+    + getFavoriteFood(index : int) : String
+    + getFavoriteFoods() : List<String>
+    + getName() : String
+    + getText() : String
+    ~ initialize(choice : String)
+    + setFavoriteFoods(newFoods : List<String>)
+    + setName(newName : String)
+    + setText(newText : String)
+  }
+  class Tamagotchi  <<Serializable>>{
+    + LOW_NEED_THRESH : int {static}
+    - alive : boolean
+    - cleanliness : Need
+    - energy : Need
+    - favoriteFoods : String[]
+    - happiness : Need
+    - health : Need
+    - hunger : Need
+    - lastModifiedTime : long
+    - mood : String
+    - name : String
+    ~ needs : Need[]
+    - needsList : List<Need>
+    - specie : Specie
+    + Tamagotchi()
+    + checkHealth()
+    + depleteNeeds(timeElapsed : long)
+    + evalHealth()
+    + evalMood()
+    + getCleanliness() : int
+    + getCleanlinessName() : String
+    + getEnergy() : int
+    + getEnergyName() : String
+    + getFavoriteFood(index : int) : String
+    + getFavoriteFoods() : String[]
+    + getFood(index : int) : String
+    + getFoods() : List<String>
+    + getHappiness() : int
+    + getHappinessName() : String
+    + getHealth() : int
+    + getHealthName() : String
+    + getHunger() : int
+    + getHungerName() : String
+    + getModifiedTime() : long
+    + getMood() : String
+    + getName() : String
+    + getNeedArray() : Need[]
+    + getSpecie() : String
+    + getSpecieText() : String
+    + heal(healValue : int)
+    + hurt(damage : int)
+    + isAlive() : boolean
+    + kill()
+    + setAlive(alive : boolean)
+    + setCleanliness(clean : int)
+    + setDefaultStats()
+    + setEnergy(energy : int)
+    + setHappiness(newHapinnes : int)
+    + setHealth(newHealth : int)
+    + setHunger(hunger : int)
+    + setModifiedTime(time : long)
+    + setMood(mood : String)
+    + setName(newName : String)
+    + setSpecie(newSpecie : String)
+    + update()
+    + updateTime()
+  }
+}
+package gamemanager #edc4c2{
+  class GameLoader {
+    - tamaload : Tamagotchi
+    + GameLoader()
+    + loadTamagotchi() : Tamagotchi
+    + loadingSuccess() : boolean
+  }
+  class GameSaver {
+    ~ savetama : Tamagotchi
+    + GameSaver()
+    + save(tama : Tamagotchi) : int
+  }
+package sauvegarde <<Database>> {
+
+}
+sauvegarde .. GameLoader
+sauvegarde .. GameSaver
+            note right of sauvegarde : Fichier de sauvegarde stocké sur le disque
+
+}
+}
+}
+GameLoader -->  "-tamaload" Tamagotchi
+GameSaver -->  "-savetama" Tamagotchi
+TamagotchiController -->  "-loader" GameLoader
+Tamagotchi -right->  "-specie" Specie
+TamagotchiBasicController -->  "-model" Tamagotchi
+StartView -->  "-controller" NOTE_CONTROLLER
+RunnableImplementation --+ GameView
+RunnableImplementation -down-+ TamagotchiController
+TamagotchiController -->  "-saver" GameSaver
+GameView -->  "-controller" NOTE_CONTROLLER
+Tamagotchi -->  "-hunger" Need
+Tamagotchi -->  "-health" Need
+Tamagotchi -right->  "-happiness" Need
+TamagotchiController --|> TamagotchiBasicController 
+NOTE_CONTROLLER .. TamagotchiController
+
+
+@enduml
