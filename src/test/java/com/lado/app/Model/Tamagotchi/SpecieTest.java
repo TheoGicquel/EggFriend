@@ -1,7 +1,7 @@
 package com.lado.app.model.tamagotchi;
 /**
  * @file SpecieTest.java
- * @author Theo Gicquel
+ * @author Théo Gicquel
  * Tests de la l'espece du Tamagotchi
  */
 import static org.junit.Assert.*;
