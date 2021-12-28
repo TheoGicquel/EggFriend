@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-12-12" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-09-07" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
     <description>
         <![CDATA[Déroulement de projet de développement de l'application EggFriend]]>
     </description>
@@ -7,7 +7,7 @@
         <field id="tpd4" name="Date de début" width="72" order="1"/>
         <field id="tpd5" name="Date de fin" width="70" order="2"/>
         <option id="color.recent">
-            <![CDATA[#ffffff #ffcc66 #33ff33 #ff6666 #ffff99 #ffff66 #f4f4f4 #000000 #ff9933 #6666ff]]>
+            <![CDATA[#ff66ff #ffffff #ffcc66 #33ff33 #ff6666 #ffff99 #ffff66 #f4f4f4 #000000 #ff9933]]>
         </option>
     </view>
     <view id="resource-table">
@@ -44,7 +44,7 @@
                 <depend id="41" type="2" difference="0" hardness="Strong"/>
                 <depend id="52" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="15" name="Etablissement Cahier des charges" color="#8cb6ce" meeting="false" start="2021-09-08" duration="36" complete="0" thirdDate="2021-09-08" thirdDate-constraint="1" expand="true">
+            <task id="15" name="Etablissement Cahier des charges" color="#ff66ff" meeting="false" start="2021-09-08" duration="36" complete="0" thirdDate="2021-09-08" thirdDate-constraint="1" expand="true">
                 <depend id="20" type="3" difference="0" hardness="Strong"/>
                 <depend id="25" type="3" difference="0" hardness="Strong"/>
             </task>
