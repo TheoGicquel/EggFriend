@@ -20,15 +20,12 @@ public class GameSaver {
     public int save(Tamagotchi tama)
     {
         savetama = tama;
-        
-        try {
-            FileOutputStream fileOut =
-            new FileOutputStream("tamagotchisaving.ser");
+        /// la structure du try catch ferme automatiquement les flux utilisés
+        try(
+            FileOutputStream fileOut = new FileOutputStream("tamagotchisavedata.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
+        ){
             out.writeObject(savetama);
-            out.close();
-            fileOut.close();
-            //System.out.printf("game Saved");
             return 0;
         } catch (IOException i) {
             i.printStackTrace();

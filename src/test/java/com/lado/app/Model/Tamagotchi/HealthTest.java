@@ -44,5 +44,15 @@ public class HealthTest {
       testTamagotchi.setHealth(20);
       assertEquals(20, testTamagotchi.getHealth());
     }
+
+
+    @Test
+    public void killTest(){
+      Tamagotchi tama = new Tamagotchi();
+      tama.kill();
+      assertEquals(false,tama.isAlive());
+      assertEquals("Mort",tama.getMood());
+
+    }
   
 }

@@ -59,19 +59,6 @@ public class InfoPanel extends JPanel{
         this.add(moodLabel);
     }
 
-    public void setDeadImage()
-    {
-        String deadImagePath = "images/" + controller.getSpecie() + "_dead.png";
-        
-        tamagotchiDeadUrl = getClass().getClassLoader().getResource(deadImagePath);
-        if(tamagotchiDeadUrl != null)
-        {
-            this.image = new JLabel( new ImageIcon(tamagotchiDeadUrl) );
-            this.revalidate();
-        }
-
-    }
-
     public void updateMoodLabel()
     {
         if(controller.isTamagotchiAlive()){
@@ -79,7 +66,7 @@ public class InfoPanel extends JPanel{
         }
         else
         {
-            moodLabel.setText(LABEL_PRETEXT + " Mort ☠️");
+            moodLabel.setText(LABEL_PRETEXT + " Mort");
         }
     }
 }

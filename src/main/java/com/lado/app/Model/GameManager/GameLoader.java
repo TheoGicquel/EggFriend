@@ -11,9 +11,9 @@ public class GameLoader {
 
     public boolean loadingSuccess()
     {
-        
+        /// la structure du try catch ferme automatiquement les flux utilisés
         try(
-            FileInputStream fileIn = new FileInputStream("tamagotchisaving.ser");
+            FileInputStream fileIn = new FileInputStream("tamagotchisavedata.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
         ){
             tamaload = (Tamagotchi) in.readObject();

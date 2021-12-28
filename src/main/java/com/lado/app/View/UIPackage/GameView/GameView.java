@@ -232,7 +232,6 @@ public class GameView implements ActionListener{
   {
     if(!controller.isTamagotchiAlive())
     {
-      infoPanel.setDeadImage();
       infoPanel.revalidate();
       infoPanel.repaint();
       frame.revalidate();

@@ -1,9 +1,7 @@
 package com.lado.app.controller;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
-import javax.swing.JFrame;
 
 import com.lado.app.model.tamagotchi.Tamagotchi;
 
