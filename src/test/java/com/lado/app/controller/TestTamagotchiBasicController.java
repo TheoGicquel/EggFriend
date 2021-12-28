@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.lado.app.controller.TamagotchiBasicController;
 import com.lado.app.model.tamagotchi.Tamagotchi;
 
 public class TestTamagotchiBasicController {
