@@ -1,5 +1,6 @@
 [![Maven CI](https://github.com/TheoGicquel/Tamagotchi-Simulation/actions/workflows/maven.yml/badge.svg)](https://github.com/TheoGicquel/Tamagotchi-Simulation/actions/workflows/maven.yml)
-
+![](https://img.shields.io/badge/Coverage-41%25-83A603.svg?prefix=$coverage$)
+![](https://img.shields.io/badge/successful%20tests-78-83A603.svg?prefix=$coverage$)
 # Tamagotchi-Simulation
 
 Projet de groupe de réalisation d'un [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) sous Java
