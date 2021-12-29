@@ -282,9 +282,7 @@ public class Tamagotchi implements Serializable{
   }
 
   public void setEnergy(int energy){
-    if (this.energy.getVal() != 0) {
       this.energy.setVal(energy);
-    }
   }
   
    // ---------------- FAIM -------------
