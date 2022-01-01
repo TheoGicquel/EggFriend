@@ -13,17 +13,11 @@ alt Playing with the tamagotchi
 
     Utilisateur -> GameManager : play game
     
-    deactivate Utilisateur
-
     activate GameManager
 
-    GameManager -> GameTimer : Time Management
-
-    GameTimer -> GameManager : Real Time
-
-    activate Utilisateur
-
     Utilisateur -> GameManager : Save and Quit
+
+    deactivate Utilisateur
 
     GameManager -> GameSaver : Save Game
 

@@ -1,0 +1,46 @@
+	
+@startuml game manager
+/' Guide : https://plantuml.com/en/sequence-diagram '/
+
+/'Connection au jeu et reccupération'/
+    Actor Utilisateur
+
+
+alt Playing with the tamagotchi
+
+    activate Utilisateur
+
+
+    Utilisateur -> GameManager : play game
+    
+    activate GameManager
+
+    Utilisateur -> GameManager : Save and Quit
+
+    deactivate Utilisateur
+
+    GameManager -> GameSaver : Save Game
+
+    GameManager -> Utilisateur : Game closed
+
+    deactivate Utilisateur
+
+else Leave the tamagotchi behind
+
+
+
+    GameManager -> Utilisateur : Dying Tamagotchi
+
+    GameManager -> GameSaver : Tamagotchi dead, Save deleted
+
+    GameManager -> Utilisateur : Game Closed
+end
+
+    deactivate GameManager
+
+
+
+    
+
+
+@enduml

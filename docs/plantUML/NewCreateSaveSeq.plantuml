@@ -1,0 +1,59 @@
+	
+@startuml game manager
+/' Guide : https://plantuml.com/en/sequence-diagram '/
+
+/'Connection au jeu et reccupération'/
+    Actor Utilisateur
+
+
+    activate Utilisateur
+
+    Utilisateur -> StartView : newGameButton
+
+    activate StartView
+
+    StartView -> TamagotchiController : NewGame
+
+    deactivate StartView
+    
+    activate TamagotchiController
+
+        TamagotchiController -> NewGameConfirmationDialog : confirmation
+
+        activate NewGameConfirmationDialog
+
+        NewGameConfirmationDialog -> TamagotchiController
+
+        deactivate NewGameConfirmationDialog
+
+        activate SpicieSelector
+
+        TamagotchiController -> SpicieSelector
+
+        Utilisateur -> SpicieSelector : Choix Espèce
+
+        SpicieSelector -> TamagotchiController : Spicie
+
+        deactivate SpicieSelector
+
+        activate NewGameNameDialog 
+
+        TamagotchiController -> NewGameNameDialog
+
+        Utilisateur -> NewGameNameDialog : Choix Nom Tamagotchi
+
+        NewGameNameDialog -> TamagotchiController : TamaName
+
+        deactivate NewGameNameDialog
+
+        TamagotchiController -> GameSaver : (Game)
+
+        activate GameView
+        TamagotchiController -> GameView
+
+    deactivate TamagotchiController
+    
+    Utilisateur -> GameView : Joue
+    deactivate GameView
+
+@enduml

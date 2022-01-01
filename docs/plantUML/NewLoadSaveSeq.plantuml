@@ -1,0 +1,51 @@
+@startuml game manager
+/' Guide : https://plantuml.com/en/sequence-diagram '/
+
+/'Connection au jeu et reccupération'/
+    Actor Utilisateur
+
+
+    activate Utilisateur
+
+    Utilisateur -> StartView : newGameButton
+
+    deactivate Utilisateur
+
+    activate StartView
+
+    StartView -> TamagotchiController : LoadGame
+
+    deactivate StartView
+    
+    activate TamagotchiController
+
+    TamagotchiController -> GameLoader
+
+    alt Game Successfully Loaded
+
+        activate GameLoader
+
+        GameLoader -> TamagotchiController : Chargement réussi
+
+        TamagotchiController -> GameLoader : loader()
+
+        GameLoader -> TamagotchiController : Game
+
+        deactivate GameLoader
+
+    else Error Loading Game
+
+        GameLoader -> TamagotchiController : Erreur de Chargement
+
+        activate GameLoader 
+
+        deactivate GameLoader
+
+        TamagotchiController -> StartView
+
+        activate StartView
+    end
+
+
+
+@enduml
