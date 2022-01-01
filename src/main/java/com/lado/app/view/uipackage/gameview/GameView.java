@@ -77,7 +77,7 @@ public class GameView implements ActionListener{
 
      frame.setSize(400, 400);
      frame.setLocationRelativeTo(null);
-     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+     frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
      frame.setResizable(true);
      
 

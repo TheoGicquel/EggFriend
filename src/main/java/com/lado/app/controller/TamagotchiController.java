@@ -119,13 +119,13 @@ public class TamagotchiController extends TamagotchiBasicController {
         if(model.isAlive()){
             FoodChoiceDialog foodChoice = new FoodChoiceDialog();
             String chosenFood = foodChoice.foodSelect();
-            
-            if(chosenFood.equals(model.getFavoriteFood(0)))
-            {
-                model.setHunger(model.getHunger() + 40);
-                model.setHappiness(model.getHappiness()+ 5);
+
+                if(chosenFood.equals(model.getFavoriteFood(0))||chosenFood.equals(model.getFavoriteFood(1)))
+                {
+                    model.setHunger(model.getHunger() + 40);
+                    model.setHappiness(model.getHappiness()+ 5);
+                }
             }
-        }
     }
 
     /**
