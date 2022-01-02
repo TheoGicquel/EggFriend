@@ -10,35 +10,46 @@ alt Playing with the tamagotchi
 
     activate Utilisateur
 
+    Utilisateur -> GameView : play game
 
-    Utilisateur -> GameManager : play game
-    
-    activate GameManager
+    activate GameView
 
-    Utilisateur -> GameManager : Save and Quit
-
-    deactivate Utilisateur
-
-    GameManager -> GameSaver : Save Game
-
-    GameManager -> Utilisateur : Game closed
+    Utilisateur -> GameView : *Quit the game*
 
     deactivate Utilisateur
+
+    GameView -> TamagotchiController : quitBtn
+
+    deactivate GameView
+
+    activate TamagotchiController 
+
+    TamagotchiController -> GameSaver : Save Game
+
+    TamagotchiController -> GameView
+
+    activate GameView
+
+    GameView -> Utilisateur : Game Closed
+
+    deactivate GameView
 
 else Leave the tamagotchi behind
 
 
 
-    GameManager -> Utilisateur : Dying Tamagotchi
+    TamagotchiController -> GameView : Dying Tamagotchi
 
-    GameManager -> GameSaver : Tamagotchi dead, Save deleted
+    activate GameView
 
-    GameManager -> Utilisateur : Game Closed
+    TamagotchiController -> GameSaver : Tamagotchi dead, Save deleted
+
+    deactivate TamagotchiController
+
+    GameView -> Utilisateur : Game Closed
+
+    deactivate GameView
 end
-
-    deactivate GameManager
-
-
 
     
 
