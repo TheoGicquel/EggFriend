@@ -14,3 +14,26 @@ Projet de groupe de réalisation d'un [Tamagotchi](https://en.wikipedia.org/wiki
 * [Dépôt GIT](https://github.com/TheoGicquel/Tamagochi-Simulation)
 * [Diaporama de soutenance](https://docs.google.com/presentation/d/1CMQYeZqiHejnTpLuLi8jmTGkGIywHEuxQ0kgC7GOHSM/edit?usp=sharing)
 * [Rapport Final](docs/livrable_final/livrable_final.pdf)
+
+## Prérequis
+* La version 1.8 de l'environnement d'éxecution Java est requis.
+## Téléchargement
+* [Dernière version disponible de l'éxecutable Jar](https://github.com/TheoGicquel/EggFriend/releases/latest)
+## Compilation
+### Prérequis
+* un JDK supérieur ou égal a 1.8 (>mars 2014)
+* [Apache Maven](https://maven.apache.org/)
+### Compilation
+* Aprés avoir copié le dépôt logiciel, effectuez dans le répertoire source :
+  ```bash
+  mvn compile
+  ```
+* Pour produire l'éxecutable Jar :
+  ```bash
+  mvn clean package
+  ```
+### Validation des tests unitaires
+```
+mvn test
+```
+Un rapport de test complet ainsi qu'un rapport de coverage Jacoco est trouvable dans le dossier `/target`

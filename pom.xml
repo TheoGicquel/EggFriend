@@ -4,7 +4,7 @@
   <groupId>com.lado.app</groupId>
   <artifactId>EggFriend</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>EggFriend</name>
   <url>http://maven.apache.org</url>
   <dependencies>
