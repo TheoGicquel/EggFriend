@@ -32,7 +32,7 @@
 
         Utilisateur -> SpecieSelector : Choix Espèce
 
-        SpecieSelector -> TamagotchiController : Spicie
+        SpecieSelector -> TamagotchiController : Specie
 
         deactivate SpecieSelector
 

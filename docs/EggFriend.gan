@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-09-07" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="EggFriend" company="Les Amis des Omelettes" webLink="https://github.com/TheoGicquel/EggFriend" view-date="2021-11-30" view-index="0" gantt-divider-location="557" resource-divider-location="553" version="3.1.3100" locale="fr_FR">
     <description>
         <![CDATA[Déroulement de projet de développement de l'application EggFriend]]>
     </description>
@@ -7,7 +7,7 @@
         <field id="tpd4" name="Date de début" width="72" order="1"/>
         <field id="tpd5" name="Date de fin" width="70" order="2"/>
         <option id="color.recent">
-            <![CDATA[#ff66ff #ffffff #ffcc66 #33ff33 #ff6666 #ffff99 #ffff66 #f4f4f4 #000000 #ff9933]]>
+            <![CDATA[#ffcc66 #ff66ff #ffffff #33ff33 #ff6666 #ffff99 #ffff66 #f4f4f4 #000000 #ff9933]]>
         </option>
     </view>
     <view id="resource-table">
@@ -144,27 +144,30 @@
                 </task>
             </task>
         </task>
-        <task id="402" name="Codage/Réalisation" color="#000000" meeting="false" start="2021-12-29" duration="7" complete="0" thirdDate="2021-11-22" thirdDate-constraint="0" expand="true">
-            <task id="42" name="Dépôt final - Deuxieme livrable" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-01-03" duration="2" complete="0" thirdDate="2022-01-04" thirdDate-constraint="0" expand="true"/>
-            <task id="429" name="Finalisation Diagramme de classes" color="#ffcc66" meeting="false" start="2021-12-29" duration="1" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+        <task id="402" name="Codage/Réalisation" color="#000000" meeting="false" start="2021-12-29" duration="8" complete="0" thirdDate="2021-11-22" thirdDate-constraint="0" expand="true">
+            <task id="42" name="Dépôt final - Deuxieme livrable" color="#ffff66" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-01-04" duration="2" complete="0" thirdDate="2022-01-04" thirdDate-constraint="0" expand="true"/>
+            <task id="429" name="Finalisation Diagramme de classes" color="#ffcc66" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="435" name="Finalisation Diagramme de Gantt" color="#ffcc66" meeting="false" start="2021-12-29" duration="3" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+            <task id="435" name="Finalisation Diagramme de Gantt" color="#ffcc66" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="437" name="Finalisation Cahier des charges" color="#ffcc66" meeting="false" start="2021-12-29" duration="2" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+            <task id="437" name="Finalisation Cahier des charges" color="#ffcc66" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="510" name="Finalisation Diagramme de séquence" color="#ff6666" meeting="false" start="2021-12-29" duration="1" complete="0" thirdDate="2021-11-08" thirdDate-constraint="0" expand="true">
+            <task id="510" name="Finalisation Diagramme de séquence" color="#ff6666" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-11-08" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="1137" name="Finalisation Schéma conceptuel de persistance des données" color="#ff6666" meeting="false" start="2021-12-29" duration="1" complete="0" thirdDate="2021-11-15" thirdDate-constraint="0" expand="true">
+            <task id="1137" name="Finalisation Schéma conceptuel de persistance des données" color="#ff6666" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-11-15" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="1177" name="Finalisation cas de tests" color="#ffffff" meeting="false" start="2021-12-29" duration="1" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+            <task id="1177" name="Finalisation cas de tests" color="#ffffff" meeting="false" start="2021-12-29" duration="6" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="1185" name="Page de garde rapport &amp; envoi" color="#ffcc66" meeting="false" start="2022-01-02" duration="1" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+            <task id="1185" name="Page de garde rapport &amp; envoi" color="#ffcc66" meeting="false" start="2022-01-02" duration="2" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
+                <depend id="42" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="1187" name="Derniers ajustements &amp; Nettoyage" color="#ffcc66" meeting="false" start="2022-01-03" duration="1" complete="0" thirdDate="2021-12-29" thirdDate-constraint="0" expand="true">
                 <depend id="42" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -196,6 +199,7 @@
         <allocation task-id="18" resource-id="0" function="Default:1" responsible="false" load="10.0"/>
         <allocation task-id="324" resource-id="0" function="1" responsible="true" load="100.0"/>
         <allocation task-id="308" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="1187" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="15" resource-id="1" function="3" responsible="true" load="100.0"/>
         <allocation task-id="24" resource-id="1" function="3" responsible="true" load="100.0"/>
         <allocation task-id="25" resource-id="1" function="3" responsible="true" load="100.0"/>

@@ -7,7 +7,7 @@ package com.lado.app {
   note left: Point d'entrée de l'éxécutable
 
 
-package controller  #7ad7ff {
+package controller  #7ad7ff  {
   class TamagotchiBasicController {
     ~ model : Tamagotchi
     + TamagotchiBasicController(newModel : Tamagotchi)
@@ -44,13 +44,9 @@ package controller  #7ad7ff {
     + sleepAction()
     + updateModel()
   }
-  -class RunnableImplementation {
-    - RunnableImplementation()
-    + run()
-  }
+
 }
 package view.uipackage #b2ff91{
-note "Fait appel au controlleur parent" as NOTE_CONTROLLER
 
 
 
@@ -60,12 +56,12 @@ package startview  #96ff69{
     + get(frame : JFrame) : boolean
   }
   
-  NewGameConfirmationDialog - NOTE_CONTROLLER
+  NewGameConfirmationDialog - TamagotchiController
   class NewGameNameDialog {
     + NewGameNameDialog()
     + get(frame : JFrame) : String
   }
-  NewGameNameDialog - NOTE_CONTROLLER
+  NewGameNameDialog - TamagotchiController
   class SpecieSelector {
     ~ combo : JComboBox<String>
     - isFormValid : boolean
@@ -75,7 +71,7 @@ package startview  #96ff69{
     + SpecieSelector()
     + specieSelect() : String
   }
-  SpecieSelector - NOTE_CONTROLLER
+  SpecieSelector - TamagotchiController
   class StartView {
     ~ controller : TamagotchiController
     - frame : JFrame
@@ -98,7 +94,7 @@ package gameview  #96ff69{
     + FoodChoiceDialog()
     + foodSelect() : String
   }
-  FoodChoiceDialog -- NOTE_CONTROLLER
+  FoodChoiceDialog -- TamagotchiController
   class GameView {
     ~ cleanBtn : JButton
     ~ cleanLinessPanel : NeedPanel
@@ -267,16 +263,15 @@ GameSaver -->  "-savetama" Tamagotchi
 TamagotchiController -->  "-loader" GameLoader
 Tamagotchi -right->  "-specie" Specie
 TamagotchiBasicController -->  "-model" Tamagotchi
-StartView -->  "-controller" NOTE_CONTROLLER
-RunnableImplementation --+ GameView
-RunnableImplementation -down-+ TamagotchiController
+StartView -->  "-controller" TamagotchiController
+
 TamagotchiController -->  "-saver" GameSaver
-GameView -->  "-controller" NOTE_CONTROLLER
+GameView -->  "-controller" TamagotchiController
 Tamagotchi -->  "-hunger" Need
 Tamagotchi -->  "-health" Need
 Tamagotchi -right->  "-happiness" Need
 TamagotchiController --|> TamagotchiBasicController 
-NOTE_CONTROLLER .. TamagotchiController
+TamagotchiController .. TamagotchiController
 
 
 @enduml
