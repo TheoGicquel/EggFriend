@@ -2,7 +2,7 @@ package com.lado.app.model.tamagotchi;
 /**
  * @file Specie.java
  * @author Théo Gicquel
- * Objet représentant l'espèce d'un Tamagotchi ( Chien, Chat, Mouton, etc...)
+ * Objet représentant l'espèce d'un Tamagotchi ( Chien, Chat, Chèvre, etc...)
  */
 
 import java.io.Serializable;
@@ -39,9 +39,9 @@ public class Specie implements Serializable{
             this.addFood("Croquettes");
         }
 
-        else if("sheep".equals(choice)||"Mouton".equals(choice)){
-            this.setName("sheep");
-            this.setText("Mouton");
+        else if("goat".equals(choice)||"Chèvre".equals(choice)){
+            this.setName("goat");
+            this.setText("Chèvre");
             this.addFood("Herbe");
         }
 

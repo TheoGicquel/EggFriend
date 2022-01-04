@@ -41,21 +41,21 @@ public class TestSpecieConstructors {
     }
 
     @Test
-    public void testSheep()
+    public void testgoat()
     {
-      Specie specie = new Specie("sheep");
-      assertEquals("sheep", specie.getName());
-      assertEquals("Mouton", specie.getText());
+      Specie specie = new Specie("goat");
+      assertEquals("goat", specie.getName());
+      assertEquals("Chèvre", specie.getText());
       assertEquals("Herbe", specie.getFavoriteFood(0));
       
     }
 
     @Test
-    public void testMouton()
+    public void testChevre()
     {
-      Specie specie = new Specie("Mouton");
-      assertEquals("sheep", specie.getName());
-      assertEquals("Mouton", specie.getText());
+      Specie specie = new Specie("Chèvre");
+      assertEquals("goat", specie.getName());
+      assertEquals("Chèvre", specie.getText());
       assertEquals("Herbe", specie.getFavoriteFood(0));
       
     }

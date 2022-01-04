@@ -11,7 +11,7 @@ public class SpecieSelector {
   private boolean isFormValid = false;
 
   String result = "";
-  String[] specieList = {"...","Chat","Chien","Mouton","Robot"};
+  String[] specieList = {"...","Chat","Chien","Chèvre","Robot"};
   final JComboBox < String > combo = new JComboBox < > (specieList);
   String[] options = {"Ok"};
 
