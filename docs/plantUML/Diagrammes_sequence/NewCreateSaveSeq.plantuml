@@ -26,15 +26,15 @@
 
         deactivate NewGameConfirmationDialog
 
-        activate SpicieSelector
+        activate SpecieSelector
 
-        TamagotchiController -> SpicieSelector
+        TamagotchiController -> SpecieSelector
 
-        Utilisateur -> SpicieSelector : Choix Espèce
+        Utilisateur -> SpecieSelector : Choix Espèce
 
-        SpicieSelector -> TamagotchiController : Spicie
+        SpecieSelector -> TamagotchiController : Spicie
 
-        deactivate SpicieSelector
+        deactivate SpecieSelector
 
         activate NewGameNameDialog 
 

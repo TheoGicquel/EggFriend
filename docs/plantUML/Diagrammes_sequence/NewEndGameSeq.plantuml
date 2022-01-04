@@ -42,7 +42,7 @@ else Leave the tamagotchi behind
 
     activate GameView
 
-    TamagotchiController -> GameSaver : Tamagotchi dead, Save deleted
+    TamagotchiController -> GameSaver : Tamagotchi dead
 
     deactivate TamagotchiController
 
